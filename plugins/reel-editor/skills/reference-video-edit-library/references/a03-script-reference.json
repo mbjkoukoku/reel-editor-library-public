@@ -1,0 +1,1344 @@
+{
+  "id": "A03",
+  "version": "0.5.0",
+  "source": "0719(1).mov",
+  "meaning": "Observed on-screen copy, not a spoken transcript or approved claims for a new clinic.",
+  "fps": 30,
+  "durationFrames": 6498,
+  "timingPolicy": "reference only; caption script comes before footage",
+  "clinicLPProvided": false,
+  "groups": [
+    {
+      "groupId": "g01",
+      "start": 0,
+      "end": 201,
+      "role": "悩みのつかみ",
+      "layerIds": [
+        "a03-text-01"
+      ],
+      "durationIsReferenceOnly": true,
+      "clinicFactPolicy": "今回の対象症状・施術方針と合うか確認。合う部分は原文の流れ・語り口を保つ。",
+      "layers": [
+        {
+          "key": "a03-text-01",
+          "referenceText": "その腰痛、\n腰が原因では\nないかもしれません。",
+          "writingMode": "vertical-rl",
+          "lineOrder": "first source line is rightmost column",
+          "start": 0,
+          "end": 201,
+          "fontFiles": [
+            "ヒラギノ角ゴシック W6.ttc"
+          ],
+          "referenceFrame": "../assets/a03-reference/frame-00100.jpg",
+          "colorSpans": [
+            {
+              "text": "その腰痛、\n腰が原因では\nないかもしれません。",
+              "rgb": [
+                1,
+                1,
+                1
+              ]
+            }
+          ],
+          "redGlow": false
+        }
+      ]
+    },
+    {
+      "groupId": "g02",
+      "start": 202,
+      "end": 331,
+      "role": "対象者の呼びかけ",
+      "layerIds": [
+        "a03-text-02"
+      ],
+      "durationIsReferenceOnly": true,
+      "clinicFactPolicy": "今回の対象症状・施術方針と合うか確認。合う部分は原文の流れ・語り口を保つ。",
+      "layers": [
+        {
+          "key": "a03-text-02",
+          "referenceText": "病院や整体で\n改善しない方へ",
+          "writingMode": "vertical-rl",
+          "lineOrder": "first source line is rightmost column",
+          "start": 202,
+          "end": 331,
+          "fontFiles": [
+            "ヒラギノ角ゴシック W6.ttc"
+          ],
+          "referenceFrame": "../assets/a03-reference/frame-00266.jpg",
+          "colorSpans": [
+            {
+              "text": "病院や整体で\n改善しない方へ",
+              "rgb": [
+                1,
+                1,
+                1
+              ]
+            }
+          ],
+          "redGlow": false
+        }
+      ]
+    },
+    {
+      "groupId": "g03",
+      "start": 331,
+      "end": 471,
+      "role": "一時的な変化の共感",
+      "layerIds": [
+        "a03-text-03"
+      ],
+      "durationIsReferenceOnly": true,
+      "clinicFactPolicy": "今回の対象症状・施術方針と合うか確認。合う部分は原文の流れ・語り口を保つ。",
+      "layers": [
+        {
+          "key": "a03-text-03",
+          "referenceText": "施術後は体は\n楽になってきた。",
+          "writingMode": "vertical-rl",
+          "lineOrder": "first source line is rightmost column",
+          "start": 331,
+          "end": 471,
+          "fontFiles": [
+            "ヒラギノ角ゴシック W6.ttc"
+          ],
+          "referenceFrame": "../assets/a03-reference/frame-00401.jpg",
+          "colorSpans": [
+            {
+              "text": "施術後は体は\n楽になってきた。",
+              "rgb": [
+                1,
+                1,
+                1
+              ]
+            }
+          ],
+          "redGlow": false
+        }
+      ]
+    },
+    {
+      "groupId": "g04",
+      "start": 471,
+      "end": 602,
+      "role": "悩みが戻る共感",
+      "layerIds": [
+        "a03-text-04"
+      ],
+      "durationIsReferenceOnly": true,
+      "clinicFactPolicy": "今回の対象症状・施術方針と合うか確認。合う部分は原文の流れ・語り口を保つ。",
+      "layers": [
+        {
+          "key": "a03-text-04",
+          "referenceText": "でも忙しくなると、\nまた腰が痛む",
+          "writingMode": "vertical-rl",
+          "lineOrder": "first source line is rightmost column",
+          "start": 471,
+          "end": 602,
+          "fontFiles": [
+            "ヒラギノ角ゴシック W6.ttc"
+          ],
+          "referenceFrame": "../assets/a03-reference/frame-00536.jpg",
+          "colorSpans": [
+            {
+              "text": "でも忙しくなると、\nまた腰が痛む",
+              "rgb": [
+                1,
+                1,
+                1
+              ]
+            }
+          ],
+          "redGlow": false
+        }
+      ]
+    },
+    {
+      "groupId": "g05",
+      "start": 602,
+      "end": 728,
+      "role": "経験への問いかけ",
+      "layerIds": [
+        "a03-text-05"
+      ],
+      "durationIsReferenceOnly": true,
+      "clinicFactPolicy": "今回の対象症状・施術方針と合うか確認。合う部分は原文の流れ・語り口を保つ。",
+      "layers": [
+        {
+          "key": "a03-text-05",
+          "referenceText": "そんな経験、\n今でもされていませんか？",
+          "writingMode": "vertical-rl",
+          "lineOrder": "first source line is rightmost column",
+          "start": 602,
+          "end": 728,
+          "fontFiles": [
+            "ヒラギノ角ゴシック W6.ttc"
+          ],
+          "referenceFrame": "../assets/a03-reference/frame-00665.jpg",
+          "colorSpans": [
+            {
+              "text": "そんな経験、\n今でもされていませんか？",
+              "rgb": [
+                1,
+                1,
+                1
+              ]
+            }
+          ],
+          "redGlow": false
+        }
+      ]
+    },
+    {
+      "groupId": "g06",
+      "start": 731,
+      "end": 965,
+      "role": "評価を重視する方針",
+      "layerIds": [
+        "a03-text-06"
+      ],
+      "durationIsReferenceOnly": true,
+      "clinicFactPolicy": "今回の対象症状・施術方針と合うか確認。合う部分は原文の流れ・語り口を保つ。",
+      "layers": [
+        {
+          "key": "a03-text-06",
+          "referenceText": "当院ではまずはしっかり\n評価から始めます",
+          "writingMode": "vertical-rl",
+          "lineOrder": "first source line is rightmost column",
+          "start": 731,
+          "end": 965,
+          "fontFiles": [
+            "ヒラギノ角ゴシック W6.ttc"
+          ],
+          "referenceFrame": "../assets/a03-reference/frame-00848.jpg",
+          "colorSpans": [
+            {
+              "text": "当院ではまずはしっかり\n評価から始めます",
+              "rgb": [
+                1,
+                1,
+                1
+              ]
+            }
+          ],
+          "redGlow": false
+        }
+      ]
+    },
+    {
+      "groupId": "g07",
+      "start": 965,
+      "end": 1143,
+      "role": "局所だけで判断しない方針",
+      "layerIds": [
+        "a03-text-07"
+      ],
+      "durationIsReferenceOnly": true,
+      "clinicFactPolicy": "今回の対象症状・施術方針と合うか確認。合う部分は原文の流れ・語り口を保つ。",
+      "layers": [
+        {
+          "key": "a03-text-07",
+          "referenceText": "痛い場所だけでは\n判断しません。",
+          "writingMode": "vertical-rl",
+          "lineOrder": "first source line is rightmost column",
+          "start": 965,
+          "end": 1143,
+          "fontFiles": [
+            "ヒラギノ角ゴシック W6.ttc"
+          ],
+          "referenceFrame": "../assets/a03-reference/frame-01054.jpg",
+          "colorSpans": [
+            {
+              "text": "痛い場所だけでは\n判断しません。",
+              "rgb": [
+                1,
+                1,
+                1
+              ]
+            }
+          ],
+          "redGlow": false
+        }
+      ]
+    },
+    {
+      "groupId": "g08",
+      "start": 1146,
+      "end": 1341,
+      "role": "動作評価",
+      "layerIds": [
+        "a03-text-08"
+      ],
+      "durationIsReferenceOnly": true,
+      "clinicFactPolicy": "今回の対象症状・施術方針と合うか確認。合う部分は原文の流れ・語り口を保つ。",
+      "layers": [
+        {
+          "key": "a03-text-08",
+          "referenceText": "動きのクセまで\n細かくチェックします。",
+          "writingMode": "vertical-rl",
+          "lineOrder": "first source line is rightmost column",
+          "start": 1146,
+          "end": 1341,
+          "fontFiles": [
+            "ヒラギノ角ゴシック W6.ttc"
+          ],
+          "referenceFrame": "../assets/a03-reference/frame-01243.jpg",
+          "colorSpans": [
+            {
+              "text": "動きのクセまで\n細かくチェックします。",
+              "rgb": [
+                1,
+                1,
+                1
+              ]
+            }
+          ],
+          "redGlow": false
+        }
+      ]
+    },
+    {
+      "groupId": "g09",
+      "start": 1341,
+      "end": 1537,
+      "role": "左右差の所見",
+      "layerIds": [
+        "a03-text-09"
+      ],
+      "durationIsReferenceOnly": true,
+      "clinicFactPolicy": "今回の検査・施術前後の場面や所見に依存。台本は仮とし、素材で確認できなければ変更案を出す。",
+      "layers": [
+        {
+          "key": "a03-text-09",
+          "referenceText": "足の動きに\n左右差あります。",
+          "writingMode": "vertical-rl",
+          "lineOrder": "first source line is rightmost column",
+          "start": 1341,
+          "end": 1537,
+          "fontFiles": [
+            "ヒラギノ角ゴシック W6.ttc"
+          ],
+          "referenceFrame": "../assets/a03-reference/frame-01439.jpg",
+          "colorSpans": [
+            {
+              "text": "足の動きに\n左右差あります。",
+              "rgb": [
+                1,
+                1,
+                1
+              ]
+            }
+          ],
+          "redGlow": false
+        }
+      ]
+    },
+    {
+      "groupId": "g10",
+      "start": 1537,
+      "end": 1737,
+      "role": "検査所見の意味づけ",
+      "layerIds": [
+        "a03-text-10"
+      ],
+      "durationIsReferenceOnly": true,
+      "clinicFactPolicy": "症状の原因・身体の関係・効果に関する見本文。今回のLP・提供情報に根拠がなければ断定を引き継がず、同じ役割の確認可能な文へ最小限変更する。",
+      "layers": [
+        {
+          "key": "a03-text-10",
+          "referenceText": "これがどこに行っても\nよくならない「原因」です",
+          "writingMode": "vertical-rl",
+          "lineOrder": "first source line is rightmost column",
+          "start": 1537,
+          "end": 1737,
+          "fontFiles": [
+            "ヒラギノ角ゴシック W6.ttc"
+          ],
+          "referenceFrame": "../assets/a03-reference/frame-01637.jpg",
+          "colorSpans": [
+            {
+              "text": "これがどこに行っても\nよくならない「原因」です",
+              "rgb": [
+                1,
+                1,
+                1
+              ]
+            }
+          ],
+          "redGlow": false
+        }
+      ]
+    },
+    {
+      "groupId": "g11",
+      "start": 1737,
+      "end": 1951,
+      "role": "原因候補の強調",
+      "layerIds": [
+        "a03-text-11",
+        "a03-text-35"
+      ],
+      "durationIsReferenceOnly": true,
+      "clinicFactPolicy": "症状の原因・身体の関係・効果に関する見本文。今回のLP・提供情報に根拠がなければ断定を引き継がず、同じ役割の確認可能な文へ最小限変更する。",
+      "layers": [
+        {
+          "key": "a03-text-11",
+          "referenceText": "腰の痛みが\n戻る原因は",
+          "writingMode": "vertical-rl",
+          "lineOrder": "first source line is rightmost column",
+          "start": 1737,
+          "end": 1951,
+          "fontFiles": [
+            "ヒラギノ角ゴシック W6.ttc"
+          ],
+          "referenceFrame": "../assets/a03-reference/frame-01844.jpg",
+          "colorSpans": [
+            {
+              "text": "腰の痛みが\n戻る原因は",
+              "rgb": [
+                1,
+                1,
+                1
+              ]
+            }
+          ],
+          "redGlow": false
+        },
+        {
+          "key": "a03-text-35",
+          "referenceText": "「足」",
+          "writingMode": "vertical-rl",
+          "lineOrder": "first source line is rightmost column",
+          "start": 1737,
+          "end": 1951,
+          "fontFiles": [
+            "ヒラギノ角ゴシック W7.ttc"
+          ],
+          "referenceFrame": "../assets/a03-reference/frame-01844.jpg",
+          "colorSpans": [
+            {
+              "text": "「足」",
+              "rgb": [
+                1,
+                1,
+                1
+              ]
+            }
+          ],
+          "redGlow": false
+        }
+      ]
+    },
+    {
+      "groupId": "g12",
+      "start": 1951,
+      "end": 2166,
+      "role": "足への荷重の説明",
+      "layerIds": [
+        "a03-text-12"
+      ],
+      "durationIsReferenceOnly": true,
+      "clinicFactPolicy": "症状の原因・身体の関係・効果に関する見本文。今回のLP・提供情報に根拠がなければ断定を引き継がず、同じ役割の確認可能な文へ最小限変更する。",
+      "layers": [
+        {
+          "key": "a03-text-12",
+          "referenceText": "小指側に体重が乗る\n足が外側へ倒れやすくなる",
+          "writingMode": "vertical-rl",
+          "lineOrder": "first source line is rightmost column",
+          "start": 1951,
+          "end": 2166,
+          "fontFiles": [
+            "ヒラギノ角ゴシック W6.ttc"
+          ],
+          "referenceFrame": "../assets/a03-reference/frame-02058.jpg",
+          "colorSpans": [
+            {
+              "text": "小指側に体重が乗る\n足が外側へ倒れやすくなる",
+              "rgb": [
+                1,
+                1,
+                1
+              ]
+            }
+          ],
+          "redGlow": false
+        }
+      ]
+    },
+    {
+      "groupId": "g13",
+      "start": 2166,
+      "end": 2381,
+      "role": "身体の連動の説明",
+      "layerIds": [
+        "a03-text-13"
+      ],
+      "durationIsReferenceOnly": true,
+      "clinicFactPolicy": "症状の原因・身体の関係・効果に関する見本文。今回のLP・提供情報に根拠がなければ断定を引き継がず、同じ役割の確認可能な文へ最小限変更する。",
+      "layers": [
+        {
+          "key": "a03-text-13",
+          "referenceText": "外側の筋肉が引っ張られて\n腰も下に引っ張られて",
+          "writingMode": "vertical-rl",
+          "lineOrder": "first source line is rightmost column",
+          "start": 2166,
+          "end": 2381,
+          "fontFiles": [
+            "ヒラギノ角ゴシック W6.ttc"
+          ],
+          "referenceFrame": "../assets/a03-reference/frame-02273.jpg",
+          "colorSpans": [
+            {
+              "text": "外側の筋肉が引っ張られて\n腰も下に引っ張られて",
+              "rgb": [
+                1,
+                1,
+                1
+              ]
+            }
+          ],
+          "redGlow": false
+        }
+      ]
+    },
+    {
+      "groupId": "g14",
+      "start": 2381,
+      "end": 2630,
+      "role": "説明の結論を強調",
+      "layerIds": [
+        "a03-text-14"
+      ],
+      "durationIsReferenceOnly": true,
+      "clinicFactPolicy": "症状の原因・身体の関係・効果に関する見本文。今回のLP・提供情報に根拠がなければ断定を引き継がず、同じ役割の確認可能な文へ最小限変更する。",
+      "layers": [
+        {
+          "key": "a03-text-14",
+          "referenceText": "これが腰痛の\n治らない原因です",
+          "writingMode": "vertical-rl",
+          "lineOrder": "first source line is rightmost column",
+          "start": 2381,
+          "end": 2630,
+          "fontFiles": [
+            "ヒラギノ角ゴシック W7.ttc"
+          ],
+          "referenceFrame": "../assets/a03-reference/frame-02505.jpg",
+          "colorSpans": [
+            {
+              "text": "これが腰痛の\n",
+              "rgb": [
+                1,
+                1,
+                1
+              ]
+            },
+            {
+              "text": "治らない原因",
+              "rgb": [
+                1,
+                0.196078434586525,
+                0.196078434586525
+              ]
+            },
+            {
+              "text": "です",
+              "rgb": [
+                1,
+                1,
+                1
+              ]
+            }
+          ],
+          "redGlow": false
+        }
+      ]
+    },
+    {
+      "groupId": "g15",
+      "start": 2630,
+      "end": 2997,
+      "role": "動作評価の重要性",
+      "layerIds": [
+        "a03-text-15"
+      ],
+      "durationIsReferenceOnly": true,
+      "clinicFactPolicy": "今回の対象症状・施術方針と合うか確認。合う部分は原文の流れ・語り口を保つ。",
+      "layers": [
+        {
+          "key": "a03-text-15",
+          "referenceText": "動きのクセまで\n確認することが大切",
+          "writingMode": "vertical-rl",
+          "lineOrder": "first source line is rightmost column",
+          "start": 2630,
+          "end": 2997,
+          "fontFiles": [
+            "ヒラギノ角ゴシック W7.ttc"
+          ],
+          "referenceFrame": "../assets/a03-reference/frame-02813.jpg",
+          "colorSpans": [
+            {
+              "text": "動きのクセ",
+              "rgb": [
+                1,
+                0.2705882489681244,
+                0.2705882489681244
+              ]
+            },
+            {
+              "text": "まで\n確認することが大切",
+              "rgb": [
+                1,
+                1,
+                1
+              ]
+            }
+          ],
+          "redGlow": false
+        }
+      ]
+    },
+    {
+      "groupId": "g16",
+      "start": 3047,
+      "end": 3296,
+      "role": "別姿勢での評価",
+      "layerIds": [
+        "a03-text-16"
+      ],
+      "durationIsReferenceOnly": true,
+      "clinicFactPolicy": "今回の対象症状・施術方針と合うか確認。合う部分は原文の流れ・語り口を保つ。",
+      "layers": [
+        {
+          "key": "a03-text-16",
+          "referenceText": "仰向けでも\n足の使い方を確認",
+          "writingMode": "vertical-rl",
+          "lineOrder": "first source line is rightmost column",
+          "start": 3047,
+          "end": 3296,
+          "fontFiles": [
+            "ヒラギノ角ゴシック W6.ttc"
+          ],
+          "referenceFrame": "../assets/a03-reference/frame-03171.jpg",
+          "colorSpans": [
+            {
+              "text": "仰向けでも\n足の使い方を確認",
+              "rgb": [
+                1,
+                1,
+                1
+              ]
+            }
+          ],
+          "redGlow": false
+        }
+      ]
+    },
+    {
+      "groupId": "g17",
+      "start": 3296,
+      "end": 3545,
+      "role": "検査中の2つの補助表示",
+      "layerIds": [
+        "a03-text-36",
+        "a03-text-37"
+      ],
+      "durationIsReferenceOnly": true,
+      "clinicFactPolicy": "今回の検査・施術前後の場面や所見に依存。台本は仮とし、素材で確認できなければ変更案を出す。",
+      "layers": [
+        {
+          "key": "a03-text-36",
+          "referenceText": "検査中",
+          "writingMode": "horizontal-tb",
+          "lineOrder": "top to bottom",
+          "start": 3296,
+          "end": 3545,
+          "fontFiles": [
+            "ヒラギノ角ゴシック W6.ttc"
+          ],
+          "referenceFrame": "../assets/a03-reference/frame-03420.jpg",
+          "colorSpans": [
+            {
+              "text": "検査中...",
+              "rgb": [
+                1,
+                1,
+                1
+              ]
+            }
+          ],
+          "redGlow": false
+        },
+        {
+          "key": "a03-text-37",
+          "referenceText": "しっかり評価！",
+          "writingMode": "horizontal-tb",
+          "lineOrder": "top to bottom",
+          "start": 3296,
+          "end": 3545,
+          "fontFiles": [
+            "ヒラギノ角ゴシック W6.ttc"
+          ],
+          "referenceFrame": "../assets/a03-reference/frame-03420.jpg",
+          "colorSpans": [
+            {
+              "text": "しっかり評価！",
+              "rgb": [
+                1,
+                1,
+                1
+              ]
+            }
+          ],
+          "redGlow": false
+        }
+      ]
+    },
+    {
+      "groupId": "g18",
+      "start": 3535,
+      "end": 3724,
+      "role": "足の動きの比較・前半",
+      "layerIds": [
+        "a03-text-17"
+      ],
+      "durationIsReferenceOnly": true,
+      "clinicFactPolicy": "今回の検査・施術前後の場面や所見に依存。台本は仮とし、素材で確認できなければ変更案を出す。",
+      "layers": [
+        {
+          "key": "a03-text-17",
+          "referenceText": "小指が上がらず\n親指だけが上がる",
+          "writingMode": "horizontal-tb",
+          "lineOrder": "top to bottom",
+          "start": 3535,
+          "end": 3724,
+          "fontFiles": [
+            "ヒラギノ角ゴシック W6.ttc"
+          ],
+          "referenceFrame": "../assets/a03-reference/frame-03629.jpg",
+          "colorSpans": [
+            {
+              "text": "小指が上がらず\n親指だけが上がる",
+              "rgb": [
+                1,
+                1,
+                1
+              ]
+            }
+          ],
+          "redGlow": false
+        }
+      ]
+    },
+    {
+      "groupId": "g19",
+      "start": 3724,
+      "end": 3856,
+      "role": "足の動きの比較・後半",
+      "layerIds": [
+        "a03-text-18"
+      ],
+      "durationIsReferenceOnly": true,
+      "clinicFactPolicy": "今回の検査・施術前後の場面や所見に依存。台本は仮とし、素材で確認できなければ変更案を出す。",
+      "layers": [
+        {
+          "key": "a03-text-18",
+          "referenceText": "親指も小指も\n真っ直ぐなのが\nただしい",
+          "writingMode": "horizontal-tb",
+          "lineOrder": "top to bottom",
+          "start": 3724,
+          "end": 3856,
+          "fontFiles": [
+            "ヒラギノ角ゴシック W6.ttc"
+          ],
+          "referenceFrame": "../assets/a03-reference/frame-03790.jpg",
+          "colorSpans": [
+            {
+              "text": "親指も小指も\n真っ直ぐなのが\nただしい",
+              "rgb": [
+                1,
+                1,
+                1
+              ]
+            }
+          ],
+          "redGlow": false
+        }
+      ]
+    },
+    {
+      "groupId": "g20",
+      "start": 3857,
+      "end": 3992,
+      "role": "動作のクセの意味づけ",
+      "layerIds": [
+        "a03-text-19"
+      ],
+      "durationIsReferenceOnly": true,
+      "clinicFactPolicy": "症状の原因・身体の関係・効果に関する見本文。今回のLP・提供情報に根拠がなければ断定を引き継がず、同じ役割の確認可能な文へ最小限変更する。",
+      "layers": [
+        {
+          "key": "a03-text-19",
+          "referenceText": "このクセが\n腰痛を繰り返します。",
+          "writingMode": "vertical-rl",
+          "lineOrder": "first source line is rightmost column",
+          "start": 3857,
+          "end": 3992,
+          "fontFiles": [
+            "ヒラギノ角ゴシック W7.ttc"
+          ],
+          "referenceFrame": "../assets/a03-reference/frame-03924.jpg",
+          "colorSpans": [
+            {
+              "text": "このクセが\n腰痛を繰り返します。",
+              "rgb": [
+                1,
+                1,
+                1
+              ]
+            }
+          ],
+          "redGlow": false
+        }
+      ]
+    },
+    {
+      "groupId": "g21",
+      "start": 3992,
+      "end": 4108,
+      "role": "施術の目的",
+      "layerIds": [
+        "a03-text-20"
+      ],
+      "durationIsReferenceOnly": true,
+      "clinicFactPolicy": "症状の原因・身体の関係・効果に関する見本文。今回のLP・提供情報に根拠がなければ断定を引き継がず、同じ役割の確認可能な文へ最小限変更する。",
+      "layers": [
+        {
+          "key": "a03-text-20",
+          "referenceText": "小指の筋肉を\n使いやすくすることで",
+          "writingMode": "vertical-rl",
+          "lineOrder": "first source line is rightmost column",
+          "start": 3992,
+          "end": 4108,
+          "fontFiles": [
+            "ヒラギノ角ゴシック W6.ttc"
+          ],
+          "referenceFrame": "../assets/a03-reference/frame-04050.jpg",
+          "colorSpans": [
+            {
+              "text": "小指の筋肉を\n使いやすくすることで",
+              "rgb": [
+                1,
+                1,
+                1
+              ]
+            }
+          ],
+          "redGlow": false
+        }
+      ]
+    },
+    {
+      "groupId": "g22",
+      "start": 4108,
+      "end": 4224,
+      "role": "生活動作とのつながり",
+      "layerIds": [
+        "a03-text-21"
+      ],
+      "durationIsReferenceOnly": true,
+      "clinicFactPolicy": "症状の原因・身体の関係・効果に関する見本文。今回のLP・提供情報に根拠がなければ断定を引き継がず、同じ役割の確認可能な文へ最小限変更する。",
+      "layers": [
+        {
+          "key": "a03-text-21",
+          "referenceText": "歩くときにも\n外側の筋肉の負担が減り",
+          "writingMode": "vertical-rl",
+          "lineOrder": "first source line is rightmost column",
+          "start": 4108,
+          "end": 4224,
+          "fontFiles": [
+            "ヒラギノ角ゴシック W6.ttc"
+          ],
+          "referenceFrame": "../assets/a03-reference/frame-04166.jpg",
+          "colorSpans": [
+            {
+              "text": "歩くときにも\n外側の筋肉の負担が減り",
+              "rgb": [
+                1,
+                1,
+                1
+              ]
+            }
+          ],
+          "redGlow": false
+        }
+      ]
+    },
+    {
+      "groupId": "g23",
+      "start": 4224,
+      "end": 4334,
+      "role": "変化・効果についての説明",
+      "layerIds": [
+        "a03-text-22"
+      ],
+      "durationIsReferenceOnly": true,
+      "clinicFactPolicy": "症状の原因・身体の関係・効果に関する見本文。今回のLP・提供情報に根拠がなければ断定を引き継がず、同じ役割の確認可能な文へ最小限変更する。",
+      "layers": [
+        {
+          "key": "a03-text-22",
+          "referenceText": "腰の痛みが再発する\nことなく改善します",
+          "writingMode": "vertical-rl",
+          "lineOrder": "first source line is rightmost column",
+          "start": 4224,
+          "end": 4334,
+          "fontFiles": [
+            "ヒラギノ角ゴシック W6.ttc"
+          ],
+          "referenceFrame": "../assets/a03-reference/frame-04279.jpg",
+          "colorSpans": [
+            {
+              "text": "腰の痛みが再発する\nことなく改善します",
+              "rgb": [
+                1,
+                1,
+                1
+              ]
+            }
+          ],
+          "redGlow": false
+        }
+      ]
+    },
+    {
+      "groupId": "g24",
+      "start": 4340,
+      "end": 4456,
+      "role": "施術方針",
+      "layerIds": [
+        "a03-text-23"
+      ],
+      "durationIsReferenceOnly": true,
+      "clinicFactPolicy": "今回の対象症状・施術方針と合うか確認。合う部分は原文の流れ・語り口を保つ。",
+      "layers": [
+        {
+          "key": "a03-text-23",
+          "referenceText": "施術もただ揉むだけ\nではありません。",
+          "writingMode": "vertical-rl",
+          "lineOrder": "first source line is rightmost column",
+          "start": 4340,
+          "end": 4456,
+          "fontFiles": [
+            "ヒラギノ角ゴシック W6.ttc"
+          ],
+          "referenceFrame": "../assets/a03-reference/frame-04398.jpg",
+          "colorSpans": [
+            {
+              "text": "施術もただ揉むだけ\nではありません。",
+              "rgb": [
+                1,
+                1,
+                1
+              ]
+            }
+          ],
+          "redGlow": false
+        }
+      ]
+    },
+    {
+      "groupId": "g25",
+      "start": 4456,
+      "end": 4670,
+      "role": "施術アプローチ強調",
+      "layerIds": [
+        "a03-text-24"
+      ],
+      "durationIsReferenceOnly": true,
+      "clinicFactPolicy": "今回の対象症状・施術方針と合うか確認。合う部分は原文の流れ・語り口を保つ。",
+      "layers": [
+        {
+          "key": "a03-text-24",
+          "referenceText": "原因へ直接\nアプローチ",
+          "writingMode": "vertical-rl",
+          "lineOrder": "first source line is rightmost column",
+          "start": 4456,
+          "end": 4670,
+          "fontFiles": [
+            "ヒラギノ角ゴシック W7.ttc"
+          ],
+          "referenceFrame": "../assets/a03-reference/frame-04563.jpg",
+          "colorSpans": [
+            {
+              "text": "原因へ直接\nアプローチ",
+              "rgb": [
+                1,
+                1,
+                1
+              ]
+            }
+          ],
+          "redGlow": false
+        }
+      ]
+    },
+    {
+      "groupId": "g26",
+      "start": 4695,
+      "end": 4956,
+      "role": "施術後の再検査",
+      "layerIds": [
+        "a03-text-25"
+      ],
+      "durationIsReferenceOnly": true,
+      "clinicFactPolicy": "今回の検査・施術前後の場面や所見に依存。台本は仮とし、素材で確認できなければ変更案を出す。",
+      "layers": [
+        {
+          "key": "a03-text-25",
+          "referenceText": "施術後\nもう1度チェック",
+          "writingMode": "horizontal-tb",
+          "lineOrder": "top to bottom",
+          "start": 4695,
+          "end": 4956,
+          "fontFiles": [
+            "ヒラギノ角ゴシック W6.ttc"
+          ],
+          "referenceFrame": "../assets/a03-reference/frame-04825.jpg",
+          "colorSpans": [
+            {
+              "text": "施術後\nもう1度チェック",
+              "rgb": [
+                1,
+                1,
+                1
+              ]
+            }
+          ],
+          "redGlow": false
+        }
+      ]
+    },
+    {
+      "groupId": "g27",
+      "start": 4971,
+      "end": 5162,
+      "role": "再検査の所見",
+      "layerIds": [
+        "a03-text-26"
+      ],
+      "durationIsReferenceOnly": true,
+      "clinicFactPolicy": "今回の検査・施術前後の場面や所見に依存。台本は仮とし、素材で確認できなければ変更案を出す。",
+      "layers": [
+        {
+          "key": "a03-text-26",
+          "referenceText": "さっきよりも\n足が真っ直ぐ\n上がるように！！",
+          "writingMode": "horizontal-tb",
+          "lineOrder": "top to bottom",
+          "start": 4971,
+          "end": 5162,
+          "fontFiles": [
+            "ヒラギノ角ゴシック W7.ttc"
+          ],
+          "referenceFrame": "../assets/a03-reference/frame-05066.jpg",
+          "colorSpans": [
+            {
+              "text": "さっきよりも\n足が真っ直ぐ\n上がるように！！",
+              "rgb": [
+                1,
+                1,
+                1
+              ]
+            }
+          ],
+          "redGlow": false
+        }
+      ]
+    },
+    {
+      "groupId": "g28",
+      "start": 5162,
+      "end": 5353,
+      "role": "変化についての強調",
+      "layerIds": [
+        "a03-text-27"
+      ],
+      "durationIsReferenceOnly": true,
+      "clinicFactPolicy": "症状の原因・身体の関係・効果に関する見本文。今回のLP・提供情報に根拠がなければ断定を引き継がず、同じ役割の確認可能な文へ最小限変更する。",
+      "layers": [
+        {
+          "key": "a03-text-27",
+          "referenceText": "初回の施術でも\n効果を実感\nできます！",
+          "writingMode": "horizontal-tb",
+          "lineOrder": "top to bottom",
+          "start": 5162,
+          "end": 5353,
+          "fontFiles": [
+            "ヒラギノ角ゴシック W7.ttc"
+          ],
+          "referenceFrame": "../assets/a03-reference/frame-05257.jpg",
+          "colorSpans": [
+            {
+              "text": "初回の施術でも\n効果を実感\nできます！",
+              "rgb": [
+                1,
+                1,
+                1
+              ]
+            }
+          ],
+          "redGlow": true
+        }
+      ]
+    },
+    {
+      "groupId": "g29",
+      "start": 5353,
+      "end": 5518,
+      "role": "生活での注意点",
+      "layerIds": [
+        "a03-text-28"
+      ],
+      "durationIsReferenceOnly": true,
+      "clinicFactPolicy": "今回の対象症状・施術方針と合うか確認。合う部分は原文の流れ・語り口を保つ。",
+      "layers": [
+        {
+          "key": "a03-text-28",
+          "referenceText": "施術後、生活で\n気をつけることも",
+          "writingMode": "vertical-rl",
+          "lineOrder": "first source line is rightmost column",
+          "start": 5353,
+          "end": 5518,
+          "fontFiles": [
+            "ヒラギノ角ゴシック W6.ttc"
+          ],
+          "referenceFrame": "../assets/a03-reference/frame-05435.jpg",
+          "colorSpans": [
+            {
+              "text": "施術後、生活で\n気をつけることも",
+              "rgb": [
+                1,
+                1,
+                1
+              ]
+            }
+          ],
+          "redGlow": false
+        }
+      ]
+    },
+    {
+      "groupId": "g30",
+      "start": 5518,
+      "end": 5664,
+      "role": "説明・アフターケア",
+      "layerIds": [
+        "a03-text-29"
+      ],
+      "durationIsReferenceOnly": true,
+      "clinicFactPolicy": "今回の対象症状・施術方針と合うか確認。合う部分は原文の流れ・語り口を保つ。",
+      "layers": [
+        {
+          "key": "a03-text-29",
+          "referenceText": "丁寧にわかりやすく\nお伝えします。",
+          "writingMode": "vertical-rl",
+          "lineOrder": "first source line is rightmost column",
+          "start": 5518,
+          "end": 5664,
+          "fontFiles": [
+            "ヒラギノ角ゴシック W6.ttc"
+          ],
+          "referenceFrame": "../assets/a03-reference/frame-05591.jpg",
+          "colorSpans": [
+            {
+              "text": "丁寧にわかりやすく\nお伝えします。",
+              "rgb": [
+                1,
+                1,
+                1
+              ]
+            }
+          ],
+          "redGlow": false
+        }
+      ]
+    },
+    {
+      "groupId": "g31",
+      "start": 5664,
+      "end": 5838,
+      "role": "対象者への再呼びかけ",
+      "layerIds": [
+        "a03-text-30"
+      ],
+      "durationIsReferenceOnly": true,
+      "clinicFactPolicy": "今回の対象症状・施術方針と合うか確認。合う部分は原文の流れ・語り口を保つ。",
+      "layers": [
+        {
+          "key": "a03-text-30",
+          "referenceText": "長年改善しない\n腰痛でお悩みなら",
+          "writingMode": "vertical-rl",
+          "lineOrder": "first source line is rightmost column",
+          "start": 5664,
+          "end": 5838,
+          "fontFiles": [
+            "ヒラギノ角ゴシック W6.ttc"
+          ],
+          "referenceFrame": "../assets/a03-reference/frame-05751.jpg",
+          "colorSpans": [
+            {
+              "text": "長年改善しない\n腰痛でお悩みなら",
+              "rgb": [
+                1,
+                1,
+                1
+              ]
+            }
+          ],
+          "redGlow": false
+        }
+      ]
+    },
+    {
+      "groupId": "g32",
+      "start": 5838,
+      "end": 6010,
+      "role": "評価・来院への誘導",
+      "layerIds": [
+        "a03-text-31"
+      ],
+      "durationIsReferenceOnly": true,
+      "clinicFactPolicy": "今回の対象症状・施術方針と合うか確認。合う部分は原文の流れ・語り口を保つ。",
+      "layers": [
+        {
+          "key": "a03-text-31",
+          "referenceText": "まずは原因を\n調べてみませんか？",
+          "writingMode": "vertical-rl",
+          "lineOrder": "first source line is rightmost column",
+          "start": 5838,
+          "end": 6010,
+          "fontFiles": [
+            "ヒラギノ角ゴシック W6.ttc"
+          ],
+          "referenceFrame": "../assets/a03-reference/frame-05924.jpg",
+          "colorSpans": [
+            {
+              "text": "まずは原因を\n調べてみませんか？",
+              "rgb": [
+                1,
+                1,
+                1
+              ]
+            }
+          ],
+          "redGlow": false
+        }
+      ]
+    },
+    {
+      "groupId": "g33",
+      "start": 6010,
+      "end": 6139,
+      "role": "案内の条件",
+      "layerIds": [
+        "a03-text-32"
+      ],
+      "durationIsReferenceOnly": true,
+      "clinicFactPolicy": "期間限定・掲載限定の有無と適用条件を今回のLPで確認。なければ条件を創作せず差し替え案を提示。",
+      "layers": [
+        {
+          "key": "a03-text-32",
+          "referenceText": "ここだけの\n期間限定",
+          "writingMode": "horizontal-tb",
+          "lineOrder": "top to bottom",
+          "start": 6010,
+          "end": 6139,
+          "fontFiles": [
+            "ヒラギノ角ゴシック W8.ttc"
+          ],
+          "referenceFrame": "../assets/a03-reference/frame-06074.jpg",
+          "colorSpans": [
+            {
+              "text": "ここだけの\n期間限定",
+              "rgb": [
+                1,
+                1,
+                1
+              ]
+            }
+          ],
+          "redGlow": true
+        }
+      ]
+    },
+    {
+      "groupId": "g34",
+      "start": 6139,
+      "end": 6321,
+      "role": "価格の案内",
+      "layerIds": [
+        "a03-text-33"
+      ],
+      "durationIsReferenceOnly": true,
+      "clinicFactPolicy": "2,480円は見本の金額。今回の料金・税込表記・初回条件をLPで確認するまで採用しない。",
+      "layers": [
+        {
+          "key": "a03-text-33",
+          "referenceText": "初回\n2,480円で\nお試し！！",
+          "writingMode": "horizontal-tb",
+          "lineOrder": "top to bottom",
+          "start": 6139,
+          "end": 6321,
+          "fontFiles": [
+            "ヒラギノ角ゴシック W8.ttc"
+          ],
+          "referenceFrame": "../assets/a03-reference/frame-06230.jpg",
+          "colorSpans": [
+            {
+              "text": "初回\n2,480円で\nお試し！！",
+              "rgb": [
+                1,
+                1,
+                1
+              ]
+            }
+          ],
+          "redGlow": true
+        }
+      ]
+    },
+    {
+      "groupId": "g35",
+      "start": 6321,
+      "end": 6498,
+      "role": "予約・問い合わせの導線",
+      "layerIds": [
+        "a03-text-34"
+      ],
+      "durationIsReferenceOnly": true,
+      "clinicFactPolicy": "今回の実際の予約先と掲載先を確認。プロフィールのリンクと決めつけない。",
+      "layers": [
+        {
+          "key": "a03-text-34",
+          "referenceText": "詳しくは\nプロフィールのリンクから\nご予約ください。",
+          "writingMode": "vertical-rl",
+          "lineOrder": "first source line is rightmost column",
+          "start": 6321,
+          "end": 6498,
+          "fontFiles": [
+            "ヒラギノ角ゴシック W6.ttc"
+          ],
+          "referenceFrame": "../assets/a03-reference/frame-06409.jpg",
+          "colorSpans": [
+            {
+              "text": "詳しくは\nプロフィールのリンクから\nご予約ください。",
+              "rgb": [
+                1,
+                1,
+                1
+              ]
+            }
+          ],
+          "redGlow": false
+        }
+      ]
+    }
+  ]
+}

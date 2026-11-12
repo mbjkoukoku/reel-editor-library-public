@@ -1,0 +1,1125 @@
+{
+  "id": "A07",
+  "aliases": [
+    "A7",
+    "A07"
+  ],
+  "version": "0.10.5",
+  "name": "患者目線・1日Vlog",
+  "executionRoute": "patient_vlog_with_sourced_cast",
+  "workflow": "lp_screen_script_and_shot_plan_then_supplied_clinic_and_sourced_patient_role",
+  "canvas": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "referenceDurationNotMandatory": true
+  },
+  "input": {
+    "firstStage": [
+      "current clinic LP/official homepage or user-confirmed clinic facts",
+      "selected pattern A07"
+    ],
+    "afterScriptConfirmation": [
+      "user-supplied actual therapist/clinic footage",
+      "assistant-prepared patient-role illustrative footage"
+    ],
+    "userPatientFootageRequired": false,
+    "newAiVoiceRequired": false,
+    "spokenAudioRequired": false,
+    "registrationWithoutLpAllowed": true,
+    "missingLpAction": "Ask for current clinic LP or facts to adapt the screen-text draft, but do not require patient footage."
+  },
+  "flow": [
+    "Prepare a short screen-text script and shot plan from current LP/confirmed facts. Keep the Vlog structure and reference typography but distinguish current facts from a fictional scenario.",
+    "Mark every shot as supplied therapist/clinic, assistant-sourced patient-role, optional verified clinic screen, or missing. Show this script/plan first for confirmation; do not require patient footage or AI voice.",
+    "After confirmation, receive therapist/clinic material and prepare only the missing patient-role shots. Honor already approved plan and generation budget; do not repeatedly re-ask settled questions.",
+    "Use one fictional person throughout each film. Choose another person for the next separate film; use a per-project visual anchor and available recent cast history, not memory claims.",
+    "Edit supplied real material and the approved fictional patient-role story in the agreed order. Use productionDefaults for editable type, bands, clock and closing banner; persistent AI/sample labels are empty by default.",
+    "Verify cast continuity, fictional-story attribution, current clinic facts, approved captions/spacing, action completion, audio event sync and final composite. Report native render/export checks separately from independent-operator execution."
+  ],
+  "patientRole": {
+    "default": "assistant prepares fictional illustrative patient-role shots; the user need not supply patient footage",
+    "samePersonWithinOneFilm": true,
+    "differentPersonForNextFilm": true,
+    "acrossProjectsPolicy": "Check accessible recent-cast records and avoid reusing prior character anchors. Do not promise universal global uniqueness or access to others' private projects. If no history exists, create a new project cast and say history was unavailable.",
+    "anchorPolicy": "Save approved identity reference and appearance/outfit notes per project. Reuse the same visual anchor for related shots; text-only matching is not identity verification. A new paid anchor requires the same cost/scope authorization as generation.",
+    "castRecordFields": [
+      "project/film ID",
+      "fictional cast ID",
+      "approved anchor asset/path",
+      "appearance and wardrobe",
+      "shot role",
+      "job or licensed stock asset IDs",
+      "model/provider/license",
+      "date",
+      "reference use permissions",
+      "review status"
+    ],
+    "noCopyOfReferenceRealPatient": true,
+    "doNotAlterActualTherapistIdentity": true,
+    "whollyFictionalFaceNeedNotBeMosaicked": true,
+    "realIdentifiablePatientUsesFaceMosaic": "face-mosaic.md",
+    "generatedLabel": "",
+    "generatedLabelVisibleDuringRelevantShots": false,
+    "stockLabel": "イメージ映像",
+    "stockUse": "Only licensed footage allowing this use and context, preferably a same-actor series with continuity. Verify attribution, model release/context restrictions and actual license terms. Do not imply the model has a diagnosed condition or is a real customer.",
+    "generatedTreatment": "Do not fabricate that a real therapist treated the fictional patient. Prefer supplied hands/therapist demonstration or separate clearly illustrated scene; do not composite a real provider with a fictional patient and present it as documentary treatment.",
+    "generationScope": "After shot plan and cast are concrete, use the active host generation skill and current supported tools. Disclose costs/credits and obtain any missing spend authorization before paid work. If no credits/budget are allowed, use permitted supplied/licensed material or report the exact missing scenes; never silently charge.",
+    "noGenerationDuringReferenceRegistration": true,
+    "generatedLabelPolicy": "The approved presentation has no persistent AI-generated corner label. Keep fictional provenance in the project record and initial script; do not represent the character as a verified actual customer. Honor explicit current-job labeling requirements and licensed-material requirements."
+  },
+  "copyPolicy": {
+    "sourceTranscriptIsNotRequired": true,
+    "screenTextIsNotVerifiedPatientSpeech": true,
+    "referenceScriptOnly": [
+      {
+        "role": "intro",
+        "text": "春日市\n腰痛に悩む主婦\n1日Vlog"
+      },
+      {
+        "role": "morning",
+        "text": "6:00\n今日も朝から腰が痛い"
+      },
+      {
+        "role": "breakfast",
+        "text": "6:20\n家族のお弁当と朝食作り\n痛いなんて言ってられない"
+      },
+      {
+        "role": "laundry",
+        "text": "7:20\n洗濯物も毎日たまる\nはぁー腰がつらい…"
+      },
+      {
+        "role": "cleaning",
+        "text": "9:00\n掃除も後回しに出来ないし\nこのまま腰が固まっちゃいそう…"
+      },
+      {
+        "role": "shopping",
+        "text": "11:00\nスーパーへ買い物\n重いものを持つのも\nちょっとしんどい"
+      },
+      {
+        "role": "dinner_before",
+        "text": "17:00\n夕飯の準備\n気付けばシンクに\nもたれかかっている"
+      },
+      {
+        "role": "discovery_a",
+        "text": "22:00\n眠れなくて\nインスタ見ていると"
+      },
+      {
+        "role": "discovery_b",
+        "text": "22:00\n女性整体師か、、、\nちょっと気になる"
+      },
+      {
+        "role": "discovery_c",
+        "text": "22:00\n思い切って、整体を予約"
+      },
+      {
+        "role": "next_morning_a",
+        "text": "6:00\n起床\n当たり前のように腰が痛い"
+      },
+      {
+        "role": "next_morning_b",
+        "text": "6:00\n本当に嫌になる、、、"
+      },
+      {
+        "role": "travel_to_clinic",
+        "text": "10:00\n整体に行く"
+      },
+      {
+        "role": "arrival",
+        "text": "10:30\n到着"
+      },
+      {
+        "role": "consultation",
+        "text": "10:30\n痛みや悩みを相談"
+      },
+      {
+        "role": "treatment_1",
+        "text": "11:00\n施術開始"
+      },
+      {
+        "role": "treatment_2a",
+        "text": "11:00\n初めてこんな動きしたw"
+      },
+      {
+        "role": "treatment_2b",
+        "text": "11:00\nなんか楽しいかも！"
+      },
+      {
+        "role": "treatment_3b",
+        "text": "11:00\nこれで本当変わるんかな？"
+      },
+      {
+        "role": "reaction_a",
+        "text": "11:30\nあれ？！全然違う！"
+      },
+      {
+        "role": "reaction_b",
+        "text": "11:30\n思わず笑った"
+      },
+      {
+        "role": "dinner_after",
+        "text": "17:00\nいつものように夕食の準備\nでも今日は、、、"
+      },
+      {
+        "role": "daily_motion",
+        "text": "17:00\nなんだか身体が軽い"
+      },
+      {
+        "role": "aspiration",
+        "text": "ふと、\n「このまま、もっと楽になったら\nまた旅行に行きたいな」"
+      },
+      {
+        "role": "walking",
+        "text": "そんなことを\n思えるようになった"
+      },
+      {
+        "role": "eating_a",
+        "text": "腰が痛いからと"
+      },
+      {
+        "role": "eating_b",
+        "text": "やりたいことを\n諦める毎日じゃなくていい"
+      },
+      {
+        "role": "closing",
+        "text": "次回も楽しみ！\nハローデイ春日店1F\n-慢性腰痛専門-\nエクティブ整骨院"
+      }
+    ],
+    "retain": "Story order, short time badges, concise screen copy, visual rhythm and typography hierarchy.",
+    "replace": "Clinic, region, access, provider description and offered services with confirmed current facts.",
+    "notAutomaticDefaults": [
+      "pain diagnosis",
+      "patient medical history",
+      "actual clinic visit by AI person",
+      "patient quote/testimonial",
+      "treatment result or improvement",
+      "claim that all patients have the same result"
+    ],
+    "fictionalScenario": "These are examples from the user-approved fictional patient-role story, not verified testimony or evidence of an individual treatment outcome. Preserve the emotional progression in the initial script; adapt factual clinic information and submit the new script for confirmation. Do not attribute this fictional response to a real patient or promise it for everyone.",
+    "lpLimits": "LP service descriptions do not prove an individual patient's diagnosis, result or quote.",
+    "clockLabels": "Narrative time labels, not verified appointment or operating hours. Adapt them to a coherent fictional day and distinguish next day when needed.",
+    "firstReviewIncludes": [
+      "screen text",
+      "basis/current clinic fact vs illustrative scenario",
+      "shot role and provider",
+      "same cast plan",
+      "fictional-story provenance and any current-job label requirements",
+      "generation durations and budget status"
+    ]
+  },
+  "reference": {
+    "fileName": "ex患者vlog2.mov",
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "durationSeconds": 61.366667,
+    "videoFrameCount": 1841,
+    "videoCodec": "h264",
+    "audioCodec": "aac",
+    "pictureSegments": [
+      {
+        "index": 1,
+        "role": "intro",
+        "description": "患者役・腰へ手を添える導入",
+        "futureFootageOwner": "patient_role",
+        "startFrame": 0,
+        "endFrameExclusive": 46,
+        "startSeconds": 0.0,
+        "endSeconds": 1.533333,
+        "referenceDurationSeconds": 1.533333
+      },
+      {
+        "index": 2,
+        "role": "morning",
+        "description": "起床",
+        "futureFootageOwner": "patient_role",
+        "startFrame": 46,
+        "endFrameExclusive": 121,
+        "startSeconds": 1.533333,
+        "endSeconds": 4.033333,
+        "referenceDurationSeconds": 2.5
+      },
+      {
+        "index": 3,
+        "role": "breakfast",
+        "description": "弁当・朝食づくり",
+        "futureFootageOwner": "patient_role",
+        "startFrame": 121,
+        "endFrameExclusive": 195,
+        "startSeconds": 4.033333,
+        "endSeconds": 6.5,
+        "referenceDurationSeconds": 2.466667
+      },
+      {
+        "index": 4,
+        "role": "laundry",
+        "description": "洗濯",
+        "futureFootageOwner": "patient_role",
+        "startFrame": 195,
+        "endFrameExclusive": 270,
+        "startSeconds": 6.5,
+        "endSeconds": 9.0,
+        "referenceDurationSeconds": 2.5
+      },
+      {
+        "index": 5,
+        "role": "cleaning",
+        "description": "掃除",
+        "futureFootageOwner": "patient_role",
+        "startFrame": 270,
+        "endFrameExclusive": 345,
+        "startSeconds": 9.0,
+        "endSeconds": 11.5,
+        "referenceDurationSeconds": 2.5
+      },
+      {
+        "index": 6,
+        "role": "shopping",
+        "description": "買い物・荷物",
+        "futureFootageOwner": "patient_role",
+        "startFrame": 345,
+        "endFrameExclusive": 436,
+        "startSeconds": 11.5,
+        "endSeconds": 14.533333,
+        "referenceDurationSeconds": 3.033333
+      },
+      {
+        "index": 7,
+        "role": "dinner_before",
+        "description": "夕食準備",
+        "futureFootageOwner": "patient_role",
+        "startFrame": 436,
+        "endFrameExclusive": 511,
+        "startSeconds": 14.533333,
+        "endSeconds": 17.033333,
+        "referenceDurationSeconds": 2.5
+      },
+      {
+        "index": 8,
+        "role": "discovery",
+        "description": "夜のスマートフォン・院を知る",
+        "futureFootageOwner": "patient_role_and_verified_clinic_screen",
+        "startFrame": 511,
+        "endFrameExclusive": 691,
+        "startSeconds": 17.033333,
+        "endSeconds": 23.033333,
+        "referenceDurationSeconds": 6.0
+      },
+      {
+        "index": 9,
+        "role": "next_morning",
+        "description": "翌朝の起床",
+        "futureFootageOwner": "patient_role",
+        "startFrame": 691,
+        "endFrameExclusive": 781,
+        "startSeconds": 23.033333,
+        "endSeconds": 26.033333,
+        "referenceDurationSeconds": 3.0
+      },
+      {
+        "index": 10,
+        "role": "travel_to_clinic",
+        "description": "移動",
+        "futureFootageOwner": "patient_role",
+        "startFrame": 781,
+        "endFrameExclusive": 872,
+        "startSeconds": 26.033333,
+        "endSeconds": 29.066667,
+        "referenceDurationSeconds": 3.033333
+      },
+      {
+        "index": 11,
+        "role": "arrival",
+        "description": "施術者による迎え入れ",
+        "futureFootageOwner": "user_therapist_clinic",
+        "startFrame": 872,
+        "endFrameExclusive": 922,
+        "startSeconds": 29.066667,
+        "endSeconds": 30.733333,
+        "referenceDurationSeconds": 1.666667
+      },
+      {
+        "index": 12,
+        "role": "consultation",
+        "description": "問診・相談",
+        "futureFootageOwner": "user_therapist_clinic",
+        "startFrame": 922,
+        "endFrameExclusive": 992,
+        "startSeconds": 30.733333,
+        "endSeconds": 33.066667,
+        "referenceDurationSeconds": 2.333333
+      },
+      {
+        "index": 13,
+        "role": "treatment_1",
+        "description": "施術1・うつ伏せで片膝を曲げる動作",
+        "futureFootageOwner": "user_therapist_and_patient_or_demo",
+        "startFrame": 992,
+        "endFrameExclusive": 1066,
+        "startSeconds": 33.066667,
+        "endSeconds": 35.533333,
+        "referenceDurationSeconds": 2.466667,
+        "observationCorrection": {
+          "date": "2026-11-10",
+          "previousDescription": "施術1・側臥位",
+          "basis": "Actual reference frame992 shows prone posture with one knee flexed, not side-lying. Timing and segment boundaries are unchanged."
+        }
+      },
+      {
+        "index": 14,
+        "role": "treatment_2",
+        "description": "施術2・体の動き",
+        "futureFootageOwner": "user_therapist_and_patient_or_demo",
+        "startFrame": 1066,
+        "endFrameExclusive": 1170,
+        "startSeconds": 35.533333,
+        "endSeconds": 39.0,
+        "referenceDurationSeconds": 3.466667
+      },
+      {
+        "index": 15,
+        "role": "treatment_3",
+        "description": "施術3・仰向けの動き",
+        "futureFootageOwner": "user_therapist_and_patient_or_demo",
+        "startFrame": 1170,
+        "endFrameExclusive": 1275,
+        "startSeconds": 39.0,
+        "endSeconds": 42.5,
+        "referenceDurationSeconds": 3.5
+      },
+      {
+        "index": 16,
+        "role": "reaction",
+        "description": "立位での反応",
+        "futureFootageOwner": "patient_role_or_actual_confirmed_patient",
+        "startFrame": 1275,
+        "endFrameExclusive": 1407,
+        "startSeconds": 42.5,
+        "endSeconds": 46.9,
+        "referenceDurationSeconds": 4.4
+      },
+      {
+        "index": 17,
+        "role": "dinner_after",
+        "description": "夕食の準備へ戻る",
+        "futureFootageOwner": "patient_role",
+        "startFrame": 1407,
+        "endFrameExclusive": 1467,
+        "startSeconds": 46.9,
+        "endSeconds": 48.9,
+        "referenceDurationSeconds": 2.0
+      },
+      {
+        "index": 18,
+        "role": "daily_motion",
+        "description": "日常の体の動き",
+        "futureFootageOwner": "patient_role",
+        "startFrame": 1467,
+        "endFrameExclusive": 1556,
+        "startSeconds": 48.9,
+        "endSeconds": 51.866667,
+        "referenceDurationSeconds": 2.966667
+      },
+      {
+        "index": 19,
+        "role": "aspiration",
+        "description": "旅行などやりたいこと",
+        "futureFootageOwner": "patient_role",
+        "startFrame": 1556,
+        "endFrameExclusive": 1646,
+        "startSeconds": 51.866667,
+        "endSeconds": 54.866667,
+        "referenceDurationSeconds": 3.0
+      },
+      {
+        "index": 20,
+        "role": "walking",
+        "description": "散歩・歩く",
+        "futureFootageOwner": "patient_role",
+        "startFrame": 1646,
+        "endFrameExclusive": 1693,
+        "startSeconds": 54.866667,
+        "endSeconds": 56.433333,
+        "referenceDurationSeconds": 1.566667
+      },
+      {
+        "index": 21,
+        "role": "eating",
+        "description": "食事",
+        "futureFootageOwner": "patient_role",
+        "startFrame": 1693,
+        "endFrameExclusive": 1752,
+        "startSeconds": 56.433333,
+        "endSeconds": 58.4,
+        "referenceDurationSeconds": 1.966667
+      },
+      {
+        "index": 22,
+        "role": "closing",
+        "description": "締め・院情報",
+        "futureFootageOwner": "patient_role_and_verified_clinic_info",
+        "startFrame": 1752,
+        "endFrameExclusive": 1841,
+        "startSeconds": 58.4,
+        "endSeconds": 61.366667,
+        "referenceDurationSeconds": 2.966667
+      }
+    ],
+    "sceneBoundariesVerifiedWithAdjacentFrames": true,
+    "sampledContactFrames": 61,
+    "boundaryReviewFrames": 72,
+    "displayOnlyChanges": [
+      {
+        "frame": 524,
+        "seconds": 17.466667,
+        "change": "Instagram profile panel begins"
+      },
+      {
+        "frame": 570,
+        "seconds": 19,
+        "change": "embedded therapist reel replaces profile"
+      },
+      {
+        "frame": 1753,
+        "seconds": 58.433333,
+        "change": "orange clinic banner begins"
+      }
+    ],
+    "captionTiming": "Text transcription is visually checked in representative frames; all exact caption onset/exit frames were not recovered. Cut boundaries are source frames, not mandatory new-timeline values.",
+    "existingFaceBlur": "Visible on many patient faces. This is baked source blur, not proof that every exposure was covered or a reusable mask.",
+    "notNewClinicFootage": true
+  },
+  "graphicStyle": {
+    "font": {
+      "class": "bold/heavy Japanese Mincho serif",
+      "identityVerified": false,
+      "originalProjectFound": false,
+      "fontBinariesBundled": false,
+      "policy": "Use available legally usable Mincho face with similar stroke contrast and width; compare glyphs at actual output size. Do not claim the original font was identified. No unapproved broad substitution for another pattern."
+    },
+    "textFill": "#FFFFFF",
+    "shadow": {
+      "observed": "visible fairly crisp black lower-right drop shadow",
+      "exactParametersKnown": false,
+      "startingEstimateAt1080p": {
+        "offsetX": 7,
+        "offsetY": 9,
+        "blur": 1,
+        "opacity": 0.8
+      },
+      "estimatedValuesNotOriginalSettings": true
+    },
+    "background": {
+      "shape": "square-corner dark gray translucent rectangle per text block",
+      "originalColorOpacityUnknown": true,
+      "startingEstimate": "#222222 at approximately45–55% opacity; calibrate on real composite",
+      "notRoundedCards": true
+    },
+    "referenceCanvas": [
+      1080,
+      1920
+    ],
+    "intro": {
+      "regionBoxApproxPx": [
+        387,
+        449,
+        307,
+        140
+      ],
+      "regionFontApproxPx": 96,
+      "storyBoxApproxPx": [
+        247,
+        728,
+        587,
+        120
+      ],
+      "storyFontApproxPx": 78,
+      "vlogBoxApproxPx": [
+        362,
+        898,
+        356,
+        125
+      ],
+      "vlogFontApproxPx": 86
+    },
+    "body": {
+      "clockBoxExamplePx": [
+        425,
+        616,
+        230,
+        122
+      ],
+      "clockFontApproxPx": 84,
+      "mainBlockExamplePx": [
+        204,
+        869,
+        674,
+        184
+      ],
+      "bodyFontApproxPx": 72,
+      "lineHeightApproxPx": 78,
+      "alignment": "center",
+      "commonBlockCenterNormalized": [
+        0.5,
+        0.5
+      ],
+      "commonClockCenterNormalized": [
+        0.5,
+        0.352
+      ],
+      "variation": "Some scenes put the clock around0.32height and captions around0.47height. One to three lines; text block width follows text. Keep hands/action visible. Adapt only as needed for reading and current footage."
+    },
+    "closing": {
+      "topBlockExamplePx": [
+        238,
+        616,
+        604,
+        123
+      ],
+      "clinicBannerExamplePx": [
+        75,
+        903,
+        932,
+        330
+      ],
+      "clinicTextApproxPx": 90,
+      "clinicLines": 3,
+      "accentObserved": "orange translucent fill; original color/alpha unknown",
+      "accentStartingEstimate": "#E88721 with approximately75% opacity; compare actual result",
+      "newClinicFactsRequired": true
+    },
+    "animations": {
+      "intro": "First title is already visible at the start; lower two lines reveal characters over approximately first0.6second, then hold. Precise character timing not recovered.",
+      "body": "Mostly static text blocks switching with content; do not invent elaborate motion.",
+      "phoneInsert": "Vertical profile panel enters lower center at17.466667s/frame524 and changes to a therapist reel at19.000000s/frame570. Content/timing must be current-clinic appropriate.",
+      "closing": "Orange banner visible from58.433333s/frame1753. Source has an isolated overlap of previous text atframe1752; do not reproduce that artifact.",
+      "cutType": "Hard picture cuts; ordinary camera/subject motion is source motion, not proof of a coded animation."
+    }
+  },
+  "editing": {
+    "referenceStructure": [
+      "intro",
+      "daily burdens",
+      "discover clinic/reserve",
+      "visit/consult/treatment process",
+      "return to daily life/aspiration",
+      "current clinic closing"
+    ],
+    "referenceCutCount": 22,
+    "newCutCountFixed": false,
+    "referenceDurationFixed": false,
+    "castContinuityRequired": true,
+    "keepMeaningfulTreatmentMotion": true,
+    "doNotFillerCutByDefault": true,
+    "doNotImportA04VerbatimCaptions": true,
+    "doNotImportA06SpeechSummaryRoute": true,
+    "textLayersEditable": true,
+    "timing": "Use approved screen script and current footage lengths. Keep enough reading time; do not stretch/truncate a character or action to fit61.37seconds.",
+    "footageSelection": "Keep the supplied therapist recognizable and real clinic information accurate. Never fill missing therapist shots with another clinic's real person."
+  },
+  "audio": {
+    "noMandatoryAiVoice": true,
+    "addAiVoiceByDefault": false,
+    "addBgmByDefault": true,
+    "addSfxByDefault": true,
+    "productionProfile": "productionDefaults.audio",
+    "referenceRegistrationObservations": "referenceRegistrationAudio",
+    "handling": "Current user-authorized reference BGM and SFX, when the source is accessible and permitted for this job. Record scope; do not assume a prior single-ad permission authorizes every future user or redistribution. If the authorized original is unavailable, use provided or commercial-use-permitted free similar sound, state the difference, and do not silently add paid generation or a new subscription. Honor current explicit silence/no-BGM instructions."
+  },
+  "helperCompatibility": {
+    "timeline_plan.py": false,
+    "text_revision.py": false,
+    "reason": "Dedicated script/shot/cast preparation route with independently editable overlays and generated/stock provenance, not generic fixed-caption timing."
+  },
+  "assets": {
+    "intro": "../assets/a07-reference/intro.jpg",
+    "body": "../assets/a07-reference/laundry.jpg",
+    "phone": "../assets/a07-reference/phone.jpg",
+    "clinic": "../assets/a07-reference/clinic.jpg",
+    "treatment": "../assets/a07-reference/treatment.jpg",
+    "closing": "../assets/a07-reference/ending.jpg",
+    "referenceImagesNotProductionAssets": true
+  },
+  "verification": {
+    "sourceMetadataRead": true,
+    "sourceFramesDecoded": true,
+    "wholeTimelineSampled": true,
+    "adjacentCutFramesViewed": true,
+    "introMotionSampled": true,
+    "exactFontIdentity": false,
+    "exactAllCaptionTimes": false,
+    "manualAudioAudition": false,
+    "wholeReferenceFacePrivacyCertified": false,
+    "previewTranscodedTo540x960": true,
+    "previewFullDecode": true,
+    "previewAudioPayloadAndPtsPreserved": true,
+    "previewLastAudioPacketDurationDeltaSeconds": 0.000658,
+    "newPatientFootageGenerated": true,
+    "newFootageEdited": true,
+    "newChatCutComposite": true,
+    "newLocalMp4Export": true,
+    "crossFilmCastRotationTest": false,
+    "otherOperatorEndToEnd": false,
+    "productionApprovalDate": "2026-11-10",
+    "productionDetails": "productionDefaults.validation",
+    "registrationHistory": "referenceRegistrationVerification"
+  },
+  "referenceObservationScope": "reference, graphicStyle and referenceScriptOnly preserve0.9.0 source observations. productionDefaults are the approved new-production settings and take precedence for new editing.",
+  "referenceRegistrationAudio": {
+    "speechDetectedWithVadByTwoAsrModels": false,
+    "asrIsNotAudition": true,
+    "noVadAsrDiscardedAsUnreliable": true,
+    "manualAudioAudition": false,
+    "backgroundTrackIdentified": false,
+    "referenceTrackLicenseVerifiedForNewWork": false,
+    "noMandatoryAiVoice": true,
+    "addAiVoiceByDefault": false,
+    "addBgmByDefault": false,
+    "handling": "Use current user-authorized sound. Do not extract the reference soundtrack as a new licensed BGM or invent speech from ASR hallucinations. No new paid audio work implied by patient video generation."
+  },
+  "referenceRegistrationVerification": {
+    "sourceMetadataRead": true,
+    "sourceFramesDecoded": true,
+    "wholeTimelineSampled": true,
+    "adjacentCutFramesViewed": true,
+    "introMotionSampled": true,
+    "exactFontIdentity": false,
+    "exactAllCaptionTimes": false,
+    "manualAudioAudition": false,
+    "wholeReferenceFacePrivacyCertified": false,
+    "previewTranscodedTo540x960": true,
+    "previewFullDecode": true,
+    "previewAudioPayloadAndPtsPreserved": true,
+    "previewLastAudioPacketDurationDeltaSeconds": 0.000658,
+    "newPatientFootageGenerated": false,
+    "newFootageEdited": false,
+    "newChatCutComposite": false,
+    "newLocalMp4Export": false,
+    "crossFilmCastRotationTest": false,
+    "otherOperatorEndToEnd": false
+  },
+  "productionDefaults": {
+    "version": "0.10.5",
+    "approvedDate": "2026-11-10",
+    "basis": "User-approved production recreation; not identification of original template font/settings. Original reference observations remain unchanged.",
+    "canvas": {
+      "width": 1080,
+      "height": 1920,
+      "fps": 30
+    },
+    "scaling": "For the same aspect ratio, multiply every pixel dimension including font, line height, tracking, shadow, padding and coordinates by outputWidth/1080. For another aspect ratio recalibrate the complete composite; do not shrink text to fit copy.",
+    "typography": {
+      "body": {
+        "fontFamily": "A07 Reference Serif",
+        "fontWeight": 700,
+        "fontSizePx": 78,
+        "lineHeightPx": 104,
+        "letterSpacingPx": 4.8,
+        "textColor": "#FFFFFF",
+        "alignment": "center",
+        "maxTextWidthPx": 1000,
+        "centerXPx": 540,
+        "centerYPx": 960,
+        "paddingPx": [
+          14,
+          22,
+          16,
+          22
+        ],
+        "defaultMaxLines": 2
+      },
+      "splitSecondBand": {
+        "fontSizePx": 78,
+        "lineHeightPx": 104,
+        "firstBandTopPx": 836,
+        "secondBandReferenceTopPx": 1009,
+        "minimumGapPx": 24,
+        "layout": "Natural flex column; longer first band pushes second down, never overlap."
+      },
+      "clock": {
+        "fontFamily": "Noto Serif CJK JP",
+        "fontWeight": 900,
+        "fontSizePx": 75,
+        "lineHeightPx": 100,
+        "letterSpacingPx": 5,
+        "topPx": 616,
+        "clinicTopPx": 652,
+        "minWidthPx": 230,
+        "minHeightPx": 122,
+        "paddingPx": [
+          6,
+          22,
+          6,
+          22
+        ]
+      },
+      "intro": {
+        "fontFamily": "A07 Reference Serif",
+        "fontWeight": 700,
+        "regionSizePx": 100,
+        "titleSizePx": 84,
+        "vlogSizePx": 92,
+        "regionTopPx": 449,
+        "titleTopPx": 728,
+        "vlogTopPx": 898,
+        "lineHeightsPx": [
+          126,
+          106,
+          111
+        ],
+        "revealSecondsApprox": 0.6
+      },
+      "ending": {
+        "fontFamily": "A07 Reference Serif",
+        "fontWeight": 700,
+        "fontSizePx": 90,
+        "lineHeightPx": 118,
+        "letterSpacingPx": 3,
+        "bannerTopPx": 903,
+        "bannerWidthPx": 932,
+        "minimumBannerHeightPx": 330,
+        "paddingPx": [
+          15,
+          26,
+          15,
+          26
+        ],
+        "bandColor": "#E88721",
+        "bandOpacity": 0.75,
+        "headingSizePx": 80,
+        "headingLineHeightPx": 100,
+        "headingLetterSpacingPx": 4,
+        "maxLines": 3
+      },
+      "shadow": {
+        "color": "#000000",
+        "offsetXPx": 5,
+        "offsetYPx": 7,
+        "blurPx": 1,
+        "opacity": 0.7
+      },
+      "bodyBand": {
+        "color": "#222222",
+        "opacity": 0.5,
+        "cornerRadiusPx": 0
+      },
+      "wrapping": "Use intentional Japanese meaning-based line breaks; body captions should normally be at most2 lines and closing clinic information at most3. Split long copy into consecutive cues before reducing the approved size or line height. A08 eight-character-per-line rule does not apply automatically.",
+      "increaseNote": "Body changed from72 to78px (about8.3%) and line height from78 to104px. Intro and ending were separately adjusted; clock was retained, so this is not a uniform8% scale of every element.",
+      "insetClearancePx": 22
+    },
+    "story": {
+      "order": [
+        "intro",
+        "wake fully into seated posture",
+        "breakfast preparation",
+        "laundry",
+        "midday clinic discovery",
+        "decide to consult",
+        "next morning if needed",
+        "visit and consultation",
+        "treatment",
+        "return home and usual housework",
+        "lighter/easier feeling in the approved fictional story",
+        "wish to travel again",
+        "glad to have visited",
+        "current clinic information"
+      ],
+      "discoveryClock": "12:00",
+      "discoveryClockPolicy": "Use midday when looking up the clinic after morning chores; allow13:00 or another coherent approved time. Do not reuse22:00 from the reference for this daytime scene.",
+      "approvedAfterTreatmentCopyExamples": [
+        "家に帰って\nいつもの家事",
+        "あれ、腰が軽い\n家事も楽にできる",
+        "また旅行に\n行きたくなってきた",
+        "来てよかった"
+      ],
+      "copyScope": "These are examples from the user-approved fictional patient-role story, not verified testimony or evidence of an individual treatment outcome. Preserve the emotional progression in the initial script; adapt factual clinic information and submit the new script for confirmation. Do not attribute this fictional response to a real patient or promise it for everyone.",
+      "durationFixed": false,
+      "referenceDurationMandatory": false,
+      "motionRules": [
+        "Show the intended start and end state in the pre-generation shot table. Wake-up must complete sitting with feet down; inspect the actual action before accepting.",
+        "Remove an unnatural long pause facing away after getting up. Keep enough of sitting down to read the action.",
+        "Speed up unusually slow breakfast/laundry actions only as needed to look natural; check hands, fabric and neighboring cuts. Do not fix a required action that is missing by speeding or cropping.",
+        "Crop/reframe the crossed-leg portion in the clinic-research scene while keeping the phone, face and caption readable.",
+        "Same wake-up source can cover two story beats if agreed; do not generate a second clip merely for a repeated cue."
+      ]
+    },
+    "labels": {
+      "sceneLabelDefault": "",
+      "sampleLabelDefault": "",
+      "automaticAiCornerLabel": false,
+      "policy": "The approved presentation has no persistent AI-generated corner label. Keep fictional provenance in the project record and initial script; do not represent the character as a verified actual customer. Honor explicit current-job labeling requirements and licensed-material requirements."
+    },
+    "audio": {
+      "includeBgmAndSfxByDefault": true,
+      "newAiVoiceByDefault": false,
+      "preferredSource": "Current user-authorized reference BGM and SFX, when the source is accessible and permitted for this job. Record scope; do not assume a prior single-ad permission authorizes every future user or redistribution.",
+      "referenceTrackTitleIdentified": false,
+      "audioBinariesBundled": false,
+      "bgmStyle": "Match the reference daily-life Vlog music and phrasing, keep a quiet bed under the text and short accents. Reuse the authorized original before selecting a merely similar track.",
+      "mixStartingPoint": {
+        "originalDerivedBedGainDb": -3,
+        "observedBedIntegratedLufsApprox": -32.43,
+        "alarmTargetPeakDbfs": -18,
+        "shortAccentTargetPeakDbfs": -16,
+        "scope": "Measurements from the approved source. A different source needs loudness matching and listening; do not blindly use the same gain or call these platform loudness standards.",
+        "playbackRate": 1,
+        "endingFadeOutSeconds": 1.2
+      },
+      "sfxRoles": [
+        {
+          "role": "first wake-up",
+          "sound": "ピピピ alarm",
+          "repeat": "If a next-morning waking scene exists, the alarm must also be placed there. The approved film uses two alarms."
+        },
+        {
+          "role": "housework scene change",
+          "sound": "short transition accent"
+        },
+        {
+          "role": "clinic/LP inset appears",
+          "sound": "short pop/accent"
+        },
+        {
+          "role": "therapist inset appears",
+          "sound": "second short pop/accent"
+        },
+        {
+          "role": "arrival/consultation begins",
+          "sound": "short accent"
+        },
+        {
+          "role": "return home",
+          "sound": "short accent"
+        },
+        {
+          "role": "closing clinic banner",
+          "sound": "short closing accent"
+        }
+      ],
+      "sync": "Align the audible onset, not merely the file start, to the current scene/text/inset event. The approved example used8 sound placements including2 alarms; use semantic roles, not fixed frame positions/count.",
+      "mixedReferenceHandling": "If SFX and BGM are mixed, keep a continuous bed and avoid doubling music when layering excerpts. Extracted mixed SFX can retain music residue; do not label them clean isolated stems. Protect starts/tails and fades; check discontinuities and final mix.",
+      "fallback": "If the authorized original is unavailable, use provided or commercial-use-permitted free similar sound, state the difference, and do not silently add paid generation or a new subscription. Honor current explicit silence/no-BGM instructions.",
+      "referenceSfxCropRanges": {
+        "source": "Original reference ex患者vlog2.mov; verify the source/version and current-job permission first. These are reference-source positions, never fixed new-timeline placement times.",
+        "rangesSeconds": {
+          "alarm": [
+            0.08,
+            0.7
+          ],
+          "shopping": [
+            11.5,
+            11.9
+          ],
+          "inset1": [
+            17.45,
+            17.85
+          ],
+          "inset2": [
+            18.98,
+            19.38
+          ],
+          "arrival": [
+            29.0,
+            29.46
+          ],
+          "return": [
+            46.89,
+            47.29
+          ],
+          "closing": [
+            58.22,
+            58.75
+          ]
+        },
+        "edgeFadesSeconds": {
+          "in": 0.003,
+          "out": 0.02
+        },
+        "note": "Preserve event attack and tail. Six excerpts contain residual source music; not isolated stems. Use the same alarm excerpt for both waking scenes when present."
+      },
+      "sourceAccess": {
+        "referenceFileName": "ex患者vlog2.mov",
+        "libraryReferenceUrl": "https://seitai-reel-library.ryo60129109.chatgpt.site/assets/a07-reference.mp4",
+        "accessPolicy": "Use the current user-accessible reference from the existing library site or their supplied original. An authenticated site may require access. Do not pretend the audio is available when the URL cannot be read. Request the permitted reference/audio only if it is unavailable and no equivalent authorized source exists.",
+        "audioEquivalenceEvidence": "The registered library preview preserves the original2644 AAC payloads and packet timestamps; video is downscaled. Last audio container packet duration differs about0.000658s. Verify the retrieved version before applying source times.",
+        "permissionScope": "Reference access is not commercial-use or redistribution permission; honor current-job authorization and do not publish extracted audio in the plugin."
+      },
+      "referenceBgmReconstructionRecipe": {
+        "status": "Recipe retained from the approved native production; not a claim of perfect stem separation or completed reconstruction in a new operator environment.",
+        "decode": {
+          "sampleRate": 48000,
+          "channels": 2,
+          "sampleFormat": "float32 PCM"
+        },
+        "sourceStartSeconds": 0,
+        "playbackRate": 1,
+        "observedRepeatingPhraseSeconds": 21.333333333333332,
+        "tempoRelationship": "At approximately90 BPM,32 quarter-note beats (8 bars of4/4) last21.333333s. Use the measured repeat offset; do not confuse32 beats with32 bars.",
+        "patches": [
+          {
+            "cue": "initial_alarm",
+            "sourceReplaceSeconds": [
+              0,
+              0.7
+            ],
+            "method": "Silence the opening0.00–0.70s where the alarm occurs; reference music first begins about1.53s. Keep that original initial musical silence."
+          },
+          {
+            "cue": "shopping_two_tone",
+            "coreSeconds": [
+              11.495,
+              11.77
+            ],
+            "blendRegionSeconds": [
+              11.45,
+              11.815
+            ],
+            "donorRegionSeconds": [
+              32.78333333333333,
+              33.14833333333333
+            ],
+            "donorTimeShiftSeconds": 21.333333333333332,
+            "crossfadeSeconds": 0.045,
+            "method": "Replace the core with donor from the same musical phase and use smoothstep edge blends over the stated blend region; preserve stereo and total timeline duration."
+          },
+          {
+            "cue": "profile_two_tone",
+            "coreSeconds": [
+              17.49,
+              17.77
+            ],
+            "blendRegionSeconds": [
+              17.445,
+              17.815
+            ],
+            "donorRegionSeconds": [
+              38.778333333333336,
+              39.14833333333333
+            ],
+            "donorTimeShiftSeconds": 21.333333333333332,
+            "crossfadeSeconds": 0.045,
+            "method": "Replace the core with donor from the same musical phase and use smoothstep edge blends over the stated blend region; preserve stereo and total timeline duration."
+          },
+          {
+            "cue": "therapist_two_tone",
+            "coreSeconds": [
+              19.01,
+              19.29
+            ],
+            "blendRegionSeconds": [
+              18.965,
+              19.335
+            ],
+            "donorRegionSeconds": [
+              40.29833333333333,
+              40.66833333333334
+            ],
+            "donorTimeShiftSeconds": 21.333333333333332,
+            "crossfadeSeconds": 0.045,
+            "method": "Replace the core with donor from the same musical phase and use smoothstep edge blends over the stated blend region; preserve stereo and total timeline duration."
+          },
+          {
+            "cue": "next_morning_alarm",
+            "coreSeconds": [
+              23.09,
+              23.67
+            ],
+            "blendRegionSeconds": [
+              23.045,
+              23.715
+            ],
+            "donorRegionSeconds": [
+              44.37833333333333,
+              45.04833333333333
+            ],
+            "donorTimeShiftSeconds": 21.333333333333332,
+            "crossfadeSeconds": 0.045,
+            "method": "Replace the core with donor from the same musical phase and use smoothstep edge blends over the stated blend region; preserve stereo and total timeline duration."
+          },
+          {
+            "cue": "arrival_two_tone",
+            "coreSeconds": [
+              29.005,
+              29.34
+            ],
+            "blendRegionSeconds": [
+              28.96,
+              29.385
+            ],
+            "donorRegionSeconds": [
+              50.29333333333334,
+              50.718333333333334
+            ],
+            "donorTimeShiftSeconds": 21.333333333333332,
+            "crossfadeSeconds": 0.045,
+            "method": "Replace the core with donor from the same musical phase and use smoothstep edge blends over the stated blend region; preserve stereo and total timeline duration."
+          },
+          {
+            "cue": "return_home_two_tone",
+            "coreSeconds": [
+              46.88,
+              47.18
+            ],
+            "blendRegionSeconds": [
+              46.835,
+              47.225
+            ],
+            "donorRegionSeconds": [
+              25.501666666666665,
+              25.891666666666666
+            ],
+            "donorTimeShiftSeconds": -21.333333333333332,
+            "crossfadeSeconds": 0.045,
+            "method": "Replace the core with donor from the same musical phase and use smoothstep edge blends over the stated blend region; preserve stereo and total timeline duration."
+          }
+        ],
+        "outputLengthPolicy": "Reconstruct from the full authorized source, then trim to the new timeline. The approved48.833s example uses these patches. A longer timeline must also inspect any later reference accents (including the source closing cue) and make verified same-phase replacements; do not leave unplanned SFX in the bed. Do not hardcode48.833s or speed up/slow down the music.",
+        "placement": {
+          "startAtBeginning": true,
+          "gainDbStartingPoint": -3,
+          "endingFadeOutSeconds": 1.2,
+          "playbackRate": 1
+        },
+        "knownLimits": [
+          "This is edited mixed source audio, not an isolated clean BGM stem.",
+          "Short extracted SFX other than the opening alarm retain residual BGM; check layered level and avoid doubling.",
+          "Crossfades and signal checks do not establish perceptual seamlessness without audition."
+        ],
+        "finishChecks": [
+          "Inspect peak/discontinuity and clip/head/tail boundaries.",
+          "Confirm every selected scene accent separately and the alarms at both waking scenes when present.",
+          "Play the mixed result if playback is available and report actual audition separately from numeric analysis."
+        ]
+      }
+    },
+    "portableAssets": {
+      "source": "../assets/a07/a07-approved-layout.desktop.jsx",
+      "schema": "../assets/a07/a07-approved-layout.properties.json",
+      "roleOverrides": "../assets/a07/a07-approved-role-overrides.json",
+      "readme": "../assets/a07/README.md",
+      "bodyFont": "../assets/a07/fonts/A07ReferenceSerif-Bold.otf",
+      "fontLicense": "../assets/a07/fonts/NotoSerifCJK-LICENSE.txt",
+      "fontNotice": "../assets/a07/fonts/DERIVATIVE-NOTICE.txt",
+      "clockFont": "../assets/fonts/NotoSerifCJKjp-Black.otf",
+      "bodyFontSha256": "960a21db3b30772f6a99fa02f35ef77cd015525bcd98cdecf8a0e11d0f630002",
+      "sourceContract": "Retained Desktop-compatible source. For Web, adapt only with the active host MG skill and validate; do not pass the Desktop import/export syntax unchanged.",
+      "clockFontSha256": "7a8c8b6dd729eddc63b021284d1eb4ada9974c84609c5eb4b23f9591795e8e76"
+    },
+    "validation": {
+      "userApproved": true,
+      "newPatientRoleFootageGeneratedInProduction": true,
+      "nativeEditableComposite": true,
+      "nativeLocalMp4Export": true,
+      "fullOutputDecode": true,
+      "finalAfterStoryCaptionCompositeInspected": true,
+      "audioUnchangedThroughFinalTextRevisionNumericallyVerified": true,
+      "directAgentAudition": false,
+      "continuousAudiovisualPlaybackByAgent": false,
+      "originalFontIdentityKnown": false,
+      "otherOperatorEndToEnd": false,
+      "newPortablePackageExecutedByAnotherOperator": false,
+      "currentUpdateCreatedNewPaidMedia": false,
+      "scope": "Completed one production and final user approval; original observations and these production checks are separate. No promise of perfect rendering in another environment without its composite check."
+    }
+  }
+}

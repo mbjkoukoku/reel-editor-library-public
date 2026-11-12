@@ -1,0 +1,5820 @@
+{
+  "id": "A03",
+  "version": "0.5.0",
+  "name": "施術風景・縦書きテロップ",
+  "canvas": {
+    "width": 720,
+    "height": 1280,
+    "fps": 30,
+    "durationFrames": 6498
+  },
+  "executionRoute": "native_independent_overlays",
+  "workflow": "caption_only",
+  "durationPolicy": "reference only; adapt to approved copy and actual examination/treatment sequence, not audio pauses",
+  "reference": {
+    "label": "0719(1).mov",
+    "durationSeconds": 216.6,
+    "captionLayerCount": 37,
+    "displayGroupCount": 35,
+    "writingModeCounts": {
+      "vertical": 28,
+      "horizontal": 9
+    },
+    "sourceContainsAudio": true,
+    "useReferenceAudio": false,
+    "blackTailExcludedFrames": 0,
+    "matchEvidence": "37 layers and timings, 4 picture ranges, duration and sampled composites match draft; export takes precedence over later draft updates",
+    "draftDiscrepancies": [
+      "Draft created/updated effects include requestdate after source export. Face blur metadata is not automatically original.",
+      "a03-text-36 draft 検査中... versus observed no trailing dots."
+    ]
+  },
+  "audio": {
+    "muteSource": true,
+    "addNarration": false,
+    "addBgm": false,
+    "addSfx": false,
+    "speechCleanup": false,
+    "speechTranscriptionForCaptions": false
+  },
+  "cuts": [
+    {
+      "start": 0,
+      "end": 715,
+      "role": "座って悩み・検査方針を説明",
+      "visualIntent": "施術者と患者が座って会話・体の動きを説明",
+      "cutType": "hardcut"
+    },
+    {
+      "start": 715,
+      "end": 4695,
+      "role": "評価から施術までを連続して見せる",
+      "visualIntent": "立位での足・動きの検査→座位の説明→仰向けの足の検査→施術。内部の多くは自然な動き・カメラ移動。",
+      "cutType": "hardcut"
+    },
+    {
+      "start": 4695,
+      "end": 5308,
+      "role": "施術後の再検査",
+      "visualIntent": "立位で脚の動きを再確認",
+      "cutType": "hardcut"
+    },
+    {
+      "start": 5308,
+      "end": 6498,
+      "role": "生活指導から案内",
+      "visualIntent": "患者が座る→施術者から説明→予約案内まで",
+      "cutType": "hardcut"
+    }
+  ],
+  "cues": [
+    {
+      "key": "a03-text-01",
+      "groupId": "g01",
+      "start": 0,
+      "end": 201,
+      "style": "white_gothic_black_shadow",
+      "referenceText": "その腰痛、\n腰が原因では\nないかもしれません。",
+      "textIsApprovedForNewClinic": false,
+      "writingMode": "vertical-rl",
+      "lineOrder": "first source line is rightmost column",
+      "layer": {
+        "referenceTrack": 2,
+        "renderIndex": 14000
+      },
+      "animations": [],
+      "observedTransition": "instant cut-on/cut-off; no sampled entrance/exit movement",
+      "sampleFrame": 100,
+      "referenceFrame": "../assets/a03-reference/frame-00100.jpg",
+      "fontIdentity": "draft TTC filename and weight; face selection and ChatCut rendering pending comparison",
+      "fontFiles": [
+        "ヒラギノ角ゴシック W6.ttc"
+      ],
+      "sourceMismatchNote": null,
+      "originalCapCut": {
+        "units": "native CapCut values, not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.0,
+            "y": 1.0
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 1,
+          "alignment": 3,
+          "line_feed": 1,
+          "letter_spacing": 0.1,
+          "line_spacing": 0.36999999999999994,
+          "font_size": 18.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "original_size": [],
+          "force_apply_line_max_width": false,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 39,
+          "global_alpha": 1.0,
+          "text_color": "#ffffff",
+          "text_alpha": 1.0
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    1,
+                    1,
+                    1
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              23
+            ],
+            "shadows": [
+              {
+                "thickness_projection_distance": 0,
+                "thickness_projection_angle": -45,
+                "diffuse": 0.0833333358168602,
+                "distance": 0,
+                "content": {
+                  "solid": {
+                    "color": [
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  "render_type": "solid"
+                },
+                "thickness_projection_enable": false,
+                "angle": 0
+              }
+            ],
+            "useLetterColor": true,
+            "size": 18,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "ttcFaceIndexSpecifiedByDraft": false
+            },
+            "substring": "その腰痛、\n腰が原因では\nないかもしれません。"
+          }
+        ],
+        "textEffects": []
+      },
+      "clinicFactPolicy": "今回の対象症状・施術方針と合うか確認。合う部分は原文の流れ・語り口を保つ。"
+    },
+    {
+      "key": "a03-text-02",
+      "groupId": "g02",
+      "start": 202,
+      "end": 331,
+      "style": "white_gothic_black_shadow",
+      "referenceText": "病院や整体で\n改善しない方へ",
+      "textIsApprovedForNewClinic": false,
+      "writingMode": "vertical-rl",
+      "lineOrder": "first source line is rightmost column",
+      "layer": {
+        "referenceTrack": 2,
+        "renderIndex": 14000
+      },
+      "animations": [],
+      "observedTransition": "instant cut-on/cut-off; no sampled entrance/exit movement",
+      "sampleFrame": 266,
+      "referenceFrame": "../assets/a03-reference/frame-00266.jpg",
+      "fontIdentity": "draft TTC filename and weight; face selection and ChatCut rendering pending comparison",
+      "fontFiles": [
+        "ヒラギノ角ゴシック W6.ttc"
+      ],
+      "sourceMismatchNote": null,
+      "originalCapCut": {
+        "units": "native CapCut values, not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.0,
+            "y": 1.0
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 1,
+          "alignment": 3,
+          "line_feed": 1,
+          "letter_spacing": 0.1,
+          "line_spacing": 0.36999999999999994,
+          "font_size": 18.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "original_size": [],
+          "force_apply_line_max_width": false,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 39,
+          "global_alpha": 1.0,
+          "text_color": "#ffffff",
+          "text_alpha": 1.0
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    1,
+                    1,
+                    1
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              14
+            ],
+            "shadows": [
+              {
+                "thickness_projection_distance": 0,
+                "thickness_projection_angle": -45,
+                "diffuse": 0.0833333358168602,
+                "distance": 0,
+                "content": {
+                  "solid": {
+                    "color": [
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  "render_type": "solid"
+                },
+                "thickness_projection_enable": false,
+                "angle": 0
+              }
+            ],
+            "useLetterColor": true,
+            "size": 18,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "ttcFaceIndexSpecifiedByDraft": false
+            },
+            "substring": "病院や整体で\n改善しない方へ"
+          }
+        ],
+        "textEffects": []
+      },
+      "clinicFactPolicy": "今回の対象症状・施術方針と合うか確認。合う部分は原文の流れ・語り口を保つ。"
+    },
+    {
+      "key": "a03-text-03",
+      "groupId": "g03",
+      "start": 331,
+      "end": 471,
+      "style": "white_gothic_black_shadow",
+      "referenceText": "施術後は体は\n楽になってきた。",
+      "textIsApprovedForNewClinic": false,
+      "writingMode": "vertical-rl",
+      "lineOrder": "first source line is rightmost column",
+      "layer": {
+        "referenceTrack": 2,
+        "renderIndex": 14000
+      },
+      "animations": [],
+      "observedTransition": "instant cut-on/cut-off; no sampled entrance/exit movement",
+      "sampleFrame": 401,
+      "referenceFrame": "../assets/a03-reference/frame-00401.jpg",
+      "fontIdentity": "draft TTC filename and weight; face selection and ChatCut rendering pending comparison",
+      "fontFiles": [
+        "ヒラギノ角ゴシック W6.ttc"
+      ],
+      "sourceMismatchNote": null,
+      "originalCapCut": {
+        "units": "native CapCut values, not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.0,
+            "y": 1.0
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 1,
+          "alignment": 3,
+          "line_feed": 1,
+          "letter_spacing": 0.1,
+          "line_spacing": 0.36999999999999994,
+          "font_size": 18.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "original_size": [],
+          "force_apply_line_max_width": false,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 39,
+          "global_alpha": 1.0,
+          "text_color": "#ffffff",
+          "text_alpha": 1.0
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    1,
+                    1,
+                    1
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              15
+            ],
+            "shadows": [
+              {
+                "thickness_projection_distance": 0,
+                "thickness_projection_angle": -45,
+                "diffuse": 0.0833333358168602,
+                "distance": 0,
+                "content": {
+                  "solid": {
+                    "color": [
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  "render_type": "solid"
+                },
+                "thickness_projection_enable": false,
+                "angle": 0
+              }
+            ],
+            "useLetterColor": true,
+            "size": 18,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "ttcFaceIndexSpecifiedByDraft": false
+            },
+            "substring": "施術後は体は\n楽になってきた。"
+          }
+        ],
+        "textEffects": []
+      },
+      "clinicFactPolicy": "今回の対象症状・施術方針と合うか確認。合う部分は原文の流れ・語り口を保つ。"
+    },
+    {
+      "key": "a03-text-04",
+      "groupId": "g04",
+      "start": 471,
+      "end": 602,
+      "style": "white_gothic_black_shadow",
+      "referenceText": "でも忙しくなると、\nまた腰が痛む",
+      "textIsApprovedForNewClinic": false,
+      "writingMode": "vertical-rl",
+      "lineOrder": "first source line is rightmost column",
+      "layer": {
+        "referenceTrack": 2,
+        "renderIndex": 14000
+      },
+      "animations": [],
+      "observedTransition": "instant cut-on/cut-off; no sampled entrance/exit movement",
+      "sampleFrame": 536,
+      "referenceFrame": "../assets/a03-reference/frame-00536.jpg",
+      "fontIdentity": "draft TTC filename and weight; face selection and ChatCut rendering pending comparison",
+      "fontFiles": [
+        "ヒラギノ角ゴシック W6.ttc"
+      ],
+      "sourceMismatchNote": null,
+      "originalCapCut": {
+        "units": "native CapCut values, not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.0,
+            "y": 1.0
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 1,
+          "alignment": 3,
+          "line_feed": 1,
+          "letter_spacing": 0.1,
+          "line_spacing": 0.36999999999999994,
+          "font_size": 18.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "original_size": [],
+          "force_apply_line_max_width": false,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 39,
+          "global_alpha": 1.0,
+          "text_color": "#ffffff",
+          "text_alpha": 1.0
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    1,
+                    1,
+                    1
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              16
+            ],
+            "shadows": [
+              {
+                "thickness_projection_distance": 0,
+                "thickness_projection_angle": -45,
+                "diffuse": 0.0833333358168602,
+                "distance": 0,
+                "content": {
+                  "solid": {
+                    "color": [
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  "render_type": "solid"
+                },
+                "thickness_projection_enable": false,
+                "angle": 0
+              }
+            ],
+            "useLetterColor": true,
+            "size": 18,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "ttcFaceIndexSpecifiedByDraft": false
+            },
+            "substring": "でも忙しくなると、\nまた腰が痛む"
+          }
+        ],
+        "textEffects": []
+      },
+      "clinicFactPolicy": "今回の対象症状・施術方針と合うか確認。合う部分は原文の流れ・語り口を保つ。"
+    },
+    {
+      "key": "a03-text-05",
+      "groupId": "g05",
+      "start": 602,
+      "end": 728,
+      "style": "white_gothic_black_shadow",
+      "referenceText": "そんな経験、\n今でもされていませんか？",
+      "textIsApprovedForNewClinic": false,
+      "writingMode": "vertical-rl",
+      "lineOrder": "first source line is rightmost column",
+      "layer": {
+        "referenceTrack": 2,
+        "renderIndex": 14000
+      },
+      "animations": [],
+      "observedTransition": "instant cut-on/cut-off; no sampled entrance/exit movement",
+      "sampleFrame": 665,
+      "referenceFrame": "../assets/a03-reference/frame-00665.jpg",
+      "fontIdentity": "draft TTC filename and weight; face selection and ChatCut rendering pending comparison",
+      "fontFiles": [
+        "ヒラギノ角ゴシック W6.ttc"
+      ],
+      "sourceMismatchNote": null,
+      "originalCapCut": {
+        "units": "native CapCut values, not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.0,
+            "y": 1.0
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 1,
+          "alignment": 3,
+          "line_feed": 1,
+          "letter_spacing": 0.1,
+          "line_spacing": 0.36999999999999994,
+          "font_size": 18.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "original_size": [],
+          "force_apply_line_max_width": false,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 39,
+          "global_alpha": 1.0,
+          "text_color": "#ffffff",
+          "text_alpha": 1.0
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    1,
+                    1,
+                    1
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              19
+            ],
+            "shadows": [
+              {
+                "thickness_projection_distance": 0,
+                "thickness_projection_angle": -45,
+                "diffuse": 0.0833333358168602,
+                "distance": 0,
+                "content": {
+                  "solid": {
+                    "color": [
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  "render_type": "solid"
+                },
+                "thickness_projection_enable": false,
+                "angle": 0
+              }
+            ],
+            "useLetterColor": true,
+            "size": 18,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "ttcFaceIndexSpecifiedByDraft": false
+            },
+            "substring": "そんな経験、\n今でもされていませんか？"
+          }
+        ],
+        "textEffects": []
+      },
+      "clinicFactPolicy": "今回の対象症状・施術方針と合うか確認。合う部分は原文の流れ・語り口を保つ。"
+    },
+    {
+      "key": "a03-text-06",
+      "groupId": "g06",
+      "start": 731,
+      "end": 965,
+      "style": "white_gothic_black_shadow",
+      "referenceText": "当院ではまずはしっかり\n評価から始めます",
+      "textIsApprovedForNewClinic": false,
+      "writingMode": "vertical-rl",
+      "lineOrder": "first source line is rightmost column",
+      "layer": {
+        "referenceTrack": 2,
+        "renderIndex": 14000
+      },
+      "animations": [],
+      "observedTransition": "instant cut-on/cut-off; no sampled entrance/exit movement",
+      "sampleFrame": 848,
+      "referenceFrame": "../assets/a03-reference/frame-00848.jpg",
+      "fontIdentity": "draft TTC filename and weight; face selection and ChatCut rendering pending comparison",
+      "fontFiles": [
+        "ヒラギノ角ゴシック W6.ttc"
+      ],
+      "sourceMismatchNote": null,
+      "originalCapCut": {
+        "units": "native CapCut values, not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.0,
+            "y": 1.0
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 1,
+          "alignment": 3,
+          "line_feed": 1,
+          "letter_spacing": 0.1,
+          "line_spacing": 0.36999999999999994,
+          "font_size": 18.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "original_size": [],
+          "force_apply_line_max_width": false,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 39,
+          "global_alpha": 1.0,
+          "text_color": "#ffffff",
+          "text_alpha": 1.0
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    1,
+                    1,
+                    1
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              20
+            ],
+            "shadows": [
+              {
+                "thickness_projection_distance": 0,
+                "thickness_projection_angle": -45,
+                "diffuse": 0.0833333358168602,
+                "distance": 0,
+                "content": {
+                  "solid": {
+                    "color": [
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  "render_type": "solid"
+                },
+                "thickness_projection_enable": false,
+                "angle": 0
+              }
+            ],
+            "useLetterColor": true,
+            "size": 18,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "ttcFaceIndexSpecifiedByDraft": false
+            },
+            "substring": "当院ではまずはしっかり\n評価から始めます"
+          }
+        ],
+        "textEffects": []
+      },
+      "clinicFactPolicy": "今回の対象症状・施術方針と合うか確認。合う部分は原文の流れ・語り口を保つ。"
+    },
+    {
+      "key": "a03-text-07",
+      "groupId": "g07",
+      "start": 965,
+      "end": 1143,
+      "style": "white_gothic_black_shadow",
+      "referenceText": "痛い場所だけでは\n判断しません。",
+      "textIsApprovedForNewClinic": false,
+      "writingMode": "vertical-rl",
+      "lineOrder": "first source line is rightmost column",
+      "layer": {
+        "referenceTrack": 2,
+        "renderIndex": 14000
+      },
+      "animations": [],
+      "observedTransition": "instant cut-on/cut-off; no sampled entrance/exit movement",
+      "sampleFrame": 1054,
+      "referenceFrame": "../assets/a03-reference/frame-01054.jpg",
+      "fontIdentity": "draft TTC filename and weight; face selection and ChatCut rendering pending comparison",
+      "fontFiles": [
+        "ヒラギノ角ゴシック W6.ttc"
+      ],
+      "sourceMismatchNote": null,
+      "originalCapCut": {
+        "units": "native CapCut values, not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.0,
+            "y": 1.0
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 1,
+          "alignment": 3,
+          "line_feed": 1,
+          "letter_spacing": 0.1,
+          "line_spacing": 0.36999999999999994,
+          "font_size": 18.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "original_size": [],
+          "force_apply_line_max_width": false,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 39,
+          "global_alpha": 1.0,
+          "text_color": "#ffffff",
+          "text_alpha": 1.0
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    1,
+                    1,
+                    1
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              16
+            ],
+            "shadows": [
+              {
+                "thickness_projection_distance": 0,
+                "thickness_projection_angle": -45,
+                "diffuse": 0.0833333358168602,
+                "distance": 0,
+                "content": {
+                  "solid": {
+                    "color": [
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  "render_type": "solid"
+                },
+                "thickness_projection_enable": false,
+                "angle": 0
+              }
+            ],
+            "useLetterColor": true,
+            "size": 18,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "ttcFaceIndexSpecifiedByDraft": false
+            },
+            "substring": "痛い場所だけでは\n判断しません。"
+          }
+        ],
+        "textEffects": []
+      },
+      "clinicFactPolicy": "今回の対象症状・施術方針と合うか確認。合う部分は原文の流れ・語り口を保つ。"
+    },
+    {
+      "key": "a03-text-08",
+      "groupId": "g08",
+      "start": 1146,
+      "end": 1341,
+      "style": "white_gothic_black_shadow",
+      "referenceText": "動きのクセまで\n細かくチェックします。",
+      "textIsApprovedForNewClinic": false,
+      "writingMode": "vertical-rl",
+      "lineOrder": "first source line is rightmost column",
+      "layer": {
+        "referenceTrack": 2,
+        "renderIndex": 14000
+      },
+      "animations": [],
+      "observedTransition": "instant cut-on/cut-off; no sampled entrance/exit movement",
+      "sampleFrame": 1243,
+      "referenceFrame": "../assets/a03-reference/frame-01243.jpg",
+      "fontIdentity": "draft TTC filename and weight; face selection and ChatCut rendering pending comparison",
+      "fontFiles": [
+        "ヒラギノ角ゴシック W6.ttc"
+      ],
+      "sourceMismatchNote": null,
+      "originalCapCut": {
+        "units": "native CapCut values, not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.0,
+            "y": 1.0
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 1,
+          "alignment": 3,
+          "line_feed": 1,
+          "letter_spacing": 0.1,
+          "line_spacing": 0.36999999999999994,
+          "font_size": 18.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "original_size": [],
+          "force_apply_line_max_width": false,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 39,
+          "global_alpha": 1.0,
+          "text_color": "#ffffff",
+          "text_alpha": 1.0
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    1,
+                    1,
+                    1
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              19
+            ],
+            "shadows": [
+              {
+                "thickness_projection_distance": 0,
+                "thickness_projection_angle": -45,
+                "diffuse": 0.0833333358168602,
+                "distance": 0,
+                "content": {
+                  "solid": {
+                    "color": [
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  "render_type": "solid"
+                },
+                "thickness_projection_enable": false,
+                "angle": 0
+              }
+            ],
+            "useLetterColor": true,
+            "size": 18,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "ttcFaceIndexSpecifiedByDraft": false
+            },
+            "substring": "動きのクセまで\n細かくチェックします。"
+          }
+        ],
+        "textEffects": []
+      },
+      "clinicFactPolicy": "今回の対象症状・施術方針と合うか確認。合う部分は原文の流れ・語り口を保つ。"
+    },
+    {
+      "key": "a03-text-09",
+      "groupId": "g09",
+      "start": 1341,
+      "end": 1537,
+      "style": "white_gothic_black_shadow",
+      "referenceText": "足の動きに\n左右差あります。",
+      "textIsApprovedForNewClinic": false,
+      "writingMode": "vertical-rl",
+      "lineOrder": "first source line is rightmost column",
+      "layer": {
+        "referenceTrack": 2,
+        "renderIndex": 14000
+      },
+      "animations": [],
+      "observedTransition": "instant cut-on/cut-off; no sampled entrance/exit movement",
+      "sampleFrame": 1439,
+      "referenceFrame": "../assets/a03-reference/frame-01439.jpg",
+      "fontIdentity": "draft TTC filename and weight; face selection and ChatCut rendering pending comparison",
+      "fontFiles": [
+        "ヒラギノ角ゴシック W6.ttc"
+      ],
+      "sourceMismatchNote": null,
+      "originalCapCut": {
+        "units": "native CapCut values, not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.0,
+            "y": 1.0
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 1,
+          "alignment": 3,
+          "line_feed": 1,
+          "letter_spacing": 0.1,
+          "line_spacing": 0.41999999999999993,
+          "font_size": 18.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "original_size": [],
+          "force_apply_line_max_width": false,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 39,
+          "global_alpha": 1.0,
+          "text_color": "#ffffff",
+          "text_alpha": 1.0
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    1,
+                    1,
+                    1
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              14
+            ],
+            "shadows": [
+              {
+                "thickness_projection_distance": 0,
+                "thickness_projection_angle": -45,
+                "diffuse": 0.0833333358168602,
+                "distance": 0,
+                "content": {
+                  "solid": {
+                    "color": [
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  "render_type": "solid"
+                },
+                "thickness_projection_enable": false,
+                "angle": 0
+              }
+            ],
+            "useLetterColor": true,
+            "size": 18,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "ttcFaceIndexSpecifiedByDraft": false
+            },
+            "substring": "足の動きに\n左右差あります。"
+          }
+        ],
+        "textEffects": []
+      },
+      "clinicFactPolicy": "今回の検査・施術前後の場面や所見に依存。台本は仮とし、素材で確認できなければ変更案を出す。"
+    },
+    {
+      "key": "a03-text-10",
+      "groupId": "g10",
+      "start": 1537,
+      "end": 1737,
+      "style": "white_gothic_black_shadow",
+      "referenceText": "これがどこに行っても\nよくならない「原因」です",
+      "textIsApprovedForNewClinic": false,
+      "writingMode": "vertical-rl",
+      "lineOrder": "first source line is rightmost column",
+      "layer": {
+        "referenceTrack": 2,
+        "renderIndex": 14000
+      },
+      "animations": [],
+      "observedTransition": "instant cut-on/cut-off; no sampled entrance/exit movement",
+      "sampleFrame": 1637,
+      "referenceFrame": "../assets/a03-reference/frame-01637.jpg",
+      "fontIdentity": "draft TTC filename and weight; face selection and ChatCut rendering pending comparison",
+      "fontFiles": [
+        "ヒラギノ角ゴシック W6.ttc"
+      ],
+      "sourceMismatchNote": null,
+      "originalCapCut": {
+        "units": "native CapCut values, not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.0,
+            "y": 1.0
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 1,
+          "alignment": 3,
+          "line_feed": 1,
+          "letter_spacing": 0.1,
+          "line_spacing": 0.41999999999999993,
+          "font_size": 18.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "original_size": [],
+          "force_apply_line_max_width": false,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 39,
+          "global_alpha": 1.0,
+          "text_color": "#ffffff",
+          "text_alpha": 1.0
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    1,
+                    1,
+                    1
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              23
+            ],
+            "shadows": [
+              {
+                "thickness_projection_distance": 0,
+                "thickness_projection_angle": -45,
+                "diffuse": 0.0833333358168602,
+                "distance": 0,
+                "content": {
+                  "solid": {
+                    "color": [
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  "render_type": "solid"
+                },
+                "thickness_projection_enable": false,
+                "angle": 0
+              }
+            ],
+            "useLetterColor": true,
+            "size": 18,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "ttcFaceIndexSpecifiedByDraft": false
+            },
+            "substring": "これがどこに行っても\nよくならない「原因」です"
+          }
+        ],
+        "textEffects": []
+      },
+      "clinicFactPolicy": "症状の原因・身体の関係・効果に関する見本文。今回のLP・提供情報に根拠がなければ断定を引き継がず、同じ役割の確認可能な文へ最小限変更する。"
+    },
+    {
+      "key": "a03-text-11",
+      "groupId": "g11",
+      "start": 1737,
+      "end": 1951,
+      "style": "white_gothic_black_shadow",
+      "referenceText": "腰の痛みが\n戻る原因は",
+      "textIsApprovedForNewClinic": false,
+      "writingMode": "vertical-rl",
+      "lineOrder": "first source line is rightmost column",
+      "layer": {
+        "referenceTrack": 2,
+        "renderIndex": 14000
+      },
+      "animations": [],
+      "observedTransition": "instant cut-on/cut-off; no sampled entrance/exit movement",
+      "sampleFrame": 1844,
+      "referenceFrame": "../assets/a03-reference/frame-01844.jpg",
+      "fontIdentity": "draft TTC filename and weight; face selection and ChatCut rendering pending comparison",
+      "fontFiles": [
+        "ヒラギノ角ゴシック W6.ttc"
+      ],
+      "sourceMismatchNote": null,
+      "originalCapCut": {
+        "units": "native CapCut values, not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.0,
+            "y": 1.0
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": 0.4014454657013098
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 1,
+          "alignment": 3,
+          "line_feed": 1,
+          "letter_spacing": 0.1,
+          "line_spacing": 0.41999999999999993,
+          "font_size": 21.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "original_size": [],
+          "force_apply_line_max_width": false,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": true,
+          "check_flag": 39,
+          "global_alpha": 1.0,
+          "text_color": "#ffffff",
+          "text_alpha": 1.0
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    1,
+                    1,
+                    1
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              11
+            ],
+            "shadows": [
+              {
+                "thickness_projection_distance": 0,
+                "thickness_projection_angle": -45,
+                "diffuse": 0.0833333358168602,
+                "distance": 0,
+                "content": {
+                  "solid": {
+                    "color": [
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  "render_type": "solid"
+                },
+                "thickness_projection_enable": false,
+                "angle": 0
+              }
+            ],
+            "useLetterColor": true,
+            "size": 18,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "ttcFaceIndexSpecifiedByDraft": false
+            },
+            "substring": "腰の痛みが\n戻る原因は"
+          }
+        ],
+        "textEffects": []
+      },
+      "clinicFactPolicy": "症状の原因・身体の関係・効果に関する見本文。今回のLP・提供情報に根拠がなければ断定を引き継がず、同じ役割の確認可能な文へ最小限変更する。"
+    },
+    {
+      "key": "a03-text-12",
+      "groupId": "g12",
+      "start": 1951,
+      "end": 2166,
+      "style": "white_gothic_black_shadow",
+      "referenceText": "小指側に体重が乗る\n足が外側へ倒れやすくなる",
+      "textIsApprovedForNewClinic": false,
+      "writingMode": "vertical-rl",
+      "lineOrder": "first source line is rightmost column",
+      "layer": {
+        "referenceTrack": 2,
+        "renderIndex": 14000
+      },
+      "animations": [],
+      "observedTransition": "instant cut-on/cut-off; no sampled entrance/exit movement",
+      "sampleFrame": 2058,
+      "referenceFrame": "../assets/a03-reference/frame-02058.jpg",
+      "fontIdentity": "draft TTC filename and weight; face selection and ChatCut rendering pending comparison",
+      "fontFiles": [
+        "ヒラギノ角ゴシック W6.ttc"
+      ],
+      "sourceMismatchNote": null,
+      "originalCapCut": {
+        "units": "native CapCut values, not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.0,
+            "y": 1.0
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 1,
+          "alignment": 3,
+          "line_feed": 1,
+          "letter_spacing": 0.1,
+          "line_spacing": 0.41999999999999993,
+          "font_size": 18.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "original_size": [],
+          "force_apply_line_max_width": false,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 39,
+          "global_alpha": 1.0,
+          "text_color": "#ffffff",
+          "text_alpha": 1.0
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    1,
+                    1,
+                    1
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              22
+            ],
+            "shadows": [
+              {
+                "thickness_projection_distance": 0,
+                "thickness_projection_angle": -45,
+                "diffuse": 0.0833333358168602,
+                "distance": 0,
+                "content": {
+                  "solid": {
+                    "color": [
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  "render_type": "solid"
+                },
+                "thickness_projection_enable": false,
+                "angle": 0
+              }
+            ],
+            "useLetterColor": true,
+            "size": 18,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "ttcFaceIndexSpecifiedByDraft": false
+            },
+            "substring": "小指側に体重が乗る\n足が外側へ倒れやすくなる"
+          }
+        ],
+        "textEffects": []
+      },
+      "clinicFactPolicy": "症状の原因・身体の関係・効果に関する見本文。今回のLP・提供情報に根拠がなければ断定を引き継がず、同じ役割の確認可能な文へ最小限変更する。"
+    },
+    {
+      "key": "a03-text-13",
+      "groupId": "g13",
+      "start": 2166,
+      "end": 2381,
+      "style": "white_gothic_black_shadow",
+      "referenceText": "外側の筋肉が引っ張られて\n腰も下に引っ張られて",
+      "textIsApprovedForNewClinic": false,
+      "writingMode": "vertical-rl",
+      "lineOrder": "first source line is rightmost column",
+      "layer": {
+        "referenceTrack": 2,
+        "renderIndex": 14000
+      },
+      "animations": [],
+      "observedTransition": "instant cut-on/cut-off; no sampled entrance/exit movement",
+      "sampleFrame": 2273,
+      "referenceFrame": "../assets/a03-reference/frame-02273.jpg",
+      "fontIdentity": "draft TTC filename and weight; face selection and ChatCut rendering pending comparison",
+      "fontFiles": [
+        "ヒラギノ角ゴシック W6.ttc"
+      ],
+      "sourceMismatchNote": null,
+      "originalCapCut": {
+        "units": "native CapCut values, not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.0,
+            "y": 1.0
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 1,
+          "alignment": 3,
+          "line_feed": 1,
+          "letter_spacing": 0.1,
+          "line_spacing": 0.41999999999999993,
+          "font_size": 18.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "original_size": [],
+          "force_apply_line_max_width": false,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 39,
+          "global_alpha": 1.0,
+          "text_color": "#ffffff",
+          "text_alpha": 1.0
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    1,
+                    1,
+                    1
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              23
+            ],
+            "shadows": [
+              {
+                "thickness_projection_distance": 0,
+                "thickness_projection_angle": -45,
+                "diffuse": 0.0833333358168602,
+                "distance": 0,
+                "content": {
+                  "solid": {
+                    "color": [
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  "render_type": "solid"
+                },
+                "thickness_projection_enable": false,
+                "angle": 0
+              }
+            ],
+            "useLetterColor": true,
+            "size": 18,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "ttcFaceIndexSpecifiedByDraft": false
+            },
+            "substring": "外側の筋肉が引っ張られて\n腰も下に引っ張られて"
+          }
+        ],
+        "textEffects": []
+      },
+      "clinicFactPolicy": "症状の原因・身体の関係・効果に関する見本文。今回のLP・提供情報に根拠がなければ断定を引き継がず、同じ役割の確認可能な文へ最小限変更する。"
+    },
+    {
+      "key": "a03-text-14",
+      "groupId": "g14",
+      "start": 2381,
+      "end": 2630,
+      "style": "white_gothic_black_shadow",
+      "referenceText": "これが腰痛の\n治らない原因です",
+      "textIsApprovedForNewClinic": false,
+      "writingMode": "vertical-rl",
+      "lineOrder": "first source line is rightmost column",
+      "layer": {
+        "referenceTrack": 2,
+        "renderIndex": 14000
+      },
+      "animations": [],
+      "observedTransition": "instant cut-on/cut-off; no sampled entrance/exit movement",
+      "sampleFrame": 2505,
+      "referenceFrame": "../assets/a03-reference/frame-02505.jpg",
+      "fontIdentity": "draft TTC filename and weight; face selection and ChatCut rendering pending comparison",
+      "fontFiles": [
+        "ヒラギノ角ゴシック W7.ttc"
+      ],
+      "sourceMismatchNote": null,
+      "originalCapCut": {
+        "units": "native CapCut values, not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.0,
+            "y": 1.0
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 1,
+          "alignment": 3,
+          "line_feed": 1,
+          "letter_spacing": 0.1,
+          "line_spacing": 0.41999999999999993,
+          "font_size": 22.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "original_size": [],
+          "force_apply_line_max_width": false,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": false,
+          "is_rich_text": true,
+          "check_flag": 39,
+          "global_alpha": 1.0,
+          "text_color": "#ff3232",
+          "text_alpha": 1.0
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    1,
+                    1,
+                    1
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              7
+            ],
+            "shadows": [
+              {
+                "thickness_projection_distance": 0,
+                "thickness_projection_angle": -45,
+                "diffuse": 0.0833333358168602,
+                "distance": 0,
+                "content": {
+                  "solid": {
+                    "color": [
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  "render_type": "solid"
+                },
+                "thickness_projection_enable": false,
+                "angle": 0
+              }
+            ],
+            "useLetterColor": true,
+            "size": 22,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W7.ttc",
+              "ttcFaceIndexSpecifiedByDraft": false
+            },
+            "substring": "これが腰痛の\n"
+          },
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    1,
+                    0.196078434586525,
+                    0.196078434586525
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              7,
+              13
+            ],
+            "shadows": [
+              {
+                "thickness_projection_distance": 0,
+                "thickness_projection_angle": -45,
+                "diffuse": 0.0833333358168602,
+                "distance": 0,
+                "content": {
+                  "solid": {
+                    "color": [
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  "render_type": "solid"
+                },
+                "thickness_projection_enable": false,
+                "angle": 0
+              }
+            ],
+            "useLetterColor": true,
+            "size": 22,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W7.ttc",
+              "ttcFaceIndexSpecifiedByDraft": false
+            },
+            "substring": "治らない原因"
+          },
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    1,
+                    1,
+                    1
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              13,
+              15
+            ],
+            "shadows": [
+              {
+                "thickness_projection_distance": 0,
+                "thickness_projection_angle": -45,
+                "diffuse": 0.0833333358168602,
+                "distance": 0,
+                "content": {
+                  "solid": {
+                    "color": [
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  "render_type": "solid"
+                },
+                "thickness_projection_enable": false,
+                "angle": 0
+              }
+            ],
+            "useLetterColor": true,
+            "size": 22,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W7.ttc",
+              "ttcFaceIndexSpecifiedByDraft": false
+            },
+            "substring": "です"
+          }
+        ],
+        "textEffects": []
+      },
+      "clinicFactPolicy": "症状の原因・身体の関係・効果に関する見本文。今回のLP・提供情報に根拠がなければ断定を引き継がず、同じ役割の確認可能な文へ最小限変更する。"
+    },
+    {
+      "key": "a03-text-15",
+      "groupId": "g15",
+      "start": 2630,
+      "end": 2997,
+      "style": "white_gothic_black_shadow",
+      "referenceText": "動きのクセまで\n確認することが大切",
+      "textIsApprovedForNewClinic": false,
+      "writingMode": "vertical-rl",
+      "lineOrder": "first source line is rightmost column",
+      "layer": {
+        "referenceTrack": 2,
+        "renderIndex": 14000
+      },
+      "animations": [],
+      "observedTransition": "instant cut-on/cut-off; no sampled entrance/exit movement",
+      "sampleFrame": 2813,
+      "referenceFrame": "../assets/a03-reference/frame-02813.jpg",
+      "fontIdentity": "draft TTC filename and weight; face selection and ChatCut rendering pending comparison",
+      "fontFiles": [
+        "ヒラギノ角ゴシック W7.ttc"
+      ],
+      "sourceMismatchNote": null,
+      "originalCapCut": {
+        "units": "native CapCut values, not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.0,
+            "y": 1.0
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 1,
+          "alignment": 3,
+          "line_feed": 1,
+          "letter_spacing": 0.1,
+          "line_spacing": 0.41999999999999993,
+          "font_size": 21.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "original_size": [],
+          "force_apply_line_max_width": false,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": false,
+          "is_rich_text": true,
+          "check_flag": 39,
+          "global_alpha": 1.0,
+          "text_color": "#ff4545",
+          "text_alpha": 1.0
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    1,
+                    0.2705882489681244,
+                    0.2705882489681244
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              5
+            ],
+            "shadows": [
+              {
+                "thickness_projection_distance": 0,
+                "thickness_projection_angle": -45,
+                "diffuse": 0.0833333358168602,
+                "distance": 0,
+                "content": {
+                  "solid": {
+                    "color": [
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  "render_type": "solid"
+                },
+                "thickness_projection_enable": false,
+                "angle": 0
+              }
+            ],
+            "useLetterColor": true,
+            "size": 21,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W7.ttc",
+              "ttcFaceIndexSpecifiedByDraft": false
+            },
+            "substring": "動きのクセ"
+          },
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    1,
+                    1,
+                    1
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              5,
+              17
+            ],
+            "shadows": [
+              {
+                "thickness_projection_distance": 0,
+                "thickness_projection_angle": -45,
+                "diffuse": 0.0833333358168602,
+                "distance": 0,
+                "content": {
+                  "solid": {
+                    "color": [
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  "render_type": "solid"
+                },
+                "thickness_projection_enable": false,
+                "angle": 0
+              }
+            ],
+            "useLetterColor": true,
+            "size": 21,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W7.ttc",
+              "ttcFaceIndexSpecifiedByDraft": false
+            },
+            "substring": "まで\n確認することが大切"
+          }
+        ],
+        "textEffects": []
+      },
+      "clinicFactPolicy": "今回の対象症状・施術方針と合うか確認。合う部分は原文の流れ・語り口を保つ。"
+    },
+    {
+      "key": "a03-text-16",
+      "groupId": "g16",
+      "start": 3047,
+      "end": 3296,
+      "style": "white_gothic_black_shadow",
+      "referenceText": "仰向けでも\n足の使い方を確認",
+      "textIsApprovedForNewClinic": false,
+      "writingMode": "vertical-rl",
+      "lineOrder": "first source line is rightmost column",
+      "layer": {
+        "referenceTrack": 2,
+        "renderIndex": 14000
+      },
+      "animations": [],
+      "observedTransition": "instant cut-on/cut-off; no sampled entrance/exit movement",
+      "sampleFrame": 3171,
+      "referenceFrame": "../assets/a03-reference/frame-03171.jpg",
+      "fontIdentity": "draft TTC filename and weight; face selection and ChatCut rendering pending comparison",
+      "fontFiles": [
+        "ヒラギノ角ゴシック W6.ttc"
+      ],
+      "sourceMismatchNote": null,
+      "originalCapCut": {
+        "units": "native CapCut values, not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.0,
+            "y": 1.0
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 1,
+          "alignment": 3,
+          "line_feed": 1,
+          "letter_spacing": 0.1,
+          "line_spacing": 0.41999999999999993,
+          "font_size": 18.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "original_size": [],
+          "force_apply_line_max_width": false,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 39,
+          "global_alpha": 1.0,
+          "text_color": "#ffffff",
+          "text_alpha": 1.0
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    1,
+                    1,
+                    1
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              14
+            ],
+            "shadows": [
+              {
+                "thickness_projection_distance": 0,
+                "thickness_projection_angle": -45,
+                "diffuse": 0.0833333358168602,
+                "distance": 0,
+                "content": {
+                  "solid": {
+                    "color": [
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  "render_type": "solid"
+                },
+                "thickness_projection_enable": false,
+                "angle": 0
+              }
+            ],
+            "useLetterColor": true,
+            "size": 18,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "ttcFaceIndexSpecifiedByDraft": false
+            },
+            "substring": "仰向けでも\n足の使い方を確認"
+          }
+        ],
+        "textEffects": []
+      },
+      "clinicFactPolicy": "今回の対象症状・施術方針と合うか確認。合う部分は原文の流れ・語り口を保つ。"
+    },
+    {
+      "key": "a03-text-17",
+      "groupId": "g18",
+      "start": 3535,
+      "end": 3724,
+      "style": "white_gothic_black_shadow",
+      "referenceText": "小指が上がらず\n親指だけが上がる",
+      "textIsApprovedForNewClinic": false,
+      "writingMode": "horizontal-tb",
+      "lineOrder": "top to bottom",
+      "layer": {
+        "referenceTrack": 2,
+        "renderIndex": 14000
+      },
+      "animations": [],
+      "observedTransition": "instant cut-on/cut-off; no sampled entrance/exit movement",
+      "sampleFrame": 3629,
+      "referenceFrame": "../assets/a03-reference/frame-03629.jpg",
+      "fontIdentity": "draft TTC filename and weight; face selection and ChatCut rendering pending comparison",
+      "fontFiles": [
+        "ヒラギノ角ゴシック W6.ttc"
+      ],
+      "sourceMismatchNote": null,
+      "originalCapCut": {
+        "units": "native CapCut values, not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.0,
+            "y": 1.0
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": -0.47796534502903754
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 0,
+          "alignment": 1,
+          "line_feed": 1,
+          "letter_spacing": 0.1,
+          "line_spacing": 0.41999999999999993,
+          "font_size": 17.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "original_size": [],
+          "force_apply_line_max_width": false,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 39,
+          "global_alpha": 1.0,
+          "text_color": "#ffffff",
+          "text_alpha": 1.0
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    1,
+                    1,
+                    1
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              16
+            ],
+            "shadows": [
+              {
+                "thickness_projection_distance": 0,
+                "thickness_projection_angle": -45,
+                "diffuse": 0.0833333358168602,
+                "distance": 0,
+                "content": {
+                  "solid": {
+                    "color": [
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  "render_type": "solid"
+                },
+                "thickness_projection_enable": false,
+                "angle": 0
+              }
+            ],
+            "useLetterColor": true,
+            "size": 17,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "ttcFaceIndexSpecifiedByDraft": false
+            },
+            "substring": "小指が上がらず\n親指だけが上がる"
+          }
+        ],
+        "textEffects": []
+      },
+      "clinicFactPolicy": "今回の検査・施術前後の場面や所見に依存。台本は仮とし、素材で確認できなければ変更案を出す。"
+    },
+    {
+      "key": "a03-text-18",
+      "groupId": "g19",
+      "start": 3724,
+      "end": 3856,
+      "style": "white_gothic_black_shadow",
+      "referenceText": "親指も小指も\n真っ直ぐなのが\nただしい",
+      "textIsApprovedForNewClinic": false,
+      "writingMode": "horizontal-tb",
+      "lineOrder": "top to bottom",
+      "layer": {
+        "referenceTrack": 2,
+        "renderIndex": 14000
+      },
+      "animations": [],
+      "observedTransition": "instant cut-on/cut-off; no sampled entrance/exit movement",
+      "sampleFrame": 3790,
+      "referenceFrame": "../assets/a03-reference/frame-03790.jpg",
+      "fontIdentity": "draft TTC filename and weight; face selection and ChatCut rendering pending comparison",
+      "fontFiles": [
+        "ヒラギノ角ゴシック W6.ttc"
+      ],
+      "sourceMismatchNote": null,
+      "originalCapCut": {
+        "units": "native CapCut values, not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.0,
+            "y": 1.0
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": -0.5629993586344797
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 0,
+          "alignment": 1,
+          "line_feed": 1,
+          "letter_spacing": 0.1,
+          "line_spacing": 0.41999999999999993,
+          "font_size": 17.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "original_size": [],
+          "force_apply_line_max_width": false,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 39,
+          "global_alpha": 1.0,
+          "text_color": "#ffffff",
+          "text_alpha": 1.0
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    1,
+                    1,
+                    1
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              19
+            ],
+            "shadows": [
+              {
+                "thickness_projection_distance": 0,
+                "thickness_projection_angle": -45,
+                "diffuse": 0.0833333358168602,
+                "distance": 0,
+                "content": {
+                  "solid": {
+                    "color": [
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  "render_type": "solid"
+                },
+                "thickness_projection_enable": false,
+                "angle": 0
+              }
+            ],
+            "useLetterColor": true,
+            "size": 17,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "ttcFaceIndexSpecifiedByDraft": false
+            },
+            "substring": "親指も小指も\n真っ直ぐなのが\nただしい"
+          }
+        ],
+        "textEffects": []
+      },
+      "clinicFactPolicy": "今回の検査・施術前後の場面や所見に依存。台本は仮とし、素材で確認できなければ変更案を出す。"
+    },
+    {
+      "key": "a03-text-19",
+      "groupId": "g20",
+      "start": 3857,
+      "end": 3992,
+      "style": "white_gothic_black_shadow",
+      "referenceText": "このクセが\n腰痛を繰り返します。",
+      "textIsApprovedForNewClinic": false,
+      "writingMode": "vertical-rl",
+      "lineOrder": "first source line is rightmost column",
+      "layer": {
+        "referenceTrack": 2,
+        "renderIndex": 14000
+      },
+      "animations": [],
+      "observedTransition": "instant cut-on/cut-off; no sampled entrance/exit movement",
+      "sampleFrame": 3924,
+      "referenceFrame": "../assets/a03-reference/frame-03924.jpg",
+      "fontIdentity": "draft TTC filename and weight; face selection and ChatCut rendering pending comparison",
+      "fontFiles": [
+        "ヒラギノ角ゴシック W7.ttc"
+      ],
+      "sourceMismatchNote": null,
+      "originalCapCut": {
+        "units": "native CapCut values, not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.0,
+            "y": 1.0
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 1,
+          "alignment": 3,
+          "line_feed": 1,
+          "letter_spacing": 0.1,
+          "line_spacing": 0.41999999999999993,
+          "font_size": 22.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "original_size": [],
+          "force_apply_line_max_width": false,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 39,
+          "global_alpha": 1.0,
+          "text_color": "#ffffff",
+          "text_alpha": 1.0
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    1,
+                    1,
+                    1
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              16
+            ],
+            "shadows": [
+              {
+                "thickness_projection_distance": 0,
+                "thickness_projection_angle": -45,
+                "diffuse": 0.0833333358168602,
+                "distance": 0,
+                "content": {
+                  "solid": {
+                    "color": [
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  "render_type": "solid"
+                },
+                "thickness_projection_enable": false,
+                "angle": 0
+              }
+            ],
+            "useLetterColor": true,
+            "size": 22,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W7.ttc",
+              "ttcFaceIndexSpecifiedByDraft": false
+            },
+            "substring": "このクセが\n腰痛を繰り返します。"
+          }
+        ],
+        "textEffects": []
+      },
+      "clinicFactPolicy": "症状の原因・身体の関係・効果に関する見本文。今回のLP・提供情報に根拠がなければ断定を引き継がず、同じ役割の確認可能な文へ最小限変更する。"
+    },
+    {
+      "key": "a03-text-20",
+      "groupId": "g21",
+      "start": 3992,
+      "end": 4108,
+      "style": "white_gothic_black_shadow",
+      "referenceText": "小指の筋肉を\n使いやすくすることで",
+      "textIsApprovedForNewClinic": false,
+      "writingMode": "vertical-rl",
+      "lineOrder": "first source line is rightmost column",
+      "layer": {
+        "referenceTrack": 2,
+        "renderIndex": 14000
+      },
+      "animations": [],
+      "observedTransition": "instant cut-on/cut-off; no sampled entrance/exit movement",
+      "sampleFrame": 4050,
+      "referenceFrame": "../assets/a03-reference/frame-04050.jpg",
+      "fontIdentity": "draft TTC filename and weight; face selection and ChatCut rendering pending comparison",
+      "fontFiles": [
+        "ヒラギノ角ゴシック W6.ttc"
+      ],
+      "sourceMismatchNote": null,
+      "originalCapCut": {
+        "units": "native CapCut values, not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.0,
+            "y": 1.0
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 1,
+          "alignment": 3,
+          "line_feed": 1,
+          "letter_spacing": 0.1,
+          "line_spacing": 0.41999999999999993,
+          "font_size": 17.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "original_size": [],
+          "force_apply_line_max_width": false,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 39,
+          "global_alpha": 1.0,
+          "text_color": "#ffffff",
+          "text_alpha": 1.0
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    1,
+                    1,
+                    1
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              17
+            ],
+            "shadows": [
+              {
+                "thickness_projection_distance": 0,
+                "thickness_projection_angle": -45,
+                "diffuse": 0.0833333358168602,
+                "distance": 0,
+                "content": {
+                  "solid": {
+                    "color": [
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  "render_type": "solid"
+                },
+                "thickness_projection_enable": false,
+                "angle": 0
+              }
+            ],
+            "useLetterColor": true,
+            "size": 17,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "ttcFaceIndexSpecifiedByDraft": false
+            },
+            "substring": "小指の筋肉を\n使いやすくすることで"
+          }
+        ],
+        "textEffects": []
+      },
+      "clinicFactPolicy": "症状の原因・身体の関係・効果に関する見本文。今回のLP・提供情報に根拠がなければ断定を引き継がず、同じ役割の確認可能な文へ最小限変更する。"
+    },
+    {
+      "key": "a03-text-21",
+      "groupId": "g22",
+      "start": 4108,
+      "end": 4224,
+      "style": "white_gothic_black_shadow",
+      "referenceText": "歩くときにも\n外側の筋肉の負担が減り",
+      "textIsApprovedForNewClinic": false,
+      "writingMode": "vertical-rl",
+      "lineOrder": "first source line is rightmost column",
+      "layer": {
+        "referenceTrack": 2,
+        "renderIndex": 14000
+      },
+      "animations": [],
+      "observedTransition": "instant cut-on/cut-off; no sampled entrance/exit movement",
+      "sampleFrame": 4166,
+      "referenceFrame": "../assets/a03-reference/frame-04166.jpg",
+      "fontIdentity": "draft TTC filename and weight; face selection and ChatCut rendering pending comparison",
+      "fontFiles": [
+        "ヒラギノ角ゴシック W6.ttc"
+      ],
+      "sourceMismatchNote": null,
+      "originalCapCut": {
+        "units": "native CapCut values, not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.0,
+            "y": 1.0
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 1,
+          "alignment": 3,
+          "line_feed": 1,
+          "letter_spacing": 0.1,
+          "line_spacing": 0.41999999999999993,
+          "font_size": 17.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "original_size": [],
+          "force_apply_line_max_width": false,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 39,
+          "global_alpha": 1.0,
+          "text_color": "#ffffff",
+          "text_alpha": 1.0
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    1,
+                    1,
+                    1
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              18
+            ],
+            "shadows": [
+              {
+                "thickness_projection_distance": 0,
+                "thickness_projection_angle": -45,
+                "diffuse": 0.0833333358168602,
+                "distance": 0,
+                "content": {
+                  "solid": {
+                    "color": [
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  "render_type": "solid"
+                },
+                "thickness_projection_enable": false,
+                "angle": 0
+              }
+            ],
+            "useLetterColor": true,
+            "size": 17,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "ttcFaceIndexSpecifiedByDraft": false
+            },
+            "substring": "歩くときにも\n外側の筋肉の負担が減り"
+          }
+        ],
+        "textEffects": []
+      },
+      "clinicFactPolicy": "症状の原因・身体の関係・効果に関する見本文。今回のLP・提供情報に根拠がなければ断定を引き継がず、同じ役割の確認可能な文へ最小限変更する。"
+    },
+    {
+      "key": "a03-text-22",
+      "groupId": "g23",
+      "start": 4224,
+      "end": 4334,
+      "style": "white_gothic_black_shadow",
+      "referenceText": "腰の痛みが再発する\nことなく改善します",
+      "textIsApprovedForNewClinic": false,
+      "writingMode": "vertical-rl",
+      "lineOrder": "first source line is rightmost column",
+      "layer": {
+        "referenceTrack": 2,
+        "renderIndex": 14000
+      },
+      "animations": [],
+      "observedTransition": "instant cut-on/cut-off; no sampled entrance/exit movement",
+      "sampleFrame": 4279,
+      "referenceFrame": "../assets/a03-reference/frame-04279.jpg",
+      "fontIdentity": "draft TTC filename and weight; face selection and ChatCut rendering pending comparison",
+      "fontFiles": [
+        "ヒラギノ角ゴシック W6.ttc"
+      ],
+      "sourceMismatchNote": null,
+      "originalCapCut": {
+        "units": "native CapCut values, not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.0,
+            "y": 1.0
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 1,
+          "alignment": 3,
+          "line_feed": 1,
+          "letter_spacing": 0.1,
+          "line_spacing": 0.41999999999999993,
+          "font_size": 17.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "original_size": [],
+          "force_apply_line_max_width": false,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 39,
+          "global_alpha": 1.0,
+          "text_color": "#ffffff",
+          "text_alpha": 1.0
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    1,
+                    1,
+                    1
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              19
+            ],
+            "shadows": [
+              {
+                "thickness_projection_distance": 0,
+                "thickness_projection_angle": -45,
+                "diffuse": 0.0833333358168602,
+                "distance": 0,
+                "content": {
+                  "solid": {
+                    "color": [
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  "render_type": "solid"
+                },
+                "thickness_projection_enable": false,
+                "angle": 0
+              }
+            ],
+            "useLetterColor": true,
+            "size": 17,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "ttcFaceIndexSpecifiedByDraft": false
+            },
+            "substring": "腰の痛みが再発する\nことなく改善します"
+          }
+        ],
+        "textEffects": []
+      },
+      "clinicFactPolicy": "症状の原因・身体の関係・効果に関する見本文。今回のLP・提供情報に根拠がなければ断定を引き継がず、同じ役割の確認可能な文へ最小限変更する。"
+    },
+    {
+      "key": "a03-text-23",
+      "groupId": "g24",
+      "start": 4340,
+      "end": 4456,
+      "style": "white_gothic_black_shadow",
+      "referenceText": "施術もただ揉むだけ\nではありません。",
+      "textIsApprovedForNewClinic": false,
+      "writingMode": "vertical-rl",
+      "lineOrder": "first source line is rightmost column",
+      "layer": {
+        "referenceTrack": 2,
+        "renderIndex": 14000
+      },
+      "animations": [],
+      "observedTransition": "instant cut-on/cut-off; no sampled entrance/exit movement",
+      "sampleFrame": 4398,
+      "referenceFrame": "../assets/a03-reference/frame-04398.jpg",
+      "fontIdentity": "draft TTC filename and weight; face selection and ChatCut rendering pending comparison",
+      "fontFiles": [
+        "ヒラギノ角ゴシック W6.ttc"
+      ],
+      "sourceMismatchNote": null,
+      "originalCapCut": {
+        "units": "native CapCut values, not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.0,
+            "y": 1.0
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 1,
+          "alignment": 3,
+          "line_feed": 1,
+          "letter_spacing": 0.1,
+          "line_spacing": 0.41999999999999993,
+          "font_size": 17.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "original_size": [],
+          "force_apply_line_max_width": false,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 39,
+          "global_alpha": 1.0,
+          "text_color": "#ffffff",
+          "text_alpha": 1.0
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    1,
+                    1,
+                    1
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              18
+            ],
+            "shadows": [
+              {
+                "thickness_projection_distance": 0,
+                "thickness_projection_angle": -45,
+                "diffuse": 0.0833333358168602,
+                "distance": 0,
+                "content": {
+                  "solid": {
+                    "color": [
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  "render_type": "solid"
+                },
+                "thickness_projection_enable": false,
+                "angle": 0
+              }
+            ],
+            "useLetterColor": true,
+            "size": 17,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "ttcFaceIndexSpecifiedByDraft": false
+            },
+            "substring": "施術もただ揉むだけ\nではありません。"
+          }
+        ],
+        "textEffects": []
+      },
+      "clinicFactPolicy": "今回の対象症状・施術方針と合うか確認。合う部分は原文の流れ・語り口を保つ。"
+    },
+    {
+      "key": "a03-text-24",
+      "groupId": "g25",
+      "start": 4456,
+      "end": 4670,
+      "style": "white_gothic_black_shadow",
+      "referenceText": "原因へ直接\nアプローチ",
+      "textIsApprovedForNewClinic": false,
+      "writingMode": "vertical-rl",
+      "lineOrder": "first source line is rightmost column",
+      "layer": {
+        "referenceTrack": 2,
+        "renderIndex": 14000
+      },
+      "animations": [],
+      "observedTransition": "instant cut-on/cut-off; no sampled entrance/exit movement",
+      "sampleFrame": 4563,
+      "referenceFrame": "../assets/a03-reference/frame-04563.jpg",
+      "fontIdentity": "draft TTC filename and weight; face selection and ChatCut rendering pending comparison",
+      "fontFiles": [
+        "ヒラギノ角ゴシック W7.ttc"
+      ],
+      "sourceMismatchNote": null,
+      "originalCapCut": {
+        "units": "native CapCut values, not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.0,
+            "y": 1.0
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 1,
+          "alignment": 3,
+          "line_feed": 1,
+          "letter_spacing": 0.1,
+          "line_spacing": 0.41999999999999993,
+          "font_size": 22.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "original_size": [],
+          "force_apply_line_max_width": false,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 39,
+          "global_alpha": 1.0,
+          "text_color": "#ffffff",
+          "text_alpha": 1.0
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    1,
+                    1,
+                    1
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              11
+            ],
+            "shadows": [
+              {
+                "thickness_projection_distance": 0,
+                "thickness_projection_angle": -45,
+                "diffuse": 0.0833333358168602,
+                "distance": 0,
+                "content": {
+                  "solid": {
+                    "color": [
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  "render_type": "solid"
+                },
+                "thickness_projection_enable": false,
+                "angle": 0
+              }
+            ],
+            "useLetterColor": true,
+            "size": 22,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W7.ttc",
+              "ttcFaceIndexSpecifiedByDraft": false
+            },
+            "substring": "原因へ直接\nアプローチ"
+          }
+        ],
+        "textEffects": []
+      },
+      "clinicFactPolicy": "今回の対象症状・施術方針と合うか確認。合う部分は原文の流れ・語り口を保つ。"
+    },
+    {
+      "key": "a03-text-25",
+      "groupId": "g26",
+      "start": 4695,
+      "end": 4956,
+      "style": "white_gothic_black_shadow",
+      "referenceText": "施術後\nもう1度チェック",
+      "textIsApprovedForNewClinic": false,
+      "writingMode": "horizontal-tb",
+      "lineOrder": "top to bottom",
+      "layer": {
+        "referenceTrack": 2,
+        "renderIndex": 14000
+      },
+      "animations": [],
+      "observedTransition": "instant cut-on/cut-off; no sampled entrance/exit movement",
+      "sampleFrame": 4825,
+      "referenceFrame": "../assets/a03-reference/frame-04825.jpg",
+      "fontIdentity": "draft TTC filename and weight; face selection and ChatCut rendering pending comparison",
+      "fontFiles": [
+        "ヒラギノ角ゴシック W6.ttc"
+      ],
+      "sourceMismatchNote": null,
+      "originalCapCut": {
+        "units": "native CapCut values, not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.0,
+            "y": 1.0
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 0,
+          "alignment": 1,
+          "line_feed": 1,
+          "letter_spacing": 0.1,
+          "line_spacing": 0.41999999999999993,
+          "font_size": 17.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "original_size": [],
+          "force_apply_line_max_width": false,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 39,
+          "global_alpha": 1.0,
+          "text_color": "#ffffff",
+          "text_alpha": 1.0
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    1,
+                    1,
+                    1
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              12
+            ],
+            "shadows": [
+              {
+                "thickness_projection_distance": 0,
+                "thickness_projection_angle": -45,
+                "diffuse": 0.0833333358168602,
+                "distance": 0,
+                "content": {
+                  "solid": {
+                    "color": [
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  "render_type": "solid"
+                },
+                "thickness_projection_enable": false,
+                "angle": 0
+              }
+            ],
+            "useLetterColor": true,
+            "size": 17,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "ttcFaceIndexSpecifiedByDraft": false
+            },
+            "substring": "施術後\nもう1度チェック"
+          }
+        ],
+        "textEffects": []
+      },
+      "clinicFactPolicy": "今回の検査・施術前後の場面や所見に依存。台本は仮とし、素材で確認できなければ変更案を出す。"
+    },
+    {
+      "key": "a03-text-26",
+      "groupId": "g27",
+      "start": 4971,
+      "end": 5162,
+      "style": "white_gothic_black_shadow",
+      "referenceText": "さっきよりも\n足が真っ直ぐ\n上がるように！！",
+      "textIsApprovedForNewClinic": false,
+      "writingMode": "horizontal-tb",
+      "lineOrder": "top to bottom",
+      "layer": {
+        "referenceTrack": 2,
+        "renderIndex": 14000
+      },
+      "animations": [],
+      "observedTransition": "instant cut-on/cut-off; no sampled entrance/exit movement",
+      "sampleFrame": 5066,
+      "referenceFrame": "../assets/a03-reference/frame-05066.jpg",
+      "fontIdentity": "draft TTC filename and weight; face selection and ChatCut rendering pending comparison",
+      "fontFiles": [
+        "ヒラギノ角ゴシック W7.ttc"
+      ],
+      "sourceMismatchNote": null,
+      "originalCapCut": {
+        "units": "native CapCut values, not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.0,
+            "y": 1.0
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 0,
+          "alignment": 1,
+          "line_feed": 1,
+          "letter_spacing": 0.1,
+          "line_spacing": 0.41999999999999993,
+          "font_size": 18.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "original_size": [],
+          "force_apply_line_max_width": false,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 39,
+          "global_alpha": 1.0,
+          "text_color": "#ffffff",
+          "text_alpha": 1.0
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    1,
+                    1,
+                    1
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              22
+            ],
+            "shadows": [
+              {
+                "thickness_projection_distance": 0,
+                "thickness_projection_angle": -45,
+                "diffuse": 0.0833333358168602,
+                "distance": 0,
+                "content": {
+                  "solid": {
+                    "color": [
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  "render_type": "solid"
+                },
+                "thickness_projection_enable": false,
+                "angle": 0
+              }
+            ],
+            "useLetterColor": true,
+            "size": 18,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W7.ttc",
+              "ttcFaceIndexSpecifiedByDraft": false
+            },
+            "substring": "さっきよりも\n足が真っ直ぐ\n上がるように！！"
+          }
+        ],
+        "textEffects": []
+      },
+      "clinicFactPolicy": "今回の検査・施術前後の場面や所見に依存。台本は仮とし、素材で確認できなければ変更案を出す。"
+    },
+    {
+      "key": "a03-text-27",
+      "groupId": "g28",
+      "start": 5162,
+      "end": 5353,
+      "style": "white_gothic_red_glow",
+      "referenceText": "初回の施術でも\n効果を実感\nできます！",
+      "textIsApprovedForNewClinic": false,
+      "writingMode": "horizontal-tb",
+      "lineOrder": "top to bottom",
+      "layer": {
+        "referenceTrack": 2,
+        "renderIndex": 14000
+      },
+      "animations": [],
+      "observedTransition": "instant cut-on/cut-off; no sampled entrance/exit movement",
+      "sampleFrame": 5257,
+      "referenceFrame": "../assets/a03-reference/frame-05257.jpg",
+      "fontIdentity": "draft TTC filename and weight; face selection and ChatCut rendering pending comparison",
+      "fontFiles": [
+        "ヒラギノ角ゴシック W7.ttc"
+      ],
+      "sourceMismatchNote": null,
+      "originalCapCut": {
+        "units": "native CapCut values, not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.0,
+            "y": 1.0
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 0,
+          "alignment": 1,
+          "line_feed": 1,
+          "letter_spacing": 0.1,
+          "line_spacing": 0.21999999999999992,
+          "font_size": 21.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "original_size": [],
+          "force_apply_line_max_width": false,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 103,
+          "global_alpha": 1.0,
+          "text_color": "#ffffff",
+          "text_alpha": 1.0
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    1,
+                    1,
+                    1
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              19
+            ],
+            "useLetterColor": true,
+            "size": 21,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W7.ttc",
+              "ttcFaceIndexSpecifiedByDraft": false
+            },
+            "substring": "初回の施術でも\n効果を実感\nできます！"
+          }
+        ],
+        "textEffects": [
+          {
+            "type": "bloom",
+            "name": "ニオン・ブリリアント",
+            "effect_id": "7194814295517958657",
+            "resource_id": "7194814295517958657",
+            "visible": true,
+            "value": 0.0,
+            "panel_id": "text_glow",
+            "bloom_params": {
+              "color": "#ec1d1d",
+              "strength": 0.5,
+              "range": 0.4,
+              "dir_x": 0.0,
+              "dir_y": 0.0
+            },
+            "adjust_params": [],
+            "apply_target_type": 0
+          }
+        ]
+      },
+      "clinicFactPolicy": "症状の原因・身体の関係・効果に関する見本文。今回のLP・提供情報に根拠がなければ断定を引き継がず、同じ役割の確認可能な文へ最小限変更する。"
+    },
+    {
+      "key": "a03-text-28",
+      "groupId": "g29",
+      "start": 5353,
+      "end": 5518,
+      "style": "white_gothic_black_shadow",
+      "referenceText": "施術後、生活で\n気をつけることも",
+      "textIsApprovedForNewClinic": false,
+      "writingMode": "vertical-rl",
+      "lineOrder": "first source line is rightmost column",
+      "layer": {
+        "referenceTrack": 2,
+        "renderIndex": 14000
+      },
+      "animations": [],
+      "observedTransition": "instant cut-on/cut-off; no sampled entrance/exit movement",
+      "sampleFrame": 5435,
+      "referenceFrame": "../assets/a03-reference/frame-05435.jpg",
+      "fontIdentity": "draft TTC filename and weight; face selection and ChatCut rendering pending comparison",
+      "fontFiles": [
+        "ヒラギノ角ゴシック W6.ttc"
+      ],
+      "sourceMismatchNote": null,
+      "originalCapCut": {
+        "units": "native CapCut values, not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.0,
+            "y": 1.0
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 1,
+          "alignment": 3,
+          "line_feed": 1,
+          "letter_spacing": 0.15,
+          "line_spacing": 0.41999999999999993,
+          "font_size": 18.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "original_size": [],
+          "force_apply_line_max_width": false,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 39,
+          "global_alpha": 1.0,
+          "text_color": "#ffffff",
+          "text_alpha": 1.0
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    1,
+                    1,
+                    1
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              16
+            ],
+            "shadows": [
+              {
+                "thickness_projection_distance": 0,
+                "thickness_projection_angle": -45,
+                "diffuse": 0.0833333358168602,
+                "distance": 0,
+                "content": {
+                  "solid": {
+                    "color": [
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  "render_type": "solid"
+                },
+                "thickness_projection_enable": false,
+                "angle": 0
+              }
+            ],
+            "useLetterColor": true,
+            "size": 18,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "ttcFaceIndexSpecifiedByDraft": false
+            },
+            "substring": "施術後、生活で\n気をつけることも"
+          }
+        ],
+        "textEffects": []
+      },
+      "clinicFactPolicy": "今回の対象症状・施術方針と合うか確認。合う部分は原文の流れ・語り口を保つ。"
+    },
+    {
+      "key": "a03-text-29",
+      "groupId": "g30",
+      "start": 5518,
+      "end": 5664,
+      "style": "white_gothic_black_shadow",
+      "referenceText": "丁寧にわかりやすく\nお伝えします。",
+      "textIsApprovedForNewClinic": false,
+      "writingMode": "vertical-rl",
+      "lineOrder": "first source line is rightmost column",
+      "layer": {
+        "referenceTrack": 2,
+        "renderIndex": 14000
+      },
+      "animations": [],
+      "observedTransition": "instant cut-on/cut-off; no sampled entrance/exit movement",
+      "sampleFrame": 5591,
+      "referenceFrame": "../assets/a03-reference/frame-05591.jpg",
+      "fontIdentity": "draft TTC filename and weight; face selection and ChatCut rendering pending comparison",
+      "fontFiles": [
+        "ヒラギノ角ゴシック W6.ttc"
+      ],
+      "sourceMismatchNote": null,
+      "originalCapCut": {
+        "units": "native CapCut values, not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.0,
+            "y": 1.0
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 1,
+          "alignment": 3,
+          "line_feed": 1,
+          "letter_spacing": 0.15,
+          "line_spacing": 0.41999999999999993,
+          "font_size": 18.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "original_size": [],
+          "force_apply_line_max_width": false,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 39,
+          "global_alpha": 1.0,
+          "text_color": "#ffffff",
+          "text_alpha": 1.0
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    1,
+                    1,
+                    1
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              17
+            ],
+            "shadows": [
+              {
+                "thickness_projection_distance": 0,
+                "thickness_projection_angle": -45,
+                "diffuse": 0.0833333358168602,
+                "distance": 0,
+                "content": {
+                  "solid": {
+                    "color": [
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  "render_type": "solid"
+                },
+                "thickness_projection_enable": false,
+                "angle": 0
+              }
+            ],
+            "useLetterColor": true,
+            "size": 18,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "ttcFaceIndexSpecifiedByDraft": false
+            },
+            "substring": "丁寧にわかりやすく\nお伝えします。"
+          }
+        ],
+        "textEffects": []
+      },
+      "clinicFactPolicy": "今回の対象症状・施術方針と合うか確認。合う部分は原文の流れ・語り口を保つ。"
+    },
+    {
+      "key": "a03-text-30",
+      "groupId": "g31",
+      "start": 5664,
+      "end": 5838,
+      "style": "white_gothic_black_shadow",
+      "referenceText": "長年改善しない\n腰痛でお悩みなら",
+      "textIsApprovedForNewClinic": false,
+      "writingMode": "vertical-rl",
+      "lineOrder": "first source line is rightmost column",
+      "layer": {
+        "referenceTrack": 2,
+        "renderIndex": 14000
+      },
+      "animations": [],
+      "observedTransition": "instant cut-on/cut-off; no sampled entrance/exit movement",
+      "sampleFrame": 5751,
+      "referenceFrame": "../assets/a03-reference/frame-05751.jpg",
+      "fontIdentity": "draft TTC filename and weight; face selection and ChatCut rendering pending comparison",
+      "fontFiles": [
+        "ヒラギノ角ゴシック W6.ttc"
+      ],
+      "sourceMismatchNote": null,
+      "originalCapCut": {
+        "units": "native CapCut values, not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.0,
+            "y": 1.0
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 1,
+          "alignment": 3,
+          "line_feed": 1,
+          "letter_spacing": 0.15,
+          "line_spacing": 0.41999999999999993,
+          "font_size": 18.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "original_size": [],
+          "force_apply_line_max_width": false,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 39,
+          "global_alpha": 1.0,
+          "text_color": "#ffffff",
+          "text_alpha": 1.0
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    1,
+                    1,
+                    1
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              16
+            ],
+            "shadows": [
+              {
+                "thickness_projection_distance": 0,
+                "thickness_projection_angle": -45,
+                "diffuse": 0.0833333358168602,
+                "distance": 0,
+                "content": {
+                  "solid": {
+                    "color": [
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  "render_type": "solid"
+                },
+                "thickness_projection_enable": false,
+                "angle": 0
+              }
+            ],
+            "useLetterColor": true,
+            "size": 18,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "ttcFaceIndexSpecifiedByDraft": false
+            },
+            "substring": "長年改善しない\n腰痛でお悩みなら"
+          }
+        ],
+        "textEffects": []
+      },
+      "clinicFactPolicy": "今回の対象症状・施術方針と合うか確認。合う部分は原文の流れ・語り口を保つ。"
+    },
+    {
+      "key": "a03-text-31",
+      "groupId": "g32",
+      "start": 5838,
+      "end": 6010,
+      "style": "white_gothic_black_shadow",
+      "referenceText": "まずは原因を\n調べてみませんか？",
+      "textIsApprovedForNewClinic": false,
+      "writingMode": "vertical-rl",
+      "lineOrder": "first source line is rightmost column",
+      "layer": {
+        "referenceTrack": 2,
+        "renderIndex": 14000
+      },
+      "animations": [],
+      "observedTransition": "instant cut-on/cut-off; no sampled entrance/exit movement",
+      "sampleFrame": 5924,
+      "referenceFrame": "../assets/a03-reference/frame-05924.jpg",
+      "fontIdentity": "draft TTC filename and weight; face selection and ChatCut rendering pending comparison",
+      "fontFiles": [
+        "ヒラギノ角ゴシック W6.ttc"
+      ],
+      "sourceMismatchNote": null,
+      "originalCapCut": {
+        "units": "native CapCut values, not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.0,
+            "y": 1.0
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 1,
+          "alignment": 3,
+          "line_feed": 1,
+          "letter_spacing": 0.15,
+          "line_spacing": 0.41999999999999993,
+          "font_size": 18.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "original_size": [],
+          "force_apply_line_max_width": false,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 39,
+          "global_alpha": 1.0,
+          "text_color": "#ffffff",
+          "text_alpha": 1.0
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    1,
+                    1,
+                    1
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              16
+            ],
+            "shadows": [
+              {
+                "thickness_projection_distance": 0,
+                "thickness_projection_angle": -45,
+                "diffuse": 0.0833333358168602,
+                "distance": 0,
+                "content": {
+                  "solid": {
+                    "color": [
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  "render_type": "solid"
+                },
+                "thickness_projection_enable": false,
+                "angle": 0
+              }
+            ],
+            "useLetterColor": true,
+            "size": 18,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "ttcFaceIndexSpecifiedByDraft": false
+            },
+            "substring": "まずは原因を\n調べてみませんか？"
+          }
+        ],
+        "textEffects": []
+      },
+      "clinicFactPolicy": "今回の対象症状・施術方針と合うか確認。合う部分は原文の流れ・語り口を保つ。"
+    },
+    {
+      "key": "a03-text-32",
+      "groupId": "g33",
+      "start": 6010,
+      "end": 6139,
+      "style": "white_gothic_red_glow",
+      "referenceText": "ここだけの\n期間限定",
+      "textIsApprovedForNewClinic": false,
+      "writingMode": "horizontal-tb",
+      "lineOrder": "top to bottom",
+      "layer": {
+        "referenceTrack": 2,
+        "renderIndex": 14000
+      },
+      "animations": [],
+      "observedTransition": "instant cut-on/cut-off; no sampled entrance/exit movement",
+      "sampleFrame": 6074,
+      "referenceFrame": "../assets/a03-reference/frame-06074.jpg",
+      "fontIdentity": "draft TTC filename and weight; face selection and ChatCut rendering pending comparison",
+      "fontFiles": [
+        "ヒラギノ角ゴシック W8.ttc"
+      ],
+      "sourceMismatchNote": null,
+      "originalCapCut": {
+        "units": "native CapCut values, not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.0,
+            "y": 1.0
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 0,
+          "alignment": 1,
+          "line_feed": 1,
+          "letter_spacing": 0.1,
+          "line_spacing": 0.2699999999999999,
+          "font_size": 22.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "original_size": [],
+          "force_apply_line_max_width": false,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 103,
+          "global_alpha": 1.0,
+          "text_color": "#ffffff",
+          "text_alpha": 1.0
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    1,
+                    1,
+                    1
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              10
+            ],
+            "useLetterColor": true,
+            "size": 22,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W8.ttc",
+              "ttcFaceIndexSpecifiedByDraft": false
+            },
+            "substring": "ここだけの\n期間限定"
+          }
+        ],
+        "textEffects": [
+          {
+            "type": "bloom",
+            "name": "ニオン・ブリリアント",
+            "effect_id": "7194814295517958657",
+            "resource_id": "7194814295517958657",
+            "visible": true,
+            "value": 0.0,
+            "panel_id": "text_glow",
+            "bloom_params": {
+              "color": "#fb0101",
+              "strength": 0.581701144366197,
+              "range": 0.5691461267605633,
+              "dir_x": 0.0,
+              "dir_y": 0.0
+            },
+            "adjust_params": [],
+            "apply_target_type": 0
+          }
+        ]
+      },
+      "clinicFactPolicy": "期間限定・掲載限定の有無と適用条件を今回のLPで確認。なければ条件を創作せず差し替え案を提示。"
+    },
+    {
+      "key": "a03-text-33",
+      "groupId": "g34",
+      "start": 6139,
+      "end": 6321,
+      "style": "white_gothic_red_glow",
+      "referenceText": "初回\n2,480円で\nお試し！！",
+      "textIsApprovedForNewClinic": false,
+      "writingMode": "horizontal-tb",
+      "lineOrder": "top to bottom",
+      "layer": {
+        "referenceTrack": 2,
+        "renderIndex": 14000
+      },
+      "animations": [],
+      "observedTransition": "instant cut-on/cut-off; no sampled entrance/exit movement",
+      "sampleFrame": 6230,
+      "referenceFrame": "../assets/a03-reference/frame-06230.jpg",
+      "fontIdentity": "draft TTC filename and weight; face selection and ChatCut rendering pending comparison",
+      "fontFiles": [
+        "ヒラギノ角ゴシック W8.ttc"
+      ],
+      "sourceMismatchNote": null,
+      "originalCapCut": {
+        "units": "native CapCut values, not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.0,
+            "y": 1.0
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 0,
+          "alignment": 1,
+          "line_feed": 1,
+          "letter_spacing": 0.1,
+          "line_spacing": 0.2699999999999999,
+          "font_size": 23.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "original_size": [],
+          "force_apply_line_max_width": false,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 103,
+          "global_alpha": 1.0,
+          "text_color": "#ffffff",
+          "text_alpha": 1.0
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    1,
+                    1,
+                    1
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              16
+            ],
+            "useLetterColor": true,
+            "size": 23,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W8.ttc",
+              "ttcFaceIndexSpecifiedByDraft": false
+            },
+            "substring": "初回\n2,480円で\nお試し！！"
+          }
+        ],
+        "textEffects": [
+          {
+            "type": "bloom",
+            "name": "ニオン・ブリリアント",
+            "effect_id": "7194814295517958657",
+            "resource_id": "7194814295517958657",
+            "visible": true,
+            "value": 0.0,
+            "panel_id": "text_glow",
+            "bloom_params": {
+              "color": "#fb0101",
+              "strength": 0.581701144366197,
+              "range": 0.5691461267605633,
+              "dir_x": 0.0,
+              "dir_y": 0.0
+            },
+            "adjust_params": [],
+            "apply_target_type": 0
+          }
+        ]
+      },
+      "clinicFactPolicy": "2,480円は見本の金額。今回の料金・税込表記・初回条件をLPで確認するまで採用しない。"
+    },
+    {
+      "key": "a03-text-34",
+      "groupId": "g35",
+      "start": 6321,
+      "end": 6498,
+      "style": "white_gothic_black_shadow",
+      "referenceText": "詳しくは\nプロフィールのリンクから\nご予約ください。",
+      "textIsApprovedForNewClinic": false,
+      "writingMode": "vertical-rl",
+      "lineOrder": "first source line is rightmost column",
+      "layer": {
+        "referenceTrack": 2,
+        "renderIndex": 14000
+      },
+      "animations": [],
+      "observedTransition": "instant cut-on/cut-off; no sampled entrance/exit movement",
+      "sampleFrame": 6409,
+      "referenceFrame": "../assets/a03-reference/frame-06409.jpg",
+      "fontIdentity": "draft TTC filename and weight; face selection and ChatCut rendering pending comparison",
+      "fontFiles": [
+        "ヒラギノ角ゴシック W6.ttc"
+      ],
+      "sourceMismatchNote": null,
+      "originalCapCut": {
+        "units": "native CapCut values, not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.0,
+            "y": 1.0
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 1,
+          "alignment": 3,
+          "line_feed": 1,
+          "letter_spacing": 0.1,
+          "line_spacing": 0.41999999999999993,
+          "font_size": 18.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "original_size": [],
+          "force_apply_line_max_width": false,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 39,
+          "global_alpha": 1.0,
+          "text_color": "#ffffff",
+          "text_alpha": 1.0
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    1,
+                    1,
+                    1
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              26
+            ],
+            "shadows": [
+              {
+                "thickness_projection_distance": 0,
+                "thickness_projection_angle": -45,
+                "diffuse": 0.0833333358168602,
+                "distance": 0,
+                "content": {
+                  "solid": {
+                    "color": [
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  "render_type": "solid"
+                },
+                "thickness_projection_enable": false,
+                "angle": 0
+              }
+            ],
+            "useLetterColor": true,
+            "size": 18,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "ttcFaceIndexSpecifiedByDraft": false
+            },
+            "substring": "詳しくは\nプロフィールのリンクから\nご予約ください。"
+          }
+        ],
+        "textEffects": []
+      },
+      "clinicFactPolicy": "今回の実際の予約先と掲載先を確認。プロフィールのリンクと決めつけない。"
+    },
+    {
+      "key": "a03-text-35",
+      "groupId": "g11",
+      "start": 1737,
+      "end": 1951,
+      "style": "white_gothic_black_shadow",
+      "referenceText": "「足」",
+      "textIsApprovedForNewClinic": false,
+      "writingMode": "vertical-rl",
+      "lineOrder": "first source line is rightmost column",
+      "layer": {
+        "referenceTrack": 3,
+        "renderIndex": 14000
+      },
+      "animations": [],
+      "observedTransition": "instant cut-on/cut-off; no sampled entrance/exit movement",
+      "sampleFrame": 1844,
+      "referenceFrame": "../assets/a03-reference/frame-01844.jpg",
+      "fontIdentity": "draft TTC filename and weight; face selection and ChatCut rendering pending comparison",
+      "fontFiles": [
+        "ヒラギノ角ゴシック W7.ttc"
+      ],
+      "sourceMismatchNote": null,
+      "originalCapCut": {
+        "units": "native CapCut values, not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.0,
+            "y": 1.0
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": -0.22229141586380408
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 1,
+          "alignment": 3,
+          "line_feed": 1,
+          "letter_spacing": 0.1,
+          "line_spacing": 0.41999999999999993,
+          "font_size": 38.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "original_size": [],
+          "force_apply_line_max_width": false,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": true,
+          "check_flag": 39,
+          "global_alpha": 1.0,
+          "text_color": "#ffffff",
+          "text_alpha": 1.0
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    1,
+                    1,
+                    1
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              3
+            ],
+            "shadows": [
+              {
+                "thickness_projection_distance": 0,
+                "thickness_projection_angle": -45,
+                "diffuse": 0.0833333358168602,
+                "distance": 0,
+                "content": {
+                  "solid": {
+                    "color": [
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  "render_type": "solid"
+                },
+                "thickness_projection_enable": false,
+                "angle": 0
+              }
+            ],
+            "useLetterColor": true,
+            "size": 38,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W7.ttc",
+              "ttcFaceIndexSpecifiedByDraft": false
+            },
+            "substring": "「足」"
+          }
+        ],
+        "textEffects": []
+      },
+      "clinicFactPolicy": "症状の原因・身体の関係・効果に関する見本文。今回のLP・提供情報に根拠がなければ断定を引き継がず、同じ役割の確認可能な文へ最小限変更する。"
+    },
+    {
+      "key": "a03-text-36",
+      "groupId": "g17",
+      "start": 3296,
+      "end": 3545,
+      "style": "white_gothic_black_shadow",
+      "referenceText": "検査中",
+      "textIsApprovedForNewClinic": false,
+      "writingMode": "horizontal-tb",
+      "lineOrder": "top to bottom",
+      "layer": {
+        "referenceTrack": 3,
+        "renderIndex": 14000
+      },
+      "animations": [],
+      "observedTransition": "instant cut-on/cut-off; no sampled entrance/exit movement",
+      "sampleFrame": 3420,
+      "referenceFrame": "../assets/a03-reference/frame-03420.jpg",
+      "fontIdentity": "draft TTC filename and weight; face selection and ChatCut rendering pending comparison",
+      "fontFiles": [
+        "ヒラギノ角ゴシック W6.ttc"
+      ],
+      "sourceMismatchNote": "Current draft has trailing three dots, but inspected exported frames show 検査中 with no visible dots. Use exported appearance as reference, retain draft text as separate evidence.",
+      "originalCapCut": {
+        "units": "native CapCut values, not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.0,
+            "y": 1.0
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": 0.6224489795918366
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 0,
+          "alignment": 1,
+          "line_feed": 1,
+          "letter_spacing": 0.1,
+          "line_spacing": 0.41999999999999993,
+          "font_size": 21.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "original_size": [],
+          "force_apply_line_max_width": false,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 39,
+          "global_alpha": 1.0,
+          "text_color": "#ffffff",
+          "text_alpha": 1.0
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    1,
+                    1,
+                    1
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              6
+            ],
+            "shadows": [
+              {
+                "thickness_projection_distance": 0,
+                "thickness_projection_angle": -45,
+                "diffuse": 0.0833333358168602,
+                "distance": 0,
+                "content": {
+                  "solid": {
+                    "color": [
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  "render_type": "solid"
+                },
+                "thickness_projection_enable": false,
+                "angle": 0
+              }
+            ],
+            "useLetterColor": true,
+            "size": 21,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "ttcFaceIndexSpecifiedByDraft": false
+            },
+            "substring": "検査中..."
+          }
+        ],
+        "textEffects": []
+      },
+      "clinicFactPolicy": "今回の検査・施術前後の場面や所見に依存。台本は仮とし、素材で確認できなければ変更案を出す。"
+    },
+    {
+      "key": "a03-text-37",
+      "groupId": "g17",
+      "start": 3296,
+      "end": 3545,
+      "style": "white_gothic_black_shadow",
+      "referenceText": "しっかり評価！",
+      "textIsApprovedForNewClinic": false,
+      "writingMode": "horizontal-tb",
+      "lineOrder": "top to bottom",
+      "layer": {
+        "referenceTrack": 4,
+        "renderIndex": 14000
+      },
+      "animations": [],
+      "observedTransition": "instant cut-on/cut-off; no sampled entrance/exit movement",
+      "sampleFrame": 3420,
+      "referenceFrame": "../assets/a03-reference/frame-03420.jpg",
+      "fontIdentity": "draft TTC filename and weight; face selection and ChatCut rendering pending comparison",
+      "fontFiles": [
+        "ヒラギノ角ゴシック W6.ttc"
+      ],
+      "sourceMismatchNote": null,
+      "originalCapCut": {
+        "units": "native CapCut values, not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.0,
+            "y": 1.0
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": -0.8134350134951152
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 0,
+          "alignment": 1,
+          "line_feed": 1,
+          "letter_spacing": 0.1,
+          "line_spacing": 0.41999999999999993,
+          "font_size": 21.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "original_size": [],
+          "force_apply_line_max_width": false,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 39,
+          "global_alpha": 1.0,
+          "text_color": "#ffffff",
+          "text_alpha": 1.0
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    1,
+                    1,
+                    1
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              7
+            ],
+            "shadows": [
+              {
+                "thickness_projection_distance": 0,
+                "thickness_projection_angle": -45,
+                "diffuse": 0.0833333358168602,
+                "distance": 0,
+                "content": {
+                  "solid": {
+                    "color": [
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  "render_type": "solid"
+                },
+                "thickness_projection_enable": false,
+                "angle": 0
+              }
+            ],
+            "useLetterColor": true,
+            "size": 21,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "ttcFaceIndexSpecifiedByDraft": false
+            },
+            "substring": "しっかり評価！"
+          }
+        ],
+        "textEffects": []
+      },
+      "clinicFactPolicy": "今回の検査・施術前後の場面や所見に依存。台本は仮とし、素材で確認できなければ変更案を出す。"
+    }
+  ],
+  "displayGroups": [
+    {
+      "groupId": "g01",
+      "start": 0,
+      "end": 201,
+      "role": "悩みのつかみ",
+      "layerIds": [
+        "a03-text-01"
+      ],
+      "durationIsReferenceOnly": true,
+      "clinicFactPolicy": "今回の対象症状・施術方針と合うか確認。合う部分は原文の流れ・語り口を保つ。"
+    },
+    {
+      "groupId": "g02",
+      "start": 202,
+      "end": 331,
+      "role": "対象者の呼びかけ",
+      "layerIds": [
+        "a03-text-02"
+      ],
+      "durationIsReferenceOnly": true,
+      "clinicFactPolicy": "今回の対象症状・施術方針と合うか確認。合う部分は原文の流れ・語り口を保つ。"
+    },
+    {
+      "groupId": "g03",
+      "start": 331,
+      "end": 471,
+      "role": "一時的な変化の共感",
+      "layerIds": [
+        "a03-text-03"
+      ],
+      "durationIsReferenceOnly": true,
+      "clinicFactPolicy": "今回の対象症状・施術方針と合うか確認。合う部分は原文の流れ・語り口を保つ。"
+    },
+    {
+      "groupId": "g04",
+      "start": 471,
+      "end": 602,
+      "role": "悩みが戻る共感",
+      "layerIds": [
+        "a03-text-04"
+      ],
+      "durationIsReferenceOnly": true,
+      "clinicFactPolicy": "今回の対象症状・施術方針と合うか確認。合う部分は原文の流れ・語り口を保つ。"
+    },
+    {
+      "groupId": "g05",
+      "start": 602,
+      "end": 728,
+      "role": "経験への問いかけ",
+      "layerIds": [
+        "a03-text-05"
+      ],
+      "durationIsReferenceOnly": true,
+      "clinicFactPolicy": "今回の対象症状・施術方針と合うか確認。合う部分は原文の流れ・語り口を保つ。"
+    },
+    {
+      "groupId": "g06",
+      "start": 731,
+      "end": 965,
+      "role": "評価を重視する方針",
+      "layerIds": [
+        "a03-text-06"
+      ],
+      "durationIsReferenceOnly": true,
+      "clinicFactPolicy": "今回の対象症状・施術方針と合うか確認。合う部分は原文の流れ・語り口を保つ。"
+    },
+    {
+      "groupId": "g07",
+      "start": 965,
+      "end": 1143,
+      "role": "局所だけで判断しない方針",
+      "layerIds": [
+        "a03-text-07"
+      ],
+      "durationIsReferenceOnly": true,
+      "clinicFactPolicy": "今回の対象症状・施術方針と合うか確認。合う部分は原文の流れ・語り口を保つ。"
+    },
+    {
+      "groupId": "g08",
+      "start": 1146,
+      "end": 1341,
+      "role": "動作評価",
+      "layerIds": [
+        "a03-text-08"
+      ],
+      "durationIsReferenceOnly": true,
+      "clinicFactPolicy": "今回の対象症状・施術方針と合うか確認。合う部分は原文の流れ・語り口を保つ。"
+    },
+    {
+      "groupId": "g09",
+      "start": 1341,
+      "end": 1537,
+      "role": "左右差の所見",
+      "layerIds": [
+        "a03-text-09"
+      ],
+      "durationIsReferenceOnly": true,
+      "clinicFactPolicy": "今回の検査・施術前後の場面や所見に依存。台本は仮とし、素材で確認できなければ変更案を出す。"
+    },
+    {
+      "groupId": "g10",
+      "start": 1537,
+      "end": 1737,
+      "role": "検査所見の意味づけ",
+      "layerIds": [
+        "a03-text-10"
+      ],
+      "durationIsReferenceOnly": true,
+      "clinicFactPolicy": "症状の原因・身体の関係・効果に関する見本文。今回のLP・提供情報に根拠がなければ断定を引き継がず、同じ役割の確認可能な文へ最小限変更する。"
+    },
+    {
+      "groupId": "g11",
+      "start": 1737,
+      "end": 1951,
+      "role": "原因候補の強調",
+      "layerIds": [
+        "a03-text-11",
+        "a03-text-35"
+      ],
+      "durationIsReferenceOnly": true,
+      "clinicFactPolicy": "症状の原因・身体の関係・効果に関する見本文。今回のLP・提供情報に根拠がなければ断定を引き継がず、同じ役割の確認可能な文へ最小限変更する。"
+    },
+    {
+      "groupId": "g12",
+      "start": 1951,
+      "end": 2166,
+      "role": "足への荷重の説明",
+      "layerIds": [
+        "a03-text-12"
+      ],
+      "durationIsReferenceOnly": true,
+      "clinicFactPolicy": "症状の原因・身体の関係・効果に関する見本文。今回のLP・提供情報に根拠がなければ断定を引き継がず、同じ役割の確認可能な文へ最小限変更する。"
+    },
+    {
+      "groupId": "g13",
+      "start": 2166,
+      "end": 2381,
+      "role": "身体の連動の説明",
+      "layerIds": [
+        "a03-text-13"
+      ],
+      "durationIsReferenceOnly": true,
+      "clinicFactPolicy": "症状の原因・身体の関係・効果に関する見本文。今回のLP・提供情報に根拠がなければ断定を引き継がず、同じ役割の確認可能な文へ最小限変更する。"
+    },
+    {
+      "groupId": "g14",
+      "start": 2381,
+      "end": 2630,
+      "role": "説明の結論を強調",
+      "layerIds": [
+        "a03-text-14"
+      ],
+      "durationIsReferenceOnly": true,
+      "clinicFactPolicy": "症状の原因・身体の関係・効果に関する見本文。今回のLP・提供情報に根拠がなければ断定を引き継がず、同じ役割の確認可能な文へ最小限変更する。"
+    },
+    {
+      "groupId": "g15",
+      "start": 2630,
+      "end": 2997,
+      "role": "動作評価の重要性",
+      "layerIds": [
+        "a03-text-15"
+      ],
+      "durationIsReferenceOnly": true,
+      "clinicFactPolicy": "今回の対象症状・施術方針と合うか確認。合う部分は原文の流れ・語り口を保つ。"
+    },
+    {
+      "groupId": "g16",
+      "start": 3047,
+      "end": 3296,
+      "role": "別姿勢での評価",
+      "layerIds": [
+        "a03-text-16"
+      ],
+      "durationIsReferenceOnly": true,
+      "clinicFactPolicy": "今回の対象症状・施術方針と合うか確認。合う部分は原文の流れ・語り口を保つ。"
+    },
+    {
+      "groupId": "g17",
+      "start": 3296,
+      "end": 3545,
+      "role": "検査中の2つの補助表示",
+      "layerIds": [
+        "a03-text-36",
+        "a03-text-37"
+      ],
+      "durationIsReferenceOnly": true,
+      "clinicFactPolicy": "今回の検査・施術前後の場面や所見に依存。台本は仮とし、素材で確認できなければ変更案を出す。"
+    },
+    {
+      "groupId": "g18",
+      "start": 3535,
+      "end": 3724,
+      "role": "足の動きの比較・前半",
+      "layerIds": [
+        "a03-text-17"
+      ],
+      "durationIsReferenceOnly": true,
+      "clinicFactPolicy": "今回の検査・施術前後の場面や所見に依存。台本は仮とし、素材で確認できなければ変更案を出す。"
+    },
+    {
+      "groupId": "g19",
+      "start": 3724,
+      "end": 3856,
+      "role": "足の動きの比較・後半",
+      "layerIds": [
+        "a03-text-18"
+      ],
+      "durationIsReferenceOnly": true,
+      "clinicFactPolicy": "今回の検査・施術前後の場面や所見に依存。台本は仮とし、素材で確認できなければ変更案を出す。"
+    },
+    {
+      "groupId": "g20",
+      "start": 3857,
+      "end": 3992,
+      "role": "動作のクセの意味づけ",
+      "layerIds": [
+        "a03-text-19"
+      ],
+      "durationIsReferenceOnly": true,
+      "clinicFactPolicy": "症状の原因・身体の関係・効果に関する見本文。今回のLP・提供情報に根拠がなければ断定を引き継がず、同じ役割の確認可能な文へ最小限変更する。"
+    },
+    {
+      "groupId": "g21",
+      "start": 3992,
+      "end": 4108,
+      "role": "施術の目的",
+      "layerIds": [
+        "a03-text-20"
+      ],
+      "durationIsReferenceOnly": true,
+      "clinicFactPolicy": "症状の原因・身体の関係・効果に関する見本文。今回のLP・提供情報に根拠がなければ断定を引き継がず、同じ役割の確認可能な文へ最小限変更する。"
+    },
+    {
+      "groupId": "g22",
+      "start": 4108,
+      "end": 4224,
+      "role": "生活動作とのつながり",
+      "layerIds": [
+        "a03-text-21"
+      ],
+      "durationIsReferenceOnly": true,
+      "clinicFactPolicy": "症状の原因・身体の関係・効果に関する見本文。今回のLP・提供情報に根拠がなければ断定を引き継がず、同じ役割の確認可能な文へ最小限変更する。"
+    },
+    {
+      "groupId": "g23",
+      "start": 4224,
+      "end": 4334,
+      "role": "変化・効果についての説明",
+      "layerIds": [
+        "a03-text-22"
+      ],
+      "durationIsReferenceOnly": true,
+      "clinicFactPolicy": "症状の原因・身体の関係・効果に関する見本文。今回のLP・提供情報に根拠がなければ断定を引き継がず、同じ役割の確認可能な文へ最小限変更する。"
+    },
+    {
+      "groupId": "g24",
+      "start": 4340,
+      "end": 4456,
+      "role": "施術方針",
+      "layerIds": [
+        "a03-text-23"
+      ],
+      "durationIsReferenceOnly": true,
+      "clinicFactPolicy": "今回の対象症状・施術方針と合うか確認。合う部分は原文の流れ・語り口を保つ。"
+    },
+    {
+      "groupId": "g25",
+      "start": 4456,
+      "end": 4670,
+      "role": "施術アプローチ強調",
+      "layerIds": [
+        "a03-text-24"
+      ],
+      "durationIsReferenceOnly": true,
+      "clinicFactPolicy": "今回の対象症状・施術方針と合うか確認。合う部分は原文の流れ・語り口を保つ。"
+    },
+    {
+      "groupId": "g26",
+      "start": 4695,
+      "end": 4956,
+      "role": "施術後の再検査",
+      "layerIds": [
+        "a03-text-25"
+      ],
+      "durationIsReferenceOnly": true,
+      "clinicFactPolicy": "今回の検査・施術前後の場面や所見に依存。台本は仮とし、素材で確認できなければ変更案を出す。"
+    },
+    {
+      "groupId": "g27",
+      "start": 4971,
+      "end": 5162,
+      "role": "再検査の所見",
+      "layerIds": [
+        "a03-text-26"
+      ],
+      "durationIsReferenceOnly": true,
+      "clinicFactPolicy": "今回の検査・施術前後の場面や所見に依存。台本は仮とし、素材で確認できなければ変更案を出す。"
+    },
+    {
+      "groupId": "g28",
+      "start": 5162,
+      "end": 5353,
+      "role": "変化についての強調",
+      "layerIds": [
+        "a03-text-27"
+      ],
+      "durationIsReferenceOnly": true,
+      "clinicFactPolicy": "症状の原因・身体の関係・効果に関する見本文。今回のLP・提供情報に根拠がなければ断定を引き継がず、同じ役割の確認可能な文へ最小限変更する。"
+    },
+    {
+      "groupId": "g29",
+      "start": 5353,
+      "end": 5518,
+      "role": "生活での注意点",
+      "layerIds": [
+        "a03-text-28"
+      ],
+      "durationIsReferenceOnly": true,
+      "clinicFactPolicy": "今回の対象症状・施術方針と合うか確認。合う部分は原文の流れ・語り口を保つ。"
+    },
+    {
+      "groupId": "g30",
+      "start": 5518,
+      "end": 5664,
+      "role": "説明・アフターケア",
+      "layerIds": [
+        "a03-text-29"
+      ],
+      "durationIsReferenceOnly": true,
+      "clinicFactPolicy": "今回の対象症状・施術方針と合うか確認。合う部分は原文の流れ・語り口を保つ。"
+    },
+    {
+      "groupId": "g31",
+      "start": 5664,
+      "end": 5838,
+      "role": "対象者への再呼びかけ",
+      "layerIds": [
+        "a03-text-30"
+      ],
+      "durationIsReferenceOnly": true,
+      "clinicFactPolicy": "今回の対象症状・施術方針と合うか確認。合う部分は原文の流れ・語り口を保つ。"
+    },
+    {
+      "groupId": "g32",
+      "start": 5838,
+      "end": 6010,
+      "role": "評価・来院への誘導",
+      "layerIds": [
+        "a03-text-31"
+      ],
+      "durationIsReferenceOnly": true,
+      "clinicFactPolicy": "今回の対象症状・施術方針と合うか確認。合う部分は原文の流れ・語り口を保つ。"
+    },
+    {
+      "groupId": "g33",
+      "start": 6010,
+      "end": 6139,
+      "role": "案内の条件",
+      "layerIds": [
+        "a03-text-32"
+      ],
+      "durationIsReferenceOnly": true,
+      "clinicFactPolicy": "期間限定・掲載限定の有無と適用条件を今回のLPで確認。なければ条件を創作せず差し替え案を提示。"
+    },
+    {
+      "groupId": "g34",
+      "start": 6139,
+      "end": 6321,
+      "role": "価格の案内",
+      "layerIds": [
+        "a03-text-33"
+      ],
+      "durationIsReferenceOnly": true,
+      "clinicFactPolicy": "2,480円は見本の金額。今回の料金・税込表記・初回条件をLPで確認するまで採用しない。"
+    },
+    {
+      "groupId": "g35",
+      "start": 6321,
+      "end": 6498,
+      "role": "予約・問い合わせの導線",
+      "layerIds": [
+        "a03-text-34"
+      ],
+      "durationIsReferenceOnly": true,
+      "clinicFactPolicy": "今回の実際の予約先と掲載先を確認。プロフィールのリンクと決めつけない。"
+    }
+  ],
+  "referenceCaptionGaps": [
+    {
+      "start": 201,
+      "end": 202
+    },
+    {
+      "start": 728,
+      "end": 731
+    },
+    {
+      "start": 1143,
+      "end": 1146
+    },
+    {
+      "start": 2997,
+      "end": 3047
+    },
+    {
+      "start": 3856,
+      "end": 3857
+    },
+    {
+      "start": 4334,
+      "end": 4340
+    },
+    {
+      "start": 4670,
+      "end": 4695
+    },
+    {
+      "start": 4956,
+      "end": 4971
+    }
+  ],
+  "overlapFindings": [
+    {
+      "start": 3535,
+      "end": 3545,
+      "durationFrames": 10,
+      "layers": [
+        "a03-text-17",
+        "a03-text-36",
+        "a03-text-37"
+      ],
+      "description": "New foot-description text appears while 検査中 / しっかり評価 remain for10frames. Observed reference overlap, not an ASR merge."
+    }
+  ],
+  "overlapPolicy": "preserve intended multi-layer groups; the observed 10-frame leftover label overlap is evidence, not a required collision for new copy",
+  "typography": {
+    "bodyFont": "ヒラギノ角ゴシック W6",
+    "emphasisFont": "ヒラギノ角ゴシック W7",
+    "priceFont": "ヒラギノ角ゴシック W8",
+    "fontFilesRedistributed": false,
+    "fonts": [
+      {
+        "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+        "faces": [
+          {
+            "faceIndex": 0,
+            "postscriptNames": [
+              "HiraginoSans-W6"
+            ]
+          },
+          {
+            "faceIndex": 1,
+            "postscriptNames": [
+              ".HiraKakuInterface-W6"
+            ]
+          },
+          {
+            "faceIndex": 2,
+            "postscriptNames": [
+              "HiraKakuProN-W6"
+            ]
+          },
+          {
+            "faceIndex": 3,
+            "postscriptNames": [
+              "HiraKakuPro-W6"
+            ]
+          }
+        ]
+      },
+      {
+        "fileBasename": "ヒラギノ角ゴシック W7.ttc",
+        "faces": [
+          {
+            "faceIndex": 0,
+            "postscriptNames": [
+              "HiraginoSans-W7"
+            ]
+          },
+          {
+            "faceIndex": 1,
+            "postscriptNames": [
+              ".HiraKakuInterface-W7"
+            ]
+          }
+        ]
+      },
+      {
+        "fileBasename": "ヒラギノ角ゴシック W8.ttc",
+        "faces": [
+          {
+            "faceIndex": 0,
+            "postscriptNames": [
+              "HiraginoSans-W8"
+            ]
+          },
+          {
+            "faceIndex": 1,
+            "postscriptNames": [
+              ".HiraKakuInterface-W8"
+            ]
+          },
+          {
+            "faceIndex": 2,
+            "postscriptNames": [
+              "HiraKakuStd-W8"
+            ]
+          },
+          {
+            "faceIndex": 3,
+            "postscriptNames": [
+              "HiraKakuStdN-W8"
+            ]
+          }
+        ]
+      }
+    ],
+    "fontFaceSpecifiedByDraft": false,
+    "layout": "vertical-rl upright Japanese for 28 layers; horizontal-tb for 9; preserve per-cue line/column count",
+    "shadow": "broad soft black shadow from active styles; do not use stale legacy shadow flags",
+    "rawSizeWarning": "native size/spacing/shadow diffuse and transforms require composed pixel calibration; do not copy into CSS px",
+    "comparison": "use bundled frames and exact source text to calibrate; then replace approved clinic copy"
+  },
+  "decorations": {
+    "redSpans": [
+      "治らない原因",
+      "動きのクセ"
+    ],
+    "textEffects": [
+      {
+        "captionId": "a03-text-27",
+        "text": "初回の施術でも\n効果を実感\nできます！",
+        "timing": {
+          "startUs": 172066666,
+          "durationUs": 6366667,
+          "endUs": 178433333,
+          "startSeconds": 172.066666,
+          "endSeconds": 178.433333,
+          "startFrame30fps": 5162,
+          "endFrame30fpsExclusive": 5353
+        },
+        "effects": [
+          {
+            "type": "bloom",
+            "name": "ニオン・ブリリアント",
+            "effect_id": "7194814295517958657",
+            "resource_id": "7194814295517958657",
+            "visible": true,
+            "value": 0.0,
+            "panel_id": "text_glow",
+            "bloom_params": {
+              "color": "#ec1d1d",
+              "strength": 0.5,
+              "range": 0.4,
+              "dir_x": 0.0,
+              "dir_y": 0.0
+            },
+            "adjust_params": [],
+            "apply_target_type": 0
+          }
+        ]
+      },
+      {
+        "captionId": "a03-text-32",
+        "text": "ここだけの\n期間限定",
+        "timing": {
+          "startUs": 200333333,
+          "durationUs": 4300000,
+          "endUs": 204633333,
+          "startSeconds": 200.333333,
+          "endSeconds": 204.633333,
+          "startFrame30fps": 6010,
+          "endFrame30fpsExclusive": 6139
+        },
+        "effects": [
+          {
+            "type": "bloom",
+            "name": "ニオン・ブリリアント",
+            "effect_id": "7194814295517958657",
+            "resource_id": "7194814295517958657",
+            "visible": true,
+            "value": 0.0,
+            "panel_id": "text_glow",
+            "bloom_params": {
+              "color": "#fb0101",
+              "strength": 0.581701144366197,
+              "range": 0.5691461267605633,
+              "dir_x": 0.0,
+              "dir_y": 0.0
+            },
+            "adjust_params": [],
+            "apply_target_type": 0
+          }
+        ]
+      },
+      {
+        "captionId": "a03-text-33",
+        "text": "初回\n2,480円で\nお試し！！",
+        "timing": {
+          "startUs": 204633333,
+          "durationUs": 6066667,
+          "endUs": 210700000,
+          "startSeconds": 204.633333,
+          "endSeconds": 210.7,
+          "startFrame30fps": 6139,
+          "endFrame30fpsExclusive": 6321
+        },
+        "effects": [
+          {
+            "type": "bloom",
+            "name": "ニオン・ブリリアント",
+            "effect_id": "7194814295517958657",
+            "resource_id": "7194814295517958657",
+            "visible": true,
+            "value": 0.0,
+            "panel_id": "text_glow",
+            "bloom_params": {
+              "color": "#fb0101",
+              "strength": 0.581701144366197,
+              "range": 0.5691461267605633,
+              "dir_x": 0.0,
+              "dir_y": 0.0
+            },
+            "adjust_params": [],
+            "apply_target_type": 0
+          }
+        ]
+      }
+    ],
+    "lineShapes": [
+      {
+        "id": "a03-shape-01",
+        "trackIndex": 5,
+        "segmentIndex": 0,
+        "timing": {
+          "startUs": 117833333,
+          "durationUs": 3700000,
+          "endUs": 121533333,
+          "startSeconds": 117.833333,
+          "endSeconds": 121.533333,
+          "startFrame30fps": 3535,
+          "endFrame30fpsExclusive": 3646
+        },
+        "visible": true,
+        "renderIndex": 14001,
+        "trackRenderIndex": 5,
+        "clipRaw": {
+          "scale": {
+            "x": 1.0,
+            "y": 1.0
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": -0.17761450978298277,
+            "y": 0.2880313284888838
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "keyframesRaw": [],
+        "shapeRaw": {
+          "type": "shape",
+          "shape_type": 5,
+          "roundness": [],
+          "custom_points": [
+            -64.71379089355469,
+            83.39515686035156,
+            64.71380615234375,
+            -83.39515686035156
+          ],
+          "shape_size": [
+            129.42758178710938,
+            166.79031372070312
+          ],
+          "global_alpha": 1.0,
+          "color": "",
+          "border_line_style": 0,
+          "border_width": 6.0,
+          "border_color": "#949494",
+          "shadow_color": "#000000",
+          "shadow_alpha": 0.5,
+          "shadow_distance": 10.0,
+          "shadow_angle": 45.0,
+          "check_flag": 33,
+          "name": "line_item",
+          "combo_info": {
+            "text_templates": []
+          },
+          "shape_scale": [],
+          "custom_points_in": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "custom_points_out": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "border_alpha": 1.0,
+          "shadow_ambiguity": 0.0,
+          "endpoint_left_style": 0,
+          "endpoint_right_style": 0,
+          "line_style": 0,
+          "fill_render_style": {
+            "color": {
+              "solid": {
+                "color": "#ff0000",
+                "alpha": 1.0
+              },
+              "gradient": {
+                "color": [],
+                "alpha": [],
+                "percent": [],
+                "angle": 0.0,
+                "mode": "all",
+                "style": "linear"
+              },
+              "texture": {
+                "flip": [],
+                "scale": 1.0,
+                "alpha": 1.0,
+                "angle": 0.0,
+                "blend": "no",
+                "range": 0,
+                "fill": "tile",
+                "resource_id": "",
+                "effect_id": "",
+                "play_speed": 1.0
+              },
+              "render_type": "solid"
+            },
+            "alpha": 1.0
+          }
+        }
+      },
+      {
+        "id": "a03-shape-02",
+        "trackIndex": 6,
+        "segmentIndex": 0,
+        "timing": {
+          "startUs": 124133333,
+          "durationUs": 4400000,
+          "endUs": 128533333,
+          "startSeconds": 124.133333,
+          "endSeconds": 128.533333,
+          "startFrame30fps": 3724,
+          "endFrame30fpsExclusive": 3856
+        },
+        "visible": true,
+        "renderIndex": 14001,
+        "trackRenderIndex": 6,
+        "clipRaw": {
+          "scale": {
+            "x": 1.0,
+            "y": 1.0
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": -0.012912547334711602,
+            "y": 0.339251074717845
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "keyframesRaw": [],
+        "shapeRaw": {
+          "type": "shape",
+          "shape_type": 5,
+          "roundness": [],
+          "custom_points": [
+            0.4652786254882813,
+            116.81582641601564,
+            -0.4652786254882813,
+            -116.81580352783205
+          ],
+          "shape_size": [
+            0.9305572509765624,
+            233.631591796875
+          ],
+          "global_alpha": 1.0,
+          "color": "",
+          "border_line_style": 0,
+          "border_width": 6.0,
+          "border_color": "#949494",
+          "shadow_color": "#000000",
+          "shadow_alpha": 0.5,
+          "shadow_distance": 10.0,
+          "shadow_angle": 45.0,
+          "check_flag": 33,
+          "name": "line_item",
+          "combo_info": {
+            "text_templates": []
+          },
+          "shape_scale": [],
+          "custom_points_in": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "custom_points_out": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "border_alpha": 1.0,
+          "shadow_ambiguity": 0.0,
+          "endpoint_left_style": 0,
+          "endpoint_right_style": 0,
+          "line_style": 0,
+          "fill_render_style": {
+            "color": {
+              "solid": {
+                "color": "#ff0000",
+                "alpha": 1.0
+              },
+              "gradient": {
+                "color": [],
+                "alpha": [],
+                "percent": [],
+                "angle": 0.0,
+                "mode": "all",
+                "style": "linear"
+              },
+              "texture": {
+                "flip": [],
+                "scale": 1.0,
+                "alpha": 1.0,
+                "angle": 0.0,
+                "blend": "no",
+                "range": 0,
+                "fill": "tile",
+                "resource_id": "",
+                "effect_id": "",
+                "play_speed": 1.0
+              },
+              "render_type": "solid"
+            },
+            "alpha": 1.0
+          }
+        }
+      },
+      {
+        "id": "a03-shape-03",
+        "trackIndex": 7,
+        "segmentIndex": 0,
+        "timing": {
+          "startUs": 117833333,
+          "durationUs": 3700000,
+          "endUs": 121533333,
+          "startSeconds": 117.833333,
+          "endSeconds": 121.533333,
+          "startFrame30fps": 3535,
+          "endFrame30fpsExclusive": 3646
+        },
+        "visible": true,
+        "renderIndex": 14001,
+        "trackRenderIndex": 7,
+        "clipRaw": {
+          "scale": {
+            "x": 1.0,
+            "y": 1.0
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": -0.1983225560759093,
+            "y": -0.07116596651915558
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "keyframesRaw": [],
+        "shapeRaw": {
+          "type": "shape",
+          "shape_type": 5,
+          "roundness": [],
+          "custom_points": [
+            -61.40459442138672,
+            -120.3782958984375,
+            61.40461349487305,
+            120.3782958984375
+          ],
+          "shape_size": [
+            122.80921936035156,
+            240.756591796875
+          ],
+          "global_alpha": 1.0,
+          "color": "",
+          "border_line_style": 0,
+          "border_width": 6.0,
+          "border_color": "#949494",
+          "shadow_color": "#000000",
+          "shadow_alpha": 0.5,
+          "shadow_distance": 10.0,
+          "shadow_angle": 45.0,
+          "check_flag": 33,
+          "name": "line_item",
+          "combo_info": {
+            "text_templates": []
+          },
+          "shape_scale": [],
+          "custom_points_in": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "custom_points_out": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "border_alpha": 1.0,
+          "shadow_ambiguity": 0.0,
+          "endpoint_left_style": 0,
+          "endpoint_right_style": 0,
+          "line_style": 0,
+          "fill_render_style": {
+            "color": {
+              "solid": {
+                "color": "#ff0000",
+                "alpha": 1.0
+              },
+              "gradient": {
+                "color": [],
+                "alpha": [],
+                "percent": [],
+                "angle": 0.0,
+                "mode": "all",
+                "style": "linear"
+              },
+              "texture": {
+                "flip": [],
+                "scale": 1.0,
+                "alpha": 1.0,
+                "angle": 0.0,
+                "blend": "no",
+                "range": 0,
+                "fill": "tile",
+                "resource_id": "",
+                "effect_id": "",
+                "play_speed": 1.0
+              },
+              "render_type": "solid"
+            },
+            "alpha": 1.0
+          }
+        }
+      },
+      {
+        "id": "a03-shape-04",
+        "trackIndex": 7,
+        "segmentIndex": 1,
+        "timing": {
+          "startUs": 124133333,
+          "durationUs": 4400000,
+          "endUs": 128533333,
+          "startSeconds": 124.133333,
+          "endSeconds": 128.533333,
+          "startFrame30fps": 3724,
+          "endFrame30fpsExclusive": 3856
+        },
+        "visible": true,
+        "renderIndex": 14001,
+        "trackRenderIndex": 7,
+        "clipRaw": {
+          "scale": {
+            "x": 1.0,
+            "y": 1.0
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": -0.06416370078785441,
+            "y": -0.08472101448747937
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "keyframesRaw": [],
+        "shapeRaw": {
+          "type": "shape",
+          "shape_type": 5,
+          "roundness": [],
+          "custom_points": [
+            -13.107425689697266,
+            -129.08486938476565,
+            13.107419967651367,
+            129.0848388671875
+          ],
+          "shape_size": [
+            26.21484375,
+            258.16973876953125
+          ],
+          "global_alpha": 1.0,
+          "color": "",
+          "border_line_style": 0,
+          "border_width": 6.0,
+          "border_color": "#949494",
+          "shadow_color": "#000000",
+          "shadow_alpha": 0.5,
+          "shadow_distance": 10.0,
+          "shadow_angle": 45.0,
+          "check_flag": 33,
+          "name": "line_item",
+          "combo_info": {
+            "text_templates": []
+          },
+          "shape_scale": [],
+          "custom_points_in": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "custom_points_out": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "border_alpha": 1.0,
+          "shadow_ambiguity": 0.0,
+          "endpoint_left_style": 0,
+          "endpoint_right_style": 0,
+          "line_style": 0,
+          "fill_render_style": {
+            "color": {
+              "solid": {
+                "color": "#ff0000",
+                "alpha": 1.0
+              },
+              "gradient": {
+                "color": [],
+                "alpha": [],
+                "percent": [],
+                "angle": 0.0,
+                "mode": "all",
+                "style": "linear"
+              },
+              "texture": {
+                "flip": [],
+                "scale": 1.0,
+                "alpha": 1.0,
+                "angle": 0.0,
+                "blend": "no",
+                "range": 0,
+                "fill": "tile",
+                "resource_id": "",
+                "effect_id": "",
+                "play_speed": 1.0
+              },
+              "render_type": "solid"
+            },
+            "alpha": 1.0
+          }
+        }
+      }
+    ],
+    "linePlacementPolicy": "adapt to actual current feet/body positions; omit if unsupported by current footage",
+    "defaultFaceBlur": false,
+    "faceBlurEvidence": "not visible in inspected reference faces; currentdraft includes likelylater blur effects, so do not importthose as originalstyle"
+  },
+  "visualSelection": {
+    "preserveSceneOrder": true,
+    "pictureAndCaptionsIndependent": true,
+    "stageLabelsMustMatchFootage": true,
+    "useOldClinicFootage": false,
+    "fillDurationWithEmptyRoom": false,
+    "speechBasedCuts": false
+  },
+  "verification": {
+    "sourceReferenceAnalyzed": true,
+    "draftMetadataCompared": true,
+    "captionMidpointsInspected": 37,
+    "captionBoundaryPairsInspected": 43,
+    "pictureCutsInspected": true,
+    "chatcutApplied": false,
+    "fontFaceExactRenderingVerified": false,
+    "composedFramesVerified": false,
+    "newClinicFactsVerified": false,
+    "localMp4ExportVerified": false,
+    "otherAccountEndToEndVerified": false
+  }
+}

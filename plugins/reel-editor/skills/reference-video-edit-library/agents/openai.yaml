@@ -1,0 +1,11 @@
+interface:
+  display_name: "動画編集ライブラリ"
+  short_description: "素材とLPを使い、A01などの共通パターンでCodexからChatCutを編集"
+  default_prompt: "$reference-video-edit-library を使い、A01でまず台本だけ作成してください。LPを送ります。参考台本の語り口と話順を保ち、店舗ごとの事実だけ差し替えてください。素材と音声は台本確認後に同じタスクへ送ります。今は動画編集・音声生成を始めないでください。"
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "chatcut"
+      description: "ChatCutの認証済み編集接続が必要。個別の接続は利用者が行います。"
+      transport: "streamable_http"
+      url: "https://api.chatcut.io/api/external-mcp/mcp"

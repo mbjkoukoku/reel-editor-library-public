@@ -1,0 +1,1574 @@
+{
+  "id": "A01",
+  "version": "0.3.0",
+  "name": "整体院紹介・白明朝・尺は内容に合わせる",
+  "canvas": {
+    "width": 1440,
+    "height": 3114,
+    "fps": 30,
+    "durationFrames": 1585
+  },
+  "cuts": [
+    {
+      "role": "施術の寄り",
+      "start": 0,
+      "end": 131
+    },
+    {
+      "role": "施術の手元",
+      "start": 131,
+      "end": 220
+    },
+    {
+      "role": "外観",
+      "start": 220,
+      "end": 315
+    },
+    {
+      "role": "内観",
+      "start": 315,
+      "end": 408
+    },
+    {
+      "role": "カウンセリング・検査",
+      "start": 408,
+      "end": 576
+    },
+    {
+      "role": "施術・運動療法",
+      "start": 576,
+      "end": 707
+    },
+    {
+      "role": "別角度の施術",
+      "start": 707,
+      "end": 781
+    },
+    {
+      "role": "施術と資格・実績の重ね表示",
+      "start": 781,
+      "end": 999
+    },
+    {
+      "role": "担当者の対応",
+      "start": 999,
+      "end": 1113
+    },
+    {
+      "role": "説明・カウンセリング",
+      "start": 1113,
+      "end": 1247
+    },
+    {
+      "role": "施術と相談案内",
+      "start": 1247,
+      "end": 1344
+    },
+    {
+      "role": "初回案内の上下黒帯",
+      "start": 1344,
+      "end": 1474
+    },
+    {
+      "role": "担当者の案内と行動喚起",
+      "start": 1474,
+      "end": 1585
+    }
+  ],
+  "cues": [
+    {
+      "start": 0,
+      "end": 50,
+      "key": "text0",
+      "style": "intro_handwritten",
+      "role": "悩みのつかみ",
+      "metrics": {
+        "centerY": 1568,
+        "linePitch": 238,
+        "fontSize": 233,
+        "status": "image-measured target; fontSize must be recalibrated using identified font"
+      },
+      "originalCapCut": {
+        "fontSize": 28.0,
+        "lineSpacing": 0.02,
+        "letterSpacing": 0.0,
+        "transform": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0
+        },
+        "bold": true,
+        "shadows": [
+          {
+            "thickness_projection_distance": 0,
+            "diffuse": 0.0242459662258625,
+            "angle": 0,
+            "thickness_projection_enable": false,
+            "content": {
+              "solid": {
+                "color": [
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "render_type": "solid"
+            },
+            "distance": 0,
+            "thickness_projection_angle": -45,
+            "alpha": 0.6028592586517334
+          }
+        ],
+        "strokes": [],
+        "animations": [
+          {
+            "name": "カーブスライド",
+            "type": "in",
+            "start": 0,
+            "duration": 1533333
+          }
+        ],
+        "manualLineCount": 2,
+        "automaticWrappingMayAddLines": true
+      }
+    },
+    {
+      "start": 53,
+      "end": 126,
+      "key": "text1",
+      "style": "main",
+      "role": "共感",
+      "metrics": {
+        "centerY": 1556.5,
+        "linePitch": 223,
+        "fontSize": 176,
+        "status": "image-measured target; fontSize must be recalibrated using identified font"
+      },
+      "originalCapCut": {
+        "fontSize": 21.0,
+        "lineSpacing": 0.26999999999999996,
+        "letterSpacing": 0.0,
+        "transform": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0
+        },
+        "bold": false,
+        "shadows": [
+          {
+            "alpha": 0.6529361009597778,
+            "angle": 0,
+            "content": {
+              "render_type": "solid",
+              "solid": {
+                "color": [
+                  0,
+                  0,
+                  0
+                ]
+              }
+            },
+            "diffuse": 0.024979721754789352,
+            "distance": 0,
+            "thickness_projection_angle": -45,
+            "thickness_projection_distance": 0,
+            "thickness_projection_enable": false
+          }
+        ],
+        "strokes": [],
+        "animations": [],
+        "manualLineCount": 2,
+        "automaticWrappingMayAddLines": true
+      }
+    },
+    {
+      "start": 133,
+      "end": 220,
+      "key": "text2",
+      "style": "main",
+      "role": "対象者",
+      "metrics": {
+        "centerY": 1420,
+        "linePitch": 241,
+        "fontSize": 184,
+        "status": "image-measured target; fontSize must be recalibrated using identified font"
+      },
+      "originalCapCut": {
+        "fontSize": 22.0,
+        "lineSpacing": 0.31999999999999995,
+        "letterSpacing": 0.0,
+        "transform": {
+          "x": 0.0,
+          "y": 0.08799670625200384
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0
+        },
+        "bold": false,
+        "shadows": [
+          {
+            "alpha": 0.645411729812622,
+            "angle": 0,
+            "content": {
+              "render_type": "solid",
+              "solid": {
+                "color": [
+                  0,
+                  0,
+                  0
+                ]
+              }
+            },
+            "diffuse": 0.025737494230270386,
+            "distance": 0,
+            "thickness_projection_angle": -45,
+            "thickness_projection_distance": 0,
+            "thickness_projection_enable": false
+          }
+        ],
+        "strokes": [],
+        "animations": [],
+        "manualLineCount": 2,
+        "automaticWrappingMayAddLines": true
+      }
+    },
+    {
+      "start": 221,
+      "end": 276,
+      "key": "text3",
+      "style": "main_black_band",
+      "role": "地域",
+      "metrics": {
+        "centerY": 1560,
+        "linePitch": 231,
+        "fontSize": 184,
+        "status": "image-measured target; fontSize must be recalibrated using identified font"
+      },
+      "originalCapCut": {
+        "fontSize": 22.0,
+        "lineSpacing": 0.26999999999999996,
+        "letterSpacing": 0.0,
+        "transform": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0
+        },
+        "bold": false,
+        "shadows": [
+          {
+            "alpha": 0.6373591423034668,
+            "angle": 0,
+            "content": {
+              "render_type": "solid",
+              "solid": {
+                "color": [
+                  0,
+                  0,
+                  0
+                ]
+              }
+            },
+            "diffuse": 0.0247422531247139,
+            "distance": 0,
+            "thickness_projection_angle": -45,
+            "thickness_projection_distance": 0,
+            "thickness_projection_enable": false
+          }
+        ],
+        "strokes": [],
+        "animations": [],
+        "manualLineCount": 2,
+        "automaticWrappingMayAddLines": true
+      }
+    },
+    {
+      "start": 287,
+      "end": 355,
+      "key": "text4",
+      "style": "main_black_band",
+      "role": "専門性",
+      "metrics": {
+        "centerY": 1557,
+        "linePitch": 223,
+        "fontSize": 176,
+        "status": "image-measured target; fontSize must be recalibrated using identified font"
+      },
+      "originalCapCut": {
+        "fontSize": 21.0,
+        "lineSpacing": 0.26999999999999996,
+        "letterSpacing": 0.0,
+        "transform": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0
+        },
+        "bold": false,
+        "shadows": [
+          {
+            "alpha": 0.6453957557678223,
+            "angle": 0,
+            "content": {
+              "render_type": "solid",
+              "solid": {
+                "color": [
+                  0,
+                  0,
+                  0
+                ]
+              }
+            },
+            "diffuse": 0.02475292794406414,
+            "distance": 0,
+            "thickness_projection_angle": -45,
+            "thickness_projection_distance": 0,
+            "thickness_projection_enable": false
+          }
+        ],
+        "strokes": [],
+        "animations": [],
+        "manualLineCount": 1,
+        "automaticWrappingMayAddLines": true
+      }
+    },
+    {
+      "start": 359,
+      "end": 408,
+      "key": "text5",
+      "style": "main_black_band",
+      "role": "店名",
+      "metrics": {
+        "centerY": 1561,
+        "linePitch": 210,
+        "fontSize": 160,
+        "status": "image-measured target; fontSize must be recalibrated using identified font"
+      },
+      "originalCapCut": {
+        "fontSize": 20.0,
+        "lineSpacing": 0.26999999999999996,
+        "letterSpacing": 0.0,
+        "transform": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0
+        },
+        "bold": false,
+        "shadows": [
+          {
+            "alpha": 0.6411212682724,
+            "angle": 0,
+            "content": {
+              "render_type": "solid",
+              "solid": {
+                "color": [
+                  0,
+                  0,
+                  0
+                ]
+              }
+            },
+            "diffuse": 0.024942366406321526,
+            "distance": 0,
+            "thickness_projection_angle": -45,
+            "thickness_projection_distance": 0,
+            "thickness_projection_enable": false
+          }
+        ],
+        "strokes": [],
+        "animations": [],
+        "manualLineCount": 2,
+        "automaticWrappingMayAddLines": true
+      }
+    },
+    {
+      "start": 412,
+      "end": 456,
+      "key": "text6",
+      "style": "main",
+      "role": "問診・検査",
+      "metrics": {
+        "centerY": 1561.5,
+        "linePitch": 224,
+        "fontSize": 184,
+        "status": "image-measured target; fontSize must be recalibrated using identified font"
+      },
+      "originalCapCut": {
+        "fontSize": 22.0,
+        "lineSpacing": 0.26999999999999996,
+        "letterSpacing": 0.0,
+        "transform": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0
+        },
+        "bold": false,
+        "shadows": [
+          {
+            "alpha": 0.6448514461517334,
+            "angle": 0,
+            "content": {
+              "render_type": "solid",
+              "solid": {
+                "color": [
+                  0,
+                  0,
+                  0
+                ]
+              }
+            },
+            "diffuse": 0.025596080347895622,
+            "distance": 0,
+            "thickness_projection_angle": -45,
+            "thickness_projection_distance": 0,
+            "thickness_projection_enable": false
+          }
+        ],
+        "strokes": [],
+        "animations": [],
+        "manualLineCount": 1,
+        "automaticWrappingMayAddLines": true
+      }
+    },
+    {
+      "start": 458,
+      "end": 502,
+      "key": "text7",
+      "style": "main",
+      "role": "原因の確認",
+      "metrics": {
+        "centerY": 1556,
+        "linePitch": 239,
+        "fontSize": 184,
+        "status": "image-measured target; fontSize must be recalibrated using identified font"
+      },
+      "originalCapCut": {
+        "fontSize": 22.0,
+        "lineSpacing": 0.26999999999999996,
+        "letterSpacing": 0.0,
+        "transform": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0
+        },
+        "bold": false,
+        "shadows": [
+          {
+            "alpha": 0.6488217115402222,
+            "angle": 0,
+            "content": {
+              "render_type": "solid",
+              "solid": {
+                "color": [
+                  0,
+                  0,
+                  0
+                ]
+              }
+            },
+            "diffuse": 0.02463819459080696,
+            "distance": 0,
+            "thickness_projection_angle": -45,
+            "thickness_projection_distance": 0,
+            "thickness_projection_enable": false
+          }
+        ],
+        "strokes": [],
+        "animations": [],
+        "manualLineCount": 2,
+        "automaticWrappingMayAddLines": true
+      }
+    },
+    {
+      "start": 505,
+      "end": 576,
+      "key": "text8",
+      "style": "main",
+      "role": "施術の提案",
+      "metrics": {
+        "centerY": 1558.5,
+        "linePitch": 231,
+        "fontSize": 184,
+        "status": "image-measured target; fontSize must be recalibrated using identified font"
+      },
+      "originalCapCut": {
+        "fontSize": 22.0,
+        "lineSpacing": 0.26999999999999996,
+        "letterSpacing": 0.0,
+        "transform": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0
+        },
+        "bold": false,
+        "shadows": [
+          {
+            "alpha": 0.6526479125022888,
+            "angle": 0,
+            "content": {
+              "render_type": "solid",
+              "solid": {
+                "color": [
+                  0,
+                  0,
+                  0
+                ]
+              }
+            },
+            "diffuse": 0.025614755228161812,
+            "distance": 0,
+            "thickness_projection_angle": -45,
+            "thickness_projection_distance": 0,
+            "thickness_projection_enable": false
+          }
+        ],
+        "strokes": [],
+        "animations": [],
+        "manualLineCount": 2,
+        "automaticWrappingMayAddLines": true
+      }
+    },
+    {
+      "start": 579,
+      "end": 642,
+      "key": "text9",
+      "style": "main",
+      "role": "運動等の提案",
+      "metrics": {
+        "centerY": 1557,
+        "linePitch": 235,
+        "fontSize": 182,
+        "status": "image-measured target; fontSize must be recalibrated using identified font"
+      },
+      "originalCapCut": {
+        "fontSize": 22.0,
+        "lineSpacing": 0.26999999999999996,
+        "letterSpacing": 0.0,
+        "transform": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0
+        },
+        "bold": false,
+        "shadows": [
+          {
+            "alpha": 0.6504706740379333,
+            "angle": 0,
+            "content": {
+              "render_type": "solid",
+              "solid": {
+                "color": [
+                  0,
+                  0,
+                  0
+                ]
+              }
+            },
+            "diffuse": 0.024680884554982185,
+            "distance": 0,
+            "thickness_projection_angle": -45,
+            "thickness_projection_distance": 0,
+            "thickness_projection_enable": false
+          }
+        ],
+        "strokes": [],
+        "animations": [],
+        "manualLineCount": 3,
+        "automaticWrappingMayAddLines": true
+      }
+    },
+    {
+      "start": 652,
+      "end": 707,
+      "key": "text10",
+      "style": "main",
+      "role": "施術方針",
+      "metrics": {
+        "centerY": 1559,
+        "linePitch": 221,
+        "fontSize": 176,
+        "status": "image-measured target; fontSize must be recalibrated using identified font"
+      },
+      "originalCapCut": {
+        "fontSize": 21.0,
+        "lineSpacing": 0.26999999999999996,
+        "letterSpacing": 0.0,
+        "transform": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0
+        },
+        "bold": false,
+        "shadows": [
+          {
+            "alpha": 0.6483254432678223,
+            "angle": 0,
+            "content": {
+              "render_type": "solid",
+              "solid": {
+                "color": [
+                  0,
+                  0,
+                  0
+                ]
+              }
+            },
+            "diffuse": 0.024859655648469925,
+            "distance": 0,
+            "thickness_projection_angle": -45,
+            "thickness_projection_distance": 0,
+            "thickness_projection_enable": false
+          }
+        ],
+        "strokes": [],
+        "animations": [],
+        "manualLineCount": 2,
+        "automaticWrappingMayAddLines": true
+      }
+    },
+    {
+      "start": 722,
+      "end": 781,
+      "key": "text11",
+      "style": "main",
+      "role": "目指す方向",
+      "metrics": {
+        "centerY": 1558,
+        "linePitch": 212,
+        "fontSize": 168,
+        "status": "image-measured target; fontSize must be recalibrated using identified font"
+      },
+      "originalCapCut": {
+        "fontSize": 20.0,
+        "lineSpacing": 0.26999999999999996,
+        "letterSpacing": 0.0,
+        "transform": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0
+        },
+        "bold": false,
+        "shadows": [
+          {
+            "alpha": 0.634957730770111,
+            "angle": 0,
+            "content": {
+              "render_type": "solid",
+              "solid": {
+                "color": [
+                  0,
+                  0,
+                  0
+                ]
+              }
+            },
+            "diffuse": 0.02550269290804863,
+            "distance": 0,
+            "thickness_projection_angle": -45,
+            "thickness_projection_distance": 0,
+            "thickness_projection_enable": false
+          }
+        ],
+        "strokes": [],
+        "animations": [],
+        "manualLineCount": 2,
+        "automaticWrappingMayAddLines": true
+      }
+    },
+    {
+      "start": 786,
+      "end": 921,
+      "key": "text12",
+      "style": "badges_only",
+      "role": "資格・実績バッジ",
+      "metrics": null
+    },
+    {
+      "start": 914,
+      "end": 992,
+      "key": "text13",
+      "style": "main_between_credentials",
+      "role": "担当者",
+      "metrics": {
+        "centerY": 1244,
+        "linePitch": 211,
+        "fontSize": 168,
+        "status": "image-measured target; fontSize must be recalibrated using identified font"
+      },
+      "originalCapCut": {
+        "fontSize": 20.0,
+        "lineSpacing": 0.26999999999999996,
+        "letterSpacing": 0.0,
+        "transform": {
+          "x": 0.0,
+          "y": 0.20207283204492632
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0
+        },
+        "bold": false,
+        "shadows": [
+          {
+            "alpha": 0.649945557117462,
+            "angle": 0,
+            "content": {
+              "render_type": "solid",
+              "solid": {
+                "color": [
+                  0,
+                  0,
+                  0
+                ]
+              }
+            },
+            "diffuse": 0.0256414357572794,
+            "distance": 0,
+            "thickness_projection_angle": -45,
+            "thickness_projection_distance": 0,
+            "thickness_projection_enable": false
+          }
+        ],
+        "strokes": [],
+        "animations": [
+          {
+            "name": "スライド（右）",
+            "type": "in",
+            "start": 0,
+            "duration": 500000
+          }
+        ],
+        "manualLineCount": 2,
+        "automaticWrappingMayAddLines": true
+      }
+    },
+    {
+      "start": 999,
+      "end": 1050,
+      "key": "text14",
+      "style": "main",
+      "role": "対応の特徴",
+      "metrics": {
+        "centerY": 1557,
+        "linePitch": 234,
+        "fontSize": 182,
+        "status": "image-measured target; fontSize must be recalibrated using identified font"
+      },
+      "originalCapCut": {
+        "fontSize": 22.0,
+        "lineSpacing": 0.26999999999999996,
+        "letterSpacing": 0.0,
+        "transform": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0
+        },
+        "bold": false,
+        "shadows": [
+          {
+            "alpha": 0.6517193913459778,
+            "angle": 0,
+            "content": {
+              "render_type": "solid",
+              "solid": {
+                "color": [
+                  0,
+                  0,
+                  0
+                ]
+              }
+            },
+            "diffuse": 0.0247369185090065,
+            "distance": 0,
+            "thickness_projection_angle": -45,
+            "thickness_projection_distance": 0,
+            "thickness_projection_enable": false
+          }
+        ],
+        "strokes": [],
+        "animations": [],
+        "manualLineCount": 3,
+        "automaticWrappingMayAddLines": true
+      }
+    },
+    {
+      "start": 1055,
+      "end": 1109,
+      "key": "text15",
+      "style": "main",
+      "role": "初回相談",
+      "metrics": {
+        "centerY": 1556.5,
+        "linePitch": 233,
+        "fontSize": 184,
+        "status": "image-measured target; fontSize must be recalibrated using identified font"
+      },
+      "originalCapCut": {
+        "fontSize": 22.0,
+        "lineSpacing": 0.26999999999999996,
+        "letterSpacing": 0.0,
+        "transform": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0
+        },
+        "bold": false,
+        "shadows": [
+          {
+            "alpha": 0.6435386538505554,
+            "angle": 0,
+            "content": {
+              "render_type": "solid",
+              "solid": {
+                "color": [
+                  0,
+                  0,
+                  0
+                ]
+              }
+            },
+            "diffuse": 0.025027751922607422,
+            "distance": 0,
+            "thickness_projection_angle": -45,
+            "thickness_projection_distance": 0,
+            "thickness_projection_enable": false
+          }
+        ],
+        "strokes": [],
+        "animations": [],
+        "manualLineCount": 2,
+        "automaticWrappingMayAddLines": true
+      }
+    },
+    {
+      "start": 1113,
+      "end": 1174,
+      "key": "text16",
+      "style": "main",
+      "role": "相談対象の悩み",
+      "metrics": {
+        "centerY": 1557.5,
+        "linePitch": 224,
+        "fontSize": 176,
+        "status": "image-measured target; fontSize must be recalibrated using identified font"
+      },
+      "originalCapCut": {
+        "fontSize": 21.0,
+        "lineSpacing": 0.26999999999999996,
+        "letterSpacing": 0.0,
+        "transform": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0
+        },
+        "bold": false,
+        "shadows": [
+          {
+            "alpha": 0.6404168605804443,
+            "angle": 0,
+            "content": {
+              "render_type": "solid",
+              "solid": {
+                "color": [
+                  0,
+                  0,
+                  0
+                ]
+              }
+            },
+            "diffuse": 0.025638770312070847,
+            "distance": 0,
+            "thickness_projection_angle": -45,
+            "thickness_projection_distance": 0,
+            "thickness_projection_enable": false
+          }
+        ],
+        "strokes": [],
+        "animations": [],
+        "manualLineCount": 3,
+        "automaticWrappingMayAddLines": true
+      }
+    },
+    {
+      "start": 1182,
+      "end": 1238,
+      "key": "text17",
+      "style": "main",
+      "role": "諦めていた悩み",
+      "metrics": {
+        "centerY": 1556.5,
+        "linePitch": 207,
+        "fontSize": 172,
+        "status": "image-measured target; fontSize must be recalibrated using identified font"
+      },
+      "originalCapCut": {
+        "fontSize": 21.0,
+        "lineSpacing": 0.16999999999999998,
+        "letterSpacing": 0.0,
+        "transform": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0
+        },
+        "bold": false,
+        "shadows": [
+          {
+            "alpha": 0.6455398201942444,
+            "angle": 0,
+            "content": {
+              "render_type": "solid",
+              "solid": {
+                "color": [
+                  0,
+                  0,
+                  0
+                ]
+              }
+            },
+            "diffuse": 0.025673456490039825,
+            "distance": 0,
+            "thickness_projection_angle": -45,
+            "thickness_projection_distance": 0,
+            "thickness_projection_enable": false
+          }
+        ],
+        "strokes": [],
+        "animations": [],
+        "manualLineCount": 2,
+        "automaticWrappingMayAddLines": true
+      }
+    },
+    {
+      "start": 1247,
+      "end": 1336,
+      "key": "text18",
+      "style": "main",
+      "role": "一度の相談",
+      "metrics": {
+        "centerY": 1559.5,
+        "linePitch": 233,
+        "fontSize": 184,
+        "status": "image-measured target; fontSize must be recalibrated using identified font"
+      },
+      "originalCapCut": {
+        "fontSize": 22.0,
+        "lineSpacing": 0.26999999999999996,
+        "letterSpacing": 0.0,
+        "transform": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0
+        },
+        "bold": false,
+        "shadows": [
+          {
+            "alpha": 0.649558126926422,
+            "angle": 0,
+            "content": {
+              "render_type": "solid",
+              "solid": {
+                "color": [
+                  0,
+                  0,
+                  0
+                ]
+              }
+            },
+            "diffuse": 0.0252332016825676,
+            "distance": 0,
+            "thickness_projection_angle": -45,
+            "thickness_projection_distance": 0,
+            "thickness_projection_enable": false
+          }
+        ],
+        "strokes": [],
+        "animations": [],
+        "manualLineCount": 3,
+        "automaticWrappingMayAddLines": true
+      }
+    },
+    {
+      "start": 1344,
+      "end": 1426,
+      "key": "text19",
+      "style": "main_letterboxed_video",
+      "role": "確認できる初回案内・保証",
+      "metrics": {
+        "centerY": 1557,
+        "linePitch": 234,
+        "fontSize": 184,
+        "status": "image-measured target; fontSize must be recalibrated using identified font"
+      },
+      "originalCapCut": {
+        "fontSize": 22.0,
+        "lineSpacing": 0.26999999999999996,
+        "letterSpacing": 0.0,
+        "transform": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0
+        },
+        "bold": false,
+        "shadows": [
+          {
+            "alpha": 0.6365906596183777,
+            "angle": 0,
+            "content": {
+              "render_type": "solid",
+              "solid": {
+                "color": [
+                  0,
+                  0,
+                  0
+                ]
+              }
+            },
+            "diffuse": 0.025075780227780342,
+            "distance": 0,
+            "thickness_projection_angle": -45,
+            "thickness_projection_distance": 0,
+            "thickness_projection_enable": false
+          }
+        ],
+        "strokes": [],
+        "animations": [],
+        "manualLineCount": 3,
+        "automaticWrappingMayAddLines": true
+      }
+    },
+    {
+      "start": 1436,
+      "end": 1474,
+      "key": "text20",
+      "style": "main_letterboxed_video",
+      "role": "相談を促す",
+      "metrics": {
+        "centerY": 1556.5,
+        "linePitch": 235,
+        "fontSize": 184,
+        "status": "image-measured target; fontSize must be recalibrated using identified font"
+      },
+      "originalCapCut": {
+        "fontSize": 22.0,
+        "lineSpacing": 0.26999999999999996,
+        "letterSpacing": 0.0,
+        "transform": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0
+        },
+        "bold": false,
+        "shadows": [
+          {
+            "alpha": 0.6646548509597778,
+            "angle": 0,
+            "content": {
+              "render_type": "solid",
+              "solid": {
+                "color": [
+                  0,
+                  0,
+                  0
+                ]
+              }
+            },
+            "diffuse": 0.025390625,
+            "distance": 0,
+            "thickness_projection_angle": -45,
+            "thickness_projection_distance": 0,
+            "thickness_projection_enable": false
+          }
+        ],
+        "strokes": [],
+        "animations": [],
+        "manualLineCount": 2,
+        "automaticWrappingMayAddLines": true
+      }
+    },
+    {
+      "start": 1476,
+      "end": 1519,
+      "key": "text21",
+      "style": "main",
+      "role": "予約方法",
+      "metrics": {
+        "centerY": 1557,
+        "linePitch": 222,
+        "fontSize": 176,
+        "status": "image-measured target; fontSize must be recalibrated using identified font"
+      },
+      "originalCapCut": {
+        "fontSize": 21.0,
+        "lineSpacing": 0.26999999999999996,
+        "letterSpacing": 0.0,
+        "transform": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0
+        },
+        "bold": false,
+        "shadows": [
+          {
+            "alpha": 0.654200792312622,
+            "angle": 0,
+            "content": {
+              "render_type": "solid",
+              "solid": {
+                "color": [
+                  0,
+                  0,
+                  0
+                ]
+              }
+            },
+            "diffuse": 0.02338413894176483,
+            "distance": 0,
+            "thickness_projection_angle": -45,
+            "thickness_projection_distance": 0,
+            "thickness_projection_enable": false
+          }
+        ],
+        "strokes": [],
+        "animations": [],
+        "manualLineCount": 1,
+        "automaticWrappingMayAddLines": true
+      }
+    },
+    {
+      "start": 1528,
+      "end": 1585,
+      "key": "text22",
+      "style": "main",
+      "role": "行動喚起",
+      "metrics": {
+        "centerY": 1555.5,
+        "linePitch": 227,
+        "fontSize": 176,
+        "status": "image-measured target; fontSize must be recalibrated using identified font"
+      },
+      "originalCapCut": {
+        "fontSize": 21.0,
+        "lineSpacing": 0.26999999999999996,
+        "letterSpacing": 0.0,
+        "transform": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0
+        },
+        "bold": false,
+        "shadows": [
+          {
+            "alpha": 0.641457498073578,
+            "angle": 0,
+            "content": {
+              "render_type": "solid",
+              "solid": {
+                "color": [
+                  0,
+                  0,
+                  0
+                ]
+              }
+            },
+            "diffuse": 0.02459016628563404,
+            "distance": 0,
+            "thickness_projection_angle": -45,
+            "thickness_projection_distance": 0,
+            "thickness_projection_enable": false
+          }
+        ],
+        "strokes": [],
+        "animations": [],
+        "manualLineCount": 2,
+        "automaticWrappingMayAddLines": true
+      }
+    }
+  ],
+  "typography": {
+    "bodyFont": "VDL Ｖ７明朝 U",
+    "introFont": "ふい字P",
+    "fontIdentity": "confirmed in matching original CapCut draft and font name table",
+    "maxLineAdvance": 1320,
+    "color": "#ffffff",
+    "whiteStroke": 0,
+    "shadow": {
+      "color": "rgba(0,0,0,0.64)",
+      "layers": [
+        {
+          "x": 0,
+          "y": 0,
+          "blur": 24
+        }
+      ],
+      "status": "provisional CSS seed; original shadows are recorded per cue, rendered match not yet verified"
+    },
+    "intro": {
+      "fontSize": 233,
+      "linePitch": 238,
+      "centerY": 1568,
+      "sourceAnimation": {
+        "name": "カーブスライド",
+        "durationFrames": 46,
+        "chatcutParityVerified": false
+      },
+      "boldInSource": true
+    },
+    "credentialSlide": {
+      "cue": "text13",
+      "sourceAnimation": "スライド（右）",
+      "durationFrames": 15,
+      "chatcutParityVerified": false
+    },
+    "bodyPostscriptName": "VDL-V7Mincho-Ultra",
+    "introPostscriptName": "HuiFontP",
+    "defaultFidelity": "source-font-required",
+    "bodyFontBundled": false,
+    "bodyFontRedistributionPermitted": false,
+    "bodyFontExternalUseRights": "not established by cache presence",
+    "renderCalibrationPending": true
+  },
+  "band": {
+    "x": 12,
+    "y": 1302,
+    "width": 1416,
+    "height": 510,
+    "color": "#000000",
+    "opacity": 0.53
+  },
+  "emphasis": {
+    "start": 207,
+    "end": 220,
+    "fontSize": 225,
+    "centerY": 1826,
+    "originalCapCut": {
+      "fontSize": 28.0,
+      "lineSpacing": 0.16999999999999998,
+      "letterSpacing": 0.0,
+      "transform": {
+        "x": 0.0,
+        "y": -0.17272667510909767
+      },
+      "scale": {
+        "x": 1.0,
+        "y": 1.0
+      },
+      "bold": false,
+      "shadows": [
+        {
+          "alpha": 0.6481013298034668,
+          "angle": 0,
+          "content": {
+            "render_type": "solid",
+            "solid": {
+              "color": [
+                0,
+                0,
+                0
+              ]
+            }
+          },
+          "diffuse": 0.025761503726243973,
+          "distance": 0,
+          "thickness_projection_angle": -45,
+          "thickness_projection_distance": 0,
+          "thickness_projection_enable": false
+        }
+      ],
+      "strokes": [],
+      "animations": [
+        {
+          "name": "スライドアップ",
+          "type": "in",
+          "start": 0,
+          "duration": 433333
+        }
+      ],
+      "manualLineCount": 1,
+      "automaticWrappingMayAddLines": true
+    }
+  },
+  "badges": {
+    "start": 785,
+    "end": 992,
+    "x": 40,
+    "y": 335,
+    "width": 1360,
+    "height": 620,
+    "radius": 300,
+    "centerX": [
+      300,
+      1060
+    ],
+    "centerY": 310,
+    "labelFontSize": 110,
+    "valueFontSize": 110,
+    "longValueFontSize": 96,
+    "textColor": "#3e3c3c"
+  },
+  "evidenceImage": {
+    "start": 785,
+    "end": 992,
+    "x": 40,
+    "y": 1750,
+    "width": 1360,
+    "height": 1020,
+    "fit": "contain"
+  },
+  "note": {
+    "start": 1344,
+    "end": 1476,
+    "x": 60,
+    "y": 2165,
+    "width": 1320,
+    "fontSize": 50,
+    "lineHeight": 1.45
+  },
+  "audio": {
+    "aiVoice": false,
+    "bgm": false,
+    "muteSource": true,
+    "muteSourceByMode": {
+      "reference": true,
+      "verbatim_speech": false
+    }
+  },
+  "verification": {
+    "independentAccountRunVerified": false,
+    "portablePluginExportVerified": false,
+    "originalFontIdentityVerified": true,
+    "identifiedFontChatCutRenderVerified": false,
+    "adaptiveTimelineLogicTested": true,
+    "speechModeFullProjectVerified": false,
+    "legacyV02ComposedFramesVerified": true
+  },
+  "reference": {
+    "primary": "整体サロン マサラグレース.mov",
+    "secondary": "大島先生１.mov",
+    "priority": "primary controls cut order, typography and visual pacing; secondary is supplementary only",
+    "baselineDurationFrames": 1585,
+    "baselineCutCount": 13,
+    "baselineCueCount": 23,
+    "fixedDurationRequired": false,
+    "sourceDraftSha256": "c4b5f2fe29e6b0175a270a1e601dc40374d2f9807bcb3e665bdc4720b44aae0b",
+    "sourceMetadataVerifiedOn": "2026-10-05",
+    "metadataUnits": "CapCut raw units are not CSS pixels"
+  },
+  "durationPolicy": {
+    "mode": "content-adaptive",
+    "preserveReferenceCutOrder": true,
+    "preserveSourcePlaybackSpeed": true,
+    "retimeBySelectedSceneDuration": true,
+    "missingScene": "omit or use another reviewed treatment shot; no empty filler",
+    "readingCharactersPerSecondWarning": 8
+  },
+  "legacyApproximation": {
+    "version": "0.2.0",
+    "typography": {
+      "bodyFont": "Noto Serif CJK JP Black",
+      "introFont": "ふい字P",
+      "fontIdentity": "reference-matched approximation; not original project metadata",
+      "maxLineAdvance": 1320,
+      "color": "#ffffff",
+      "whiteStroke": 2.5,
+      "shadow": {
+        "color": "#151515",
+        "layers": [
+          {
+            "x": 0,
+            "y": 0,
+            "blur": 12
+          },
+          {
+            "x": 0,
+            "y": 1,
+            "blur": 3
+          }
+        ]
+      },
+      "intro": {
+        "fontSize": 233,
+        "linePitch": 238,
+        "centerY": 1568,
+        "scaleEntry": {
+          "from": 0.91,
+          "to": 1,
+          "frames": 5
+        }
+      },
+      "credentialSlide": {
+        "cue": "text13",
+        "fromX": -420,
+        "toX": 0,
+        "frames": 5
+      }
+    },
+    "visibleCueFrames": {
+      "text0": {
+        "start": 6,
+        "end": 51
+      },
+      "text1": {
+        "start": 54,
+        "end": 126
+      },
+      "text2": {
+        "start": 135,
+        "end": 222
+      },
+      "text3": {
+        "start": 222,
+        "end": 276
+      },
+      "text4": {
+        "start": 288,
+        "end": 357
+      },
+      "text5": {
+        "start": 360,
+        "end": 408
+      },
+      "text6": {
+        "start": 414,
+        "end": 456
+      },
+      "text7": {
+        "start": 459,
+        "end": 504
+      },
+      "text8": {
+        "start": 507,
+        "end": 576
+      },
+      "text9": {
+        "start": 579,
+        "end": 642
+      },
+      "text10": {
+        "start": 654,
+        "end": 708
+      },
+      "text11": {
+        "start": 723,
+        "end": 783
+      },
+      "text12": {
+        "start": 786,
+        "end": 921
+      },
+      "text13": {
+        "start": 921,
+        "end": 993
+      },
+      "text14": {
+        "start": 999,
+        "end": 1050
+      },
+      "text15": {
+        "start": 1056,
+        "end": 1110
+      },
+      "text16": {
+        "start": 1113,
+        "end": 1176
+      },
+      "text17": {
+        "start": 1182,
+        "end": 1239
+      },
+      "text18": {
+        "start": 1248,
+        "end": 1338
+      },
+      "text19": {
+        "start": 1344,
+        "end": 1428
+      },
+      "text20": {
+        "start": 1437,
+        "end": 1476
+      },
+      "text21": {
+        "start": 1476,
+        "end": 1521
+      },
+      "text22": {
+        "start": 1530,
+        "end": 1585
+      }
+    },
+    "status": "prior Noto-based approximation, not the identified source design"
+  },
+  "visualSelection": {
+    "practitionerRequired": true,
+    "actualTreatmentRequired": true,
+    "watchSelectedRange": true,
+    "sampleStartMiddleEnd": true,
+    "unoccupiedAllowedRoles": [
+      "外観",
+      "内観"
+    ],
+    "maxUnoccupiedShotSeconds": 2,
+    "maxUnoccupiedRunSeconds": 4,
+    "limitsMeaning": "editable selection defaults for new reels, not measurements of the reference",
+    "brightness": "minor correction only; preserve skin tones and avoid clipped highlights"
+  }
+}

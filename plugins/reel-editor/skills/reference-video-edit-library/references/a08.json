@@ -1,0 +1,3439 @@
+{
+  "id": "A08",
+  "aliases": [
+    "A8",
+    "A08"
+  ],
+  "version": "0.10.3",
+  "name": "院紹介・明朝帯＋本人の案内",
+  "executionRoute": "promo_then_original_speech",
+  "workflow": "current_lp_promo_script_then_treatment_footage_and_presenter_original_speech",
+  "reference": {
+    "logicalFilename": "間地テンプレ1(1).mov",
+    "analysisDate": "2026-11-08",
+    "source": "matched original editable CapCut draft and supplied rendered video",
+    "draftCanvas": {
+      "ratio": "original",
+      "width": 592,
+      "height": 1280,
+      "background": null
+    },
+    "export": {
+      "width": 1080,
+      "height": 2336,
+      "fps": 30,
+      "frames": 817,
+      "durationSeconds": 27.233333333333334
+    },
+    "frameRangeConvention": "zero-based inclusive start / exclusive end",
+    "referenceDurationNotMandatory": true
+  },
+  "canvas": {
+    "referenceWidth": 1080,
+    "referenceHeight": 2336,
+    "fps": 30,
+    "referenceContentRect": {
+      "x": 0,
+      "y": 208,
+      "width": 1080,
+      "height": 1920,
+      "status": "measured_picture_edges_and_source_fit"
+    },
+    "default": "Preserve the reference aspect and framing unless the current job selects another delivery format. Do not silently crop it to 9:16.",
+    "alternative9x16": "When 1080x1920 is explicitly selected, reframe current footage and recalibrate text/panel positions against the active image area; do not stretch the image or copy normalized full-canvas y blindly."
+  },
+  "input": {
+    "firstStage": [
+      "A08 selection",
+      "current clinic LP/official homepage or user-confirmed facts"
+    ],
+    "afterScriptConfirmation": [
+      "current therapist greeting/consultation/examination/treatment footage",
+      "current presenter call-to-action video with original voice"
+    ],
+    "aiVoiceRequired": false,
+    "patientGenerationRequired": false,
+    "registrationWithoutLpAllowed": true,
+    "alreadyAuthorizedEdit": "If inputs and an approved script/edit instruction are already present, continue editing without restarting approval. Missing clinic facts do not block source analysis."
+  },
+  "flow": [
+    "Read this specification, a08.md and a08-script-reference.json. Keep the two visual/semantic sections separate.",
+    "Prepare first-section screen text from current verified facts, preserving the reference order and concise wording. Show the changed facts. For the closing, use actual provided speech; when not recorded yet, label it as a filming script proposal, not a transcript.",
+    "After script confirmation, receive treatment/examination footage and the presenter original-voice clip in the same task. Do not require AI voice.",
+    "Match the first six shot roles, keeping meaningful therapist/treatment action visible. The last section shows the actual presenter and retains their voice. Durations follow current material and speech.",
+    "Create separate editable video, panel, text and sound layers. Apply reference font files and rich text span styles, not one global style. No invented animation or transitions.",
+    "Use speech-cleanup.md only for unnecessary fillers/restarts/long pauses in the spoken closing, retaining meaning and word endings. Recalculate subtitle timings after any cut. Do not silence or shorten demonstrations merely for lack of speech.",
+    "Apply face-mosaic.md to identifiable real patients and verify movement/reflections/cuts. Do not mosaic the presenter just because patients need privacy.",
+    "Compare every caption and cut against the reference, review original voice and optional permitted sound, and check final frame/audio alignment. Use local MP4 delivery when requested."
+  ],
+  "copyPolicy": {
+    "promoIsNotVerbatimSpeech": true,
+    "closingBasedOnCurrentOriginalSpeech": true,
+    "referenceTextIsNotVerifiedTranscript": true,
+    "clinicalClaimsAndOffersRequireCurrentEvidence": true,
+    "neverInherit": [
+      "reference locality",
+      "reference method name",
+      "condition/diagnosis",
+      "effect or root-cause promise",
+      "first-visit discount or its terms",
+      "reference speaker voice",
+      "old clinic contact destination"
+    ],
+    "closingAsrMismatch": "Reference screen ends with ご連絡ください; ASR reported ご覧ください. Do not resolve this as a verified verbatim transcript without checking current original audio."
+  },
+  "typography": {
+    "fontIdentity": "Both exact original font files identified; unmodified OFL copies bundled.",
+    "fonts": [
+      {
+        "file": "../assets/a08-fonts/NotoSerifJP-Black.otf",
+        "postScriptName": "NotoSerifJP-Black",
+        "weight": 900,
+        "sha256": "a54d7409c7702b5aee0276d0179660271e3d8107db3d201de4536694edaf09e0",
+        "license": "SIL Open Font License 1.1"
+      },
+      {
+        "file": "../assets/a08-fonts/Corporate-Logo-Rounded-Bold-ver3.otf",
+        "postScriptName": "Corporate-Logo-Rounded-Bold-ver3",
+        "weight": 700,
+        "sha256": "ab5f612ab655cfaf39260578d81b9ab33492d7e76ddec36eac10a9a19057e101",
+        "license": "SIL Open Font License 1.1"
+      }
+    ],
+    "sourceUnits": "CapCut font_size, shadow distance, border width and transform are source units, not CSS pixels. Use rendered measurements and original phrases to calibrate the current renderer.",
+    "richTextPriority": "Some material-wide has_shadow=false and shadow_distance=144 conflict with richTextStyles (black shadow alpha0.65/distance8). Preserve both as source observations; compare the visible result, use actual per-span styling, and never treat144 as output px.",
+    "promo": "White heavy Mincho, usually 2 lines; short tactile-inspection caption is 1 line. Large centered text on a full-width translucent glass-like gray panel.",
+    "closing": "White rounded bold sans in the lower image, 1–2 lines, no gray panel. Only the relevant emphasis span is red #EC1D1D with white stroke; other spans remain white with black shadow.",
+    "lineBreaks": "Keep the reference role-specific line count and rhythm, adapt to the approved current wording, never stretch glyphs or cut off a long clinic name.",
+    "editable": "Text content, cue timing, style and background shape must remain separately editable; wording corrections do not cut original audio.",
+    "newProductionLineBreaks": {
+      "maxCharactersPerLine": 8,
+      "counting": "Count displayed grapheme characters, including punctuation, Latin letters and digits; line breaks are excluded.",
+      "scope": "All A08 promo and closing captions in new production; original reference observations remain unchanged.",
+      "wrapping": "Insert explicit breaks at meaningful phrase boundaries before exceeding 8 characters. Preserve names and approved meaning.",
+      "overflow": "If the approved phrase cannot fit meaningfully within 8 characters x 2 lines, split it into subsequent caption cues at semantic boundaries, preserving meaning and readable time for each cue. Never add a third line or reduce font size, horizontal scale or line spacing to squeeze it in.",
+      "priority": "Current user instructions override; otherwise these new-production line length, two-line maximum and spacing rules take priority over archival reference layout.",
+      "maxLinesPerCue": 2,
+      "lineSpacing": "Use productionDefaults: lineHeight 1.20 with the approved role-specific font sizes; preserve visible separation between glyphs and shadows. Do not compress line spacing to fit text. Verify the actual composite at delivery resolution."
+    }
+  },
+  "cuts": [
+    {
+      "id": "v01",
+      "role": "施術者の挨拶・地域への呼びかけ",
+      "referenceStartFrame": 0,
+      "referenceEndFrameExclusive": 87,
+      "referenceDurationFrames": 87,
+      "speed": 1.0,
+      "transform": {
+        "scale": {
+          "x": 1.0,
+          "y": 1.0
+        },
+        "rotation": 0.0,
+        "rotation3d": [],
+        "transform": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "flip": {
+          "vertical": false,
+          "horizontal": false
+        },
+        "alpha": 1.0
+      },
+      "referenceOriginalClipAudioMuted": true,
+      "referenceSourcePixels": [
+        720,
+        1280
+      ],
+      "transition": "hard_cut",
+      "sourceSelection": "Choose current project material matching the role; do not reuse old clinic media or source trim values."
+    },
+    {
+      "id": "v02",
+      "role": "座位の相談・説明",
+      "referenceStartFrame": 87,
+      "referenceEndFrameExclusive": 170,
+      "referenceDurationFrames": 83,
+      "speed": 1.0,
+      "transform": {
+        "scale": {
+          "x": 1.0,
+          "y": 1.0
+        },
+        "rotation": 0.0,
+        "rotation3d": [],
+        "transform": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "flip": {
+          "vertical": false,
+          "horizontal": false
+        },
+        "alpha": 1.0
+      },
+      "referenceOriginalClipAudioMuted": true,
+      "referenceSourcePixels": [
+        720,
+        1280
+      ],
+      "transition": "hard_cut",
+      "sourceSelection": "Choose current project material matching the role; do not reuse old clinic media or source trim values."
+    },
+    {
+      "id": "v03",
+      "role": "ベッド上の施術",
+      "referenceStartFrame": 170,
+      "referenceEndFrameExclusive": 262,
+      "referenceDurationFrames": 92,
+      "speed": 1.0,
+      "transform": {
+        "scale": {
+          "x": 1.0,
+          "y": 1.0
+        },
+        "rotation": 0.0,
+        "rotation3d": [],
+        "transform": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "flip": {
+          "vertical": false,
+          "horizontal": false
+        },
+        "alpha": 1.0
+      },
+      "referenceOriginalClipAudioMuted": true,
+      "referenceSourcePixels": [
+        720,
+        1280
+      ],
+      "transition": "hard_cut",
+      "sourceSelection": "Choose current project material matching the role; do not reuse old clinic media or source trim values."
+    },
+    {
+      "id": "v04",
+      "role": "別角度の検査・施術",
+      "referenceStartFrame": 262,
+      "referenceEndFrameExclusive": 358,
+      "referenceDurationFrames": 96,
+      "speed": 1.0,
+      "transform": {
+        "scale": {
+          "x": 1.0,
+          "y": 1.0
+        },
+        "rotation": 0.0,
+        "rotation3d": [],
+        "transform": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "flip": {
+          "vertical": false,
+          "horizontal": false
+        },
+        "alpha": 1.0
+      },
+      "referenceOriginalClipAudioMuted": true,
+      "referenceSourcePixels": [
+        720,
+        1280
+      ],
+      "transition": "hard_cut",
+      "sourceSelection": "Choose current project material matching the role; do not reuse old clinic media or source trim values."
+    },
+    {
+      "id": "v05",
+      "role": "立位の触診・検査",
+      "referenceStartFrame": 358,
+      "referenceEndFrameExclusive": 425,
+      "referenceDurationFrames": 67,
+      "speed": 1.0,
+      "transform": {
+        "scale": {
+          "x": 1.0,
+          "y": 1.0
+        },
+        "rotation": 0.0,
+        "rotation3d": [],
+        "transform": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "flip": {
+          "vertical": false,
+          "horizontal": false
+        },
+        "alpha": 1.0
+      },
+      "referenceOriginalClipAudioMuted": true,
+      "referenceSourcePixels": [
+        720,
+        1280
+      ],
+      "transition": "hard_cut",
+      "sourceSelection": "Choose current project material matching the role; do not reuse old clinic media or source trim values."
+    },
+    {
+      "id": "v06",
+      "role": "ベッド上の施術へ戻る",
+      "referenceStartFrame": 425,
+      "referenceEndFrameExclusive": 489,
+      "referenceDurationFrames": 64,
+      "speed": 1.0,
+      "transform": {
+        "scale": {
+          "x": 1.0,
+          "y": 1.0
+        },
+        "rotation": 0.0,
+        "rotation3d": [],
+        "transform": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "flip": {
+          "vertical": false,
+          "horizontal": false
+        },
+        "alpha": 1.0
+      },
+      "referenceOriginalClipAudioMuted": true,
+      "referenceSourcePixels": [
+        720,
+        1280
+      ],
+      "transition": "hard_cut",
+      "sourceSelection": "Choose current project material matching the role; do not reuse old clinic media or source trim values."
+    },
+    {
+      "id": "v07",
+      "role": "本人がカメラへ呼びかける",
+      "referenceStartFrame": 489,
+      "referenceEndFrameExclusive": 815,
+      "referenceDurationFrames": 326,
+      "speed": 1.0,
+      "transform": {
+        "scale": {
+          "x": 1.0,
+          "y": 1.0
+        },
+        "rotation": 0.0,
+        "rotation3d": [],
+        "transform": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "flip": {
+          "vertical": false,
+          "horizontal": false
+        },
+        "alpha": 1.0
+      },
+      "referenceOriginalClipAudioMuted": false,
+      "referenceSourcePixels": [
+        720,
+        1280
+      ],
+      "transition": "hard_cut",
+      "sourceSelection": "Choose current project material matching the role; do not reuse old clinic media or source trim values."
+    }
+  ],
+  "captions": [
+    {
+      "id": "t01",
+      "section": "promo",
+      "role": "地域の対象者",
+      "referenceStartFrame": 0,
+      "referenceEndFrameExclusive": 90,
+      "referenceText": "富山市長江に\n通える方必見！",
+      "referenceOnlyNotNewClinicFacts": true,
+      "fontFile": "../assets/a08-fonts/NotoSerifJP-Black.otf",
+      "fontPostScriptName": "NotoSerifJP-Black",
+      "fontWeight": 900,
+      "capcutSourceStyle": {
+        "style_name": "white_text_black_shadow",
+        "font_size": 15.0,
+        "alignment": 1,
+        "typesetting": 0,
+        "letter_spacing": 0.0,
+        "line_spacing": 0.0,
+        "text_color": "#ffffff",
+        "text_alpha": 1.0,
+        "has_shadow": true,
+        "shadow_alpha": 0.649999976158142,
+        "shadow_color": "#000000",
+        "shadow_distance": 8.0,
+        "shadow_smoothing": 0.0,
+        "shadow_point": {
+          "x": 1.018233764908628,
+          "y": -1.018233764908628
+        },
+        "shadow_angle": -45.0,
+        "border_width": 0.059999998658895,
+        "border_color": "",
+        "border_alpha": 1.0,
+        "background_style": 0,
+        "background_color": "",
+        "background_alpha": 1.0,
+        "line_max_width": 0.82,
+        "force_apply_line_max_width": false,
+        "use_effect_default_color": false
+      },
+      "richTextStyles": [
+        {
+          "fill": {
+            "content": {
+              "solid": {
+                "color": [
+                  1,
+                  1,
+                  1
+                ]
+              },
+              "render_type": "solid"
+            }
+          },
+          "range": [
+            0,
+            14
+          ],
+          "shadows": [
+            {
+              "thickness_projection_distance": 0,
+              "diffuse": 0,
+              "angle": -45,
+              "thickness_projection_enable": false,
+              "content": {
+                "solid": {
+                  "color": [
+                    0,
+                    0,
+                    0
+                  ]
+                },
+                "render_type": "solid"
+              },
+              "distance": 8.000064849853516,
+              "thickness_projection_angle": -45,
+              "alpha": 0.649999976158142
+            }
+          ],
+          "size": 15,
+          "font": {}
+        }
+      ],
+      "capcutTransform": {
+        "scale": {
+          "x": 1.351491570472717,
+          "y": 1.351491570472717
+        },
+        "rotation": 0.0,
+        "rotation3d": [],
+        "transform": {
+          "x": 0.038167938931298,
+          "y": 0.0
+        },
+        "flip": {
+          "vertical": false,
+          "horizontal": false
+        },
+        "alpha": 1.0
+      },
+      "animation": "none",
+      "referencePanel": "p01"
+    },
+    {
+      "id": "t02",
+      "section": "promo",
+      "role": "確認できる施術方針",
+      "referenceStartFrame": 90,
+      "referenceEndFrameExclusive": 170,
+      "referenceText": "運動療法で\n腰痛を改善できる",
+      "referenceOnlyNotNewClinicFacts": true,
+      "fontFile": "../assets/a08-fonts/NotoSerifJP-Black.otf",
+      "fontPostScriptName": "NotoSerifJP-Black",
+      "fontWeight": 900,
+      "capcutSourceStyle": {
+        "style_name": "white_text_black_shadow",
+        "font_size": 15.0,
+        "alignment": 1,
+        "typesetting": 0,
+        "letter_spacing": 0.0,
+        "line_spacing": 0.0,
+        "text_color": "#FFFFFF",
+        "text_alpha": 1.0,
+        "has_shadow": true,
+        "shadow_alpha": 0.649999976158142,
+        "shadow_color": "#000000",
+        "shadow_distance": 144.00116602579752,
+        "shadow_smoothing": 0.0,
+        "shadow_point": {
+          "x": 18.328356179210036,
+          "y": -18.328356179210033
+        },
+        "shadow_angle": -45.0,
+        "border_width": 0.0,
+        "border_color": "",
+        "border_alpha": 1.0,
+        "background_style": 0,
+        "background_color": "",
+        "background_alpha": 1.0,
+        "line_max_width": 0.82,
+        "force_apply_line_max_width": false,
+        "use_effect_default_color": false
+      },
+      "richTextStyles": [
+        {
+          "fill": {
+            "content": {
+              "solid": {
+                "color": [
+                  1,
+                  1,
+                  1
+                ]
+              },
+              "render_type": "solid"
+            }
+          },
+          "range": [
+            0,
+            14
+          ],
+          "shadows": [
+            {
+              "thickness_projection_distance": 0,
+              "diffuse": 0,
+              "angle": -45,
+              "thickness_projection_enable": false,
+              "content": {
+                "solid": {
+                  "color": [
+                    0,
+                    0,
+                    0
+                  ]
+                },
+                "render_type": "solid"
+              },
+              "distance": 8.000064849853516,
+              "thickness_projection_angle": -45,
+              "alpha": 0.649999976158142
+            }
+          ],
+          "size": 15,
+          "font": {}
+        }
+      ],
+      "capcutTransform": {
+        "scale": {
+          "x": 1.370431661605835,
+          "y": 1.370431661605835
+        },
+        "rotation": 0.0,
+        "rotation3d": [],
+        "transform": {
+          "x": 0.038167938931298,
+          "y": 0.0
+        },
+        "flip": {
+          "vertical": false,
+          "horizontal": false
+        },
+        "alpha": 1.0
+      },
+      "animation": "none",
+      "referencePanel": "p02"
+    },
+    {
+      "id": "t03",
+      "section": "promo",
+      "role": "院の利用条件",
+      "referenceStartFrame": 170,
+      "referenceEndFrameExclusive": 265,
+      "referenceText": "完全予約制の整体院\n知ってる？",
+      "referenceOnlyNotNewClinicFacts": true,
+      "fontFile": "../assets/a08-fonts/NotoSerifJP-Black.otf",
+      "fontPostScriptName": "NotoSerifJP-Black",
+      "fontWeight": 900,
+      "capcutSourceStyle": {
+        "style_name": "white_text_black_shadow",
+        "font_size": 15.0,
+        "alignment": 1,
+        "typesetting": 0,
+        "letter_spacing": 0.0,
+        "line_spacing": 0.0,
+        "text_color": "#FFFFFF",
+        "text_alpha": 1.0,
+        "has_shadow": true,
+        "shadow_alpha": 0.649999976158142,
+        "shadow_color": "#000000",
+        "shadow_distance": 144.00116602579752,
+        "shadow_smoothing": 0.0,
+        "shadow_point": {
+          "x": 18.328356179210036,
+          "y": -18.328356179210033
+        },
+        "shadow_angle": -45.0,
+        "border_width": 0.0,
+        "border_color": "",
+        "border_alpha": 1.0,
+        "background_style": 0,
+        "background_color": "",
+        "background_alpha": 1.0,
+        "line_max_width": 0.82,
+        "force_apply_line_max_width": false,
+        "use_effect_default_color": false
+      },
+      "richTextStyles": [
+        {
+          "fill": {
+            "content": {
+              "solid": {
+                "color": [
+                  1,
+                  1,
+                  1
+                ]
+              },
+              "render_type": "solid"
+            }
+          },
+          "range": [
+            0,
+            15
+          ],
+          "shadows": [
+            {
+              "thickness_projection_distance": 0,
+              "diffuse": 0,
+              "angle": -45,
+              "thickness_projection_enable": false,
+              "content": {
+                "solid": {
+                  "color": [
+                    0,
+                    0,
+                    0
+                  ]
+                },
+                "render_type": "solid"
+              },
+              "distance": 8.000064849853516,
+              "thickness_projection_angle": -45,
+              "alpha": 0.649999976158142
+            }
+          ],
+          "size": 15,
+          "font": {}
+        }
+      ],
+      "capcutTransform": {
+        "scale": {
+          "x": 1.212527990341187,
+          "y": 1.212527990341187
+        },
+        "rotation": 0.0,
+        "rotation3d": [],
+        "transform": {
+          "x": 0.022900763358778,
+          "y": 0.0
+        },
+        "flip": {
+          "vertical": false,
+          "horizontal": false
+        },
+        "alpha": 1.0
+      },
+      "animation": "none",
+      "referencePanel": "p03"
+    },
+    {
+      "id": "t04",
+      "section": "promo",
+      "role": "確認できる手法",
+      "referenceStartFrame": 265,
+      "referenceEndFrameExclusive": 359,
+      "referenceText": "MSMメソッドを\n活かした",
+      "referenceOnlyNotNewClinicFacts": true,
+      "fontFile": "../assets/a08-fonts/NotoSerifJP-Black.otf",
+      "fontPostScriptName": "NotoSerifJP-Black",
+      "fontWeight": 900,
+      "capcutSourceStyle": {
+        "style_name": "white_text_black_shadow",
+        "font_size": 15.0,
+        "alignment": 1,
+        "typesetting": 0,
+        "letter_spacing": 0.0,
+        "line_spacing": 0.0,
+        "text_color": "#FFFFFF",
+        "text_alpha": 1.0,
+        "has_shadow": true,
+        "shadow_alpha": 0.649999976158142,
+        "shadow_color": "#000000",
+        "shadow_distance": 144.00116602579752,
+        "shadow_smoothing": 0.0,
+        "shadow_point": {
+          "x": 18.328356179210036,
+          "y": -18.328356179210033
+        },
+        "shadow_angle": -45.0,
+        "border_width": 0.0,
+        "border_color": "",
+        "border_alpha": 1.0,
+        "background_style": 0,
+        "background_color": "",
+        "background_alpha": 1.0,
+        "line_max_width": 0.82,
+        "force_apply_line_max_width": false,
+        "use_effect_default_color": false
+      },
+      "richTextStyles": [
+        {
+          "fill": {
+            "content": {
+              "solid": {
+                "color": [
+                  1,
+                  1,
+                  1
+                ]
+              },
+              "render_type": "solid"
+            }
+          },
+          "range": [
+            0,
+            13
+          ],
+          "shadows": [
+            {
+              "thickness_projection_distance": 0,
+              "diffuse": 0,
+              "angle": -45,
+              "thickness_projection_enable": false,
+              "content": {
+                "solid": {
+                  "color": [
+                    0,
+                    0,
+                    0
+                  ]
+                },
+                "render_type": "solid"
+              },
+              "distance": 8.000064849853516,
+              "thickness_projection_angle": -45,
+              "alpha": 0.649999976158142
+            }
+          ],
+          "size": 15,
+          "font": {}
+        }
+      ],
+      "capcutTransform": {
+        "scale": {
+          "x": 1.269380211830139,
+          "y": 1.269380211830139
+        },
+        "rotation": 0.0,
+        "rotation3d": [],
+        "transform": {
+          "x": 0.022900763358778,
+          "y": 0.0
+        },
+        "flip": {
+          "vertical": false,
+          "horizontal": false
+        },
+        "alpha": 1.0
+      },
+      "animation": "none",
+      "referencePanel": "p04"
+    },
+    {
+      "id": "t05",
+      "section": "promo",
+      "role": "検査・触診の特徴",
+      "referenceStartFrame": 359,
+      "referenceEndFrameExclusive": 425,
+      "referenceText": "丁寧な触診で",
+      "referenceOnlyNotNewClinicFacts": true,
+      "fontFile": "../assets/a08-fonts/NotoSerifJP-Black.otf",
+      "fontPostScriptName": "NotoSerifJP-Black",
+      "fontWeight": 900,
+      "capcutSourceStyle": {
+        "style_name": "white_text_black_shadow",
+        "font_size": 15.0,
+        "alignment": 1,
+        "typesetting": 0,
+        "letter_spacing": 0.0,
+        "line_spacing": 0.0,
+        "text_color": "#FFFFFF",
+        "text_alpha": 1.0,
+        "has_shadow": true,
+        "shadow_alpha": 0.649999976158142,
+        "shadow_color": "#000000",
+        "shadow_distance": 144.00116602579752,
+        "shadow_smoothing": 0.0,
+        "shadow_point": {
+          "x": 18.328356179210036,
+          "y": -18.328356179210033
+        },
+        "shadow_angle": -45.0,
+        "border_width": 0.0,
+        "border_color": "",
+        "border_alpha": 1.0,
+        "background_style": 0,
+        "background_color": "",
+        "background_alpha": 1.0,
+        "line_max_width": 0.82,
+        "force_apply_line_max_width": false,
+        "use_effect_default_color": false
+      },
+      "richTextStyles": [
+        {
+          "fill": {
+            "content": {
+              "solid": {
+                "color": [
+                  1,
+                  1,
+                  1
+                ]
+              },
+              "render_type": "solid"
+            }
+          },
+          "range": [
+            0,
+            6
+          ],
+          "shadows": [
+            {
+              "thickness_projection_distance": 0,
+              "diffuse": 0,
+              "angle": -45,
+              "thickness_projection_enable": false,
+              "content": {
+                "solid": {
+                  "color": [
+                    0,
+                    0,
+                    0
+                  ]
+                },
+                "render_type": "solid"
+              },
+              "distance": 8.000064849853516,
+              "thickness_projection_angle": -45,
+              "alpha": 0.649999976158142
+            }
+          ],
+          "size": 15,
+          "font": {}
+        }
+      ],
+      "capcutTransform": {
+        "scale": {
+          "x": 1.390487790107727,
+          "y": 1.390487790107727
+        },
+        "rotation": 0.0,
+        "rotation3d": [],
+        "transform": {
+          "x": 0.022900763358778,
+          "y": 0.0
+        },
+        "flip": {
+          "vertical": false,
+          "horizontal": false
+        },
+        "alpha": 1.0
+      },
+      "animation": "none",
+      "referencePanel": "p05"
+    },
+    {
+      "id": "t06",
+      "section": "promo",
+      "role": "確認できる施術方針の締め",
+      "referenceStartFrame": 425,
+      "referenceEndFrameExclusive": 486,
+      "referenceText": "繰り返す痛みを根本から\n改善していきます",
+      "referenceOnlyNotNewClinicFacts": true,
+      "fontFile": "../assets/a08-fonts/NotoSerifJP-Black.otf",
+      "fontPostScriptName": "NotoSerifJP-Black",
+      "fontWeight": 900,
+      "capcutSourceStyle": {
+        "style_name": "white_text_black_shadow",
+        "font_size": 15.0,
+        "alignment": 1,
+        "typesetting": 0,
+        "letter_spacing": 0.0,
+        "line_spacing": 0.0,
+        "text_color": "#FFFFFF",
+        "text_alpha": 1.0,
+        "has_shadow": true,
+        "shadow_alpha": 0.649999976158142,
+        "shadow_color": "#000000",
+        "shadow_distance": 144.00116602579752,
+        "shadow_smoothing": 0.0,
+        "shadow_point": {
+          "x": 18.328356179210036,
+          "y": -18.328356179210033
+        },
+        "shadow_angle": -45.0,
+        "border_width": 0.0,
+        "border_color": "",
+        "border_alpha": 1.0,
+        "background_style": 0,
+        "background_color": "",
+        "background_alpha": 1.0,
+        "line_max_width": 0.82,
+        "force_apply_line_max_width": false,
+        "use_effect_default_color": false
+      },
+      "richTextStyles": [
+        {
+          "fill": {
+            "content": {
+              "solid": {
+                "color": [
+                  1,
+                  1,
+                  1
+                ]
+              },
+              "render_type": "solid"
+            }
+          },
+          "range": [
+            0,
+            20
+          ],
+          "shadows": [
+            {
+              "thickness_projection_distance": 0,
+              "diffuse": 0,
+              "angle": -45,
+              "thickness_projection_enable": false,
+              "content": {
+                "solid": {
+                  "color": [
+                    0,
+                    0,
+                    0
+                  ]
+                },
+                "render_type": "solid"
+              },
+              "distance": 8.000064849853516,
+              "thickness_projection_angle": -45,
+              "alpha": 0.649999976158142
+            }
+          ],
+          "size": 15,
+          "font": {}
+        }
+      ],
+      "capcutTransform": {
+        "scale": {
+          "x": 0.968647360801697,
+          "y": 0.968647360801697
+        },
+        "rotation": 0.035380516201258,
+        "rotation3d": [],
+        "transform": {
+          "x": 0.007633587786259,
+          "y": 0.0
+        },
+        "flip": {
+          "vertical": false,
+          "horizontal": false
+        },
+        "alpha": 1.0
+      },
+      "animation": "none",
+      "referencePanel": "p06"
+    },
+    {
+      "id": "t07",
+      "section": "original_speech",
+      "role": "本人案内の導入",
+      "referenceStartFrame": 486,
+      "referenceEndFrameExclusive": 508,
+      "referenceText": "只今ですね",
+      "referenceOnlyNotNewClinicFacts": true,
+      "fontFile": "../assets/a08-fonts/Corporate-Logo-Rounded-Bold-ver3.otf",
+      "fontPostScriptName": "Corporate-Logo-Rounded-Bold-ver3",
+      "fontWeight": 700,
+      "capcutSourceStyle": {
+        "style_name": "white_text_black_shadow",
+        "font_size": 10.0,
+        "alignment": 1,
+        "typesetting": 0,
+        "letter_spacing": 0.0,
+        "line_spacing": 0.0,
+        "text_color": "#ffffff",
+        "text_alpha": 1.0,
+        "has_shadow": true,
+        "shadow_alpha": 0.649999976158142,
+        "shadow_color": "#000000",
+        "shadow_distance": 8.0,
+        "shadow_smoothing": 0.0,
+        "shadow_point": {
+          "x": 1.018233764908628,
+          "y": -1.018233764908628
+        },
+        "shadow_angle": -45.0,
+        "border_width": 0.059999998658895,
+        "border_color": "",
+        "border_alpha": 1.0,
+        "background_style": 0,
+        "background_color": "",
+        "background_alpha": 1.0,
+        "line_max_width": 0.82,
+        "force_apply_line_max_width": false,
+        "use_effect_default_color": true
+      },
+      "richTextStyles": [
+        {
+          "fill": {
+            "content": {
+              "solid": {
+                "color": [
+                  1,
+                  1,
+                  1
+                ]
+              },
+              "render_type": "solid"
+            }
+          },
+          "range": [
+            0,
+            5
+          ],
+          "shadows": [
+            {
+              "thickness_projection_distance": 0,
+              "diffuse": 0,
+              "angle": -45,
+              "thickness_projection_enable": false,
+              "content": {
+                "solid": {
+                  "color": [
+                    0,
+                    0,
+                    0
+                  ]
+                },
+                "render_type": "solid"
+              },
+              "distance": 8.000064849853516,
+              "thickness_projection_angle": -45,
+              "alpha": 0.649999976158142
+            }
+          ],
+          "size": 10,
+          "font": {}
+        }
+      ],
+      "capcutTransform": {
+        "scale": {
+          "x": 1.717912554740906,
+          "y": 1.717912554740906
+        },
+        "rotation": 0.0,
+        "rotation3d": [],
+        "transform": {
+          "x": 0.011450381679389,
+          "y": -0.533544973544974
+        },
+        "flip": {
+          "vertical": false,
+          "horizontal": false
+        },
+        "alpha": 1.0
+      },
+      "animation": "none",
+      "referencePanel": null
+    },
+    {
+      "id": "t08",
+      "section": "original_speech",
+      "role": "案内する対象",
+      "referenceStartFrame": 508,
+      "referenceEndFrameExclusive": 546,
+      "referenceText": "慢性腰痛",
+      "referenceOnlyNotNewClinicFacts": true,
+      "fontFile": "../assets/a08-fonts/Corporate-Logo-Rounded-Bold-ver3.otf",
+      "fontPostScriptName": "Corporate-Logo-Rounded-Bold-ver3",
+      "fontWeight": 700,
+      "capcutSourceStyle": {
+        "style_name": "white_text_black_shadow",
+        "font_size": 10.0,
+        "alignment": 1,
+        "typesetting": 0,
+        "letter_spacing": 0.0,
+        "line_spacing": 0.0,
+        "text_color": "#ffffff",
+        "text_alpha": 1.0,
+        "has_shadow": false,
+        "shadow_alpha": 0.649999976158142,
+        "shadow_color": "#000000",
+        "shadow_distance": 8.0,
+        "shadow_smoothing": 0.0,
+        "shadow_point": {
+          "x": 1.018233764908628,
+          "y": -1.018233764908628
+        },
+        "shadow_angle": -45.0,
+        "border_width": 0.059999998658895,
+        "border_color": "",
+        "border_alpha": 1.0,
+        "background_style": 0,
+        "background_color": "",
+        "background_alpha": 1.0,
+        "line_max_width": 0.82,
+        "force_apply_line_max_width": false,
+        "use_effect_default_color": true
+      },
+      "richTextStyles": [
+        {
+          "fill": {
+            "content": {
+              "render_type": "solid",
+              "solid": {
+                "color": [
+                  1,
+                  1,
+                  1
+                ]
+              }
+            }
+          },
+          "font": {},
+          "range": [
+            0,
+            4
+          ],
+          "shadows": [
+            {
+              "alpha": 0.649999976158142,
+              "angle": -45,
+              "content": {
+                "render_type": "solid",
+                "solid": {
+                  "color": [
+                    0,
+                    0,
+                    0
+                  ]
+                }
+              },
+              "diffuse": 0,
+              "distance": 8.000064849853516,
+              "thickness_projection_angle": -45,
+              "thickness_projection_distance": 0,
+              "thickness_projection_enable": false
+            }
+          ],
+          "size": 10
+        }
+      ],
+      "capcutTransform": {
+        "scale": {
+          "x": 1.717912554740906,
+          "y": 1.717912554740906
+        },
+        "rotation": 0.0,
+        "rotation3d": [],
+        "transform": {
+          "x": 0.011450381679389,
+          "y": -0.533544973544974
+        },
+        "flip": {
+          "vertical": false,
+          "horizontal": false
+        },
+        "alpha": 1.0
+      },
+      "animation": "none",
+      "referencePanel": null
+    },
+    {
+      "id": "t09",
+      "section": "original_speech",
+      "role": "今回有効な案内の強調",
+      "referenceStartFrame": 546,
+      "referenceEndFrameExclusive": 586,
+      "referenceText": "コースの初回割引",
+      "referenceOnlyNotNewClinicFacts": true,
+      "fontFile": "../assets/a08-fonts/Corporate-Logo-Rounded-Bold-ver3.otf",
+      "fontPostScriptName": "Corporate-Logo-Rounded-Bold-ver3",
+      "fontWeight": 700,
+      "capcutSourceStyle": {
+        "style_name": "red_text_white_border",
+        "font_size": 10.0,
+        "alignment": 1,
+        "typesetting": 0,
+        "letter_spacing": 0.0,
+        "line_spacing": 0.0,
+        "text_color": "#ec1d1d",
+        "text_alpha": 1.0,
+        "has_shadow": false,
+        "shadow_alpha": 0.0,
+        "shadow_color": "",
+        "shadow_distance": 0.0,
+        "shadow_smoothing": 0.0,
+        "shadow_point": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "shadow_angle": -45.0,
+        "border_width": 0.059999998658895,
+        "border_color": "#ffffff",
+        "border_alpha": 1.0,
+        "background_style": 0,
+        "background_color": "",
+        "background_alpha": 1.0,
+        "line_max_width": 0.82,
+        "force_apply_line_max_width": false,
+        "use_effect_default_color": true
+      },
+      "richTextStyles": [
+        {
+          "fill": {
+            "content": {
+              "render_type": "solid",
+              "solid": {
+                "color": [
+                  1,
+                  1,
+                  1
+                ]
+              }
+            }
+          },
+          "font": {},
+          "range": [
+            0,
+            4
+          ],
+          "shadows": [
+            {
+              "alpha": 0.649999976158142,
+              "angle": -45,
+              "content": {
+                "render_type": "solid",
+                "solid": {
+                  "color": [
+                    0,
+                    0,
+                    0
+                  ]
+                }
+              },
+              "diffuse": 0,
+              "distance": 8.000064849853516,
+              "thickness_projection_angle": -45,
+              "thickness_projection_distance": 0,
+              "thickness_projection_enable": false
+            }
+          ],
+          "size": 10
+        },
+        {
+          "fill": {
+            "content": {
+              "render_type": "solid",
+              "solid": {
+                "color": [
+                  0.9254900217056274,
+                  0.11372499912977219,
+                  0.11372499912977219
+                ]
+              }
+            }
+          },
+          "font": {},
+          "range": [
+            4,
+            8
+          ],
+          "size": 10,
+          "strokes": [
+            {
+              "content": {
+                "render_type": "solid",
+                "solid": {
+                  "color": [
+                    1,
+                    1,
+                    1
+                  ]
+                }
+              },
+              "mode": 0,
+              "width": 0.0599999986588955
+            }
+          ]
+        }
+      ],
+      "capcutTransform": {
+        "scale": {
+          "x": 1.717912554740906,
+          "y": 1.717912554740906
+        },
+        "rotation": 0.0,
+        "rotation3d": [],
+        "transform": {
+          "x": 0.011450381679389,
+          "y": -0.533544973544974
+        },
+        "flip": {
+          "vertical": false,
+          "horizontal": false
+        },
+        "alpha": 1.0
+      },
+      "animation": "none",
+      "referencePanel": null
+    },
+    {
+      "id": "t10",
+      "section": "original_speech",
+      "role": "案内の続き",
+      "referenceStartFrame": 590,
+      "referenceEndFrameExclusive": 633,
+      "referenceText": "をさせて\nいただいております！",
+      "referenceOnlyNotNewClinicFacts": true,
+      "fontFile": "../assets/a08-fonts/Corporate-Logo-Rounded-Bold-ver3.otf",
+      "fontPostScriptName": "Corporate-Logo-Rounded-Bold-ver3",
+      "fontWeight": 700,
+      "capcutSourceStyle": {
+        "style_name": "white_text_black_shadow",
+        "font_size": 10.0,
+        "alignment": 1,
+        "typesetting": 0,
+        "letter_spacing": 0.0,
+        "line_spacing": 0.0,
+        "text_color": "#ffffff",
+        "text_alpha": 1.0,
+        "has_shadow": false,
+        "shadow_alpha": 0.649999976158142,
+        "shadow_color": "#000000",
+        "shadow_distance": 8.0,
+        "shadow_smoothing": 0.0,
+        "shadow_point": {
+          "x": 1.018233764908628,
+          "y": -1.018233764908628
+        },
+        "shadow_angle": -45.0,
+        "border_width": 0.059999998658895,
+        "border_color": "",
+        "border_alpha": 1.0,
+        "background_style": 0,
+        "background_color": "",
+        "background_alpha": 1.0,
+        "line_max_width": 0.82,
+        "force_apply_line_max_width": false,
+        "use_effect_default_color": true
+      },
+      "richTextStyles": [
+        {
+          "fill": {
+            "content": {
+              "render_type": "solid",
+              "solid": {
+                "color": [
+                  1,
+                  1,
+                  1
+                ]
+              }
+            }
+          },
+          "font": {},
+          "range": [
+            0,
+            15
+          ],
+          "shadows": [
+            {
+              "alpha": 0.649999976158142,
+              "angle": -45,
+              "content": {
+                "render_type": "solid",
+                "solid": {
+                  "color": [
+                    0,
+                    0,
+                    0
+                  ]
+                }
+              },
+              "diffuse": 0,
+              "distance": 8.000064849853516,
+              "thickness_projection_angle": -45,
+              "thickness_projection_distance": 0,
+              "thickness_projection_enable": false
+            }
+          ],
+          "size": 10
+        }
+      ],
+      "capcutTransform": {
+        "scale": {
+          "x": 1.717912554740906,
+          "y": 1.717912554740906
+        },
+        "rotation": 0.0,
+        "rotation3d": [],
+        "transform": {
+          "x": 0.011450381679389,
+          "y": -0.533544973544974
+        },
+        "flip": {
+          "vertical": false,
+          "horizontal": false
+        },
+        "alpha": 1.0
+      },
+      "animation": "none",
+      "referencePanel": null
+    },
+    {
+      "id": "t11",
+      "section": "original_speech",
+      "role": "本人の呼びかけ",
+      "referenceStartFrame": 653,
+      "referenceEndFrameExclusive": 712,
+      "referenceText": "本気で\n治したいという方はですね",
+      "referenceOnlyNotNewClinicFacts": true,
+      "fontFile": "../assets/a08-fonts/Corporate-Logo-Rounded-Bold-ver3.otf",
+      "fontPostScriptName": "Corporate-Logo-Rounded-Bold-ver3",
+      "fontWeight": 700,
+      "capcutSourceStyle": {
+        "style_name": "white_text_black_shadow",
+        "font_size": 10.0,
+        "alignment": 1,
+        "typesetting": 0,
+        "letter_spacing": 0.0,
+        "line_spacing": 0.0,
+        "text_color": "#ffffff",
+        "text_alpha": 1.0,
+        "has_shadow": false,
+        "shadow_alpha": 0.649999976158142,
+        "shadow_color": "#000000",
+        "shadow_distance": 8.0,
+        "shadow_smoothing": 0.0,
+        "shadow_point": {
+          "x": 1.018233764908628,
+          "y": -1.018233764908628
+        },
+        "shadow_angle": -45.0,
+        "border_width": 0.059999998658895,
+        "border_color": "",
+        "border_alpha": 1.0,
+        "background_style": 0,
+        "background_color": "",
+        "background_alpha": 1.0,
+        "line_max_width": 0.82,
+        "force_apply_line_max_width": false,
+        "use_effect_default_color": true
+      },
+      "richTextStyles": [
+        {
+          "fill": {
+            "content": {
+              "render_type": "solid",
+              "solid": {
+                "color": [
+                  1,
+                  1,
+                  1
+                ]
+              }
+            }
+          },
+          "font": {},
+          "range": [
+            0,
+            16
+          ],
+          "shadows": [
+            {
+              "alpha": 0.649999976158142,
+              "angle": -45,
+              "content": {
+                "render_type": "solid",
+                "solid": {
+                  "color": [
+                    0,
+                    0,
+                    0
+                  ]
+                }
+              },
+              "diffuse": 0,
+              "distance": 8.000064849853516,
+              "thickness_projection_angle": -45,
+              "thickness_projection_distance": 0,
+              "thickness_projection_enable": false
+            }
+          ],
+          "size": 10
+        }
+      ],
+      "capcutTransform": {
+        "scale": {
+          "x": 1.717912554740906,
+          "y": 1.717912554740906
+        },
+        "rotation": 0.0,
+        "rotation3d": [],
+        "transform": {
+          "x": 0.011450381679389,
+          "y": -0.533544973544974
+        },
+        "flip": {
+          "vertical": false,
+          "horizontal": false
+        },
+        "alpha": 1.0
+      },
+      "animation": "none",
+      "referencePanel": null
+    },
+    {
+      "id": "t12",
+      "section": "original_speech",
+      "role": "確認済みの連絡導線",
+      "referenceStartFrame": 728,
+      "referenceEndFrameExclusive": 816,
+      "referenceText": "下のホームページより\nご連絡ください！",
+      "referenceOnlyNotNewClinicFacts": true,
+      "fontFile": "../assets/a08-fonts/Corporate-Logo-Rounded-Bold-ver3.otf",
+      "fontPostScriptName": "Corporate-Logo-Rounded-Bold-ver3",
+      "fontWeight": 700,
+      "capcutSourceStyle": {
+        "style_name": "white_text_black_shadow",
+        "font_size": 10.0,
+        "alignment": 1,
+        "typesetting": 0,
+        "letter_spacing": 0.0,
+        "line_spacing": 0.0,
+        "text_color": "#ffffff",
+        "text_alpha": 1.0,
+        "has_shadow": false,
+        "shadow_alpha": 0.649999976158142,
+        "shadow_color": "#000000",
+        "shadow_distance": 8.0,
+        "shadow_smoothing": 0.0,
+        "shadow_point": {
+          "x": 1.018233764908628,
+          "y": -1.018233764908628
+        },
+        "shadow_angle": -45.0,
+        "border_width": 0.059999998658895,
+        "border_color": "",
+        "border_alpha": 1.0,
+        "background_style": 0,
+        "background_color": "",
+        "background_alpha": 1.0,
+        "line_max_width": 0.82,
+        "force_apply_line_max_width": false,
+        "use_effect_default_color": true
+      },
+      "richTextStyles": [
+        {
+          "fill": {
+            "content": {
+              "render_type": "solid",
+              "solid": {
+                "color": [
+                  1,
+                  1,
+                  1
+                ]
+              }
+            }
+          },
+          "font": {},
+          "range": [
+            0,
+            19
+          ],
+          "shadows": [
+            {
+              "alpha": 0.649999976158142,
+              "angle": -45,
+              "content": {
+                "render_type": "solid",
+                "solid": {
+                  "color": [
+                    0,
+                    0,
+                    0
+                  ]
+                }
+              },
+              "diffuse": 0,
+              "distance": 8.000064849853516,
+              "thickness_projection_angle": -45,
+              "thickness_projection_distance": 0,
+              "thickness_projection_enable": false
+            }
+          ],
+          "size": 10
+        }
+      ],
+      "capcutTransform": {
+        "scale": {
+          "x": 1.717912554740906,
+          "y": 1.717912554740906
+        },
+        "rotation": 0.0,
+        "rotation3d": [],
+        "transform": {
+          "x": 0.011450381679389,
+          "y": -0.533544973544974
+        },
+        "flip": {
+          "vertical": false,
+          "horizontal": false
+        },
+        "alpha": 1.0
+      },
+      "animation": "none",
+      "referencePanel": null
+    }
+  ],
+  "panels": [
+    {
+      "id": "p01",
+      "referenceStartFrame": 0,
+      "referenceEndFrameExclusive": 90,
+      "capcutTransform": {
+        "scale": {
+          "x": 0.970957100391388,
+          "y": 0.970957100391388
+        },
+        "rotation": 0.0,
+        "rotation3d": [],
+        "transform": {
+          "x": 0.00381679389313,
+          "y": 0.00352733686067
+        },
+        "flip": {
+          "vertical": false,
+          "horizontal": false
+        },
+        "alpha": 1.0
+      },
+      "appearance": "Semi-transparent gray rounded glass panel with a fine light top edge and subtle inset shading; no speech-bubble tail.",
+      "originalPngSize": [
+        800,
+        357
+      ],
+      "originalPngMaxAlpha": 0.7019607843137254,
+      "sourceName": "square transparent bubble",
+      "originalPngBundled": false,
+      "reproduction": "Rebuild as an editable shape and compare at output resolution. The original decorative PNG is not distributed.",
+      "animation": "none"
+    },
+    {
+      "id": "p02",
+      "referenceStartFrame": 90,
+      "referenceEndFrameExclusive": 170,
+      "capcutTransform": {
+        "scale": {
+          "x": 0.970957100391388,
+          "y": 0.970957100391388
+        },
+        "rotation": 0.0,
+        "rotation3d": [],
+        "transform": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "flip": {
+          "vertical": false,
+          "horizontal": false
+        },
+        "alpha": 1.0
+      },
+      "appearance": "Semi-transparent gray rounded glass panel with a fine light top edge and subtle inset shading; no speech-bubble tail.",
+      "originalPngSize": [
+        800,
+        357
+      ],
+      "originalPngMaxAlpha": 0.7019607843137254,
+      "sourceName": "square transparent bubble",
+      "originalPngBundled": false,
+      "reproduction": "Rebuild as an editable shape and compare at output resolution. The original decorative PNG is not distributed.",
+      "animation": "none"
+    },
+    {
+      "id": "p03",
+      "referenceStartFrame": 170,
+      "referenceEndFrameExclusive": 265,
+      "capcutTransform": {
+        "scale": {
+          "x": 0.970957100391388,
+          "y": 0.970957100391388
+        },
+        "rotation": 0.0,
+        "rotation3d": [],
+        "transform": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "flip": {
+          "vertical": false,
+          "horizontal": false
+        },
+        "alpha": 1.0
+      },
+      "appearance": "Semi-transparent gray rounded glass panel with a fine light top edge and subtle inset shading; no speech-bubble tail.",
+      "originalPngSize": [
+        800,
+        357
+      ],
+      "originalPngMaxAlpha": 0.7019607843137254,
+      "sourceName": "square transparent bubble",
+      "originalPngBundled": false,
+      "reproduction": "Rebuild as an editable shape and compare at output resolution. The original decorative PNG is not distributed.",
+      "animation": "none"
+    },
+    {
+      "id": "p04",
+      "referenceStartFrame": 265,
+      "referenceEndFrameExclusive": 359,
+      "capcutTransform": {
+        "scale": {
+          "x": 0.970957100391388,
+          "y": 0.970957100391388
+        },
+        "rotation": 0.0,
+        "rotation3d": [],
+        "transform": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "flip": {
+          "vertical": false,
+          "horizontal": false
+        },
+        "alpha": 1.0
+      },
+      "appearance": "Semi-transparent gray rounded glass panel with a fine light top edge and subtle inset shading; no speech-bubble tail.",
+      "originalPngSize": [
+        800,
+        357
+      ],
+      "originalPngMaxAlpha": 0.7019607843137254,
+      "sourceName": "square transparent bubble",
+      "originalPngBundled": false,
+      "reproduction": "Rebuild as an editable shape and compare at output resolution. The original decorative PNG is not distributed.",
+      "animation": "none"
+    },
+    {
+      "id": "p05",
+      "referenceStartFrame": 359,
+      "referenceEndFrameExclusive": 425,
+      "capcutTransform": {
+        "scale": {
+          "x": 0.970957100391388,
+          "y": 0.970957100391388
+        },
+        "rotation": 0.0,
+        "rotation3d": [],
+        "transform": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "flip": {
+          "vertical": false,
+          "horizontal": false
+        },
+        "alpha": 1.0
+      },
+      "appearance": "Semi-transparent gray rounded glass panel with a fine light top edge and subtle inset shading; no speech-bubble tail.",
+      "originalPngSize": [
+        800,
+        357
+      ],
+      "originalPngMaxAlpha": 0.7019607843137254,
+      "sourceName": "square transparent bubble",
+      "originalPngBundled": false,
+      "reproduction": "Rebuild as an editable shape and compare at output resolution. The original decorative PNG is not distributed.",
+      "animation": "none"
+    },
+    {
+      "id": "p06",
+      "referenceStartFrame": 425,
+      "referenceEndFrameExclusive": 491,
+      "capcutTransform": {
+        "scale": {
+          "x": 0.970957100391388,
+          "y": 0.970957100391388
+        },
+        "rotation": 0.0,
+        "rotation3d": [],
+        "transform": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "flip": {
+          "vertical": false,
+          "horizontal": false
+        },
+        "alpha": 1.0
+      },
+      "appearance": "Semi-transparent gray rounded glass panel with a fine light top edge and subtle inset shading; no speech-bubble tail.",
+      "originalPngSize": [
+        800,
+        357
+      ],
+      "originalPngMaxAlpha": 0.7019607843137254,
+      "sourceName": "square transparent bubble",
+      "originalPngBundled": false,
+      "reproduction": "Rebuild as an editable shape and compare at output resolution. The original decorative PNG is not distributed.",
+      "animation": "none"
+    }
+  ],
+  "motion": {
+    "transitions": [],
+    "textAnimations": [],
+    "keyframes": [],
+    "referenceAllFootageSpeed": 1,
+    "rule": "Source motion comes from the footage. Use hard cuts and instantaneous caption changes. Do not add typewriter, zoom, pop, fade or camera animation merely because other patterns use them."
+  },
+  "audio": {
+    "referenceTracks": [
+      {
+        "id": "a01",
+        "role": "mixed extracted original soundtrack",
+        "referenceStartFrame": 0,
+        "referenceEndFrameExclusive": 790,
+        "referenceName": "抽出済み20260828-03",
+        "referenceGainDb": -5.098504257749247,
+        "referenceGainNotNewProductionDefault": true,
+        "sourceAudioBundled": false,
+        "exactReusePermissionConfirmed": false
+      },
+      {
+        "id": "a02",
+        "role": "sound effect",
+        "referenceStartFrame": 609,
+        "referenceEndFrameExclusive": 653,
+        "referenceName": "きらーんと目が光る",
+        "referenceGainDb": -4.701540050811203,
+        "referenceGainNotNewProductionDefault": true,
+        "sourceAudioBundled": false,
+        "exactReusePermissionConfirmed": false
+      },
+      {
+        "id": "a03",
+        "role": "sound effect",
+        "referenceStartFrame": 728,
+        "referenceEndFrameExclusive": 818,
+        "referenceName": "テロップなどが出る時の効果音",
+        "referenceGainDb": 0.0,
+        "referenceGainNotNewProductionDefault": true,
+        "sourceAudioBundled": false,
+        "exactReusePermissionConfirmed": false
+      }
+    ],
+    "observed": "Separate mixed soundtrack plus two short effects; original video clip audio is muted in the source draft because audio is on a different track.",
+    "speech": {
+      "asrSpeechFromSeconds": 16.56,
+      "asrCrosscheckedWithTwoLocalModels": true,
+      "directHumanOrModelAudioAudition": false,
+      "openingSpeechConfirmed": false
+    },
+    "newProduction": "Preserve current presenter original voice, or use the explicitly approved separated soundtrack. Mute a duplicate camera track only when the selected audio already contains the same voice. Do not import the old presenter voice.",
+    "musicAndEffects": "Select and add a free instrumental BGM suited to a clinic (calm, clean and welcoming). Verify official distribution terms for commercial SNS video embedding and editing, retain required credits, and record title, creator, source URL and terms. Mix under current speech and use a natural ending fade. Use only permitted SFX; never silently buy or generate audio. Do not redistribute standalone music in the library. Honor an explicit no-BGM instruction.",
+    "generationDefault": false,
+    "gain": "Reference gains and measured peaks are observations only. Balance new sounds against the current voice and avoid clipping.",
+    "explicitSilenceRequestWins": true,
+    "bgmDefault": {
+      "enabled": true,
+      "source": "official_free_distribution_with_verified_commercial_sns_video_rights",
+      "paidPurchaseAllowed": false,
+      "paidGenerationAllowed": false,
+      "recordCreditsAndLicense": true,
+      "explicitNoBgmRequestWins": true
+    }
+  },
+  "referenceArtifacts": {
+    "tail": "Original picture stops at f815, text ends at f816, export has f817 frames. Visual check found f815 text on black and f816 black. Preserve the original in the library preview, but do not recreate accidental black tail in a new edit. Align final picture/text/audio naturally.",
+    "captionPictureBoundaryOffsets": "Some caption changes precede/follow picture cuts by 1–3 frames. Keep separate layers; reference offsets are not forced onto different speech.",
+    "captionGaps": "Closing contains intentional/reference gaps between captions; derive current gaps from actual speech rather than stretching captions to fill the whole clip."
+  },
+  "verification": {
+    "matchedEditableSource": true,
+    "exactFontsIdentified": true,
+    "referenceVisualReviewed": true,
+    "newFootageEdited": false,
+    "newChatCutCompositeVerified": false,
+    "newVideoExportVerified": false,
+    "newPatientMosaicVerified": false,
+    "independentUserEndToEnd": false,
+    "scope": "Historical reference-registration snapshot from version 0.10.0. See productionDefaults.verificationScope for the approved current production baseline."
+  },
+  "validationChecklist": [
+    "All planned captions visibly present; check every cue at output resolution, not just source parameters.",
+    "Every current-production caption uses at most 2 lines and at most 8 displayed characters per line, including punctuation and Latin letters/digits. Split overflow into subsequent semantic cues with readable timing; never use 3 lines or squeeze font size, width or line spacing. Inspect actual line gaps and glyph/shadow separation; reference text is archival only.",
+    "Use productionDefaults approved role sizes (125px/107px on 1080x2336), lineHeight 1.20 and zero letter spacing, uniformly scaled for matching aspect ratio. Confirm semantic cue boundaries without fixing count or duration.",
+    "Check Mincho vs rounded bold distinction, fill/partial red emphasis, thickness, line breaks, panel, shadow and exact placement.",
+    "Check cut boundaries and caption boundaries separately; no stale text, flicker, blank picture or accidental extra animation.",
+    "Use actual therapist/examination/treatment scenes; no empty walls/floors as filler.",
+    "Check patient-face coverage after all reframing and across reflections/cuts.",
+    "Verify words and sync against current original voice; LP facts and old reference wording are separate.",
+    "Verify the selected free BGM license, credit requirements, voice balance and ending fade; honor explicit no-BGM instructions and do not reuse another practitioner voice.",
+    "Verify export duration, picture/text/audio end alignment and final frame, plus full decode.",
+    "Report what is measured, what is inferred and what has actually been rendered."
+  ],
+  "outputGeometry": {
+    "coordinateSystem": {
+      "origin": "top_left",
+      "width": 1080,
+      "height": 2336,
+      "bbox": "[x,y,width,height]"
+    },
+    "source": "uploaded reference export, sampled at each of 12 caption midpoints",
+    "pictureArea": {
+      "bboxPx": [
+        0,
+        208,
+        1080,
+        1920
+      ],
+      "status": "measured_picture_edges_and_source_fit",
+      "topBlackBarPx": 208,
+      "bottomBlackBarPx": 208,
+      "not9by16Canvas": true
+    },
+    "cues": [
+      {
+        "cue": 1,
+        "frame": 44,
+        "text": "富山市長江に\n通える方必見！",
+        "sourceFrame": "../assets/a08-reference/cue-01-f0044.jpg",
+        "lines": [
+          {
+            "bboxPx": [
+              186,
+              1045,
+              747,
+              119
+            ],
+            "centerPx": [
+              559.5,
+              1104.5
+            ],
+            "whiteInkHeightPx": 119,
+            "status": "measured_raster_threshold",
+            "method": "RGB min>230, channel range<25; row contains>10 pixels, run length>8"
+          },
+          {
+            "bboxPx": [
+              121,
+              1172,
+              831,
+              118
+            ],
+            "centerPx": [
+              536.5,
+              1231.0
+            ],
+            "whiteInkHeightPx": 118,
+            "status": "measured_raster_threshold",
+            "method": "RGB min>230, channel range<25; row contains>10 pixels, run length>8"
+          }
+        ],
+        "inkUnionBboxPx": [
+          121,
+          1045,
+          831,
+          245
+        ],
+        "inkUnionCenterPx": [
+          536.5,
+          1167.5
+        ],
+        "lineTopStepPx": 127,
+        "sourceTransform": {
+          "x": 0.038167938931298,
+          "y": 0.0
+        },
+        "sourceScale": {
+          "x": 1.351491570472717,
+          "y": 1.351491570472717
+        },
+        "sourceFontSize": {
+          "value": 15.0,
+          "units": "CapCut_internal_not_px"
+        },
+        "fontRasterFit": {
+          "estimatedEmPx": 125,
+          "status": "estimated_by_same_font_raster_fit",
+          "relativeDimensionError": 0.0182,
+          "note": "Pillow raster approximation only. Exact CapCut source size remains 15/10, not these pixel values."
+        },
+        "shadow": {
+          "offsetPx": [
+            7,
+            7
+          ],
+          "direction": "right_down",
+          "uncertaintyPx": 2,
+          "status": "estimated_mask_match_not_renderer_calibration",
+          "visibleShadowPrecision": 0.844,
+          "method": "Shift near-white ink by 1..22px and compare exposed shifted ink with mean RGB<65; exclude overlapped white; red characters excluded",
+          "blurPx": {
+            "value": 0,
+            "status": "source_diffuse_is_zero_and_visually_hard_edge_not_independently_fitted"
+          },
+          "opacity": {
+            "value": 0.65,
+            "status": "exact_source_rich_text_setting_not_opacity_measurement"
+          }
+        },
+        "ocrLines": [
+          {
+            "textRecognized": "富山市長江に",
+            "confidence": 1,
+            "bboxPx": [
+              164.59,
+              1036.9,
+              789.75,
+              155.12
+            ],
+            "status": "macOS_Vision_observation_not_transcript_authority"
+          },
+          {
+            "textRecognized": "通える方必見！",
+            "confidence": 0.5,
+            "bboxPx": [
+              132.45,
+              1164.6,
+              849.06,
+              135.81
+            ],
+            "status": "macOS_Vision_observation_not_transcript_authority"
+          }
+        ],
+        "panel": {
+          "visibleBboxPx": [
+            0,
+            904,
+            1080,
+            519
+          ],
+          "visibleCenterPx": [
+            540,
+            1163.5
+          ],
+          "status": "measured_baseline_difference",
+          "method": "median RGB abs difference >10/255 between exported frame and same source frame scaled1080x1920/padded208; 850<y<1500",
+          "baselineErrorOutsidePanelMean": 1.248,
+          "estimatedFullUnclippedBboxPx": [
+            -40.57,
+            903.88,
+            1165.27,
+            520
+          ],
+          "estimatedSourceRadiusPx": 50,
+          "estimatedOutputRadiusPx": 72.8,
+          "radiusStatus": "source_alpha_contour_fit_approximation",
+          "sourceCenterRGBA": [
+            137,
+            136,
+            136,
+            179
+          ],
+          "appearance": "semi-transparent gray panel with rounded corners, pale top rim and dark inner shading; no background blur shader",
+          "cornerClipping": "full panel slightly exceeds canvas horizontally; do not force a narrow inset card"
+        }
+      },
+      {
+        "cue": 2,
+        "frame": 129,
+        "text": "運動療法で\n腰痛を改善できる",
+        "sourceFrame": "../assets/a08-reference/cue-02-f0129.jpg",
+        "lines": [
+          {
+            "bboxPx": [
+              243,
+              1043,
+              634,
+              121
+            ],
+            "centerPx": [
+              560.0,
+              1103.5
+            ],
+            "whiteInkHeightPx": 121,
+            "status": "measured_raster_threshold",
+            "method": "RGB min>230, channel range<25; row contains>10 pixels, run length>8"
+          },
+          {
+            "bboxPx": [
+              50,
+              1171,
+              1005,
+              121
+            ],
+            "centerPx": [
+              552.5,
+              1231.5
+            ],
+            "whiteInkHeightPx": 121,
+            "status": "measured_raster_threshold",
+            "method": "RGB min>230, channel range<25; row contains>10 pixels, run length>8"
+          }
+        ],
+        "inkUnionBboxPx": [
+          50,
+          1043,
+          1005,
+          249
+        ],
+        "inkUnionCenterPx": [
+          552.5,
+          1167.5
+        ],
+        "lineTopStepPx": 128,
+        "sourceTransform": {
+          "x": 0.038167938931298,
+          "y": 0.0
+        },
+        "sourceScale": {
+          "x": 1.370431661605835,
+          "y": 1.370431661605835
+        },
+        "sourceFontSize": {
+          "value": 15.0,
+          "units": "CapCut_internal_not_px"
+        },
+        "fontRasterFit": {
+          "estimatedEmPx": 127,
+          "status": "estimated_by_same_font_raster_fit",
+          "relativeDimensionError": 0.0128,
+          "note": "Pillow raster approximation only. Exact CapCut source size remains 15/10, not these pixel values."
+        },
+        "shadow": {
+          "offsetPx": [
+            7,
+            7
+          ],
+          "direction": "right_down",
+          "uncertaintyPx": 2,
+          "status": "estimated_mask_match_not_renderer_calibration",
+          "visibleShadowPrecision": 0.8047,
+          "method": "Shift near-white ink by 1..22px and compare exposed shifted ink with mean RGB<65; exclude overlapped white; red characters excluded",
+          "blurPx": {
+            "value": 0,
+            "status": "source_diffuse_is_zero_and_visually_hard_edge_not_independently_fitted"
+          },
+          "opacity": {
+            "value": 0.65,
+            "status": "exact_source_rich_text_setting_not_opacity_measurement"
+          }
+        },
+        "ocrLines": [
+          {
+            "textRecognized": "運動療法で",
+            "confidence": 0.5,
+            "bboxPx": [
+              233.86,
+              1033.42,
+              659.83,
+              153.71
+            ],
+            "status": "macOS_Vision_observation_not_transcript_authority"
+          },
+          {
+            "textRecognized": "腰痛を改善できる",
+            "confidence": 1,
+            "bboxPx": [
+              40.75,
+              1164.6,
+              1029.06,
+              149.4
+            ],
+            "status": "macOS_Vision_observation_not_transcript_authority"
+          }
+        ],
+        "panel": {
+          "visibleBboxPx": [
+            0,
+            908,
+            1080,
+            519
+          ],
+          "visibleCenterPx": [
+            540,
+            1167.5
+          ],
+          "status": "measured_baseline_difference",
+          "method": "median RGB abs difference >10/255 between exported frame and same source frame scaled1080x1920/padded208; 850<y<1500",
+          "baselineErrorOutsidePanelMean": 1.197,
+          "estimatedFullUnclippedBboxPx": [
+            -42.63,
+            908.0,
+            1165.27,
+            520
+          ],
+          "estimatedSourceRadiusPx": 50,
+          "estimatedOutputRadiusPx": 72.8,
+          "radiusStatus": "source_alpha_contour_fit_approximation",
+          "sourceCenterRGBA": [
+            137,
+            136,
+            136,
+            179
+          ],
+          "appearance": "semi-transparent gray panel with rounded corners, pale top rim and dark inner shading; no background blur shader",
+          "cornerClipping": "full panel slightly exceeds canvas horizontally; do not force a narrow inset card"
+        }
+      },
+      {
+        "cue": 3,
+        "frame": 217,
+        "text": "完全予約制の整体院\n知ってる？",
+        "sourceFrame": "../assets/a08-reference/cue-03-f0217.jpg",
+        "lines": [
+          {
+            "bboxPx": [
+              45,
+              1058,
+              1017,
+              107
+            ],
+            "centerPx": [
+              553.5,
+              1111.5
+            ],
+            "whiteInkHeightPx": 107,
+            "status": "measured_raster_threshold",
+            "method": "RGB min>230, channel range<25; row contains>10 pixels, run length>8"
+          },
+          {
+            "bboxPx": [
+              271,
+              1174,
+              536,
+              100
+            ],
+            "centerPx": [
+              539.0,
+              1224.0
+            ],
+            "whiteInkHeightPx": 100,
+            "status": "measured_raster_threshold",
+            "method": "RGB min>230, channel range<25; row contains>10 pixels, run length>8"
+          }
+        ],
+        "inkUnionBboxPx": [
+          45,
+          1058,
+          1017,
+          216
+        ],
+        "inkUnionCenterPx": [
+          553.5,
+          1166.0
+        ],
+        "lineTopStepPx": 116,
+        "sourceTransform": {
+          "x": 0.022900763358778,
+          "y": 0.0
+        },
+        "sourceScale": {
+          "x": 1.212527990341187,
+          "y": 1.212527990341187
+        },
+        "sourceFontSize": {
+          "value": 15.0,
+          "units": "CapCut_internal_not_px"
+        },
+        "fontRasterFit": {
+          "estimatedEmPx": 113,
+          "status": "estimated_by_same_font_raster_fit",
+          "relativeDimensionError": 0.0449,
+          "note": "Pillow raster approximation only. Exact CapCut source size remains 15/10, not these pixel values."
+        },
+        "shadow": {
+          "offsetPx": [
+            7,
+            7
+          ],
+          "direction": "right_down",
+          "uncertaintyPx": 2,
+          "status": "estimated_mask_match_not_renderer_calibration",
+          "visibleShadowPrecision": 0.8155,
+          "method": "Shift near-white ink by 1..22px and compare exposed shifted ink with mean RGB<65; exclude overlapped white; red characters excluded",
+          "blurPx": {
+            "value": 0,
+            "status": "source_diffuse_is_zero_and_visually_hard_edge_not_independently_fitted"
+          },
+          "opacity": {
+            "value": 0.65,
+            "status": "exact_source_rich_text_setting_not_opacity_measurement"
+          }
+        },
+        "ocrLines": [
+          {
+            "textRecognized": "完全予約制の整体院",
+            "confidence": 1,
+            "bboxPx": [
+              33.96,
+              1052.56,
+              1042.64,
+              129.44
+            ],
+            "status": "macOS_Vision_observation_not_transcript_authority"
+          },
+          {
+            "textRecognized": "知ってる？",
+            "confidence": 1,
+            "bboxPx": [
+              247.92,
+              1147.63,
+              597.74,
+              169.77
+            ],
+            "status": "macOS_Vision_observation_not_transcript_authority"
+          }
+        ],
+        "panel": {
+          "visibleBboxPx": [
+            0,
+            908,
+            1080,
+            519
+          ],
+          "visibleCenterPx": [
+            540,
+            1167.5
+          ],
+          "status": "measured_baseline_difference",
+          "method": "median RGB abs difference >10/255 between exported frame and same source frame scaled1080x1920/padded208; 850<y<1500",
+          "baselineErrorOutsidePanelMean": 1.787,
+          "estimatedFullUnclippedBboxPx": [
+            -42.63,
+            908.0,
+            1165.27,
+            520
+          ],
+          "estimatedSourceRadiusPx": 50,
+          "estimatedOutputRadiusPx": 72.8,
+          "radiusStatus": "source_alpha_contour_fit_approximation",
+          "sourceCenterRGBA": [
+            137,
+            136,
+            136,
+            179
+          ],
+          "appearance": "semi-transparent gray panel with rounded corners, pale top rim and dark inner shading; no background blur shader",
+          "cornerClipping": "full panel slightly exceeds canvas horizontally; do not force a narrow inset card"
+        }
+      },
+      {
+        "cue": 4,
+        "frame": 311,
+        "text": "MSMメソッドを\n活かした",
+        "sourceFrame": "../assets/a08-reference/cue-04-f0311.jpg",
+        "lines": [
+          {
+            "bboxPx": [
+              101,
+              1056,
+              895,
+              106
+            ],
+            "centerPx": [
+              548.5,
+              1109.0
+            ],
+            "whiteInkHeightPx": 106,
+            "status": "measured_raster_threshold",
+            "method": "RGB min>230, channel range<25; row contains>10 pixels, run length>8"
+          },
+          {
+            "bboxPx": [
+              318,
+              1174,
+              463,
+              109
+            ],
+            "centerPx": [
+              549.5,
+              1228.5
+            ],
+            "whiteInkHeightPx": 109,
+            "status": "measured_raster_threshold",
+            "method": "RGB min>230, channel range<25; row contains>10 pixels, run length>8"
+          }
+        ],
+        "inkUnionBboxPx": [
+          101,
+          1056,
+          895,
+          227
+        ],
+        "inkUnionCenterPx": [
+          548.5,
+          1169.5
+        ],
+        "lineTopStepPx": 118,
+        "sourceTransform": {
+          "x": 0.022900763358778,
+          "y": 0.0
+        },
+        "sourceScale": {
+          "x": 1.269380211830139,
+          "y": 1.269380211830139
+        },
+        "sourceFontSize": {
+          "value": 15.0,
+          "units": "CapCut_internal_not_px"
+        },
+        "fontRasterFit": {
+          "estimatedEmPx": 118,
+          "status": "estimated_by_same_font_raster_fit",
+          "relativeDimensionError": 0.0168,
+          "note": "Pillow raster approximation only. Exact CapCut source size remains 15/10, not these pixel values."
+        },
+        "shadow": {
+          "offsetPx": [
+            7,
+            7
+          ],
+          "direction": "right_down",
+          "uncertaintyPx": 2,
+          "status": "estimated_mask_match_not_renderer_calibration",
+          "visibleShadowPrecision": 0.8426,
+          "method": "Shift near-white ink by 1..22px and compare exposed shifted ink with mean RGB<65; exclude overlapped white; red characters excluded",
+          "blurPx": {
+            "value": 0,
+            "status": "source_diffuse_is_zero_and_visually_hard_edge_not_independently_fitted"
+          },
+          "opacity": {
+            "value": 0.65,
+            "status": "exact_source_rich_text_setting_not_opacity_measurement"
+          }
+        },
+        "ocrLines": [
+          {
+            "textRecognized": "MSMメソッドを",
+            "confidence": 1,
+            "bboxPx": [
+              88.3,
+              1052.56,
+              920.38,
+              125.63
+            ],
+            "status": "macOS_Vision_observation_not_transcript_authority"
+          },
+          {
+            "textRecognized": "活かした",
+            "confidence": 0.5,
+            "bboxPx": [
+              250.77,
+              1165.62,
+              544.51,
+              133.78
+            ],
+            "status": "macOS_Vision_observation_not_transcript_authority"
+          }
+        ],
+        "panel": {
+          "visibleBboxPx": [
+            0,
+            908,
+            1080,
+            519
+          ],
+          "visibleCenterPx": [
+            540,
+            1167.5
+          ],
+          "status": "measured_baseline_difference",
+          "method": "median RGB abs difference >10/255 between exported frame and same source frame scaled1080x1920/padded208; 850<y<1500",
+          "baselineErrorOutsidePanelMean": 1.66,
+          "estimatedFullUnclippedBboxPx": [
+            -42.63,
+            908.0,
+            1165.27,
+            520
+          ],
+          "estimatedSourceRadiusPx": 50,
+          "estimatedOutputRadiusPx": 72.8,
+          "radiusStatus": "source_alpha_contour_fit_approximation",
+          "sourceCenterRGBA": [
+            137,
+            136,
+            136,
+            179
+          ],
+          "appearance": "semi-transparent gray panel with rounded corners, pale top rim and dark inner shading; no background blur shader",
+          "cornerClipping": "full panel slightly exceeds canvas horizontally; do not force a narrow inset card"
+        }
+      },
+      {
+        "cue": 5,
+        "frame": 391,
+        "text": "丁寧な触診で",
+        "sourceFrame": "../assets/a08-reference/cue-05-f0391.jpg",
+        "lines": [
+          {
+            "bboxPx": [
+              167,
+              1103,
+              771,
+              123
+            ],
+            "centerPx": [
+              552.5,
+              1164.5
+            ],
+            "whiteInkHeightPx": 123,
+            "status": "measured_raster_threshold",
+            "method": "RGB min>230, channel range<25; row contains>10 pixels, run length>8"
+          }
+        ],
+        "inkUnionBboxPx": [
+          167,
+          1103,
+          771,
+          123
+        ],
+        "inkUnionCenterPx": [
+          552.5,
+          1164.5
+        ],
+        "lineTopStepPx": null,
+        "sourceTransform": {
+          "x": 0.022900763358778,
+          "y": 0.0
+        },
+        "sourceScale": {
+          "x": 1.390487790107727,
+          "y": 1.390487790107727
+        },
+        "sourceFontSize": {
+          "value": 15.0,
+          "units": "CapCut_internal_not_px"
+        },
+        "fontRasterFit": {
+          "estimatedEmPx": 129,
+          "status": "estimated_by_same_font_raster_fit",
+          "relativeDimensionError": 0.0104,
+          "note": "Pillow raster approximation only. Exact CapCut source size remains 15/10, not these pixel values."
+        },
+        "shadow": {
+          "offsetPx": [
+            8,
+            7
+          ],
+          "direction": "right_down",
+          "uncertaintyPx": 2,
+          "status": "estimated_mask_match_not_renderer_calibration",
+          "visibleShadowPrecision": 0.8076,
+          "method": "Shift near-white ink by 1..22px and compare exposed shifted ink with mean RGB<65; exclude overlapped white; red characters excluded",
+          "blurPx": {
+            "value": 0,
+            "status": "source_diffuse_is_zero_and_visually_hard_edge_not_independently_fitted"
+          },
+          "opacity": {
+            "value": 0.65,
+            "status": "exact_source_rich_text_setting_not_opacity_measurement"
+          }
+        },
+        "ocrLines": [
+          {
+            "textRecognized": "丁寧な触診で",
+            "confidence": 1,
+            "bboxPx": [
+              163.02,
+              1096.7,
+              791.32,
+              152.79
+            ],
+            "status": "macOS_Vision_observation_not_transcript_authority"
+          }
+        ],
+        "panel": {
+          "visibleBboxPx": [
+            0,
+            908,
+            1080,
+            519
+          ],
+          "visibleCenterPx": [
+            540,
+            1167.5
+          ],
+          "status": "measured_baseline_difference",
+          "method": "median RGB abs difference >10/255 between exported frame and same source frame scaled1080x1920/padded208; 850<y<1500",
+          "baselineErrorOutsidePanelMean": 1.911,
+          "estimatedFullUnclippedBboxPx": [
+            -42.63,
+            908.0,
+            1165.27,
+            520
+          ],
+          "estimatedSourceRadiusPx": 50,
+          "estimatedOutputRadiusPx": 72.8,
+          "radiusStatus": "source_alpha_contour_fit_approximation",
+          "sourceCenterRGBA": [
+            137,
+            136,
+            136,
+            179
+          ],
+          "appearance": "semi-transparent gray panel with rounded corners, pale top rim and dark inner shading; no background blur shader",
+          "cornerClipping": "full panel slightly exceeds canvas horizontally; do not force a narrow inset card"
+        }
+      },
+      {
+        "cue": 6,
+        "frame": 455,
+        "text": "繰り返す痛みを根本から\n改善していきます",
+        "sourceFrame": "../assets/a08-reference/cue-06-f0455.jpg",
+        "lines": [
+          {
+            "bboxPx": [
+              47,
+              1080,
+              986,
+              85
+            ],
+            "centerPx": [
+              540.0,
+              1122.5
+            ],
+            "whiteInkHeightPx": 85,
+            "status": "measured_raster_threshold",
+            "method": "RGB min>230, channel range<25; row contains>10 pixels, run length>8"
+          },
+          {
+            "bboxPx": [
+              186,
+              1171,
+              717,
+              84
+            ],
+            "centerPx": [
+              544.5,
+              1213.0
+            ],
+            "whiteInkHeightPx": 84,
+            "status": "measured_raster_threshold",
+            "method": "RGB min>230, channel range<25; row contains>10 pixels, run length>8"
+          }
+        ],
+        "inkUnionBboxPx": [
+          47,
+          1080,
+          986,
+          175
+        ],
+        "inkUnionCenterPx": [
+          540.0,
+          1167.5
+        ],
+        "lineTopStepPx": 91,
+        "sourceTransform": {
+          "x": 0.007633587786259,
+          "y": 0.0
+        },
+        "sourceScale": {
+          "x": 0.968647360801697,
+          "y": 0.968647360801697
+        },
+        "sourceFontSize": {
+          "value": 15.0,
+          "units": "CapCut_internal_not_px"
+        },
+        "fontRasterFit": {
+          "estimatedEmPx": 89,
+          "status": "estimated_by_same_font_raster_fit",
+          "relativeDimensionError": 0.0247,
+          "note": "Pillow raster approximation only. Exact CapCut source size remains 15/10, not these pixel values."
+        },
+        "shadow": {
+          "offsetPx": [
+            5,
+            5
+          ],
+          "direction": "right_down",
+          "uncertaintyPx": 2,
+          "status": "estimated_mask_match_not_renderer_calibration",
+          "visibleShadowPrecision": 0.7524,
+          "method": "Shift near-white ink by 1..22px and compare exposed shifted ink with mean RGB<65; exclude overlapped white; red characters excluded",
+          "blurPx": {
+            "value": 0,
+            "status": "source_diffuse_is_zero_and_visually_hard_edge_not_independently_fitted"
+          },
+          "opacity": {
+            "value": 0.65,
+            "status": "exact_source_rich_text_setting_not_opacity_measurement"
+          }
+        },
+        "ocrLines": [
+          {
+            "textRecognized": "繰り返す痛みを根本から",
+            "confidence": 1,
+            "bboxPx": [
+              38.92,
+              1070.67,
+              1011.89,
+              116.8
+            ],
+            "status": "macOS_Vision_observation_not_transcript_authority"
+          },
+          {
+            "textRecognized": "改善していきます",
+            "confidence": 1,
+            "bboxPx": [
+              180.0,
+              1171.0,
+              730.19,
+              95.47
+            ],
+            "status": "macOS_Vision_observation_not_transcript_authority"
+          }
+        ],
+        "panel": {
+          "visibleBboxPx": [
+            0,
+            908,
+            1080,
+            519
+          ],
+          "visibleCenterPx": [
+            540,
+            1167.5
+          ],
+          "status": "measured_baseline_difference",
+          "method": "median RGB abs difference >10/255 between exported frame and same source frame scaled1080x1920/padded208; 850<y<1500",
+          "baselineErrorOutsidePanelMean": 2.006,
+          "estimatedFullUnclippedBboxPx": [
+            -42.63,
+            908.0,
+            1165.27,
+            520
+          ],
+          "estimatedSourceRadiusPx": 50,
+          "estimatedOutputRadiusPx": 72.8,
+          "radiusStatus": "source_alpha_contour_fit_approximation",
+          "sourceCenterRGBA": [
+            137,
+            136,
+            136,
+            179
+          ],
+          "appearance": "semi-transparent gray panel with rounded corners, pale top rim and dark inner shading; no background blur shader",
+          "cornerClipping": "full panel slightly exceeds canvas horizontally; do not force a narrow inset card"
+        }
+      },
+      {
+        "cue": 7,
+        "frame": 496,
+        "text": "只今ですね",
+        "sourceFrame": "../assets/a08-reference/cue-07-f0496.jpg",
+        "lines": [
+          {
+            "bboxPx": [
+              326,
+              1740,
+              442,
+              102
+            ],
+            "centerPx": [
+              547.0,
+              1791.0
+            ],
+            "whiteInkHeightPx": 102,
+            "status": "measured_raster_threshold",
+            "method": "RGB min>230, channel range<25; row contains>10 pixels, run length>8"
+          }
+        ],
+        "inkUnionBboxPx": [
+          326,
+          1740,
+          442,
+          102
+        ],
+        "inkUnionCenterPx": [
+          547.0,
+          1791.0
+        ],
+        "lineTopStepPx": null,
+        "sourceTransform": {
+          "x": 0.011450381679389,
+          "y": -0.533544973544974
+        },
+        "sourceScale": {
+          "x": 1.717912554740906,
+          "y": 1.717912554740906
+        },
+        "sourceFontSize": {
+          "value": 10.0,
+          "units": "CapCut_internal_not_px"
+        },
+        "fontRasterFit": {
+          "estimatedEmPx": 106,
+          "status": "estimated_by_same_font_raster_fit",
+          "relativeDimensionError": 0.009,
+          "note": "Pillow raster approximation only. Exact CapCut source size remains 15/10, not these pixel values."
+        },
+        "shadow": {
+          "offsetPx": [
+            7,
+            6
+          ],
+          "direction": "right_down",
+          "uncertaintyPx": 2,
+          "status": "estimated_mask_match_not_renderer_calibration",
+          "visibleShadowPrecision": 0.7894,
+          "method": "Shift near-white ink by 1..22px and compare exposed shifted ink with mean RGB<65; exclude overlapped white; red characters excluded",
+          "blurPx": {
+            "value": 0,
+            "status": "source_diffuse_is_zero_and_visually_hard_edge_not_independently_fitted"
+          },
+          "opacity": {
+            "value": 0.65,
+            "status": "exact_source_rich_text_setting_not_opacity_measurement"
+          }
+        },
+        "ocrLines": [
+          {
+            "textRecognized": "只今ですね",
+            "confidence": 1,
+            "bboxPx": [
+              315.14,
+              1735.58,
+              466.7,
+              124.51
+            ],
+            "status": "macOS_Vision_observation_not_transcript_authority"
+          }
+        ]
+      },
+      {
+        "cue": 8,
+        "frame": 526,
+        "text": "慢性腰痛",
+        "sourceFrame": "../assets/a08-reference/cue-08-f0526.jpg",
+        "lines": [
+          {
+            "bboxPx": [
+              345,
+              1741,
+              401,
+              101
+            ],
+            "centerPx": [
+              545.5,
+              1791.5
+            ],
+            "whiteInkHeightPx": 101,
+            "status": "measured_raster_threshold",
+            "method": "RGB min>230, channel range<25; row contains>10 pixels, run length>8"
+          }
+        ],
+        "inkUnionBboxPx": [
+          345,
+          1741,
+          401,
+          101
+        ],
+        "inkUnionCenterPx": [
+          545.5,
+          1791.5
+        ],
+        "lineTopStepPx": null,
+        "sourceTransform": {
+          "x": 0.011450381679389,
+          "y": -0.533544973544974
+        },
+        "sourceScale": {
+          "x": 1.717912554740906,
+          "y": 1.717912554740906
+        },
+        "sourceFontSize": {
+          "value": 10.0,
+          "units": "CapCut_internal_not_px"
+        },
+        "fontRasterFit": {
+          "estimatedEmPx": 107,
+          "status": "estimated_by_same_font_raster_fit",
+          "relativeDimensionError": 0.0,
+          "note": "Pillow raster approximation only. Exact CapCut source size remains 15/10, not these pixel values."
+        },
+        "shadow": {
+          "offsetPx": [
+            6,
+            6
+          ],
+          "direction": "right_down",
+          "uncertaintyPx": 2,
+          "status": "estimated_mask_match_not_renderer_calibration",
+          "visibleShadowPrecision": 0.7548,
+          "method": "Shift near-white ink by 1..22px and compare exposed shifted ink with mean RGB<65; exclude overlapped white; red characters excluded",
+          "blurPx": {
+            "value": 0,
+            "status": "source_diffuse_is_zero_and_visually_hard_edge_not_independently_fitted"
+          },
+          "opacity": {
+            "value": 0.65,
+            "status": "exact_source_rich_text_setting_not_opacity_measurement"
+          }
+        },
+        "ocrLines": [
+          {
+            "textRecognized": "慢性雘痛",
+            "confidence": 0.30000001192092896,
+            "bboxPx": [
+              342.77,
+              1737.54,
+              414.83,
+              117.21
+            ],
+            "status": "macOS_Vision_observation_not_transcript_authority"
+          }
+        ]
+      },
+      {
+        "cue": 9,
+        "frame": 565,
+        "text": "コースの初回割引",
+        "sourceFrame": "../assets/a08-reference/cue-09-f0565.jpg",
+        "lines": [
+          {
+            "bboxPx": [
+              193,
+              1735,
+              705,
+              113
+            ],
+            "centerPx": [
+              545.5,
+              1791.5
+            ],
+            "whiteInkHeightPx": 113,
+            "status": "measured_raster_threshold",
+            "method": "RGB min>230, channel range<25; row contains>10 pixels, run length>8"
+          }
+        ],
+        "inkUnionBboxPx": [
+          193,
+          1735,
+          705,
+          113
+        ],
+        "inkUnionCenterPx": [
+          545.5,
+          1791.5
+        ],
+        "lineTopStepPx": null,
+        "sourceTransform": {
+          "x": 0.011450381679389,
+          "y": -0.533544973544974
+        },
+        "sourceScale": {
+          "x": 1.717912554740906,
+          "y": 1.717912554740906
+        },
+        "sourceFontSize": {
+          "value": 10.0,
+          "units": "CapCut_internal_not_px"
+        },
+        "fontRasterFit": {
+          "estimatedEmPx": 107,
+          "status": "inferred_from_identical_source_font_size_scale_and_adjacent_cues",
+          "note": "White outline around red text inflates ink box; do not use outline-inclusive raster fit to enlarge this cue."
+        },
+        "shadow": {
+          "offsetPx": [
+            7,
+            6
+          ],
+          "direction": "right_down",
+          "uncertaintyPx": 2,
+          "status": "estimated_mask_match_not_renderer_calibration",
+          "visibleShadowPrecision": 0.6883,
+          "method": "Shift near-white ink by 1..22px and compare exposed shifted ink with mean RGB<65; exclude overlapped white; red characters excluded",
+          "blurPx": {
+            "value": 0,
+            "status": "source_diffuse_is_zero_and_visually_hard_edge_not_independently_fitted"
+          },
+          "opacity": {
+            "value": 0.65,
+            "status": "exact_source_rich_text_setting_not_opacity_measurement"
+          }
+        },
+        "ocrLines": [
+          {
+            "textRecognized": "コースの初回割引",
+            "confidence": 0.5,
+            "bboxPx": [
+              186.35,
+              1732.36,
+              724.28,
+              127.55
+            ],
+            "status": "macOS_Vision_observation_not_transcript_authority"
+          }
+        ],
+        "emphasisStroke": {
+          "color": "#FFFFFF",
+          "estimatedWidthPx": 6,
+          "uncertaintyPx": 1,
+          "status": "estimated_white_ring_distance_to_red_fill",
+          "sourceStrokeWidth": 0.0599999986588955,
+          "fill": "#EC1D1D",
+          "rangeUtf16": [
+            4,
+            8
+          ]
+        }
+      },
+      {
+        "cue": 10,
+        "frame": 611,
+        "text": "をさせて\nいただいております！",
+        "sourceFrame": "../assets/a08-reference/cue-10-f0611.jpg",
+        "lines": [
+          {
+            "bboxPx": [
+              384,
+              1700,
+              323,
+              87
+            ],
+            "centerPx": [
+              545.5,
+              1743.5
+            ],
+            "whiteInkHeightPx": 87,
+            "status": "measured_raster_threshold",
+            "method": "RGB min>230, channel range<25; row contains>10 pixels, run length>8"
+          },
+          {
+            "bboxPx": [
+              136,
+              1795,
+              801,
+              100
+            ],
+            "centerPx": [
+              536.5,
+              1845.0
+            ],
+            "whiteInkHeightPx": 100,
+            "status": "measured_raster_threshold",
+            "method": "RGB min>230, channel range<25; row contains>10 pixels, run length>8"
+          }
+        ],
+        "inkUnionBboxPx": [
+          136,
+          1700,
+          801,
+          195
+        ],
+        "inkUnionCenterPx": [
+          536.5,
+          1797.5
+        ],
+        "lineTopStepPx": 95,
+        "sourceTransform": {
+          "x": 0.011450381679389,
+          "y": -0.533544973544974
+        },
+        "sourceScale": {
+          "x": 1.717912554740906,
+          "y": 1.717912554740906
+        },
+        "sourceFontSize": {
+          "value": 10.0,
+          "units": "CapCut_internal_not_px"
+        },
+        "fontRasterFit": {
+          "estimatedEmPx": 107,
+          "status": "estimated_by_same_font_raster_fit",
+          "relativeDimensionError": 0.0134,
+          "note": "Pillow raster approximation only. Exact CapCut source size remains 15/10, not these pixel values."
+        },
+        "shadow": {
+          "offsetPx": [
+            7,
+            6
+          ],
+          "direction": "right_down",
+          "uncertaintyPx": 2,
+          "status": "estimated_mask_match_not_renderer_calibration",
+          "visibleShadowPrecision": 0.8012,
+          "method": "Shift near-white ink by 1..22px and compare exposed shifted ink with mean RGB<65; exclude overlapped white; red characters excluded",
+          "blurPx": {
+            "value": 0,
+            "status": "source_diffuse_is_zero_and_visually_hard_edge_not_independently_fitted"
+          },
+          "opacity": {
+            "value": 0.65,
+            "status": "exact_source_rich_text_setting_not_opacity_measurement"
+          }
+        },
+        "ocrLines": [
+          {
+            "textRecognized": "をさせて",
+            "confidence": 0.30000001192092896,
+            "bboxPx": [
+              376.83,
+              1700.53,
+              339.93,
+              96.16
+            ],
+            "status": "macOS_Vision_observation_not_transcript_authority"
+          },
+          {
+            "textRecognized": "いただいております！",
+            "confidence": 0.5,
+            "bboxPx": [
+              125.36,
+              1780.78,
+              839.46,
+              146.15
+            ],
+            "status": "macOS_Vision_observation_not_transcript_authority"
+          }
+        ]
+      },
+      {
+        "cue": 11,
+        "frame": 682,
+        "text": "本気で\n治したいという方はですね",
+        "sourceFrame": "../assets/a08-reference/cue-11-f0682.jpg",
+        "lines": [
+          {
+            "bboxPx": [
+              407,
+              1687,
+              276,
+              101
+            ],
+            "centerPx": [
+              545.0,
+              1737.5
+            ],
+            "whiteInkHeightPx": 101,
+            "status": "measured_raster_threshold",
+            "method": "RGB min>230, channel range<25; row contains>10 pixels, run length>8"
+          },
+          {
+            "bboxPx": [
+              28,
+              1794,
+              1036,
+              102
+            ],
+            "centerPx": [
+              546.0,
+              1845.0
+            ],
+            "whiteInkHeightPx": 102,
+            "status": "measured_raster_threshold",
+            "method": "RGB min>230, channel range<25; row contains>10 pixels, run length>8"
+          }
+        ],
+        "inkUnionBboxPx": [
+          28,
+          1687,
+          1036,
+          209
+        ],
+        "inkUnionCenterPx": [
+          546.0,
+          1791.5
+        ],
+        "lineTopStepPx": 107,
+        "sourceTransform": {
+          "x": 0.011450381679389,
+          "y": -0.533544973544974
+        },
+        "sourceScale": {
+          "x": 1.717912554740906,
+          "y": 1.717912554740906
+        },
+        "sourceFontSize": {
+          "value": 10.0,
+          "units": "CapCut_internal_not_px"
+        },
+        "fontRasterFit": {
+          "estimatedEmPx": 107,
+          "status": "estimated_by_same_font_raster_fit",
+          "relativeDimensionError": 0.0108,
+          "note": "Pillow raster approximation only. Exact CapCut source size remains 15/10, not these pixel values."
+        },
+        "shadow": {
+          "offsetPx": [
+            7,
+            6
+          ],
+          "direction": "right_down",
+          "uncertaintyPx": 2,
+          "status": "estimated_mask_match_not_renderer_calibration",
+          "visibleShadowPrecision": 0.7917,
+          "method": "Shift near-white ink by 1..22px and compare exposed shifted ink with mean RGB<65; exclude overlapped white; red characters excluded",
+          "blurPx": {
+            "value": 0,
+            "status": "source_diffuse_is_zero_and_visually_hard_edge_not_independently_fitted"
+          },
+          "opacity": {
+            "value": 0.65,
+            "status": "exact_source_rich_text_setting_not_opacity_measurement"
+          }
+        },
+        "ocrLines": [
+          {
+            "textRecognized": "o",
+            "confidence": 0.30000001192092896,
+            "bboxPx": [
+              590.94,
+              1229.12,
+              27.17,
+              27.16
+            ],
+            "status": "macOS_Vision_observation_not_transcript_authority"
+          },
+          {
+            "textRecognized": "本気で",
+            "confidence": 1,
+            "bboxPx": [
+              400.75,
+              1684.0,
+              295.47,
+              116.0
+            ],
+            "status": "macOS_Vision_observation_not_transcript_authority"
+          },
+          {
+            "textRecognized": "治したいという方はですね",
+            "confidence": 1,
+            "bboxPx": [
+              20.38,
+              1792.74,
+              1052.83,
+              119.26
+            ],
+            "status": "macOS_Vision_observation_not_transcript_authority"
+          }
+        ]
+      },
+      {
+        "cue": 12,
+        "frame": 771,
+        "text": "下のホームページより\nご連絡ください！",
+        "sourceFrame": "../assets/a08-reference/cue-12-f0771.jpg",
+        "lines": [
+          {
+            "bboxPx": [
+              152,
+              1688,
+              786,
+              100
+            ],
+            "centerPx": [
+              545.0,
+              1738.0
+            ],
+            "whiteInkHeightPx": 100,
+            "status": "measured_raster_threshold",
+            "method": "RGB min>230, channel range<25; row contains>10 pixels, run length>8"
+          },
+          {
+            "bboxPx": [
+              203,
+              1794,
+              666,
+              101
+            ],
+            "centerPx": [
+              536.0,
+              1844.5
+            ],
+            "whiteInkHeightPx": 101,
+            "status": "measured_raster_threshold",
+            "method": "RGB min>230, channel range<25; row contains>10 pixels, run length>8"
+          }
+        ],
+        "inkUnionBboxPx": [
+          152,
+          1688,
+          786,
+          207
+        ],
+        "inkUnionCenterPx": [
+          545.0,
+          1791.5
+        ],
+        "lineTopStepPx": 106,
+        "sourceTransform": {
+          "x": 0.011450381679389,
+          "y": -0.533544973544974
+        },
+        "sourceScale": {
+          "x": 1.717912554740906,
+          "y": 1.717912554740906
+        },
+        "sourceFontSize": {
+          "value": 10.0,
+          "units": "CapCut_internal_not_px"
+        },
+        "fontRasterFit": {
+          "estimatedEmPx": 107,
+          "status": "estimated_by_same_font_raster_fit",
+          "relativeDimensionError": 0.0157,
+          "note": "Pillow raster approximation only. Exact CapCut source size remains 15/10, not these pixel values."
+        },
+        "shadow": {
+          "offsetPx": [
+            7,
+            6
+          ],
+          "direction": "right_down",
+          "uncertaintyPx": 2,
+          "status": "estimated_mask_match_not_renderer_calibration",
+          "visibleShadowPrecision": 0.7964,
+          "method": "Shift near-white ink by 1..22px and compare exposed shifted ink with mean RGB<65; exclude overlapped white; red characters excluded",
+          "blurPx": {
+            "value": 0,
+            "status": "source_diffuse_is_zero_and_visually_hard_edge_not_independently_fitted"
+          },
+          "opacity": {
+            "value": 0.65,
+            "status": "exact_source_rich_text_setting_not_opacity_measurement"
+          }
+        },
+        "ocrLines": [
+          {
+            "textRecognized": "下のホームページょり",
+            "confidence": 0.5,
+            "bboxPx": [
+              155.01,
+              1660.4,
+              799.17,
+              144.26
+            ],
+            "status": "macOS_Vision_observation_not_transcript_authority"
+          },
+          {
+            "textRecognized": "ご連絡ください！",
+            "confidence": 0.5,
+            "bboxPx": [
+              192.9,
+              1782.41,
+              701.0,
+              146.3
+            ],
+            "status": "macOS_Vision_observation_not_transcript_authority"
+          }
+        ]
+      }
+    ],
+    "uncertainties": [
+      "Raster white-ink boxes exclude most antialiasing and shadow; OCR boxes are separately recorded and can be looser.",
+      "The red emphasis cue includes white outline in white-ink bbox; the whole text fill is mixed.",
+      "Panel visible raster bound is measured against source baseline. Unclipped full box and radius are estimates from its known 800x357 source aspect and contour.",
+      "Shadow sourceStyle distance144.001166 (front) / 8.0 (back) contradicts equal richText distance8.00006485. Preserve both; do not map144 directly to CSS pixels."
+    ],
+    "validationStatus": "reference_measurements_only_not_new_render_validation"
+  },
+  "productionDefaults": {
+    "status": "user_approved_production_baseline",
+    "approvedDate": "2026-11-08",
+    "baselineCanvas": {
+      "width": 1080,
+      "height": 2336,
+      "units": "output_pixels"
+    },
+    "promo": {
+      "fontFamily": "Noto Serif JP",
+      "fontWeight": 900,
+      "fontSizePx": 125,
+      "lineHeight": 1.2,
+      "letterSpacingPx": 0,
+      "textWidthPx": 1032,
+      "panelHeightPx": 520,
+      "sourceFaceName": "Noto Serif JP Black",
+      "runtimeFamily": "Noto Serif JP"
+    },
+    "closing": {
+      "fontFamily": "Corporate Logo Rounded ver3",
+      "fontWeight": 700,
+      "fontSizePx": 107,
+      "lineHeight": 1.2,
+      "letterSpacingPx": 0,
+      "assetWidthPx": 1080,
+      "assetHeightPx": 440,
+      "topPx": 1572,
+      "fontCompatibility": {
+        "optionalFallbackFile": "../assets/a08-fonts/A08CorpRound-full.otf",
+        "optionalRuntimeFamily": "A08 Corp Round Full",
+        "useWhen": "The original Corporate OTF cannot be parsed by the target renderer. Use the original font when it loads correctly; the fallback runtime name is not mandatory.",
+        "sameUnicodeOutlinesAndAdvancesVerified": true,
+        "unicodeMappingCount": 10062,
+        "allShapingFeaturesAndAllPlatformsVerified": false,
+        "approvedRuntimeFamily": "A08 Corp Round Full"
+      },
+      "sourceFaceName": "Corporate Logo Rounded Bold ver3",
+      "runtimeFamily": "Corporate Logo Rounded ver3"
+    },
+    "textLayout": {
+      "maxCharactersPerLine": 8,
+      "maxLinesPerCue": 2,
+      "wrapAtMeaningfulBoundaries": true,
+      "splitOverflowIntoSubsequentCues": true,
+      "preserveApprovedMeaningAndOrder": true,
+      "readableTimePerCueRequired": true,
+      "fontAutoShrink": false,
+      "horizontalCompression": false,
+      "lineSpacingCompression": false,
+      "rule": "Separate conditions, explanatory phrases and invitations into readable semantic units. Keep each cue within 8 displayed characters per line and 2 lines; use subsequent cues rather than smaller type or a third line."
+    },
+    "scaling": {
+      "sameAspectRatio": "Scale pixel values and positions uniformly by output width / 1080 (equal to output height / 2336). Keep unitless lineHeight at 1.20 and letterSpacing at zero.",
+      "differentAspectRatio": "Recalibrate positions and safe margins for therapist, treatment and text. Do not stretch or shrink type to fit the number of characters."
+    },
+    "timing": {
+      "fixedCaptionCount": null,
+      "fixedDurationSeconds": null,
+      "rule": "Derive cue count, duration and reading time from current speech and approved text; the accepted example is not a fixed template length."
+    },
+    "referencePreservation": "This approved production baseline is separate from archival reference text, source CapCut units and raster measurements. Do not rewrite the original reference observations.",
+    "verificationScope": {
+      "userCompletedVideoApproval": true,
+      "editableCompositeAndLocalMp4Checked": true,
+      "allCaptionCuesAndChangedBoundariesChecked": true,
+      "audioNumericallyMatchedToPriorVersion": true,
+      "directFullAudioVisualAudition": false,
+      "independentUserEndToEnd": false
+    },
+    "fontNaming": "sourceFaceName is the complete face label, not the runtime family. Use preferred family names (OpenType name16) with the explicit weight; confirm registration in the current renderer. The approved rebuilt closing font has its own family A08 Corp Round Full and is optional when the original cannot load."
+  }
+}

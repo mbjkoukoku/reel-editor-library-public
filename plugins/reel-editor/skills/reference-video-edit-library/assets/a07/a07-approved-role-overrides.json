@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "canvas": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30
+  },
+  "notes": "Empty content values must be filled with the current approved script. Apply these per-role overrides on top of the bundled approved property schema. No fixed project asset IDs or timeline frames.",
+  "roles": {
+    "intro": {
+      "mode": "intro",
+      "fontFamily": "A07 Reference Serif",
+      "fontWeight": 700,
+      "clock": "",
+      "text": "",
+      "sceneLabel": "",
+      "sampleLabel": ""
+    },
+    "body": {
+      "mode": "body"
+    },
+    "split": {
+      "mode": "split"
+    },
+    "discovery": {
+      "mode": "body",
+      "clock": "12:00",
+      "bodyCenterY": 932
+    },
+    "clinic": {
+      "mode": "body",
+      "clockY": 652
+    },
+    "ending": {
+      "mode": "ending",
+      "clockSize": 80,
+      "clockSpacing": 4,
+      "bodySpacing": 3,
+      "endingSize": 90,
+      "endingLineHeight": 118
+    }
+  }
+}

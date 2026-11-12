@@ -1,0 +1,15 @@
+Noto Serif CJK JP Black
+Version 2.003
+
+Copyright notice from the unmodified font name table (nameID 0):
+© 2017-2024 Adobe (http://www.adobe.com/).
+
+Licensed under the SIL Open Font License, Version 1.1.
+See NotoSerifCJK-LICENSE.txt for the full license.
+
+Official project: https://github.com/notofonts/noto-cjk
+Official font: https://github.com/notofonts/noto-cjk/blob/Serif2.003/Serif/OTF/Japanese/NotoSerifCJKjp-Black.otf
+License source: https://raw.githubusercontent.com/notofonts/noto-cjk/main/Serif/LICENSE
+
+This is an unmodified font binary.
+SHA-256: 7a8c8b6dd729eddc63b021284d1eb4ada9974c84609c5eb4b23f9591795e8e76

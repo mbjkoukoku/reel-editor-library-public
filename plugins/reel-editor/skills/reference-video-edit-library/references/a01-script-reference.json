@@ -1,0 +1,592 @@
+{
+  "id": "A01",
+  "schemaVersion": 1,
+  "evidenceType": "original-reference-on-screen-caption-reading",
+  "sourceVideo": "サイト掲載 a01-reference.mp4（主見本: 整体サロン マサラグレース.mov）",
+  "sourceVideoSha256": "a9a65efc5380c43c40437543431d73d166886c401b249d86a01e2826c21b64ba",
+  "sourceTimingReference": "a01-reference.json",
+  "fps": 30,
+  "basis": "原見本の各字幕が確認できるフレームをffmpegで抽出し、画像を目視して転記。音声の直接聴取による逐語録ではない。",
+  "verification": {
+    "all23MainCueSamplesViewed": true,
+    "additiveEmphasisViewed": true,
+    "badgesViewed": true,
+    "audioVerbatimVerified": false,
+    "certificateImageSmallPrintTranscribed": false,
+    "unreadableMainCaptionText": [],
+    "fontIdentityOrAnimationParityReverified": false
+  },
+  "cues": [
+    {
+      "sequenceIndex": 1,
+      "key": "text0",
+      "startFrame": 0,
+      "endFrameExclusive": 50,
+      "startSeconds": 0.0,
+      "endSeconds": 1.666667,
+      "role": "悩みのつかみ",
+      "screenText": "体がすごく\n軽いです",
+      "screenTextWithoutLineBreaks": "体がすごく軽いです",
+      "layerType": "main_caption",
+      "sampleFrame": 48,
+      "readabilityStatus": "visually_confirmed",
+      "factReplacementSlots": [
+        {
+          "kind": "testimonial_or_result",
+          "sourceText": "体がすごく軽いです",
+          "adaptation": "新店舗の確認済みのお客様の声がある場合のみ同趣旨で使用。見本患者の感想を新店舗の感想に転用しない。"
+        }
+      ]
+    },
+    {
+      "sequenceIndex": 2,
+      "key": "text1",
+      "startFrame": 53,
+      "endFrameExclusive": 126,
+      "startSeconds": 1.766667,
+      "endSeconds": 4.2,
+      "role": "共感",
+      "screenText": "腰痛や肩こりで\n悩んでるけど",
+      "screenTextWithoutLineBreaks": "腰痛や肩こりで悩んでるけど",
+      "layerType": "main_caption",
+      "sampleFrame": 89,
+      "readabilityStatus": "visually_confirmed",
+      "factReplacementSlots": [
+        {
+          "kind": "target_symptoms",
+          "sourceText": "腰痛や肩こり",
+          "adaptation": "LPで扱う確認済みの症状に置換。"
+        }
+      ]
+    },
+    {
+      "sequenceIndex": 3,
+      "key": "text2",
+      "startFrame": 133,
+      "endFrameExclusive": 220,
+      "startSeconds": 4.433333,
+      "endSeconds": 7.333333,
+      "role": "対象者",
+      "screenText": "その場しのぎの\n施術は嫌な人",
+      "screenTextWithoutLineBreaks": "その場しのぎの施術は嫌な人",
+      "layerType": "main_caption",
+      "sampleFrame": 176,
+      "readabilityStatus": "visually_confirmed",
+      "factReplacementSlots": []
+    },
+    {
+      "sequenceIndex": 4,
+      "key": "text3",
+      "startFrame": 221,
+      "endFrameExclusive": 276,
+      "startSeconds": 7.366667,
+      "endSeconds": 9.2,
+      "role": "地域",
+      "screenText": "目黒区\n柿の木坂にある",
+      "screenTextWithoutLineBreaks": "目黒区柿の木坂にある",
+      "layerType": "main_caption",
+      "sampleFrame": 248,
+      "readabilityStatus": "visually_confirmed",
+      "factReplacementSlots": [
+        {
+          "kind": "region",
+          "sourceText": "目黒区",
+          "adaptation": "今回の地域名に置換。"
+        },
+        {
+          "kind": "locality_or_station",
+          "sourceText": "柿の木坂",
+          "adaptation": "今回の町名・駅名等に置換。徒歩分数は確認できる場合のみ加える。"
+        }
+      ]
+    },
+    {
+      "sequenceIndex": 5,
+      "key": "text4",
+      "startFrame": 287,
+      "endFrameExclusive": 355,
+      "startSeconds": 9.566667,
+      "endSeconds": 11.833333,
+      "role": "専門性",
+      "screenText": "運動療法専門の\n整体サロン",
+      "screenTextWithoutLineBreaks": "運動療法専門の整体サロン",
+      "layerType": "main_caption",
+      "sampleFrame": 321,
+      "readabilityStatus": "visually_confirmed",
+      "factReplacementSlots": [
+        {
+          "kind": "specialty",
+          "sourceText": "運動療法専門",
+          "adaptation": "今回のLPで確認できる専門性へ置換。"
+        },
+        {
+          "kind": "business_category",
+          "sourceText": "整体サロン",
+          "adaptation": "今回の正式な業態表記に合わせる。"
+        }
+      ]
+    },
+    {
+      "sequenceIndex": 6,
+      "key": "text5",
+      "startFrame": 359,
+      "endFrameExclusive": 408,
+      "startSeconds": 11.966667,
+      "endSeconds": 13.6,
+      "role": "店名",
+      "screenText": "マサラ・グレース\nって知ってる？",
+      "screenTextWithoutLineBreaks": "マサラ・グレースって知ってる？",
+      "layerType": "main_caption",
+      "sampleFrame": 383,
+      "readabilityStatus": "visually_confirmed",
+      "factReplacementSlots": [
+        {
+          "kind": "clinic_name",
+          "sourceText": "マサラ・グレース",
+          "adaptation": "今回の院名・承認済み表示名に置換。"
+        }
+      ]
+    },
+    {
+      "sequenceIndex": 7,
+      "key": "text6",
+      "startFrame": 412,
+      "endFrameExclusive": 456,
+      "startSeconds": 13.733333,
+      "endSeconds": 15.2,
+      "role": "問診・検査",
+      "screenText": "カウンセリング\nと検査で",
+      "screenTextWithoutLineBreaks": "カウンセリングと検査で",
+      "layerType": "main_caption",
+      "sampleFrame": 434,
+      "readabilityStatus": "visually_confirmed",
+      "factReplacementSlots": [
+        {
+          "kind": "service_process",
+          "sourceText": "カウンセリングと検査",
+          "adaptation": "今回のLPの実際の工程を確認。"
+        }
+      ]
+    },
+    {
+      "sequenceIndex": 8,
+      "key": "text7",
+      "startFrame": 458,
+      "endFrameExclusive": 502,
+      "startSeconds": 15.266667,
+      "endSeconds": 16.733333,
+      "role": "原因の確認",
+      "screenText": "痛みの原因を\n見つけて",
+      "screenTextWithoutLineBreaks": "痛みの原因を見つけて",
+      "layerType": "main_caption",
+      "sampleFrame": 480,
+      "readabilityStatus": "visually_confirmed",
+      "factReplacementSlots": [
+        {
+          "kind": "assessment_claim",
+          "sourceText": "痛みの原因を見つけて",
+          "adaptation": "原因特定を断定できる根拠がなければ「身体の状態を確認して」等、確認できる説明へ最小限置換。"
+        }
+      ]
+    },
+    {
+      "sequenceIndex": 9,
+      "key": "text8",
+      "startFrame": 505,
+      "endFrameExclusive": 576,
+      "startSeconds": 16.833333,
+      "endSeconds": 19.2,
+      "role": "施術の提案",
+      "screenText": "あなたの体に\n合った施術と",
+      "screenTextWithoutLineBreaks": "あなたの体に合った施術と",
+      "layerType": "main_caption",
+      "sampleFrame": 540,
+      "readabilityStatus": "visually_confirmed",
+      "factReplacementSlots": [
+        {
+          "kind": "individualized_treatment",
+          "sourceText": "あなたの体に合った施術",
+          "adaptation": "個別対応が新LPで確認できる場合に使用。"
+        }
+      ]
+    },
+    {
+      "sequenceIndex": 10,
+      "key": "text9",
+      "startFrame": 579,
+      "endFrameExclusive": 642,
+      "startSeconds": 19.3,
+      "endSeconds": 21.4,
+      "role": "運動等の提案",
+      "screenText": "運動療法を\n提案して\nくれるから",
+      "screenTextWithoutLineBreaks": "運動療法を提案してくれるから",
+      "layerType": "main_caption",
+      "sampleFrame": 610,
+      "readabilityStatus": "visually_confirmed",
+      "factReplacementSlots": [
+        {
+          "kind": "therapy",
+          "sourceText": "運動療法を提案してくれる",
+          "adaptation": "新LPにない手法を流用せず確認できる施術・運動・生活指導へ最小限置換。"
+        }
+      ]
+    },
+    {
+      "sequenceIndex": 11,
+      "key": "text10",
+      "startFrame": 652,
+      "endFrameExclusive": 707,
+      "startSeconds": 21.733333,
+      "endSeconds": 23.566667,
+      "role": "施術方針",
+      "screenText": "ただ揉んで\n終わりじゃなく",
+      "screenTextWithoutLineBreaks": "ただ揉んで終わりじゃなく",
+      "layerType": "main_caption",
+      "sampleFrame": 679,
+      "readabilityStatus": "visually_confirmed",
+      "factReplacementSlots": [
+        {
+          "kind": "service_characteristic",
+          "sourceText": "ただ揉んで終わりじゃなく",
+          "adaptation": "新店舗の施術内容と矛盾しないことを確認。"
+        }
+      ]
+    },
+    {
+      "sequenceIndex": 12,
+      "key": "text11",
+      "startFrame": 722,
+      "endFrameExclusive": 781,
+      "startSeconds": 24.066667,
+      "endSeconds": 26.033333,
+      "role": "目指す方向",
+      "screenText": "戻りにくい体を\n目指せるんです",
+      "screenTextWithoutLineBreaks": "戻りにくい体を目指せるんです",
+      "layerType": "main_caption",
+      "sampleFrame": 751,
+      "readabilityStatus": "visually_confirmed",
+      "factReplacementSlots": [
+        {
+          "kind": "result_direction",
+          "sourceText": "戻りにくい体を目指せる",
+          "adaptation": "再発しにくさ等の目標が新LPで確認できる場合のみ使用。保証・効果断定へ強めない。"
+        }
+      ]
+    },
+    {
+      "sequenceIndex": 13,
+      "key": "text12",
+      "startFrame": 786,
+      "endFrameExclusive": 921,
+      "startSeconds": 26.2,
+      "endSeconds": 30.7,
+      "role": "資格・実績バッジ",
+      "screenText": null,
+      "screenTextWithoutLineBreaks": null,
+      "layerType": "badge_and_evidence_images",
+      "sampleFrame": 831,
+      "readabilityStatus": "visually_confirmed",
+      "factReplacementSlots": [],
+      "note": "本文字幕なし。上部の実績バッジ2個と、下部の資格証・修了証画像4枚が同時に表示される。本文読み上げ文へ自動的に結合しない。"
+    },
+    {
+      "sequenceIndex": 14,
+      "key": "text13",
+      "startFrame": 914,
+      "endFrameExclusive": 992,
+      "startSeconds": 30.466667,
+      "endSeconds": 33.066667,
+      "role": "担当者",
+      "screenText": "女性院長が\n最初から最後まで",
+      "screenTextWithoutLineBreaks": "女性院長が最初から最後まで",
+      "layerType": "main_caption",
+      "sampleFrame": 953,
+      "readabilityStatus": "visually_confirmed",
+      "factReplacementSlots": [
+        {
+          "kind": "practitioner_gender_and_role",
+          "sourceText": "女性院長",
+          "adaptation": "今回の担当者・性別・肩書きに置換。"
+        },
+        {
+          "kind": "continuity_of_care",
+          "sourceText": "最初から最後まで",
+          "adaptation": "同じ担当者による対応が確認できる場合に使用。"
+        }
+      ],
+      "note": "本文字幕に加えて、text12から継続する実績バッジと証書画像が同時表示。"
+    },
+    {
+      "sequenceIndex": 15,
+      "key": "text14",
+      "startFrame": 999,
+      "endFrameExclusive": 1050,
+      "startSeconds": 33.3,
+      "endSeconds": 35.0,
+      "role": "対応の特徴",
+      "screenText": "丁寧に\n向き合って\nくれるから",
+      "screenTextWithoutLineBreaks": "丁寧に向き合ってくれるから",
+      "layerType": "main_caption",
+      "sampleFrame": 1024,
+      "readabilityStatus": "visually_confirmed",
+      "factReplacementSlots": [
+        {
+          "kind": "service_characteristic",
+          "sourceText": "丁寧に向き合ってくれる",
+          "adaptation": "新LPの方針・対応内容に照らす。"
+        }
+      ]
+    },
+    {
+      "sequenceIndex": 16,
+      "key": "text15",
+      "startFrame": 1055,
+      "endFrameExclusive": 1109,
+      "startSeconds": 35.166667,
+      "endSeconds": 36.966667,
+      "role": "初回相談",
+      "screenText": "初めての人も\n安心",
+      "screenTextWithoutLineBreaks": "初めての人も安心",
+      "layerType": "main_caption",
+      "sampleFrame": 1082,
+      "readabilityStatus": "visually_confirmed",
+      "factReplacementSlots": []
+    },
+    {
+      "sequenceIndex": 17,
+      "key": "text16",
+      "startFrame": 1113,
+      "endFrameExclusive": 1174,
+      "startSeconds": 37.1,
+      "endSeconds": 39.133333,
+      "role": "相談対象の悩み",
+      "screenText": "何か所も\n通ったけど\n変わらなかった",
+      "screenTextWithoutLineBreaks": "何か所も通ったけど変わらなかった",
+      "layerType": "main_caption",
+      "sampleFrame": 1143,
+      "readabilityStatus": "visually_confirmed",
+      "factReplacementSlots": [
+        {
+          "kind": "audience_history",
+          "sourceText": "何か所も通ったけど変わらなかった",
+          "adaptation": "悩む対象者への呼びかけ。新店舗で改善した患者の実績として扱わない。"
+        }
+      ]
+    },
+    {
+      "sequenceIndex": 18,
+      "key": "text17",
+      "startFrame": 1182,
+      "endFrameExclusive": 1238,
+      "startSeconds": 39.4,
+      "endSeconds": 41.266667,
+      "role": "諦めていた悩み",
+      "screenText": "年齢のせいだと\n諦めていた",
+      "screenTextWithoutLineBreaks": "年齢のせいだと諦めていた",
+      "layerType": "main_caption",
+      "sampleFrame": 1210,
+      "readabilityStatus": "visually_confirmed",
+      "factReplacementSlots": [
+        {
+          "kind": "audience_concern",
+          "sourceText": "年齢のせいだと諦めていた",
+          "adaptation": "悩む対象者への呼びかけ。治療効果の断定へ書き換えない。"
+        }
+      ]
+    },
+    {
+      "sequenceIndex": 19,
+      "key": "text18",
+      "startFrame": 1247,
+      "endFrameExclusive": 1336,
+      "startSeconds": 41.566667,
+      "endSeconds": 44.533333,
+      "role": "一度の相談",
+      "screenText": "そんな方は\nまずは一度\n相談してみて",
+      "screenTextWithoutLineBreaks": "そんな方はまずは一度相談してみて",
+      "layerType": "main_caption",
+      "sampleFrame": 1291,
+      "readabilityStatus": "visually_confirmed",
+      "factReplacementSlots": []
+    },
+    {
+      "sequenceIndex": 20,
+      "key": "text19",
+      "startFrame": 1344,
+      "endFrameExclusive": 1426,
+      "startSeconds": 44.8,
+      "endSeconds": 47.533333,
+      "role": "確認できる初回案内・保証",
+      "screenText": "初回施術は\n全額返金\n保証つき",
+      "screenTextWithoutLineBreaks": "初回施術は全額返金保証つき",
+      "layerType": "main_caption",
+      "sampleFrame": 1385,
+      "readabilityStatus": "visually_confirmed",
+      "factReplacementSlots": [
+        {
+          "kind": "refund_offer",
+          "sourceText": "初回施術は全額返金保証つき",
+          "adaptation": "新店舗の現在の返金保証と適用条件を確認できる場合のみ使用。ない場合は確認済みの軽い相談案内に差替。"
+        }
+      ]
+    },
+    {
+      "sequenceIndex": 21,
+      "key": "text20",
+      "startFrame": 1436,
+      "endFrameExclusive": 1474,
+      "startSeconds": 47.866667,
+      "endSeconds": 49.133333,
+      "role": "相談を促す",
+      "screenText": "安心して\n試せる",
+      "screenTextWithoutLineBreaks": "安心して試せる",
+      "layerType": "main_caption",
+      "sampleFrame": 1455,
+      "readabilityStatus": "visually_confirmed",
+      "factReplacementSlots": []
+    },
+    {
+      "sequenceIndex": 22,
+      "key": "text21",
+      "startFrame": 1476,
+      "endFrameExclusive": 1519,
+      "startSeconds": 49.2,
+      "endSeconds": 50.633333,
+      "role": "予約方法",
+      "screenText": "予約が混み合う\n場合があるから",
+      "screenTextWithoutLineBreaks": "予約が混み合う場合があるから",
+      "layerType": "main_caption",
+      "sampleFrame": 1497,
+      "readabilityStatus": "visually_confirmed",
+      "factReplacementSlots": [
+        {
+          "kind": "booking_availability",
+          "sourceText": "予約が混み合う場合がある",
+          "adaptation": "今回の予約状況の説明と矛盾しないよう確認。虚偽の期限・残席数を追加しない。"
+        }
+      ]
+    },
+    {
+      "sequenceIndex": 23,
+      "key": "text22",
+      "startFrame": 1528,
+      "endFrameExclusive": 1585,
+      "startSeconds": 50.933333,
+      "endSeconds": 52.833333,
+      "role": "行動喚起",
+      "screenText": "今すぐ\nチェックしてね",
+      "screenTextWithoutLineBreaks": "今すぐチェックしてね",
+      "layerType": "main_caption",
+      "sampleFrame": 1556,
+      "readabilityStatus": "visually_confirmed",
+      "factReplacementSlots": []
+    }
+  ],
+  "additionalLayers": [
+    {
+      "key": "emphasis",
+      "startFrame": 207,
+      "endFrameExclusive": 220,
+      "startSeconds": 6.9,
+      "endSeconds": 7.333333,
+      "screenText": "必見！",
+      "layerType": "additive_emphasis",
+      "overlapsMainCue": "text2",
+      "sampleFrame": 217,
+      "readabilityStatus": "visually_confirmed",
+      "narrationPolicy": "画面上はtext2に追加表示。音声で読み上げているかは未検証。読み上げ文へ採用する場合は「その場しのぎの施術は嫌な人、必見！」という候補になる。"
+    },
+    {
+      "key": "experience_years_badge",
+      "startFrame": 785,
+      "endFrameExclusive": 992,
+      "screenText": "施術歴\n14年以上",
+      "layerType": "credential_badge",
+      "sourceMainFrames": [
+        831,
+        953
+      ],
+      "factReplacementSlots": [
+        {
+          "kind": "experience_years",
+          "sourceText": "14年以上",
+          "adaptation": "今回の確認済みの施術歴に置換。根拠がなければ省略。"
+        }
+      ]
+    },
+    {
+      "key": "treatment_count_badge",
+      "startFrame": 785,
+      "endFrameExclusive": 992,
+      "screenText": "累計\n15,000件\n以上の経験",
+      "layerType": "credential_badge",
+      "sourceMainFrames": [
+        831,
+        953
+      ],
+      "factReplacementSlots": [
+        {
+          "kind": "treatment_count",
+          "sourceText": "15,000件以上",
+          "adaptation": "今回の確認済みの件数と集計範囲へ置換。根拠がなければ省略。"
+        }
+      ]
+    }
+  ],
+  "evidenceImageLayer": {
+    "startFrame": 785,
+    "endFrameExclusive": 992,
+    "description": "下部に資格証・修了証4枚。新店舗の証書素材・資格の裏付けがある場合にのみ相当素材へ差替。証書の小さい全文は本レビューの画面テロップ原文に含めていない。",
+    "readingSequence": "not-main-caption"
+  },
+  "readingOrderCandidate": {
+    "authority": "画面の順序から作った構成の候補。音声の読み上げ順や全発話の検証結果ではない。",
+    "mainCueKeys": [
+      "text0",
+      "text1",
+      "text2",
+      "text3",
+      "text4",
+      "text5",
+      "text6",
+      "text7",
+      "text8",
+      "text9",
+      "text10",
+      "text11",
+      "text13",
+      "text14",
+      "text15",
+      "text16",
+      "text17",
+      "text18",
+      "text19",
+      "text20",
+      "text21",
+      "text22"
+    ],
+    "optionalAdditiveText": {
+      "afterCue": "text2",
+      "key": "emphasis"
+    },
+    "excludedFromMainReading": [
+      "experience_years_badge",
+      "treatment_count_badge",
+      "certificate_evidence_images"
+    ]
+  },
+  "reusePolicy": {
+    "preserveReferenceStructureAndPhrasing": true,
+    "clinicRegionStationAreReplacementSlots": true,
+    "otherFactsAlsoNeedCurrentClinicEvidence": true,
+    "doNotImportUnverifiedOfferQualificationOrResult": true,
+    "doNotMistakeReferenceCustomerTestimonialForNewClinicTestimonial": true
+  },
+  "notes": [
+    "元見本に金額の価格字幕は見当たらず、初回の全額返金保証を軽いオファーとしている。",
+    "cue metadataのnoteレイヤー設定は存在するが、抽出した原見本の初回保証サンプルでは別の注記テキストを視認していない。新店舗に必要な保証条件注記は、その店舗の確認済み条件に基づいて用意する。",
+    "駅名・徒歩分数はこの原見本字幕にはない。地域部分は「目黒区／柿の木坂にある」。"
+  ],
+  "reviewedOn": "2026-10-07",
+  "sourceSite": "https://seitai-reel-library.ryo60129109.chatgpt.site/"
+}

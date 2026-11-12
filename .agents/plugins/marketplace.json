@@ -1,0 +1,20 @@
+{
+  "name": "reel-library",
+  "interface": {
+    "displayName": "Reel Library"
+  },
+  "plugins": [
+    {
+      "name": "reel-editor",
+      "source": {
+        "source": "local",
+        "path": "./plugins/reel-editor"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

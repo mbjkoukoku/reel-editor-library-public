@@ -1,0 +1,135 @@
+[
+  {
+    "file": "NotoSerifJP-Black.otf",
+    "sha256": "a54d7409c7702b5aee0276d0179660271e3d8107db3d201de4536694edaf09e0",
+    "sizeBytes": 6334936,
+    "unchangedBytes": true,
+    "weight": 900,
+    "unitsPerEm": 1000,
+    "names": {
+      "0": [
+        "Copyright © 2017 Adobe Systems Incorporated (http://www.adobe.com/)."
+      ],
+      "1": [
+        "Noto Serif JP Black"
+      ],
+      "2": [
+        "Regular"
+      ],
+      "3": [
+        "1.001;GOOG;NotoSerifJP-Black;ADOBE"
+      ],
+      "4": [
+        "Noto Serif JP Black"
+      ],
+      "5": [
+        "Version 1.001;PS 1.001;hotconv 16.6.54;makeotf.lib2.5.65590"
+      ],
+      "6": [
+        "NotoSerifJP-Black"
+      ],
+      "7": [
+        "Noto is a trademark of Google Inc."
+      ],
+      "8": [
+        "Adobe Systems Incorporated"
+      ],
+      "9": [
+        "Ryoko NISHIZUKA 西塚涼子 (kana & ideographs); Frank Grießhammer (Latin, Greek & Cyrillic); Wenlong ZHANG 张文龙 (bopomofo); Sandoll Communications 산돌커뮤니케이션, Soohyun PARK 박수현, Yejin WE 위예진 & Donghoon HAN 한동훈 (hangul elements, letters & syllables)"
+      ],
+      "10": [
+        "Dr. Ken Lunde (project architect, glyph set definition & overall production); Masataka HATTORI 服部正貴 (production & ideograph elements)"
+      ],
+      "11": [
+        "http://www.google.com/get/noto/"
+      ],
+      "12": [
+        "http://www.adobe.com/type/"
+      ],
+      "13": [
+        "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software."
+      ],
+      "14": [
+        "http://scripts.sil.org/OFL"
+      ]
+    },
+    "license": "SIL Open Font License 1.1",
+    "officialLicenseReference": "https://github.com/notofonts/noto-cjk/blob/main/Serif/LICENSE",
+    "officialFullLicenseText": "https://openfontlicense.org/documents/OFL.txt",
+    "fontInternalsModified": false
+  },
+  {
+    "file": "Corporate-Logo-Rounded-Bold-ver3.otf",
+    "sha256": "ab5f612ab655cfaf39260578d81b9ab33492d7e76ddec36eac10a9a19057e101",
+    "sizeBytes": 3548248,
+    "unchangedBytes": true,
+    "weight": 700,
+    "unitsPerEm": 1000,
+    "names": {
+      "0": [
+        "[KANA_main] LOGOTYPE.JP [Source Han Sans] © 2014-2020 Adobe (http://www.adobe.com/), with Reserved Font Name 'Source'."
+      ],
+      "1": [
+        "_______________ver3 Bold",
+        "コーポレート・ロゴ（ラウンド）ver3 Bold"
+      ],
+      "2": [
+        "Regular"
+      ],
+      "3": [
+        "12.001;UKWN;Corporate-Logo-Rounded-Bold-ver3"
+      ],
+      "4": [
+        "Corporate Logo Rounded Bold ver3"
+      ],
+      "5": [
+        "Version 12.001;FEAKit 1.0"
+      ],
+      "6": [
+        "Corporate-Logo-Rounded-Bold-ver3"
+      ],
+      "7": [],
+      "8": [],
+      "9": [
+        "[KANA_main] LOGOTYPE.JP [Source Han Sans] Ryoko NISHIZUKA 西塚涼子 (kana, bopomofo & ideographs); Paul D. Hunt (Latin, Greek & Cyrillic); Sandoll Communications 산돌커뮤니케이션, Soo-young JANG 장수영 & Joo-yeon KANG 강주연 (hangul elements, letters & syllables)"
+      ],
+      "10": [],
+      "11": [],
+      "12": [],
+      "13": [
+        "SIL Open Font License 1.1"
+      ],
+      "14": []
+    },
+    "license": "SIL Open Font License 1.1",
+    "officialLicenseReference": "https://logotype.jp/font-corpmaru.html",
+    "officialFullLicenseText": "https://openfontlicense.org/documents/OFL.txt",
+    "fontInternalsModified": false
+  },
+  {
+    "file": "A08CorpRound-full.otf",
+    "sha256": "82c6fda86ab0cddd1dccb96d6129fd6e78da244300d74a322c5e14c7df86f777",
+    "sizeBytes": 3542792,
+    "weight": 700,
+    "unitsPerEm": 1000,
+    "fontInternalsModified": true,
+    "derivedFrom": "Corporate-Logo-Rounded-Bold-ver3.otf",
+    "sourceSha256": "ab5f612ab655cfaf39260578d81b9ab33492d7e76ddec36eac10a9a19057e101",
+    "purpose": "Optional native-renderer-compatible rebuild, retaining Unicode outlines and advances; not a substitute typeface.",
+    "family": "A08 Corp Round Full",
+    "postScriptName": "A08CorpRoundFull",
+    "license": "SIL Open Font License 1.1",
+    "licenseFile": "A08CorpRound-full-LICENSE.txt",
+    "originalCopyrightRetained": true,
+    "rebuildValidation": {
+      "date": "2026-11-08",
+      "unicodeMappings": 10062,
+      "sameCmap": true,
+      "allUnicodeOutlinesEqual": true,
+      "allUnicodeAdvancesEqual": true,
+      "differences": 0,
+      "allShapingFeaturesAndAllPlatformsVerified": false
+    },
+    "usage": "Only use when the original OTF fails to load. The original family works when supported; this custom runtime family is not required."
+  }
+]

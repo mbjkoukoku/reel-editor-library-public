@@ -1,0 +1,6455 @@
+{
+  "id": "A04",
+  "version": "0.6.0",
+  "name": "発話テロップ・白い角丸背景",
+  "executionRoute": "speech_cleanup_then_overlays",
+  "workflow": "verbatim_speech",
+  "canvas": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30
+  },
+  "input": {
+    "required": [
+      "new speaker footage with original speech audio"
+    ],
+    "optional": [
+      "user corrections to names or technical terms",
+      "LP only if needed to verify a stated fact"
+    ],
+    "lpRequired": false,
+    "newLpScriptRequired": false,
+    "missingFootageAction": "Ask for the current speaker footage; do not request an LP or fabricate a new speaker script.",
+    "doNotUseReferenceVideoAsNewFootage": true
+  },
+  "durationPolicy": "Preserve meaningful speech and its order; remove only justified Japanese fillers and unnecessary pauses. New duration and caption count come from the cleaned current speech, not the87.966667second61caption reference.",
+  "helperCompatibility": {
+    "timeline_plan.py": false,
+    "text_revision.py": false,
+    "reason": "A04 requires current ChatCut Script cleanup, then independent overlays on the resulting live timing. Legacy helpers link fixed pattern cues and cuts and must reject this route.",
+    "routeIsLocalDispatcherNameNotChatCutApi": true
+  },
+  "speechWorkflow": {
+    "instruction": "speech-cleanup.md",
+    "keepMeaningfulWords": true,
+    "keepSpeechOrder": true,
+    "paraphraseOrSummarize": false,
+    "arbitrarySpeedChange": false,
+    "syncVideoAndOriginalVoiceCuts": true,
+    "japaneseFillerDecision": "Listen to context; preserve meaningful hesitation, agreement, emotion and replies. Do not delete only by a word match.",
+    "pauseReviewSeconds": 0.8,
+    "initialRemainingPauseSeconds": 0.25,
+    "pauseThresholdsAreNotMandatoryLimits": true,
+    "scriptOperations": "Read, revise and apply Script through the tools currently available in the connected ChatCut environment. Preserve live revisions and use actual word/silence timestamps.",
+    "captionTimingSource": "actual cleaned timeline after Script edits; never pre-cleanup draft timing or estimated character-count timing",
+    "cleanupAuditRequired": true,
+    "doNotReapplyPreCleanupPlan": true
+  },
+  "audio": {
+    "retainOriginalSpeech": true,
+    "muteMainSpeaker": false,
+    "addAiVoice": false,
+    "addBgm": false,
+    "addSfx": "Use short similar emphasis/closing sounds where corresponding moments exist in the current speech.",
+    "sfxPolicy": {
+      "originalAssetsBundled": false,
+      "preferIdentifiedOriginalWhenLegallyAvailable": true,
+      "allowAuthorizedFreeSimilarShortSounds": true,
+      "mustDescribeSimilarAsApproximation": true,
+      "paidGenerationAuthorizedByPattern": false,
+      "doNotUsePaidGenerationOrBgmImplicitly": true,
+      "recordChosenAssetSourceAndAvailability": true,
+      "ifNoUsableSound": "Report SFX not added; do not claim original sound reproduced. Continue the speech/caption edit.",
+      "timing": "Place at the current selected emphasis entrance or actual closing statement after speech cleanup, not at reference timestamps.",
+      "gain": "Original CapCut volumes are starting references only. Confirm current tool volume units and listen; adjust to keep speech intelligible.",
+      "frequency": "Sparse emphasis and closing punctuation; do not add sound to every caption or invent a closing CTA."
+    },
+    "referenceSfx": [
+      {
+        "role": "emphasis_impact",
+        "name": "冲击-997531",
+        "publicCatalogEffectId": "7385618208601016339",
+        "referenceStartFrame": 30,
+        "referenceEndFrameExclusive": 58,
+        "referenceSourceStartUs": 0,
+        "referenceSourceDurationUs": 933333,
+        "referenceVolumeRaw": 0.1070622131228447,
+        "sourceAssetDurationUs": 6300000,
+        "availabilityAtAnalysisMachine": "identified and locally readable; not bundled",
+        "availabilityOnAnotherMachine": "must check using current authorized assets/catalog",
+        "audibleMatchToExportVerified": false,
+        "reuseFixedReferenceTime": false
+      },
+      {
+        "role": "closing_sparkle",
+        "name": "キラーン　金属　流れ星　テロップ　魔法",
+        "publicCatalogEffectId": "7089302199234201602",
+        "referenceStartFrame": 2594,
+        "referenceEndFrameExclusive": 2611,
+        "referenceSourceStartUs": 0,
+        "referenceSourceDurationUs": 566666,
+        "referenceVolumeRaw": 0.05612974613904953,
+        "sourceAssetDurationUs": 2233333,
+        "availabilityAtAnalysisMachine": "identified and locally readable; not bundled",
+        "availabilityOnAnotherMachine": "must check using current authorized assets/catalog",
+        "audibleMatchToExportVerified": false,
+        "reuseFixedReferenceTime": false
+      }
+    ]
+  },
+  "captionPolicy": {
+    "writingMode": "horizontal-tb",
+    "preserveMeaningAndOrder": true,
+    "normallyLines": [
+      1,
+      2
+    ],
+    "lineBreaks": "Use semantic phrase boundaries in current speech; preserve full proper nouns and terminology. If too long, split a caption across actual word timings without changing the spoken words.",
+    "independentOfPictureCuts": true,
+    "readabilityDoesNotAuthorizeChangingSpeech": true,
+    "emphasisSelection": "Apply red emphasis to an important sentence actually spoken. Do not force the reference warning into another speaker video.",
+    "closingSelection": "Style an actual closing statement if present. Do not add reservation wording or CTA absent from the new footage or user instruction.",
+    "editableRepresentation": [
+      "native text plus per-line background elements",
+      "editable Motion Graphic overlays following the current host MG skill"
+    ],
+    "oneBurnedInVideoAsDeliverable": false
+  },
+  "visualDefaults": {
+    "position": "lower center",
+    "normalStyle": "black_on_white_line_boxes",
+    "emphasisStyle": "red_emphasis",
+    "picture": "Keep the current speaker and relevant demonstration visible; do not pad with an empty room or substitute old-clinic reference footage.",
+    "referenceCompositionChanges": "One draft video clip and no major hard cut found by frame-difference/sample review. New cleanup can create cuts; no fixed reference cut count is imposed."
+  },
+  "renderTargets": {
+    "black_on_white_line_boxes": {
+      "fontFileBasename": "ヒラギノ角ゴシック W6.ttc",
+      "fill": "#000000",
+      "background": "#ffffff",
+      "backgroundOpacity": 1,
+      "backgroundPerLine": true,
+      "boxGeometry": "Each line has its own content-width rounded white background; adjacent line boxes overlap/join to form a stepped silhouette. Do not draw one fixed-width rectangular card.",
+      "activeTextShadow": false,
+      "activeTextStroke": false,
+      "anchorNormalized": {
+        "centerX": 0.5,
+        "centerY": 0.843
+      },
+      "exportedPixelMeasurementsAt720x1280": {
+        "centerX": 360,
+        "centerY": 1079,
+        "visibleBlackGlyphHeightPxRange": [
+          57,
+          58
+        ],
+        "approximateGlyphAdvancePxRange": [
+          62,
+          64
+        ],
+        "twoLinePitchPx": 80,
+        "singleLineWhiteHeightPx": 98,
+        "twoLineCombinedWhiteHeightPx": 177,
+        "widestSampleWhiteBoundsX": [
+          30,
+          690
+        ]
+      },
+      "measurementCaution": "These are exported-pixel observations, not source font-size units. Measurements include JPEG/antialiasing threshold tolerance.",
+      "cssFontSizeSeedAt720": [
+        62,
+        64
+      ],
+      "cornerRadiusEstimatePxAt720": [
+        14,
+        18
+      ],
+      "seedValuesRequireRenderedCalibration": true,
+      "referenceImage": "../assets/a04-reference/body-two-lines.jpg",
+      "originalCapCut": {
+        "units": "native CapCut units; not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.5,
+            "y": 1.5
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": -0.6850842088934224
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 0,
+          "alignment": 1,
+          "line_feed": 1,
+          "letter_spacing": 0.0,
+          "line_spacing": 0.26999999999999996,
+          "font_size": 10.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 63,
+          "global_alpha": 1.0
+        },
+        "background": {
+          "background_color": "#ffffff",
+          "background_alpha": 1.0,
+          "background_style": 2,
+          "background_round_radius": 0.4000000059604645,
+          "background_width": 0.2800000011920929,
+          "background_height": 0.2800000011920929,
+          "background_vertical_offset": 0.0,
+          "background_horizontal_offset": 0.0,
+          "single_char_bg_enable": false
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    0,
+                    0,
+                    0
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              7
+            ],
+            "useLetterColor": true,
+            "size": 10,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "explicitTtcFaceIndex": null
+            }
+          }
+        ],
+        "animationMaterials": []
+      }
+    },
+    "red_emphasis": {
+      "fontFileBasename": "ヒラギノ角ゴシック W7.ttc",
+      "fill": "#ff0000",
+      "stroke": "#ffffff",
+      "shadow": "#000000",
+      "whiteBackgroundBoxes": false,
+      "sourceAnimation": "プロジェクションスラム",
+      "entranceDurationSeconds": 0.5,
+      "entranceReferenceFrames": 15,
+      "observedMotion": "frame30 has no visible new text; at31 the text emerges low with vertical motion blur. By33 the primary two lines are legible. Enlarged translucent projected copies expand behind them aroundframes34–44, fade, and the stable red two-line text remains by45. Footage itself does not make a matching zoom.",
+      "animationPolicy": "Use the matching available effect or reproduce its observed projected-copy motion as an editable overlay. Label any approximation; exact curve is not reconstructed. Do not zoom the footage itself.",
+      "referenceImage": "../assets/a04-reference/emphasis-static.jpg",
+      "motionReferenceImage": "../assets/a04-reference/emphasis-motion.jpg",
+      "originalCapCut": {
+        "units": "native CapCut units; not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.5,
+            "y": 1.5
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": -0.6850842088934224
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 0,
+          "alignment": 1,
+          "line_feed": 1,
+          "letter_spacing": 0.0,
+          "line_spacing": 0.26999999999999996,
+          "font_size": 12.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": false,
+          "is_rich_text": false,
+          "check_flag": 47,
+          "global_alpha": 1.0
+        },
+        "background": {
+          "background_color": "#000000",
+          "background_alpha": 1.0,
+          "background_style": 0,
+          "background_round_radius": 0.0,
+          "background_width": 0.14,
+          "background_height": 0.14,
+          "background_vertical_offset": 0.0,
+          "background_horizontal_offset": 0.0,
+          "single_char_bg_enable": false
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    1,
+                    0,
+                    0
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              16
+            ],
+            "shadows": [
+              {
+                "thickness_projection_distance": 0,
+                "diffuse": 0.02500000037252903,
+                "angle": -45,
+                "thickness_projection_enable": false,
+                "content": {
+                  "solid": {
+                    "color": [
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  "render_type": "solid"
+                },
+                "distance": 4.999999523162842,
+                "thickness_projection_angle": -45,
+                "alpha": 0.7047608494758606
+              }
+            ],
+            "strokes": [
+              {
+                "width": 0.07032497227191925,
+                "mode": 0,
+                "content": {
+                  "solid": {
+                    "color": [
+                      1,
+                      1,
+                      1
+                    ]
+                  },
+                  "render_type": "solid"
+                }
+              }
+            ],
+            "useLetterColor": true,
+            "size": 12,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W7.ttc",
+              "explicitTtcFaceIndex": null
+            }
+          }
+        ],
+        "animationMaterials": [
+          {
+            "type": "in",
+            "start": 0,
+            "duration": 500000,
+            "name": "プロジェクションスラム",
+            "resource_id": "7537613697506708737",
+            "source_platform": 1,
+            "anim_adjust_params": null
+          }
+        ]
+      }
+    }
+  },
+  "fontIdentity": {
+    "sourceFilesIdentified": true,
+    "explicitTtcFaceIndexInDraft": false,
+    "files": [
+      {
+        "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+        "availableLocally": true,
+        "faces": [
+          {
+            "faceIndex": 0,
+            "postscriptNames": [
+              "HiraginoSans-W6"
+            ]
+          },
+          {
+            "faceIndex": 1,
+            "postscriptNames": [
+              ".HiraKakuInterface-W6"
+            ]
+          },
+          {
+            "faceIndex": 2,
+            "postscriptNames": [
+              "HiraKakuProN-W6"
+            ]
+          },
+          {
+            "faceIndex": 3,
+            "postscriptNames": [
+              "HiraKakuPro-W6"
+            ]
+          }
+        ],
+        "explicitFaceIndexInDraft": null
+      },
+      {
+        "fileBasename": "ヒラギノ角ゴシック W7.ttc",
+        "availableLocally": true,
+        "faces": [
+          {
+            "faceIndex": 0,
+            "postscriptNames": [
+              "HiraginoSans-W7"
+            ]
+          },
+          {
+            "faceIndex": 1,
+            "postscriptNames": [
+              ".HiraKakuInterface-W7"
+            ]
+          }
+        ],
+        "explicitFaceIndexInDraft": null
+      }
+    ],
+    "exactChatCutGlyphRenderingVerified": false,
+    "fontBinariesBundled": false,
+    "differentDevicePolicy": "Check available licensed fonts. A matching TTC filename does not prove its selected face or cross-renderer metrics. Calibrate against the reference frames; do not silently substitute another font.",
+    "availabilityObservationScope": "Local font availability was checked only on the analysis machine; recheck on every operator device."
+  },
+  "reference": {
+    "label": "臀筋 動画.mov",
+    "canvas": {
+      "width": 720,
+      "height": 1280,
+      "fps": 30,
+      "durationFrames": 2639
+    },
+    "durationSeconds": 87.966667,
+    "captionCount": 61,
+    "currentDraftRelativeName": "0802/draft_info.json",
+    "draftCanvas": {
+      "ratio": "original",
+      "width": 1080,
+      "height": 1920,
+      "background": null
+    },
+    "matchEvidence": [
+      "duration87.966666seconds in draft matches export within1microsecond",
+      "61 draft text materials equal61 export text count",
+      "sampled text, white boxes, emphasis style and15frame entrance match original export",
+      "current draft has1 video segment; full-frame scan and selected high-difference intervals show no major picture cut"
+    ],
+    "all61CaptionStringsVerifiedAgainstFrames": false,
+    "audioAuditioned": false,
+    "blackTailFound": false,
+    "referenceImages": [
+      {
+        "role": "body-one-line",
+        "path": "../assets/a04-reference/body-one-line.jpg",
+        "referenceFrame": 240
+      },
+      {
+        "role": "body-two-lines",
+        "path": "../assets/a04-reference/body-two-lines.jpg",
+        "referenceFrame": 110
+      },
+      {
+        "role": "emphasis-static",
+        "path": "../assets/a04-reference/emphasis-static.jpg",
+        "referenceFrame": 45
+      },
+      {
+        "role": "emphasis-motion",
+        "path": "../assets/a04-reference/emphasis-motion.jpg",
+        "referenceFrame": null
+      }
+    ],
+    "referenceImagesUse": "Style comparison only; do not insert old speaker/reference footage into another person’s edit."
+  },
+  "sourceScript": {
+    "kind": "reference_on_screen_text",
+    "location": "referenceCues[].referenceText",
+    "isAudioVerifiedVerbatimTranscript": false,
+    "useAsNewVideoScript": false,
+    "forceReferenceOpeningWarning": false,
+    "forceReferenceClosingCta": false
+  },
+  "referenceCues": [
+    {
+      "key": "a04-ref-01",
+      "referenceText": "このストレッチ",
+      "start": 9,
+      "end": 30,
+      "timingMicroseconds": {
+        "start": 300000,
+        "duration": 700000
+      },
+      "style": "black_on_white_line_boxes",
+      "automaticallyReuseForNewVideo": false,
+      "textSource": "current matching draft screen-text; not an audio-verified verbatim transcript",
+      "originalCapCut": {
+        "units": "native CapCut units; not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.5,
+            "y": 1.5
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": -0.6850842088934224
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 0,
+          "alignment": 1,
+          "line_feed": 1,
+          "letter_spacing": 0.0,
+          "line_spacing": 0.26999999999999996,
+          "font_size": 10.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 63,
+          "global_alpha": 1.0
+        },
+        "background": {
+          "background_color": "#ffffff",
+          "background_alpha": 1.0,
+          "background_style": 2,
+          "background_round_radius": 0.4000000059604645,
+          "background_width": 0.2800000011920929,
+          "background_height": 0.2800000011920929,
+          "background_vertical_offset": 0.0,
+          "background_horizontal_offset": 0.0,
+          "single_char_bg_enable": false
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    0,
+                    0,
+                    0
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              7
+            ],
+            "useLetterColor": true,
+            "size": 10,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "explicitTtcFaceIndex": null
+            }
+          }
+        ],
+        "animationMaterials": []
+      }
+    },
+    {
+      "key": "a04-ref-02",
+      "referenceText": "いきなりやるの\nやめてください！",
+      "start": 30,
+      "end": 72,
+      "timingMicroseconds": {
+        "start": 1000000,
+        "duration": 1400000
+      },
+      "style": "red_emphasis",
+      "automaticallyReuseForNewVideo": false,
+      "textSource": "current matching draft screen-text; not an audio-verified verbatim transcript",
+      "originalCapCut": {
+        "units": "native CapCut units; not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.5,
+            "y": 1.5
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": -0.6850842088934224
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 0,
+          "alignment": 1,
+          "line_feed": 1,
+          "letter_spacing": 0.0,
+          "line_spacing": 0.26999999999999996,
+          "font_size": 12.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": false,
+          "is_rich_text": false,
+          "check_flag": 47,
+          "global_alpha": 1.0
+        },
+        "background": {
+          "background_color": "#000000",
+          "background_alpha": 1.0,
+          "background_style": 0,
+          "background_round_radius": 0.0,
+          "background_width": 0.14,
+          "background_height": 0.14,
+          "background_vertical_offset": 0.0,
+          "background_horizontal_offset": 0.0,
+          "single_char_bg_enable": false
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    1,
+                    0,
+                    0
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              16
+            ],
+            "shadows": [
+              {
+                "thickness_projection_distance": 0,
+                "diffuse": 0.02500000037252903,
+                "angle": -45,
+                "thickness_projection_enable": false,
+                "content": {
+                  "solid": {
+                    "color": [
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  "render_type": "solid"
+                },
+                "distance": 4.999999523162842,
+                "thickness_projection_angle": -45,
+                "alpha": 0.7047608494758606
+              }
+            ],
+            "strokes": [
+              {
+                "width": 0.07032497227191925,
+                "mode": 0,
+                "content": {
+                  "solid": {
+                    "color": [
+                      1,
+                      1,
+                      1
+                    ]
+                  },
+                  "render_type": "solid"
+                }
+              }
+            ],
+            "useLetterColor": true,
+            "size": 12,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W7.ttc",
+              "explicitTtcFaceIndex": null
+            }
+          }
+        ],
+        "animationMaterials": [
+          {
+            "type": "in",
+            "start": 0,
+            "duration": 500000,
+            "name": "プロジェクションスラム",
+            "resource_id": "7537613697506708737",
+            "source_platform": 1,
+            "anim_adjust_params": null
+          }
+        ]
+      }
+    },
+    {
+      "key": "a04-ref-03",
+      "referenceText": "なんでかっていうと",
+      "start": 78,
+      "end": 110,
+      "timingMicroseconds": {
+        "start": 2600000,
+        "duration": 1066666
+      },
+      "style": "black_on_white_line_boxes",
+      "automaticallyReuseForNewVideo": false,
+      "textSource": "current matching draft screen-text; not an audio-verified verbatim transcript",
+      "originalCapCut": {
+        "units": "native CapCut units; not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.5,
+            "y": 1.5
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": -0.6850842088934224
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 0,
+          "alignment": 1,
+          "line_feed": 1,
+          "letter_spacing": 0.0,
+          "line_spacing": 0.26999999999999996,
+          "font_size": 10.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 63,
+          "global_alpha": 1.0
+        },
+        "background": {
+          "background_color": "#ffffff",
+          "background_alpha": 1.0,
+          "background_style": 2,
+          "background_round_radius": 0.4000000059604645,
+          "background_width": 0.2800000011920929,
+          "background_height": 0.2800000011920929,
+          "background_vertical_offset": 0.0,
+          "background_horizontal_offset": 0.0,
+          "single_char_bg_enable": false
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    0,
+                    0,
+                    0
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              9
+            ],
+            "useLetterColor": true,
+            "size": 10,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "explicitTtcFaceIndex": null
+            }
+          }
+        ],
+        "animationMaterials": []
+      }
+    },
+    {
+      "key": "a04-ref-04",
+      "referenceText": "このストレッチ自体は\nお尻の筋肉",
+      "start": 110,
+      "end": 162,
+      "timingMicroseconds": {
+        "start": 3666666,
+        "duration": 1733334
+      },
+      "style": "black_on_white_line_boxes",
+      "automaticallyReuseForNewVideo": false,
+      "textSource": "current matching draft screen-text; not an audio-verified verbatim transcript",
+      "originalCapCut": {
+        "units": "native CapCut units; not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.5,
+            "y": 1.5
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": -0.6850842088934224
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 0,
+          "alignment": 1,
+          "line_feed": 1,
+          "letter_spacing": 0.0,
+          "line_spacing": 0.26999999999999996,
+          "font_size": 10.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 63,
+          "global_alpha": 1.0
+        },
+        "background": {
+          "background_color": "#ffffff",
+          "background_alpha": 1.0,
+          "background_style": 2,
+          "background_round_radius": 0.4000000059604645,
+          "background_width": 0.2800000011920929,
+          "background_height": 0.2800000011920929,
+          "background_vertical_offset": 0.0,
+          "background_horizontal_offset": 0.0,
+          "single_char_bg_enable": false
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    0,
+                    0,
+                    0
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              16
+            ],
+            "useLetterColor": true,
+            "size": 10,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "explicitTtcFaceIndex": null
+            }
+          }
+        ],
+        "animationMaterials": []
+      }
+    },
+    {
+      "key": "a04-ref-05",
+      "referenceText": "伸ばす上で非常に\n大事になるので",
+      "start": 168,
+      "end": 220,
+      "timingMicroseconds": {
+        "start": 5600000,
+        "duration": 1733333
+      },
+      "style": "black_on_white_line_boxes",
+      "automaticallyReuseForNewVideo": false,
+      "textSource": "current matching draft screen-text; not an audio-verified verbatim transcript",
+      "originalCapCut": {
+        "units": "native CapCut units; not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.5,
+            "y": 1.5
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": -0.6850842088934224
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 0,
+          "alignment": 1,
+          "line_feed": 1,
+          "letter_spacing": 0.0,
+          "line_spacing": 0.26999999999999996,
+          "font_size": 10.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 63,
+          "global_alpha": 1.0
+        },
+        "background": {
+          "background_color": "#ffffff",
+          "background_alpha": 1.0,
+          "background_style": 2,
+          "background_round_radius": 0.4000000059604645,
+          "background_width": 0.2800000011920929,
+          "background_height": 0.2800000011920929,
+          "background_vertical_offset": 0.0,
+          "background_horizontal_offset": 0.0,
+          "single_char_bg_enable": false
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    0,
+                    0,
+                    0
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              16
+            ],
+            "useLetterColor": true,
+            "size": 10,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "explicitTtcFaceIndex": null
+            }
+          }
+        ],
+        "animationMaterials": []
+      }
+    },
+    {
+      "key": "a04-ref-06",
+      "referenceText": "有効な人もいます",
+      "start": 220,
+      "end": 262,
+      "timingMicroseconds": {
+        "start": 7333333,
+        "duration": 1400000
+      },
+      "style": "black_on_white_line_boxes",
+      "automaticallyReuseForNewVideo": false,
+      "textSource": "current matching draft screen-text; not an audio-verified verbatim transcript",
+      "originalCapCut": {
+        "units": "native CapCut units; not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.5,
+            "y": 1.5
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": -0.6850842088934224
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 0,
+          "alignment": 1,
+          "line_feed": 1,
+          "letter_spacing": 0.0,
+          "line_spacing": 0.26999999999999996,
+          "font_size": 10.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 63,
+          "global_alpha": 1.0
+        },
+        "background": {
+          "background_color": "#ffffff",
+          "background_alpha": 1.0,
+          "background_style": 2,
+          "background_round_radius": 0.4000000059604645,
+          "background_width": 0.2800000011920929,
+          "background_height": 0.2800000011920929,
+          "background_vertical_offset": 0.0,
+          "background_horizontal_offset": 0.0,
+          "single_char_bg_enable": false
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    0,
+                    0,
+                    0
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              8
+            ],
+            "useLetterColor": true,
+            "size": 10,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "explicitTtcFaceIndex": null
+            }
+          }
+        ],
+        "animationMaterials": []
+      }
+    },
+    {
+      "key": "a04-ref-07",
+      "referenceText": "ただ",
+      "start": 264,
+      "end": 288,
+      "timingMicroseconds": {
+        "start": 8800000,
+        "duration": 800000
+      },
+      "style": "black_on_white_line_boxes",
+      "automaticallyReuseForNewVideo": false,
+      "textSource": "current matching draft screen-text; not an audio-verified verbatim transcript",
+      "originalCapCut": {
+        "units": "native CapCut units; not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.5,
+            "y": 1.5
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": -0.6850842088934224
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 0,
+          "alignment": 1,
+          "line_feed": 1,
+          "letter_spacing": 0.0,
+          "line_spacing": 0.26999999999999996,
+          "font_size": 10.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 63,
+          "global_alpha": 1.0
+        },
+        "background": {
+          "background_color": "#ffffff",
+          "background_alpha": 1.0,
+          "background_style": 2,
+          "background_round_radius": 0.4000000059604645,
+          "background_width": 0.2800000011920929,
+          "background_height": 0.2800000011920929,
+          "background_vertical_offset": 0.0,
+          "background_horizontal_offset": 0.0,
+          "single_char_bg_enable": false
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    0,
+                    0,
+                    0
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              2
+            ],
+            "useLetterColor": true,
+            "size": 10,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "explicitTtcFaceIndex": null
+            }
+          }
+        ],
+        "animationMaterials": []
+      }
+    },
+    {
+      "key": "a04-ref-08",
+      "referenceText": "よくですね",
+      "start": 288,
+      "end": 318,
+      "timingMicroseconds": {
+        "start": 9600000,
+        "duration": 1000000
+      },
+      "style": "black_on_white_line_boxes",
+      "automaticallyReuseForNewVideo": false,
+      "textSource": "current matching draft screen-text; not an audio-verified verbatim transcript",
+      "originalCapCut": {
+        "units": "native CapCut units; not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.5,
+            "y": 1.5
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": -0.6850842088934224
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 0,
+          "alignment": 1,
+          "line_feed": 1,
+          "letter_spacing": 0.0,
+          "line_spacing": 0.26999999999999996,
+          "font_size": 10.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 63,
+          "global_alpha": 1.0
+        },
+        "background": {
+          "background_color": "#ffffff",
+          "background_alpha": 1.0,
+          "background_style": 2,
+          "background_round_radius": 0.4000000059604645,
+          "background_width": 0.2800000011920929,
+          "background_height": 0.2800000011920929,
+          "background_vertical_offset": 0.0,
+          "background_horizontal_offset": 0.0,
+          "single_char_bg_enable": false
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    0,
+                    0,
+                    0
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              5
+            ],
+            "useLetterColor": true,
+            "size": 10,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "explicitTtcFaceIndex": null
+            }
+          }
+        ],
+        "animationMaterials": []
+      }
+    },
+    {
+      "key": "a04-ref-09",
+      "referenceText": "このストレッチやれば",
+      "start": 318,
+      "end": 353,
+      "timingMicroseconds": {
+        "start": 10600000,
+        "duration": 1166666
+      },
+      "style": "black_on_white_line_boxes",
+      "automaticallyReuseForNewVideo": false,
+      "textSource": "current matching draft screen-text; not an audio-verified verbatim transcript",
+      "originalCapCut": {
+        "units": "native CapCut units; not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.5,
+            "y": 1.5
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": -0.6850842088934224
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 0,
+          "alignment": 1,
+          "line_feed": 1,
+          "letter_spacing": 0.0,
+          "line_spacing": 0.26999999999999996,
+          "font_size": 10.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 63,
+          "global_alpha": 1.0
+        },
+        "background": {
+          "background_color": "#ffffff",
+          "background_alpha": 1.0,
+          "background_style": 2,
+          "background_round_radius": 0.4000000059604645,
+          "background_width": 0.2800000011920929,
+          "background_height": 0.2800000011920929,
+          "background_vertical_offset": 0.0,
+          "background_horizontal_offset": 0.0,
+          "single_char_bg_enable": false
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    0,
+                    0,
+                    0
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              10
+            ],
+            "useLetterColor": true,
+            "size": 10,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "explicitTtcFaceIndex": null
+            }
+          }
+        ],
+        "animationMaterials": []
+      }
+    },
+    {
+      "key": "a04-ref-10",
+      "referenceText": "改善する\nみたいな動画",
+      "start": 356,
+      "end": 389,
+      "timingMicroseconds": {
+        "start": 11866666,
+        "duration": 1100000
+      },
+      "style": "black_on_white_line_boxes",
+      "automaticallyReuseForNewVideo": false,
+      "textSource": "current matching draft screen-text; not an audio-verified verbatim transcript",
+      "originalCapCut": {
+        "units": "native CapCut units; not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.5,
+            "y": 1.5
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": -0.6850842088934224
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 0,
+          "alignment": 1,
+          "line_feed": 1,
+          "letter_spacing": 0.0,
+          "line_spacing": 0.26999999999999996,
+          "font_size": 10.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 63,
+          "global_alpha": 1.0
+        },
+        "background": {
+          "background_color": "#ffffff",
+          "background_alpha": 1.0,
+          "background_style": 2,
+          "background_round_radius": 0.4000000059604645,
+          "background_width": 0.2800000011920929,
+          "background_height": 0.2800000011920929,
+          "background_vertical_offset": 0.0,
+          "background_horizontal_offset": 0.0,
+          "single_char_bg_enable": false
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    0,
+                    0,
+                    0
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              11
+            ],
+            "useLetterColor": true,
+            "size": 10,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "explicitTtcFaceIndex": null
+            }
+          }
+        ],
+        "animationMaterials": []
+      }
+    },
+    {
+      "key": "a04-ref-11",
+      "referenceText": "よく流れてると\n思うんですけど",
+      "start": 393,
+      "end": 429,
+      "timingMicroseconds": {
+        "start": 13100000,
+        "duration": 1200000
+      },
+      "style": "black_on_white_line_boxes",
+      "automaticallyReuseForNewVideo": false,
+      "textSource": "current matching draft screen-text; not an audio-verified verbatim transcript",
+      "originalCapCut": {
+        "units": "native CapCut units; not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.5,
+            "y": 1.5
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": -0.6850842088934224
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 0,
+          "alignment": 1,
+          "line_feed": 1,
+          "letter_spacing": 0.0,
+          "line_spacing": 0.26999999999999996,
+          "font_size": 10.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 63,
+          "global_alpha": 1.0
+        },
+        "background": {
+          "background_color": "#ffffff",
+          "background_alpha": 1.0,
+          "background_style": 2,
+          "background_round_radius": 0.4000000059604645,
+          "background_width": 0.2800000011920929,
+          "background_height": 0.2800000011920929,
+          "background_vertical_offset": 0.0,
+          "background_horizontal_offset": 0.0,
+          "single_char_bg_enable": false
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    0,
+                    0,
+                    0
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              15
+            ],
+            "useLetterColor": true,
+            "size": 10,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "explicitTtcFaceIndex": null
+            }
+          }
+        ],
+        "animationMaterials": []
+      }
+    },
+    {
+      "key": "a04-ref-12",
+      "referenceText": "そうじゃなくて逆に",
+      "start": 443,
+      "end": 479,
+      "timingMicroseconds": {
+        "start": 14766666,
+        "duration": 1200000
+      },
+      "style": "black_on_white_line_boxes",
+      "automaticallyReuseForNewVideo": false,
+      "textSource": "current matching draft screen-text; not an audio-verified verbatim transcript",
+      "originalCapCut": {
+        "units": "native CapCut units; not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.5,
+            "y": 1.5
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": -0.6850842088934224
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 0,
+          "alignment": 1,
+          "line_feed": 1,
+          "letter_spacing": 0.0,
+          "line_spacing": 0.26999999999999996,
+          "font_size": 10.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 63,
+          "global_alpha": 1.0
+        },
+        "background": {
+          "background_color": "#ffffff",
+          "background_alpha": 1.0,
+          "background_style": 2,
+          "background_round_radius": 0.4000000059604645,
+          "background_width": 0.2800000011920929,
+          "background_height": 0.2800000011920929,
+          "background_vertical_offset": 0.0,
+          "background_horizontal_offset": 0.0,
+          "single_char_bg_enable": false
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    0,
+                    0,
+                    0
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              9
+            ],
+            "useLetterColor": true,
+            "size": 10,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "explicitTtcFaceIndex": null
+            }
+          }
+        ],
+        "animationMaterials": []
+      }
+    },
+    {
+      "key": "a04-ref-13",
+      "referenceText": "痛めてしまう\nケースもあります",
+      "start": 483,
+      "end": 526,
+      "timingMicroseconds": {
+        "start": 16100000,
+        "duration": 1433333
+      },
+      "style": "black_on_white_line_boxes",
+      "automaticallyReuseForNewVideo": false,
+      "textSource": "current matching draft screen-text; not an audio-verified verbatim transcript",
+      "originalCapCut": {
+        "units": "native CapCut units; not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.5,
+            "y": 1.5
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": -0.6850842088934224
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 0,
+          "alignment": 1,
+          "line_feed": 1,
+          "letter_spacing": 0.0,
+          "line_spacing": 0.26999999999999996,
+          "font_size": 10.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 63,
+          "global_alpha": 1.0
+        },
+        "background": {
+          "background_color": "#ffffff",
+          "background_alpha": 1.0,
+          "background_style": 2,
+          "background_round_radius": 0.4000000059604645,
+          "background_width": 0.2800000011920929,
+          "background_height": 0.2800000011920929,
+          "background_vertical_offset": 0.0,
+          "background_horizontal_offset": 0.0,
+          "single_char_bg_enable": false
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    0,
+                    0,
+                    0
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              15
+            ],
+            "useLetterColor": true,
+            "size": 10,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "explicitTtcFaceIndex": null
+            }
+          }
+        ],
+        "animationMaterials": []
+      }
+    },
+    {
+      "key": "a04-ref-14",
+      "referenceText": "大事に\nなってくるのは",
+      "start": 530,
+      "end": 572,
+      "timingMicroseconds": {
+        "start": 17666666,
+        "duration": 1400000
+      },
+      "style": "black_on_white_line_boxes",
+      "automaticallyReuseForNewVideo": false,
+      "textSource": "current matching draft screen-text; not an audio-verified verbatim transcript",
+      "originalCapCut": {
+        "units": "native CapCut units; not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.5,
+            "y": 1.5
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": -0.6850842088934224
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 0,
+          "alignment": 1,
+          "line_feed": 1,
+          "letter_spacing": 0.0,
+          "line_spacing": 0.26999999999999996,
+          "font_size": 10.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 63,
+          "global_alpha": 1.0
+        },
+        "background": {
+          "background_color": "#ffffff",
+          "background_alpha": 1.0,
+          "background_style": 2,
+          "background_round_radius": 0.4000000059604645,
+          "background_width": 0.2800000011920929,
+          "background_height": 0.2800000011920929,
+          "background_vertical_offset": 0.0,
+          "background_horizontal_offset": 0.0,
+          "single_char_bg_enable": false
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    0,
+                    0,
+                    0
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              11
+            ],
+            "useLetterColor": true,
+            "size": 10,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "explicitTtcFaceIndex": null
+            }
+          }
+        ],
+        "animationMaterials": []
+      }
+    },
+    {
+      "key": "a04-ref-15",
+      "referenceText": "ただただ\nストレッチ",
+      "start": 578,
+      "end": 617,
+      "timingMicroseconds": {
+        "start": 19266666,
+        "duration": 1300000
+      },
+      "style": "black_on_white_line_boxes",
+      "automaticallyReuseForNewVideo": false,
+      "textSource": "current matching draft screen-text; not an audio-verified verbatim transcript",
+      "originalCapCut": {
+        "units": "native CapCut units; not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.5,
+            "y": 1.5
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": -0.6850842088934224
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 0,
+          "alignment": 1,
+          "line_feed": 1,
+          "letter_spacing": 0.0,
+          "line_spacing": 0.26999999999999996,
+          "font_size": 10.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 63,
+          "global_alpha": 1.0
+        },
+        "background": {
+          "background_color": "#ffffff",
+          "background_alpha": 1.0,
+          "background_style": 2,
+          "background_round_radius": 0.4000000059604645,
+          "background_width": 0.2800000011920929,
+          "background_height": 0.2800000011920929,
+          "background_vertical_offset": 0.0,
+          "background_horizontal_offset": 0.0,
+          "single_char_bg_enable": false
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    0,
+                    0,
+                    0
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              10
+            ],
+            "useLetterColor": true,
+            "size": 10,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "explicitTtcFaceIndex": null
+            }
+          }
+        ],
+        "animationMaterials": []
+      }
+    },
+    {
+      "key": "a04-ref-16",
+      "referenceText": "すればいい\nわけではなく",
+      "start": 621,
+      "end": 656,
+      "timingMicroseconds": {
+        "start": 20700000,
+        "duration": 1166666
+      },
+      "style": "black_on_white_line_boxes",
+      "automaticallyReuseForNewVideo": false,
+      "textSource": "current matching draft screen-text; not an audio-verified verbatim transcript",
+      "originalCapCut": {
+        "units": "native CapCut units; not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.5,
+            "y": 1.5
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": -0.6850842088934224
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 0,
+          "alignment": 1,
+          "line_feed": 1,
+          "letter_spacing": 0.0,
+          "line_spacing": 0.26999999999999996,
+          "font_size": 10.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 63,
+          "global_alpha": 1.0
+        },
+        "background": {
+          "background_color": "#ffffff",
+          "background_alpha": 1.0,
+          "background_style": 2,
+          "background_round_radius": 0.4000000059604645,
+          "background_width": 0.2800000011920929,
+          "background_height": 0.2800000011920929,
+          "background_vertical_offset": 0.0,
+          "background_horizontal_offset": 0.0,
+          "single_char_bg_enable": false
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    0,
+                    0,
+                    0
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              12
+            ],
+            "useLetterColor": true,
+            "size": 10,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "explicitTtcFaceIndex": null
+            }
+          }
+        ],
+        "animationMaterials": []
+      }
+    },
+    {
+      "key": "a04-ref-17",
+      "referenceText": "そもそもなんで",
+      "start": 658,
+      "end": 682,
+      "timingMicroseconds": {
+        "start": 21933333,
+        "duration": 800000
+      },
+      "style": "black_on_white_line_boxes",
+      "automaticallyReuseForNewVideo": false,
+      "textSource": "current matching draft screen-text; not an audio-verified verbatim transcript",
+      "originalCapCut": {
+        "units": "native CapCut units; not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.5,
+            "y": 1.5
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": -0.6850842088934224
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 0,
+          "alignment": 1,
+          "line_feed": 1,
+          "letter_spacing": 0.0,
+          "line_spacing": 0.26999999999999996,
+          "font_size": 10.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 63,
+          "global_alpha": 1.0
+        },
+        "background": {
+          "background_color": "#ffffff",
+          "background_alpha": 1.0,
+          "background_style": 2,
+          "background_round_radius": 0.4000000059604645,
+          "background_width": 0.2800000011920929,
+          "background_height": 0.2800000011920929,
+          "background_vertical_offset": 0.0,
+          "background_horizontal_offset": 0.0,
+          "single_char_bg_enable": false
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    0,
+                    0,
+                    0
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              7
+            ],
+            "useLetterColor": true,
+            "size": 10,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "explicitTtcFaceIndex": null
+            }
+          }
+        ],
+        "animationMaterials": []
+      }
+    },
+    {
+      "key": "a04-ref-18",
+      "referenceText": "痛いのか",
+      "start": 683,
+      "end": 699,
+      "timingMicroseconds": {
+        "start": 22766666,
+        "duration": 533334
+      },
+      "style": "black_on_white_line_boxes",
+      "automaticallyReuseForNewVideo": false,
+      "textSource": "current matching draft screen-text; not an audio-verified verbatim transcript",
+      "originalCapCut": {
+        "units": "native CapCut units; not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.5,
+            "y": 1.5
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": -0.6850842088934224
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 0,
+          "alignment": 1,
+          "line_feed": 1,
+          "letter_spacing": 0.0,
+          "line_spacing": 0.26999999999999996,
+          "font_size": 10.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 63,
+          "global_alpha": 1.0
+        },
+        "background": {
+          "background_color": "#ffffff",
+          "background_alpha": 1.0,
+          "background_style": 2,
+          "background_round_radius": 0.4000000059604645,
+          "background_width": 0.2800000011920929,
+          "background_height": 0.2800000011920929,
+          "background_vertical_offset": 0.0,
+          "background_horizontal_offset": 0.0,
+          "single_char_bg_enable": false
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    0,
+                    0,
+                    0
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              4
+            ],
+            "useLetterColor": true,
+            "size": 10,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "explicitTtcFaceIndex": null
+            }
+          }
+        ],
+        "animationMaterials": []
+      }
+    },
+    {
+      "key": "a04-ref-19",
+      "referenceText": "考えてあげると",
+      "start": 699,
+      "end": 744,
+      "timingMicroseconds": {
+        "start": 23300000,
+        "duration": 1500000
+      },
+      "style": "black_on_white_line_boxes",
+      "automaticallyReuseForNewVideo": false,
+      "textSource": "current matching draft screen-text; not an audio-verified verbatim transcript",
+      "originalCapCut": {
+        "units": "native CapCut units; not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.5,
+            "y": 1.5
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": -0.6850842088934224
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 0,
+          "alignment": 1,
+          "line_feed": 1,
+          "letter_spacing": 0.0,
+          "line_spacing": 0.26999999999999996,
+          "font_size": 10.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 63,
+          "global_alpha": 1.0
+        },
+        "background": {
+          "background_color": "#ffffff",
+          "background_alpha": 1.0,
+          "background_style": 2,
+          "background_round_radius": 0.4000000059604645,
+          "background_width": 0.2800000011920929,
+          "background_height": 0.2800000011920929,
+          "background_vertical_offset": 0.0,
+          "background_horizontal_offset": 0.0,
+          "single_char_bg_enable": false
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    0,
+                    0,
+                    0
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              7
+            ],
+            "useLetterColor": true,
+            "size": 10,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "explicitTtcFaceIndex": null
+            }
+          }
+        ],
+        "animationMaterials": []
+      }
+    },
+    {
+      "key": "a04-ref-20",
+      "referenceText": "非常にいいです",
+      "start": 744,
+      "end": 780,
+      "timingMicroseconds": {
+        "start": 24800000,
+        "duration": 1200000
+      },
+      "style": "black_on_white_line_boxes",
+      "automaticallyReuseForNewVideo": false,
+      "textSource": "current matching draft screen-text; not an audio-verified verbatim transcript",
+      "originalCapCut": {
+        "units": "native CapCut units; not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.5,
+            "y": 1.5
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": -0.6850842088934224
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 0,
+          "alignment": 1,
+          "line_feed": 1,
+          "letter_spacing": 0.0,
+          "line_spacing": 0.26999999999999996,
+          "font_size": 10.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 63,
+          "global_alpha": 1.0
+        },
+        "background": {
+          "background_color": "#ffffff",
+          "background_alpha": 1.0,
+          "background_style": 2,
+          "background_round_radius": 0.4000000059604645,
+          "background_width": 0.2800000011920929,
+          "background_height": 0.2800000011920929,
+          "background_vertical_offset": 0.0,
+          "background_horizontal_offset": 0.0,
+          "single_char_bg_enable": false
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    0,
+                    0,
+                    0
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              7
+            ],
+            "useLetterColor": true,
+            "size": 10,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "explicitTtcFaceIndex": null
+            }
+          }
+        ],
+        "animationMaterials": []
+      }
+    },
+    {
+      "key": "a04-ref-21",
+      "referenceText": "例えば痛みが\n楽になるってことは",
+      "start": 788,
+      "end": 841,
+      "timingMicroseconds": {
+        "start": 26266666,
+        "duration": 1766667
+      },
+      "style": "black_on_white_line_boxes",
+      "automaticallyReuseForNewVideo": false,
+      "textSource": "current matching draft screen-text; not an audio-verified verbatim transcript",
+      "originalCapCut": {
+        "units": "native CapCut units; not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.5,
+            "y": 1.5
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": -0.6850842088934224
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 0,
+          "alignment": 1,
+          "line_feed": 1,
+          "letter_spacing": 0.0,
+          "line_spacing": 0.26999999999999996,
+          "font_size": 10.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 63,
+          "global_alpha": 1.0
+        },
+        "background": {
+          "background_color": "#ffffff",
+          "background_alpha": 1.0,
+          "background_style": 2,
+          "background_round_radius": 0.4000000059604645,
+          "background_width": 0.2800000011920929,
+          "background_height": 0.2800000011920929,
+          "background_vertical_offset": 0.0,
+          "background_horizontal_offset": 0.0,
+          "single_char_bg_enable": false
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    0,
+                    0,
+                    0
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              16
+            ],
+            "useLetterColor": true,
+            "size": 10,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "explicitTtcFaceIndex": null
+            }
+          }
+        ],
+        "animationMaterials": []
+      }
+    },
+    {
+      "key": "a04-ref-22",
+      "referenceText": "どういうことが",
+      "start": 842,
+      "end": 855,
+      "timingMicroseconds": {
+        "start": 28066666,
+        "duration": 433334
+      },
+      "style": "black_on_white_line_boxes",
+      "automaticallyReuseForNewVideo": false,
+      "textSource": "current matching draft screen-text; not an audio-verified verbatim transcript",
+      "originalCapCut": {
+        "units": "native CapCut units; not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.5,
+            "y": 1.5
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": -0.6850842088934224
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 0,
+          "alignment": 1,
+          "line_feed": 1,
+          "letter_spacing": 0.0,
+          "line_spacing": 0.26999999999999996,
+          "font_size": 10.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 63,
+          "global_alpha": 1.0
+        },
+        "background": {
+          "background_color": "#ffffff",
+          "background_alpha": 1.0,
+          "background_style": 2,
+          "background_round_radius": 0.4000000059604645,
+          "background_width": 0.2800000011920929,
+          "background_height": 0.2800000011920929,
+          "background_vertical_offset": 0.0,
+          "background_horizontal_offset": 0.0,
+          "single_char_bg_enable": false
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    0,
+                    0,
+                    0
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              7
+            ],
+            "useLetterColor": true,
+            "size": 10,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "explicitTtcFaceIndex": null
+            }
+          }
+        ],
+        "animationMaterials": []
+      }
+    },
+    {
+      "key": "a04-ref-23",
+      "referenceText": "起きているか\nというと…",
+      "start": 855,
+      "end": 881,
+      "timingMicroseconds": {
+        "start": 28500000,
+        "duration": 866666
+      },
+      "style": "black_on_white_line_boxes",
+      "automaticallyReuseForNewVideo": false,
+      "textSource": "current matching draft screen-text; not an audio-verified verbatim transcript",
+      "originalCapCut": {
+        "units": "native CapCut units; not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.5,
+            "y": 1.5
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": -0.6850842088934224
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 0,
+          "alignment": 1,
+          "line_feed": 1,
+          "letter_spacing": 0.0,
+          "line_spacing": 0.26999999999999996,
+          "font_size": 10.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 63,
+          "global_alpha": 1.0
+        },
+        "background": {
+          "background_color": "#ffffff",
+          "background_alpha": 1.0,
+          "background_style": 2,
+          "background_round_radius": 0.4000000059604645,
+          "background_width": 0.2800000011920929,
+          "background_height": 0.2800000011920929,
+          "background_vertical_offset": 0.0,
+          "background_horizontal_offset": 0.0,
+          "single_char_bg_enable": false
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    0,
+                    0,
+                    0
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              12
+            ],
+            "useLetterColor": true,
+            "size": 10,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "explicitTtcFaceIndex": null
+            }
+          }
+        ],
+        "animationMaterials": []
+      }
+    },
+    {
+      "key": "a04-ref-24",
+      "referenceText": "お尻の筋肉が\n硬くなると",
+      "start": 952,
+      "end": 1022,
+      "timingMicroseconds": {
+        "start": 31733333,
+        "duration": 2333333
+      },
+      "style": "black_on_white_line_boxes",
+      "automaticallyReuseForNewVideo": false,
+      "textSource": "current matching draft screen-text; not an audio-verified verbatim transcript",
+      "originalCapCut": {
+        "units": "native CapCut units; not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.5,
+            "y": 1.5
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": -0.6850842088934224
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 0,
+          "alignment": 1,
+          "line_feed": 1,
+          "letter_spacing": 0.0,
+          "line_spacing": 0.26999999999999996,
+          "font_size": 10.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 63,
+          "global_alpha": 1.0
+        },
+        "background": {
+          "background_color": "#ffffff",
+          "background_alpha": 1.0,
+          "background_style": 2,
+          "background_round_radius": 0.4000000059604645,
+          "background_width": 0.2800000011920929,
+          "background_height": 0.2800000011920929,
+          "background_vertical_offset": 0.0,
+          "background_horizontal_offset": 0.0,
+          "single_char_bg_enable": false
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    0,
+                    0,
+                    0
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              12
+            ],
+            "useLetterColor": true,
+            "size": 10,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "explicitTtcFaceIndex": null
+            }
+          }
+        ],
+        "animationMaterials": []
+      }
+    },
+    {
+      "key": "a04-ref-25",
+      "referenceText": "お尻の上側に",
+      "start": 1025,
+      "end": 1058,
+      "timingMicroseconds": {
+        "start": 34166666,
+        "duration": 1100000
+      },
+      "style": "black_on_white_line_boxes",
+      "automaticallyReuseForNewVideo": false,
+      "textSource": "current matching draft screen-text; not an audio-verified verbatim transcript",
+      "originalCapCut": {
+        "units": "native CapCut units; not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.5,
+            "y": 1.5
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": -0.6850842088934224
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 0,
+          "alignment": 1,
+          "line_feed": 1,
+          "letter_spacing": 0.0,
+          "line_spacing": 0.26999999999999996,
+          "font_size": 10.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 63,
+          "global_alpha": 1.0
+        },
+        "background": {
+          "background_color": "#ffffff",
+          "background_alpha": 1.0,
+          "background_style": 2,
+          "background_round_radius": 0.4000000059604645,
+          "background_width": 0.2800000011920929,
+          "background_height": 0.2800000011920929,
+          "background_vertical_offset": 0.0,
+          "background_horizontal_offset": 0.0,
+          "single_char_bg_enable": false
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    0,
+                    0,
+                    0
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              6
+            ],
+            "useLetterColor": true,
+            "size": 10,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "explicitTtcFaceIndex": null
+            }
+          }
+        ],
+        "animationMaterials": []
+      }
+    },
+    {
+      "key": "a04-ref-26",
+      "referenceText": "「胸腰筋膜」",
+      "start": 1061,
+      "end": 1088,
+      "timingMicroseconds": {
+        "start": 35366666,
+        "duration": 900000
+      },
+      "style": "black_on_white_line_boxes",
+      "automaticallyReuseForNewVideo": false,
+      "textSource": "current matching draft screen-text; not an audio-verified verbatim transcript",
+      "originalCapCut": {
+        "units": "native CapCut units; not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.5,
+            "y": 1.5
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": -0.6850842088934224
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 0,
+          "alignment": 1,
+          "line_feed": 1,
+          "letter_spacing": 0.0,
+          "line_spacing": 0.26999999999999996,
+          "font_size": 10.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 63,
+          "global_alpha": 1.0
+        },
+        "background": {
+          "background_color": "#ffffff",
+          "background_alpha": 1.0,
+          "background_style": 2,
+          "background_round_radius": 0.4000000059604645,
+          "background_width": 0.2800000011920929,
+          "background_height": 0.2800000011920929,
+          "background_vertical_offset": 0.0,
+          "background_horizontal_offset": 0.0,
+          "single_char_bg_enable": false
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    0,
+                    0,
+                    0
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              6
+            ],
+            "useLetterColor": true,
+            "size": 10,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "explicitTtcFaceIndex": null
+            }
+          }
+        ],
+        "animationMaterials": []
+      }
+    },
+    {
+      "key": "a04-ref-27",
+      "referenceText": "という非常に\n硬い膜があります",
+      "start": 1088,
+      "end": 1121,
+      "timingMicroseconds": {
+        "start": 36266666,
+        "duration": 1100000
+      },
+      "style": "black_on_white_line_boxes",
+      "automaticallyReuseForNewVideo": false,
+      "textSource": "current matching draft screen-text; not an audio-verified verbatim transcript",
+      "originalCapCut": {
+        "units": "native CapCut units; not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.5,
+            "y": 1.5
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": -0.6850842088934224
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 0,
+          "alignment": 1,
+          "line_feed": 1,
+          "letter_spacing": 0.0,
+          "line_spacing": 0.26999999999999996,
+          "font_size": 10.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 63,
+          "global_alpha": 1.0
+        },
+        "background": {
+          "background_color": "#ffffff",
+          "background_alpha": 1.0,
+          "background_style": 2,
+          "background_round_radius": 0.4000000059604645,
+          "background_width": 0.2800000011920929,
+          "background_height": 0.2800000011920929,
+          "background_vertical_offset": 0.0,
+          "background_horizontal_offset": 0.0,
+          "single_char_bg_enable": false
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    0,
+                    0,
+                    0
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              15
+            ],
+            "useLetterColor": true,
+            "size": 10,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "explicitTtcFaceIndex": null
+            }
+          }
+        ],
+        "animationMaterials": []
+      }
+    },
+    {
+      "key": "a04-ref-28",
+      "referenceText": "お尻が硬くなると\n",
+      "start": 1127,
+      "end": 1170,
+      "timingMicroseconds": {
+        "start": 37566666,
+        "duration": 1433334
+      },
+      "style": "black_on_white_line_boxes",
+      "automaticallyReuseForNewVideo": false,
+      "textSource": "current matching draft screen-text; not an audio-verified verbatim transcript",
+      "originalCapCut": {
+        "units": "native CapCut units; not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.5,
+            "y": 1.5
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": -0.6850842088934224
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 0,
+          "alignment": 1,
+          "line_feed": 1,
+          "letter_spacing": 0.0,
+          "line_spacing": 0.26999999999999996,
+          "font_size": 10.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 63,
+          "global_alpha": 1.0
+        },
+        "background": {
+          "background_color": "#ffffff",
+          "background_alpha": 1.0,
+          "background_style": 2,
+          "background_round_radius": 0.4000000059604645,
+          "background_width": 0.2800000011920929,
+          "background_height": 0.2800000011920929,
+          "background_vertical_offset": 0.0,
+          "background_horizontal_offset": 0.0,
+          "single_char_bg_enable": false
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    0,
+                    0,
+                    0
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              9
+            ],
+            "useLetterColor": true,
+            "size": 10,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "explicitTtcFaceIndex": null
+            }
+          }
+        ],
+        "animationMaterials": []
+      }
+    },
+    {
+      "key": "a04-ref-29",
+      "referenceText": "ギューと\n引っ張られると",
+      "start": 1175,
+      "end": 1226,
+      "timingMicroseconds": {
+        "start": 39166666,
+        "duration": 1700000
+      },
+      "style": "black_on_white_line_boxes",
+      "automaticallyReuseForNewVideo": false,
+      "textSource": "current matching draft screen-text; not an audio-verified verbatim transcript",
+      "originalCapCut": {
+        "units": "native CapCut units; not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.5,
+            "y": 1.5
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": -0.6850842088934224
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 0,
+          "alignment": 1,
+          "line_feed": 1,
+          "letter_spacing": 0.0,
+          "line_spacing": 0.26999999999999996,
+          "font_size": 10.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 63,
+          "global_alpha": 1.0
+        },
+        "background": {
+          "background_color": "#ffffff",
+          "background_alpha": 1.0,
+          "background_style": 2,
+          "background_round_radius": 0.4000000059604645,
+          "background_width": 0.2800000011920929,
+          "background_height": 0.2800000011920929,
+          "background_vertical_offset": 0.0,
+          "background_horizontal_offset": 0.0,
+          "single_char_bg_enable": false
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    0,
+                    0,
+                    0
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              12
+            ],
+            "useLetterColor": true,
+            "size": 10,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "explicitTtcFaceIndex": null
+            }
+          }
+        ],
+        "animationMaterials": []
+      }
+    },
+    {
+      "key": "a04-ref-30",
+      "referenceText": "腰がはっていきます",
+      "start": 1229,
+      "end": 1256,
+      "timingMicroseconds": {
+        "start": 40966666,
+        "duration": 900000
+      },
+      "style": "black_on_white_line_boxes",
+      "automaticallyReuseForNewVideo": false,
+      "textSource": "current matching draft screen-text; not an audio-verified verbatim transcript",
+      "originalCapCut": {
+        "units": "native CapCut units; not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.5,
+            "y": 1.5
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": -0.6850842088934224
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 0,
+          "alignment": 1,
+          "line_feed": 1,
+          "letter_spacing": 0.0,
+          "line_spacing": 0.26999999999999996,
+          "font_size": 10.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 63,
+          "global_alpha": 1.0
+        },
+        "background": {
+          "background_color": "#ffffff",
+          "background_alpha": 1.0,
+          "background_style": 2,
+          "background_round_radius": 0.4000000059604645,
+          "background_width": 0.2800000011920929,
+          "background_height": 0.2800000011920929,
+          "background_vertical_offset": 0.0,
+          "background_horizontal_offset": 0.0,
+          "single_char_bg_enable": false
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    0,
+                    0,
+                    0
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              9
+            ],
+            "useLetterColor": true,
+            "size": 10,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "explicitTtcFaceIndex": null
+            }
+          }
+        ],
+        "animationMaterials": []
+      }
+    },
+    {
+      "key": "a04-ref-31",
+      "referenceText": "これによって",
+      "start": 1259,
+      "end": 1283,
+      "timingMicroseconds": {
+        "start": 41966666,
+        "duration": 800000
+      },
+      "style": "black_on_white_line_boxes",
+      "automaticallyReuseForNewVideo": false,
+      "textSource": "current matching draft screen-text; not an audio-verified verbatim transcript",
+      "originalCapCut": {
+        "units": "native CapCut units; not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.5,
+            "y": 1.5
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": -0.6850842088934224
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 0,
+          "alignment": 1,
+          "line_feed": 1,
+          "letter_spacing": 0.0,
+          "line_spacing": 0.26999999999999996,
+          "font_size": 10.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 63,
+          "global_alpha": 1.0
+        },
+        "background": {
+          "background_color": "#ffffff",
+          "background_alpha": 1.0,
+          "background_style": 2,
+          "background_round_radius": 0.4000000059604645,
+          "background_width": 0.2800000011920929,
+          "background_height": 0.2800000011920929,
+          "background_vertical_offset": 0.0,
+          "background_horizontal_offset": 0.0,
+          "single_char_bg_enable": false
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    0,
+                    0,
+                    0
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              6
+            ],
+            "useLetterColor": true,
+            "size": 10,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "explicitTtcFaceIndex": null
+            }
+          }
+        ],
+        "animationMaterials": []
+      }
+    },
+    {
+      "key": "a04-ref-32",
+      "referenceText": "腰が痛いが\n起きてきます",
+      "start": 1294,
+      "end": 1340,
+      "timingMicroseconds": {
+        "start": 43133333,
+        "duration": 1533333
+      },
+      "style": "black_on_white_line_boxes",
+      "automaticallyReuseForNewVideo": false,
+      "textSource": "current matching draft screen-text; not an audio-verified verbatim transcript",
+      "originalCapCut": {
+        "units": "native CapCut units; not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.5,
+            "y": 1.5
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": -0.6850842088934224
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 0,
+          "alignment": 1,
+          "line_feed": 1,
+          "letter_spacing": 0.0,
+          "line_spacing": 0.26999999999999996,
+          "font_size": 10.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 63,
+          "global_alpha": 1.0
+        },
+        "background": {
+          "background_color": "#ffffff",
+          "background_alpha": 1.0,
+          "background_style": 2,
+          "background_round_radius": 0.4000000059604645,
+          "background_width": 0.2800000011920929,
+          "background_height": 0.2800000011920929,
+          "background_vertical_offset": 0.0,
+          "background_horizontal_offset": 0.0,
+          "single_char_bg_enable": false
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    0,
+                    0,
+                    0
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              12
+            ],
+            "useLetterColor": true,
+            "size": 10,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "explicitTtcFaceIndex": null
+            }
+          }
+        ],
+        "animationMaterials": []
+      }
+    },
+    {
+      "key": "a04-ref-33",
+      "referenceText": "なんでこういう方に\n関しては",
+      "start": 1344,
+      "end": 1390,
+      "timingMicroseconds": {
+        "start": 44800000,
+        "duration": 1533333
+      },
+      "style": "black_on_white_line_boxes",
+      "automaticallyReuseForNewVideo": false,
+      "textSource": "current matching draft screen-text; not an audio-verified verbatim transcript",
+      "originalCapCut": {
+        "units": "native CapCut units; not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.5,
+            "y": 1.5
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": -0.6850842088934224
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 0,
+          "alignment": 1,
+          "line_feed": 1,
+          "letter_spacing": 0.0,
+          "line_spacing": 0.26999999999999996,
+          "font_size": 10.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 63,
+          "global_alpha": 1.0
+        },
+        "background": {
+          "background_color": "#ffffff",
+          "background_alpha": 1.0,
+          "background_style": 2,
+          "background_round_radius": 0.4000000059604645,
+          "background_width": 0.2800000011920929,
+          "background_height": 0.2800000011920929,
+          "background_vertical_offset": 0.0,
+          "background_horizontal_offset": 0.0,
+          "single_char_bg_enable": false
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    0,
+                    0,
+                    0
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              14
+            ],
+            "useLetterColor": true,
+            "size": 10,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "explicitTtcFaceIndex": null
+            }
+          }
+        ],
+        "animationMaterials": []
+      }
+    },
+    {
+      "key": "a04-ref-34",
+      "referenceText": "さっきの\nストレッチをして",
+      "start": 1390,
+      "end": 1434,
+      "timingMicroseconds": {
+        "start": 46333333,
+        "duration": 1466667
+      },
+      "style": "black_on_white_line_boxes",
+      "automaticallyReuseForNewVideo": false,
+      "textSource": "current matching draft screen-text; not an audio-verified verbatim transcript",
+      "originalCapCut": {
+        "units": "native CapCut units; not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.5,
+            "y": 1.5
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": -0.6850842088934224
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 0,
+          "alignment": 1,
+          "line_feed": 1,
+          "letter_spacing": 0.0,
+          "line_spacing": 0.26999999999999996,
+          "font_size": 10.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 63,
+          "global_alpha": 1.0
+        },
+        "background": {
+          "background_color": "#ffffff",
+          "background_alpha": 1.0,
+          "background_style": 2,
+          "background_round_radius": 0.4000000059604645,
+          "background_width": 0.2800000011920929,
+          "background_height": 0.2800000011920929,
+          "background_vertical_offset": 0.0,
+          "background_horizontal_offset": 0.0,
+          "single_char_bg_enable": false
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    0,
+                    0,
+                    0
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              13
+            ],
+            "useLetterColor": true,
+            "size": 10,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "explicitTtcFaceIndex": null
+            }
+          }
+        ],
+        "animationMaterials": []
+      }
+    },
+    {
+      "key": "a04-ref-35",
+      "referenceText": "お尻の筋肉を\n伸ばしてあげると",
+      "start": 1438,
+      "end": 1481,
+      "timingMicroseconds": {
+        "start": 47933333,
+        "duration": 1433333
+      },
+      "style": "black_on_white_line_boxes",
+      "automaticallyReuseForNewVideo": false,
+      "textSource": "current matching draft screen-text; not an audio-verified verbatim transcript",
+      "originalCapCut": {
+        "units": "native CapCut units; not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.5,
+            "y": 1.5
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": -0.6850842088934224
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 0,
+          "alignment": 1,
+          "line_feed": 1,
+          "letter_spacing": 0.0,
+          "line_spacing": 0.26999999999999996,
+          "font_size": 10.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 63,
+          "global_alpha": 1.0
+        },
+        "background": {
+          "background_color": "#ffffff",
+          "background_alpha": 1.0,
+          "background_style": 2,
+          "background_round_radius": 0.4000000059604645,
+          "background_width": 0.2800000011920929,
+          "background_height": 0.2800000011920929,
+          "background_vertical_offset": 0.0,
+          "background_horizontal_offset": 0.0,
+          "single_char_bg_enable": false
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    0,
+                    0,
+                    0
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              15
+            ],
+            "useLetterColor": true,
+            "size": 10,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "explicitTtcFaceIndex": null
+            }
+          }
+        ],
+        "animationMaterials": []
+      }
+    },
+    {
+      "key": "a04-ref-36",
+      "referenceText": "胸腰筋膜に\n緩みが出て",
+      "start": 1486,
+      "end": 1547,
+      "timingMicroseconds": {
+        "start": 49533333,
+        "duration": 2033333
+      },
+      "style": "black_on_white_line_boxes",
+      "automaticallyReuseForNewVideo": false,
+      "textSource": "current matching draft screen-text; not an audio-verified verbatim transcript",
+      "originalCapCut": {
+        "units": "native CapCut units; not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.5,
+            "y": 1.5
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": -0.6850842088934224
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 0,
+          "alignment": 1,
+          "line_feed": 1,
+          "letter_spacing": 0.0,
+          "line_spacing": 0.26999999999999996,
+          "font_size": 10.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 63,
+          "global_alpha": 1.0
+        },
+        "background": {
+          "background_color": "#ffffff",
+          "background_alpha": 1.0,
+          "background_style": 2,
+          "background_round_radius": 0.4000000059604645,
+          "background_width": 0.2800000011920929,
+          "background_height": 0.2800000011920929,
+          "background_vertical_offset": 0.0,
+          "background_horizontal_offset": 0.0,
+          "single_char_bg_enable": false
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    0,
+                    0,
+                    0
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              11
+            ],
+            "useLetterColor": true,
+            "size": 10,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "explicitTtcFaceIndex": null
+            }
+          }
+        ],
+        "animationMaterials": []
+      }
+    },
+    {
+      "key": "a04-ref-37",
+      "referenceText": "楽になる",
+      "start": 1553,
+      "end": 1579,
+      "timingMicroseconds": {
+        "start": 51766666,
+        "duration": 866667
+      },
+      "style": "black_on_white_line_boxes",
+      "automaticallyReuseForNewVideo": false,
+      "textSource": "current matching draft screen-text; not an audio-verified verbatim transcript",
+      "originalCapCut": {
+        "units": "native CapCut units; not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.5,
+            "y": 1.5
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": -0.6850842088934224
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 0,
+          "alignment": 1,
+          "line_feed": 1,
+          "letter_spacing": 0.0,
+          "line_spacing": 0.26999999999999996,
+          "font_size": 10.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 63,
+          "global_alpha": 1.0
+        },
+        "background": {
+          "background_color": "#ffffff",
+          "background_alpha": 1.0,
+          "background_style": 2,
+          "background_round_radius": 0.4000000059604645,
+          "background_width": 0.2800000011920929,
+          "background_height": 0.2800000011920929,
+          "background_vertical_offset": 0.0,
+          "background_horizontal_offset": 0.0,
+          "single_char_bg_enable": false
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    0,
+                    0,
+                    0
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              4
+            ],
+            "useLetterColor": true,
+            "size": 10,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "explicitTtcFaceIndex": null
+            }
+          }
+        ],
+        "animationMaterials": []
+      }
+    },
+    {
+      "key": "a04-ref-38",
+      "referenceText": "だから効果が\n出るわけです",
+      "start": 1581,
+      "end": 1630,
+      "timingMicroseconds": {
+        "start": 52700000,
+        "duration": 1633333
+      },
+      "style": "black_on_white_line_boxes",
+      "automaticallyReuseForNewVideo": false,
+      "textSource": "current matching draft screen-text; not an audio-verified verbatim transcript",
+      "originalCapCut": {
+        "units": "native CapCut units; not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.5,
+            "y": 1.5
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": -0.6850842088934224
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 0,
+          "alignment": 1,
+          "line_feed": 1,
+          "letter_spacing": 0.0,
+          "line_spacing": 0.26999999999999996,
+          "font_size": 10.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 63,
+          "global_alpha": 1.0
+        },
+        "background": {
+          "background_color": "#ffffff",
+          "background_alpha": 1.0,
+          "background_style": 2,
+          "background_round_radius": 0.4000000059604645,
+          "background_width": 0.2800000011920929,
+          "background_height": 0.2800000011920929,
+          "background_vertical_offset": 0.0,
+          "background_horizontal_offset": 0.0,
+          "single_char_bg_enable": false
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    0,
+                    0,
+                    0
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              13
+            ],
+            "useLetterColor": true,
+            "size": 10,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "explicitTtcFaceIndex": null
+            }
+          }
+        ],
+        "animationMaterials": []
+      }
+    },
+    {
+      "key": "a04-ref-39",
+      "referenceText": "でも",
+      "start": 1634,
+      "end": 1643,
+      "timingMicroseconds": {
+        "start": 54466666,
+        "duration": 300000
+      },
+      "style": "black_on_white_line_boxes",
+      "automaticallyReuseForNewVideo": false,
+      "textSource": "current matching draft screen-text; not an audio-verified verbatim transcript",
+      "originalCapCut": {
+        "units": "native CapCut units; not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.5,
+            "y": 1.5
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": -0.6850842088934224
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 0,
+          "alignment": 1,
+          "line_feed": 1,
+          "letter_spacing": 0.0,
+          "line_spacing": 0.26999999999999996,
+          "font_size": 10.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 63,
+          "global_alpha": 1.0
+        },
+        "background": {
+          "background_color": "#ffffff",
+          "background_alpha": 1.0,
+          "background_style": 2,
+          "background_round_radius": 0.4000000059604645,
+          "background_width": 0.2800000011920929,
+          "background_height": 0.2800000011920929,
+          "background_vertical_offset": 0.0,
+          "background_horizontal_offset": 0.0,
+          "single_char_bg_enable": false
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    0,
+                    0,
+                    0
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              2
+            ],
+            "useLetterColor": true,
+            "size": 10,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "explicitTtcFaceIndex": null
+            }
+          }
+        ],
+        "animationMaterials": []
+      }
+    },
+    {
+      "key": "a04-ref-40",
+      "referenceText": "そうじゃない場合に\nストレッチをやると",
+      "start": 1643,
+      "end": 1702,
+      "timingMicroseconds": {
+        "start": 54766666,
+        "duration": 1966667
+      },
+      "style": "black_on_white_line_boxes",
+      "automaticallyReuseForNewVideo": false,
+      "textSource": "current matching draft screen-text; not an audio-verified verbatim transcript",
+      "originalCapCut": {
+        "units": "native CapCut units; not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.5,
+            "y": 1.5
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": -0.6850842088934224
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 0,
+          "alignment": 1,
+          "line_feed": 1,
+          "letter_spacing": 0.0,
+          "line_spacing": 0.26999999999999996,
+          "font_size": 10.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 63,
+          "global_alpha": 1.0
+        },
+        "background": {
+          "background_color": "#ffffff",
+          "background_alpha": 1.0,
+          "background_style": 2,
+          "background_round_radius": 0.4000000059604645,
+          "background_width": 0.2800000011920929,
+          "background_height": 0.2800000011920929,
+          "background_vertical_offset": 0.0,
+          "background_horizontal_offset": 0.0,
+          "single_char_bg_enable": false
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    0,
+                    0,
+                    0
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              19
+            ],
+            "useLetterColor": true,
+            "size": 10,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "explicitTtcFaceIndex": null
+            }
+          }
+        ],
+        "animationMaterials": []
+      }
+    },
+    {
+      "key": "a04-ref-41",
+      "referenceText": "逆に股関節の前側を\n痛めてしまう",
+      "start": 1702,
+      "end": 1780,
+      "timingMicroseconds": {
+        "start": 56733333,
+        "duration": 2600000
+      },
+      "style": "black_on_white_line_boxes",
+      "automaticallyReuseForNewVideo": false,
+      "textSource": "current matching draft screen-text; not an audio-verified verbatim transcript",
+      "originalCapCut": {
+        "units": "native CapCut units; not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.5,
+            "y": 1.5
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": -0.6850842088934224
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 0,
+          "alignment": 1,
+          "line_feed": 1,
+          "letter_spacing": 0.0,
+          "line_spacing": 0.26999999999999996,
+          "font_size": 10.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 63,
+          "global_alpha": 1.0
+        },
+        "background": {
+          "background_color": "#ffffff",
+          "background_alpha": 1.0,
+          "background_style": 2,
+          "background_round_radius": 0.4000000059604645,
+          "background_width": 0.2800000011920929,
+          "background_height": 0.2800000011920929,
+          "background_vertical_offset": 0.0,
+          "background_horizontal_offset": 0.0,
+          "single_char_bg_enable": false
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    0,
+                    0,
+                    0
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              16
+            ],
+            "useLetterColor": true,
+            "size": 10,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "explicitTtcFaceIndex": null
+            }
+          }
+        ],
+        "animationMaterials": []
+      }
+    },
+    {
+      "key": "a04-ref-42",
+      "referenceText": "リスクもあります",
+      "start": 1781,
+      "end": 1808,
+      "timingMicroseconds": {
+        "start": 59366666,
+        "duration": 900000
+      },
+      "style": "black_on_white_line_boxes",
+      "automaticallyReuseForNewVideo": false,
+      "textSource": "current matching draft screen-text; not an audio-verified verbatim transcript",
+      "originalCapCut": {
+        "units": "native CapCut units; not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.5,
+            "y": 1.5
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": -0.6850842088934224
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 0,
+          "alignment": 1,
+          "line_feed": 1,
+          "letter_spacing": 0.0,
+          "line_spacing": 0.26999999999999996,
+          "font_size": 10.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 63,
+          "global_alpha": 1.0
+        },
+        "background": {
+          "background_color": "#ffffff",
+          "background_alpha": 1.0,
+          "background_style": 2,
+          "background_round_radius": 0.4000000059604645,
+          "background_width": 0.2800000011920929,
+          "background_height": 0.2800000011920929,
+          "background_vertical_offset": 0.0,
+          "background_horizontal_offset": 0.0,
+          "single_char_bg_enable": false
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    0,
+                    0,
+                    0
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              8
+            ],
+            "useLetterColor": true,
+            "size": 10,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "explicitTtcFaceIndex": null
+            }
+          }
+        ],
+        "animationMaterials": []
+      }
+    },
+    {
+      "key": "a04-ref-43",
+      "referenceText": "なので大事なのは",
+      "start": 1816,
+      "end": 1854,
+      "timingMicroseconds": {
+        "start": 60533333,
+        "duration": 1266667
+      },
+      "style": "black_on_white_line_boxes",
+      "automaticallyReuseForNewVideo": false,
+      "textSource": "current matching draft screen-text; not an audio-verified verbatim transcript",
+      "originalCapCut": {
+        "units": "native CapCut units; not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.5,
+            "y": 1.5
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": -0.6850842088934224
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 0,
+          "alignment": 1,
+          "line_feed": 1,
+          "letter_spacing": 0.0,
+          "line_spacing": 0.26999999999999996,
+          "font_size": 10.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 63,
+          "global_alpha": 1.0
+        },
+        "background": {
+          "background_color": "#ffffff",
+          "background_alpha": 1.0,
+          "background_style": 2,
+          "background_round_radius": 0.4000000059604645,
+          "background_width": 0.2800000011920929,
+          "background_height": 0.2800000011920929,
+          "background_vertical_offset": 0.0,
+          "background_horizontal_offset": 0.0,
+          "single_char_bg_enable": false
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    0,
+                    0,
+                    0
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              8
+            ],
+            "useLetterColor": true,
+            "size": 10,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "explicitTtcFaceIndex": null
+            }
+          }
+        ],
+        "animationMaterials": []
+      }
+    },
+    {
+      "key": "a04-ref-44",
+      "referenceText": "動画を見て",
+      "start": 1872,
+      "end": 1904,
+      "timingMicroseconds": {
+        "start": 62400000,
+        "duration": 1066666
+      },
+      "style": "black_on_white_line_boxes",
+      "automaticallyReuseForNewVideo": false,
+      "textSource": "current matching draft screen-text; not an audio-verified verbatim transcript",
+      "originalCapCut": {
+        "units": "native CapCut units; not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.5,
+            "y": 1.5
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": -0.6850842088934224
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 0,
+          "alignment": 1,
+          "line_feed": 1,
+          "letter_spacing": 0.0,
+          "line_spacing": 0.26999999999999996,
+          "font_size": 10.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 63,
+          "global_alpha": 1.0
+        },
+        "background": {
+          "background_color": "#ffffff",
+          "background_alpha": 1.0,
+          "background_style": 2,
+          "background_round_radius": 0.4000000059604645,
+          "background_width": 0.2800000011920929,
+          "background_height": 0.2800000011920929,
+          "background_vertical_offset": 0.0,
+          "background_horizontal_offset": 0.0,
+          "single_char_bg_enable": false
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    0,
+                    0,
+                    0
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              5
+            ],
+            "useLetterColor": true,
+            "size": 10,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "explicitTtcFaceIndex": null
+            }
+          }
+        ],
+        "animationMaterials": []
+      }
+    },
+    {
+      "key": "a04-ref-45",
+      "referenceText": "なんとなくいいなって",
+      "start": 1906,
+      "end": 1937,
+      "timingMicroseconds": {
+        "start": 63533333,
+        "duration": 1033333
+      },
+      "style": "black_on_white_line_boxes",
+      "automaticallyReuseForNewVideo": false,
+      "textSource": "current matching draft screen-text; not an audio-verified verbatim transcript",
+      "originalCapCut": {
+        "units": "native CapCut units; not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.5,
+            "y": 1.5
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": -0.6850842088934224
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 0,
+          "alignment": 1,
+          "line_feed": 1,
+          "letter_spacing": 0.0,
+          "line_spacing": 0.26999999999999996,
+          "font_size": 10.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 63,
+          "global_alpha": 1.0
+        },
+        "background": {
+          "background_color": "#ffffff",
+          "background_alpha": 1.0,
+          "background_style": 2,
+          "background_round_radius": 0.4000000059604645,
+          "background_width": 0.2800000011920929,
+          "background_height": 0.2800000011920929,
+          "background_vertical_offset": 0.0,
+          "background_horizontal_offset": 0.0,
+          "single_char_bg_enable": false
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    0,
+                    0,
+                    0
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              10
+            ],
+            "useLetterColor": true,
+            "size": 10,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "explicitTtcFaceIndex": null
+            }
+          }
+        ],
+        "animationMaterials": []
+      }
+    },
+    {
+      "key": "a04-ref-46",
+      "referenceText": "終わるんじゃなくて",
+      "start": 1937,
+      "end": 1961,
+      "timingMicroseconds": {
+        "start": 64566666,
+        "duration": 800000
+      },
+      "style": "black_on_white_line_boxes",
+      "automaticallyReuseForNewVideo": false,
+      "textSource": "current matching draft screen-text; not an audio-verified verbatim transcript",
+      "originalCapCut": {
+        "units": "native CapCut units; not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.5,
+            "y": 1.5
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": -0.6850842088934224
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 0,
+          "alignment": 1,
+          "line_feed": 1,
+          "letter_spacing": 0.0,
+          "line_spacing": 0.26999999999999996,
+          "font_size": 10.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 63,
+          "global_alpha": 1.0
+        },
+        "background": {
+          "background_color": "#ffffff",
+          "background_alpha": 1.0,
+          "background_style": 2,
+          "background_round_radius": 0.4000000059604645,
+          "background_width": 0.2800000011920929,
+          "background_height": 0.2800000011920929,
+          "background_vertical_offset": 0.0,
+          "background_horizontal_offset": 0.0,
+          "single_char_bg_enable": false
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    0,
+                    0,
+                    0
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              9
+            ],
+            "useLetterColor": true,
+            "size": 10,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "explicitTtcFaceIndex": null
+            }
+          }
+        ],
+        "animationMaterials": []
+      }
+    },
+    {
+      "key": "a04-ref-47",
+      "referenceText": "なんでそもそも",
+      "start": 1968,
+      "end": 1992,
+      "timingMicroseconds": {
+        "start": 65600000,
+        "duration": 800000
+      },
+      "style": "black_on_white_line_boxes",
+      "automaticallyReuseForNewVideo": false,
+      "textSource": "current matching draft screen-text; not an audio-verified verbatim transcript",
+      "originalCapCut": {
+        "units": "native CapCut units; not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.5,
+            "y": 1.5
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": -0.6850842088934224
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 0,
+          "alignment": 1,
+          "line_feed": 1,
+          "letter_spacing": 0.0,
+          "line_spacing": 0.26999999999999996,
+          "font_size": 10.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 63,
+          "global_alpha": 1.0
+        },
+        "background": {
+          "background_color": "#ffffff",
+          "background_alpha": 1.0,
+          "background_style": 2,
+          "background_round_radius": 0.4000000059604645,
+          "background_width": 0.2800000011920929,
+          "background_height": 0.2800000011920929,
+          "background_vertical_offset": 0.0,
+          "background_horizontal_offset": 0.0,
+          "single_char_bg_enable": false
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    0,
+                    0,
+                    0
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              7
+            ],
+            "useLetterColor": true,
+            "size": 10,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "explicitTtcFaceIndex": null
+            }
+          }
+        ],
+        "animationMaterials": []
+      }
+    },
+    {
+      "key": "a04-ref-48",
+      "referenceText": "それをするのか？\nというところを",
+      "start": 1994,
+      "end": 2034,
+      "timingMicroseconds": {
+        "start": 66466666,
+        "duration": 1333334
+      },
+      "style": "black_on_white_line_boxes",
+      "automaticallyReuseForNewVideo": false,
+      "textSource": "current matching draft screen-text; not an audio-verified verbatim transcript",
+      "originalCapCut": {
+        "units": "native CapCut units; not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.5,
+            "y": 1.5
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": -0.6850842088934224
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 0,
+          "alignment": 1,
+          "line_feed": 1,
+          "letter_spacing": 0.0,
+          "line_spacing": 0.26999999999999996,
+          "font_size": 10.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 63,
+          "global_alpha": 1.0
+        },
+        "background": {
+          "background_color": "#ffffff",
+          "background_alpha": 1.0,
+          "background_style": 2,
+          "background_round_radius": 0.4000000059604645,
+          "background_width": 0.2800000011920929,
+          "background_height": 0.2800000011920929,
+          "background_vertical_offset": 0.0,
+          "background_horizontal_offset": 0.0,
+          "single_char_bg_enable": false
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    0,
+                    0,
+                    0
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              16
+            ],
+            "useLetterColor": true,
+            "size": 10,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "explicitTtcFaceIndex": null
+            }
+          }
+        ],
+        "animationMaterials": []
+      }
+    },
+    {
+      "key": "a04-ref-49",
+      "referenceText": "しっかりと\n説明を受けた上で",
+      "start": 2037,
+      "end": 2092,
+      "timingMicroseconds": {
+        "start": 67900000,
+        "duration": 1833333
+      },
+      "style": "black_on_white_line_boxes",
+      "automaticallyReuseForNewVideo": false,
+      "textSource": "current matching draft screen-text; not an audio-verified verbatim transcript",
+      "originalCapCut": {
+        "units": "native CapCut units; not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.5,
+            "y": 1.5
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": -0.6850842088934224
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 0,
+          "alignment": 1,
+          "line_feed": 1,
+          "letter_spacing": 0.0,
+          "line_spacing": 0.26999999999999996,
+          "font_size": 10.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 63,
+          "global_alpha": 1.0
+        },
+        "background": {
+          "background_color": "#ffffff",
+          "background_alpha": 1.0,
+          "background_style": 2,
+          "background_round_radius": 0.4000000059604645,
+          "background_width": 0.2800000011920929,
+          "background_height": 0.2800000011920929,
+          "background_vertical_offset": 0.0,
+          "background_horizontal_offset": 0.0,
+          "single_char_bg_enable": false
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    0,
+                    0,
+                    0
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              14
+            ],
+            "useLetterColor": true,
+            "size": 10,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "explicitTtcFaceIndex": null
+            }
+          }
+        ],
+        "animationMaterials": []
+      }
+    },
+    {
+      "key": "a04-ref-50",
+      "referenceText": "ストレッチを\nしてもらうと",
+      "start": 2118,
+      "end": 2154,
+      "timingMicroseconds": {
+        "start": 70600000,
+        "duration": 1200000
+      },
+      "style": "black_on_white_line_boxes",
+      "automaticallyReuseForNewVideo": false,
+      "textSource": "current matching draft screen-text; not an audio-verified verbatim transcript",
+      "originalCapCut": {
+        "units": "native CapCut units; not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.5,
+            "y": 1.5
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": -0.6850842088934224
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 0,
+          "alignment": 1,
+          "line_feed": 1,
+          "letter_spacing": 0.0,
+          "line_spacing": 0.26999999999999996,
+          "font_size": 10.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 63,
+          "global_alpha": 1.0
+        },
+        "background": {
+          "background_color": "#ffffff",
+          "background_alpha": 1.0,
+          "background_style": 2,
+          "background_round_radius": 0.4000000059604645,
+          "background_width": 0.2800000011920929,
+          "background_height": 0.2800000011920929,
+          "background_vertical_offset": 0.0,
+          "background_horizontal_offset": 0.0,
+          "single_char_bg_enable": false
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    0,
+                    0,
+                    0
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              13
+            ],
+            "useLetterColor": true,
+            "size": 10,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "explicitTtcFaceIndex": null
+            }
+          }
+        ],
+        "animationMaterials": []
+      }
+    },
+    {
+      "key": "a04-ref-51",
+      "referenceText": "非常にいいかなと\n思います",
+      "start": 2154,
+      "end": 2187,
+      "timingMicroseconds": {
+        "start": 71800000,
+        "duration": 1100000
+      },
+      "style": "black_on_white_line_boxes",
+      "automaticallyReuseForNewVideo": false,
+      "textSource": "current matching draft screen-text; not an audio-verified verbatim transcript",
+      "originalCapCut": {
+        "units": "native CapCut units; not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.5,
+            "y": 1.5
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": -0.6850842088934224
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 0,
+          "alignment": 1,
+          "line_feed": 1,
+          "letter_spacing": 0.0,
+          "line_spacing": 0.26999999999999996,
+          "font_size": 10.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 63,
+          "global_alpha": 1.0
+        },
+        "background": {
+          "background_color": "#ffffff",
+          "background_alpha": 1.0,
+          "background_style": 2,
+          "background_round_radius": 0.4000000059604645,
+          "background_width": 0.2800000011920929,
+          "background_height": 0.2800000011920929,
+          "background_vertical_offset": 0.0,
+          "background_horizontal_offset": 0.0,
+          "single_char_bg_enable": false
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    0,
+                    0,
+                    0
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              13
+            ],
+            "useLetterColor": true,
+            "size": 10,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "explicitTtcFaceIndex": null
+            }
+          }
+        ],
+        "animationMaterials": []
+      }
+    },
+    {
+      "key": "a04-ref-52",
+      "referenceText": "なので",
+      "start": 2188,
+      "end": 2219,
+      "timingMicroseconds": {
+        "start": 72933333,
+        "duration": 1033333
+      },
+      "style": "black_on_white_line_boxes",
+      "automaticallyReuseForNewVideo": false,
+      "textSource": "current matching draft screen-text; not an audio-verified verbatim transcript",
+      "originalCapCut": {
+        "units": "native CapCut units; not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.5,
+            "y": 1.5
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": -0.6850842088934224
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 0,
+          "alignment": 1,
+          "line_feed": 1,
+          "letter_spacing": 0.0,
+          "line_spacing": 0.26999999999999996,
+          "font_size": 10.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 63,
+          "global_alpha": 1.0
+        },
+        "background": {
+          "background_color": "#ffffff",
+          "background_alpha": 1.0,
+          "background_style": 2,
+          "background_round_radius": 0.4000000059604645,
+          "background_width": 0.2800000011920929,
+          "background_height": 0.2800000011920929,
+          "background_vertical_offset": 0.0,
+          "background_horizontal_offset": 0.0,
+          "single_char_bg_enable": false
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    0,
+                    0,
+                    0
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              3
+            ],
+            "useLetterColor": true,
+            "size": 10,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "explicitTtcFaceIndex": null
+            }
+          }
+        ],
+        "animationMaterials": []
+      }
+    },
+    {
+      "key": "a04-ref-53",
+      "referenceText": "ちゃんと理由を知りたい",
+      "start": 2238,
+      "end": 2277,
+      "timingMicroseconds": {
+        "start": 74600000,
+        "duration": 1300000
+      },
+      "style": "black_on_white_line_boxes",
+      "automaticallyReuseForNewVideo": false,
+      "textSource": "current matching draft screen-text; not an audio-verified verbatim transcript",
+      "originalCapCut": {
+        "units": "native CapCut units; not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.5,
+            "y": 1.5
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": -0.6850842088934224
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 0,
+          "alignment": 1,
+          "line_feed": 1,
+          "letter_spacing": 0.0,
+          "line_spacing": 0.26999999999999996,
+          "font_size": 10.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 63,
+          "global_alpha": 1.0
+        },
+        "background": {
+          "background_color": "#ffffff",
+          "background_alpha": 1.0,
+          "background_style": 2,
+          "background_round_radius": 0.4000000059604645,
+          "background_width": 0.2800000011920929,
+          "background_height": 0.2800000011920929,
+          "background_vertical_offset": 0.0,
+          "background_horizontal_offset": 0.0,
+          "single_char_bg_enable": false
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    0,
+                    0,
+                    0
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              11
+            ],
+            "useLetterColor": true,
+            "size": 10,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "explicitTtcFaceIndex": null
+            }
+          }
+        ],
+        "animationMaterials": []
+      }
+    },
+    {
+      "key": "a04-ref-54",
+      "referenceText": "なんで痛いかを\n知りたいとか",
+      "start": 2277,
+      "end": 2321,
+      "timingMicroseconds": {
+        "start": 75900000,
+        "duration": 1466666
+      },
+      "style": "black_on_white_line_boxes",
+      "automaticallyReuseForNewVideo": false,
+      "textSource": "current matching draft screen-text; not an audio-verified verbatim transcript",
+      "originalCapCut": {
+        "units": "native CapCut units; not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.5,
+            "y": 1.5
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": -0.6850842088934224
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 0,
+          "alignment": 1,
+          "line_feed": 1,
+          "letter_spacing": 0.0,
+          "line_spacing": 0.26999999999999996,
+          "font_size": 10.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 63,
+          "global_alpha": 1.0
+        },
+        "background": {
+          "background_color": "#ffffff",
+          "background_alpha": 1.0,
+          "background_style": 2,
+          "background_round_radius": 0.4000000059604645,
+          "background_width": 0.2800000011920929,
+          "background_height": 0.2800000011920929,
+          "background_vertical_offset": 0.0,
+          "background_horizontal_offset": 0.0,
+          "single_char_bg_enable": false
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    0,
+                    0,
+                    0
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              14
+            ],
+            "useLetterColor": true,
+            "size": 10,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "explicitTtcFaceIndex": null
+            }
+          }
+        ],
+        "animationMaterials": []
+      }
+    },
+    {
+      "key": "a04-ref-55",
+      "referenceText": "自分の体にあった",
+      "start": 2331,
+      "end": 2385,
+      "timingMicroseconds": {
+        "start": 77700000,
+        "duration": 1800000
+      },
+      "style": "black_on_white_line_boxes",
+      "automaticallyReuseForNewVideo": false,
+      "textSource": "current matching draft screen-text; not an audio-verified verbatim transcript",
+      "originalCapCut": {
+        "units": "native CapCut units; not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.5,
+            "y": 1.5
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": -0.6850842088934224
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 0,
+          "alignment": 1,
+          "line_feed": 1,
+          "letter_spacing": 0.0,
+          "line_spacing": 0.26999999999999996,
+          "font_size": 10.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 63,
+          "global_alpha": 1.0
+        },
+        "background": {
+          "background_color": "#ffffff",
+          "background_alpha": 1.0,
+          "background_style": 2,
+          "background_round_radius": 0.4000000059604645,
+          "background_width": 0.2800000011920929,
+          "background_height": 0.2800000011920929,
+          "background_vertical_offset": 0.0,
+          "background_horizontal_offset": 0.0,
+          "single_char_bg_enable": false
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    0,
+                    0,
+                    0
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              8
+            ],
+            "useLetterColor": true,
+            "size": 10,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "explicitTtcFaceIndex": null
+            }
+          }
+        ],
+        "animationMaterials": []
+      }
+    },
+    {
+      "key": "a04-ref-56",
+      "referenceText": "セルフケアを\n知りたい方は",
+      "start": 2385,
+      "end": 2435,
+      "timingMicroseconds": {
+        "start": 79500000,
+        "duration": 1666666
+      },
+      "style": "black_on_white_line_boxes",
+      "automaticallyReuseForNewVideo": false,
+      "textSource": "current matching draft screen-text; not an audio-verified verbatim transcript",
+      "originalCapCut": {
+        "units": "native CapCut units; not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.5,
+            "y": 1.5
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": -0.6850842088934224
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 0,
+          "alignment": 1,
+          "line_feed": 1,
+          "letter_spacing": 0.0,
+          "line_spacing": 0.26999999999999996,
+          "font_size": 10.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 63,
+          "global_alpha": 1.0
+        },
+        "background": {
+          "background_color": "#ffffff",
+          "background_alpha": 1.0,
+          "background_style": 2,
+          "background_round_radius": 0.4000000059604645,
+          "background_width": 0.2800000011920929,
+          "background_height": 0.2800000011920929,
+          "background_vertical_offset": 0.0,
+          "background_horizontal_offset": 0.0,
+          "single_char_bg_enable": false
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    0,
+                    0,
+                    0
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              13
+            ],
+            "useLetterColor": true,
+            "size": 10,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "explicitTtcFaceIndex": null
+            }
+          }
+        ],
+        "animationMaterials": []
+      }
+    },
+    {
+      "key": "a04-ref-57",
+      "referenceText": "ぜひ私の治療院に\n来ていただいて",
+      "start": 2435,
+      "end": 2493,
+      "timingMicroseconds": {
+        "start": 81166666,
+        "duration": 1933334
+      },
+      "style": "black_on_white_line_boxes",
+      "automaticallyReuseForNewVideo": false,
+      "textSource": "current matching draft screen-text; not an audio-verified verbatim transcript",
+      "originalCapCut": {
+        "units": "native CapCut units; not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.5,
+            "y": 1.5
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": -0.6850842088934224
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 0,
+          "alignment": 1,
+          "line_feed": 1,
+          "letter_spacing": 0.0,
+          "line_spacing": 0.26999999999999996,
+          "font_size": 10.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 63,
+          "global_alpha": 1.0
+        },
+        "background": {
+          "background_color": "#ffffff",
+          "background_alpha": 1.0,
+          "background_style": 2,
+          "background_round_radius": 0.4000000059604645,
+          "background_width": 0.2800000011920929,
+          "background_height": 0.2800000011920929,
+          "background_vertical_offset": 0.0,
+          "background_horizontal_offset": 0.0,
+          "single_char_bg_enable": false
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    0,
+                    0,
+                    0
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              16
+            ],
+            "useLetterColor": true,
+            "size": 10,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "explicitTtcFaceIndex": null
+            }
+          }
+        ],
+        "animationMaterials": []
+      }
+    },
+    {
+      "key": "a04-ref-58",
+      "referenceText": "お体を\n見させてください！",
+      "start": 2496,
+      "end": 2539,
+      "timingMicroseconds": {
+        "start": 83200000,
+        "duration": 1433333
+      },
+      "style": "black_on_white_line_boxes",
+      "automaticallyReuseForNewVideo": false,
+      "textSource": "current matching draft screen-text; not an audio-verified verbatim transcript",
+      "originalCapCut": {
+        "units": "native CapCut units; not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.5,
+            "y": 1.5
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": -0.6850842088934224
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 0,
+          "alignment": 1,
+          "line_feed": 1,
+          "letter_spacing": 0.0,
+          "line_spacing": 0.26999999999999996,
+          "font_size": 10.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 63,
+          "global_alpha": 1.0
+        },
+        "background": {
+          "background_color": "#ffffff",
+          "background_alpha": 1.0,
+          "background_style": 2,
+          "background_round_radius": 0.4000000059604645,
+          "background_width": 0.2800000011920929,
+          "background_height": 0.2800000011920929,
+          "background_vertical_offset": 0.0,
+          "background_horizontal_offset": 0.0,
+          "single_char_bg_enable": false
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    0,
+                    0,
+                    0
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              13
+            ],
+            "useLetterColor": true,
+            "size": 10,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "explicitTtcFaceIndex": null
+            }
+          }
+        ],
+        "animationMaterials": []
+      }
+    },
+    {
+      "key": "a04-ref-59",
+      "referenceText": "ぜひ興味",
+      "start": 2553,
+      "end": 2573,
+      "timingMicroseconds": {
+        "start": 85100000,
+        "duration": 666666
+      },
+      "style": "black_on_white_line_boxes",
+      "automaticallyReuseForNewVideo": false,
+      "textSource": "current matching draft screen-text; not an audio-verified verbatim transcript",
+      "originalCapCut": {
+        "units": "native CapCut units; not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.5,
+            "y": 1.5
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": -0.6850842088934224
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 0,
+          "alignment": 1,
+          "line_feed": 1,
+          "letter_spacing": 0.0,
+          "line_spacing": 0.26999999999999996,
+          "font_size": 10.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 63,
+          "global_alpha": 1.0
+        },
+        "background": {
+          "background_color": "#ffffff",
+          "background_alpha": 1.0,
+          "background_style": 2,
+          "background_round_radius": 0.4000000059604645,
+          "background_width": 0.2800000011920929,
+          "background_height": 0.2800000011920929,
+          "background_vertical_offset": 0.0,
+          "background_horizontal_offset": 0.0,
+          "single_char_bg_enable": false
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    0,
+                    0,
+                    0
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              4
+            ],
+            "useLetterColor": true,
+            "size": 10,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "explicitTtcFaceIndex": null
+            }
+          }
+        ],
+        "animationMaterials": []
+      }
+    },
+    {
+      "key": "a04-ref-60",
+      "referenceText": "のある方は",
+      "start": 2573,
+      "end": 2594,
+      "timingMicroseconds": {
+        "start": 85766666,
+        "duration": 700000
+      },
+      "style": "black_on_white_line_boxes",
+      "automaticallyReuseForNewVideo": false,
+      "textSource": "current matching draft screen-text; not an audio-verified verbatim transcript",
+      "originalCapCut": {
+        "units": "native CapCut units; not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.5,
+            "y": 1.5
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": -0.6850842088934224
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 0,
+          "alignment": 1,
+          "line_feed": 1,
+          "letter_spacing": 0.0,
+          "line_spacing": 0.26999999999999996,
+          "font_size": 10.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 63,
+          "global_alpha": 1.0
+        },
+        "background": {
+          "background_color": "#ffffff",
+          "background_alpha": 1.0,
+          "background_style": 2,
+          "background_round_radius": 0.4000000059604645,
+          "background_width": 0.2800000011920929,
+          "background_height": 0.2800000011920929,
+          "background_vertical_offset": 0.0,
+          "background_horizontal_offset": 0.0,
+          "single_char_bg_enable": false
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    0,
+                    0,
+                    0
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              5
+            ],
+            "useLetterColor": true,
+            "size": 10,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "explicitTtcFaceIndex": null
+            }
+          }
+        ],
+        "animationMaterials": []
+      }
+    },
+    {
+      "key": "a04-ref-61",
+      "referenceText": "ご予約\nお待ちしております！",
+      "start": 2594,
+      "end": 2639,
+      "timingMicroseconds": {
+        "start": 86466666,
+        "duration": 1500000
+      },
+      "style": "black_on_white_line_boxes",
+      "automaticallyReuseForNewVideo": false,
+      "textSource": "current matching draft screen-text; not an audio-verified verbatim transcript",
+      "originalCapCut": {
+        "units": "native CapCut units; not CSS pixels",
+        "draftCanvas": {
+          "ratio": "original",
+          "width": 1080,
+          "height": 1920,
+          "background": null
+        },
+        "clip": {
+          "scale": {
+            "x": 1.5,
+            "y": 1.5
+          },
+          "rotation": 0.0,
+          "transform": {
+            "x": 0.0,
+            "y": -0.6850842088934224
+          },
+          "flip": {
+            "vertical": false,
+            "horizontal": false
+          },
+          "alpha": 1.0
+        },
+        "layout": {
+          "typesetting": 0,
+          "alignment": 1,
+          "line_feed": 1,
+          "letter_spacing": 0.0,
+          "line_spacing": 0.26999999999999996,
+          "font_size": 10.0,
+          "initial_scale": 1.0,
+          "text_size": 30,
+          "line_max_width": 0.82,
+          "fixed_width": -1.0,
+          "fixed_height": -1.0,
+          "bold_width": 0.0,
+          "italic_degree": 0,
+          "underline": false,
+          "use_effect_default_color": true,
+          "is_rich_text": false,
+          "check_flag": 63,
+          "global_alpha": 1.0
+        },
+        "background": {
+          "background_color": "#ffffff",
+          "background_alpha": 1.0,
+          "background_style": 2,
+          "background_round_radius": 0.4000000059604645,
+          "background_width": 0.2800000011920929,
+          "background_height": 0.2800000011920929,
+          "background_vertical_offset": 0.0,
+          "background_horizontal_offset": 0.0,
+          "single_char_bg_enable": false
+        },
+        "activeStyles": [
+          {
+            "fill": {
+              "content": {
+                "solid": {
+                  "color": [
+                    0,
+                    0,
+                    0
+                  ]
+                },
+                "render_type": "solid"
+              }
+            },
+            "range": [
+              0,
+              14
+            ],
+            "useLetterColor": true,
+            "size": 10,
+            "font": {
+              "fileBasename": "ヒラギノ角ゴシック W6.ttc",
+              "explicitTtcFaceIndex": null
+            }
+          }
+        ],
+        "animationMaterials": []
+      }
+    }
+  ],
+  "editingAndCorrection": {
+    "timingMapRequired": [
+      "original source word/segment ranges",
+      "removed fillers and pause ranges",
+      "cleaned timeline word/segment ranges",
+      "independent caption start/end and style keys",
+      "SFX source and placement when used"
+    ],
+    "textOnlyRevision": "Update the caption layer text, line boxes and glyphs while preserving cleaned video/voice timing. Do not delete Script words to fix a subtitle typo.",
+    "afterFurtherSpeechEdit": "Read actual new timing and refresh/reposition captions and SFX; custom overlays must not be assumed to auto-sync.",
+    "nativeOrMgTextEditLimitation": "If glyph outlines are used, text edits may require Codex to regenerate glyphs/layout rather than a simple text-field change."
+  },
+  "verification": {
+    "sourceVideoFrameInspection": true,
+    "allFramesDifferenceScanned": true,
+    "draftMetadataExtracted": true,
+    "localOriginalVideoAndSfxReadableAtAnalysis": true,
+    "soundAuditioned": false,
+    "originalSfxAcousticMatchVerified": false,
+    "all61CaptionsFrameVerified": false,
+    "newFootageSpeechCleanupVerified": false,
+    "chatcutApplied": false,
+    "newChatCutComposedFramesVerified": false,
+    "exactFontFaceRenderingVerified": false,
+    "localMp4ExportVerified": false,
+    "otherAccountEndToEndVerified": false,
+    "requiredPerJob": [
+      "Listen around every removed filler/pause; protect word beginnings/endings and lip sync.",
+      "Check all caption changes,1/2line box shapes, long names, red entrance, beginning/end and text clipping in actual composites.",
+      "Listen to SFX with the speech and confirm chosen asset identity or declared similarity.",
+      "Watch the complete finished timeline and actual exported MP4 when requested."
+    ],
+    "report": "Distinguish source analysis, implemented settings, checked composite frames, audible checks and saved MP4. Do not describe a metadata-only template as a verified new video."
+  }
+}

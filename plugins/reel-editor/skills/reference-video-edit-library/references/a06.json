@@ -1,0 +1,542 @@
+{
+  "id": "A06",
+  "aliases": [
+    "A6",
+    "A06"
+  ],
+  "version": "0.8.1",
+  "name": "話の要点・コーラル帯デザイン",
+  "executionRoute": "speech_summary_design",
+  "workflow": "analyze_original_speech_then_summary_graphics",
+  "canvas": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 24,
+    "note": "Working portrait target. Keep the supplied footage timing/frame-rate behavior when selecting actual project settings; reference geometry is normalized, not native1080pixels."
+  },
+  "input": {
+    "required": [
+      "current footage with original spoken audio"
+    ],
+    "optional": [
+      "current clinic LP or official information for clinic name, access, branding and valid offer",
+      "explicit user-provided clinic and posting destination information",
+      "user-specified summary emphasis"
+    ],
+    "lpRequired": false,
+    "newScriptRequired": false,
+    "newAiVoiceRequired": false,
+    "missingInputAction": "Request current original-speech footage only. Do not delay speech analysis merely because LP is absent; omit or clarify unverified clinic/offer/CTA facts."
+  },
+  "flow": [
+    "Read the active host basics, speech-editing and transcription skills; inspect current footage and listen to relevant speech. Make timestamped ASR for internal analysis only.",
+    "Distinguish speakers, actual patient experience, provider explanation, questions, negation, time and conditions. Verify candidate overlay facts against original audio; record source timestamps.",
+    "Select a short context line, large theme and one concise supporting message. Display this hierarchy as persistent summary graphics, not every spoken word.",
+    "Use current official LP or user-confirmed information only for clinic name, access, offer, color requests and booking destination. Do not use reference clinic facts by default.",
+    "Edit through normally with supported copy; pause for copy review only when explicitly requested or when a consequential fact remains ambiguous. Do not create a universal script-approval gate.",
+    "Preserve original speech and meaningful examination/treatment continuity; apply patient face mosaic using face-mosaic.md; create independently editable graphic layers using current host-supported tools.",
+    "Review semantic fidelity, composite layout, audio, cuts, timing and all face-exposure frames. Report actual verified scope; local export only when requested."
+  ],
+  "speechAnalysis": {
+    "internalTranscriptOnly": true,
+    "verbatimCaptions": false,
+    "summarySource": "current original speech, checked against audio",
+    "claimSourceRecordRequired": true,
+    "recordFields": [
+      "overlay role",
+      "proposed wording",
+      "source clip/time range",
+      "speaker",
+      "literal quote vs paraphrase",
+      "verified / uncertain status"
+    ],
+    "preserve": [
+      "negation",
+      "time and scope",
+      "uncertainty",
+      "question versus answer",
+      "individual experience versus general explanation"
+    ],
+    "doNotInfer": [
+      "diagnosis from image or topic alone",
+      "pain-free outcome from movement alone",
+      "medication history",
+      "an offer or deadline",
+      "a patient statement not actually said"
+    ],
+    "literalQuoteRule": "Use quotation marks only for faithful quoted speech. A paraphrase/summary must not masquerade as an exact patient quote.",
+    "ambiguousAction": "Proceed with verified independent elements; omit optional uncertain claims, or ask for the specific fact if needed for the main message.",
+    "referenceCopyIsNotNewScript": true
+  },
+  "editing": {
+    "default": "Original live treatment footage with persistent topic graphics; preserve original voice and demonstration continuity.",
+    "duration": "Follow current speech and action; never force40.54seconds, source overlay transition or source shot count.",
+    "cleanupReference": "speech-cleanup.md",
+    "silenceIsNotEnoughToCutDemonstration": true,
+    "doNotForceA04RapidCaptioning": true,
+    "doNotForceA03SilentOutput": true,
+    "doNotForceA05BeforeAfterComparison": true,
+    "frame": "Keep therapist, hands and relevant treatment body region readable above/beside the graphics; adjust text length and layout to current framing."
+  },
+  "brandingAndCta": {
+    "defaultDesignAccent": "#FB6164",
+    "accentStatus": "Approximate encoded reference coral; original design token unknown.",
+    "lpOptional": true,
+    "lpColorPolicy": "When user requests LP branding, use verified LP colors for accent while keeping hierarchy and readable white/black pairing. Otherwise preserve reference coral design.",
+    "clinicAccessSource": "Current LP/official information or explicit user-provided confirmed facts only.",
+    "unverifiedClinicInfo": "Omit or request only the needed facts; never copy the reference clinic/access.",
+    "offerBadgeConditional": true,
+    "offerCardConditional": true,
+    "unverifiedOffer": "Omit campaign/limited-period claims. The source offer is not a new default.",
+    "cta": "Use actual confirmed posting destination and valid instruction; arrows must correspond to that surface. Omit if unknown.",
+    "closingAdRequired": false
+  },
+  "graphicStyle": {
+    "hierarchy": [
+      "small_context_heading",
+      "large_coral_topic_band",
+      "compact_white_support_card",
+      "optional_coral_clinic_card",
+      "optional_verified_closing"
+    ],
+    "persistentBodyLayout": true,
+    "text": "bold/heavy Japanese Gothic; exact font unconfirmed",
+    "textColors": [
+      "#FFFFFF",
+      "#000000"
+    ],
+    "accent": "#FB6164",
+    "referenceUnits": {
+      "width": 360,
+      "height": 640
+    },
+    "productionApprovedProfile": {
+      "status": "One new-footage ChatCut composite approved by the user on 2026-10-23. This is a reusable typography/layout profile, not reusable clinic copy or a claim of exact source-font identity.",
+      "canvas": {
+        "width": 1080,
+        "height": 1920,
+        "fps": 24
+      },
+      "font": {
+        "family": "Noto Sans JP",
+        "weight": 900,
+        "role": "default supported A06 approximation when available",
+        "evidence": "Compared in the ChatCut renderer using the same Japanese copy against M PLUS 1p, Zen Kaku Gothic New and Dela Gothic One; user approved the Noto Sans JP revision.",
+        "identity": "approximation; original reference font remains unidentified",
+        "fallback": "Search the active renderer catalog and compare the actual current Japanese wording in the composed frame. Do not use file availability or glyph coverage alone as approval."
+      },
+      "tracking": {
+        "defaultEmRange": [
+          0,
+          0.02
+        ],
+        "avoidNegativeTrackingForFit": true,
+        "note": "If copy does not fit, adjust size, card width or deliberate line breaks before tightening character spacing."
+      },
+      "twoLineText": {
+        "lineHeightRange": [
+          1.15,
+          1.22
+        ],
+        "letterSpacingEmRange": [
+          0,
+          0.02
+        ],
+        "verifySeparately": [
+          "badge",
+          "large white closing card"
+        ],
+        "note": "Judge line gap and character spacing separately at a large one-up composed frame; avoid a compressed block."
+      },
+      "smallCopy": {
+        "safeTextWidthFractionOfInnerBox": [
+          0.85,
+          0.95
+        ],
+        "policy": "When side margins are visibly wasteful, enlarge the copy before shrinking the card. Preserve safe edge padding and re-check longer clinic/access wording."
+      },
+      "hierarchy": {
+        "primaryTopic": "Largest element. Scale by actual character count; short 3-4 character topics may exceed the flattened reference's approximate 56px equivalent.",
+        "contextAndSupport": "Larger than the first draft when the frame has unused width; still subordinate to the topic band.",
+        "clinicCard": "Clinic name strongest; access second; use an explicit vertical gap rather than compressed line-height."
+      },
+      "approvedGeometry1080x1920": {
+        "bodyContextBox": [
+          36,
+          786,
+          1008,
+          104
+        ],
+        "bodyTopicBand": [
+          0,
+          930,
+          1080,
+          306
+        ],
+        "bodySupportCard": [
+          27,
+          1318,
+          1026,
+          118
+        ],
+        "bodyClinicCard": [
+          72,
+          1520,
+          936,
+          352
+        ],
+        "closingBadge": [
+          6,
+          426,
+          531,
+          240
+        ],
+        "closingPrimaryCard": [
+          6,
+          768,
+          1068,
+          390
+        ],
+        "closingLowerTextBox": [
+          60,
+          1300,
+          960,
+          260
+        ],
+        "adaptationRule": "These are approved composition proportions from one 1080x1920 example. Scale to the canvas and current footage, fit actual text, and keep treatment/hands visible; do not hard-code them when the framing or copy differs."
+      },
+      "reviewOrder": [
+        "confirm the supported font first",
+        "render one large settled body frame",
+        "render one large settled closing frame",
+        "check body-to-closing boundary frames",
+        "check the final frame",
+        "re-read effective font/copy/spacing after save"
+      ]
+    },
+    "body": {
+      "short_context_heading": {
+        "role": "short_context_heading",
+        "boxPx": [
+          17,
+          266,
+          326,
+          26
+        ],
+        "approxFontPx": 24,
+        "weight": "bold",
+        "fill": "white",
+        "background": "none; faint coral glow/shadow apparent",
+        "boundsNormalized": {
+          "x": 0.047222,
+          "y": 0.415625,
+          "width": 0.905556,
+          "height": 0.040625
+        },
+        "measurementUnits": "Approximate pixels in flattened360x640reference; scale proportionally to current canvas and calibrate rendered result."
+      },
+      "primary_topic": {
+        "role": "primary_topic",
+        "backgroundBoxPx": [
+          0,
+          310,
+          360,
+          102
+        ],
+        "textBoxPx": [
+          11,
+          334,
+          338,
+          53
+        ],
+        "approxFontPx": 56,
+        "weight": "heavy",
+        "fill": "white",
+        "background": "coral wide band with small rounded corners",
+        "boundsNormalized": {
+          "x": 0.0,
+          "y": 0.484375,
+          "width": 1.0,
+          "height": 0.159375
+        },
+        "measurementUnits": "Approximate pixels in flattened360x640reference; scale proportionally to current canvas and calibrate rendered result."
+      },
+      "patient_result_or_key_message": {
+        "role": "patient_result_or_key_message",
+        "backgroundBoxPx": [
+          9,
+          441,
+          342,
+          35
+        ],
+        "approxFontPx": 18,
+        "weight": "bold",
+        "fill": "black",
+        "background": "white rounded strip",
+        "note": "This is reference-copy only. An outcome and first-person quote require actual new-source speech/user confirmation; do not infer from appearance or reuse as generic result.",
+        "boundsNormalized": {
+          "x": 0.025,
+          "y": 0.689063,
+          "width": 0.95,
+          "height": 0.054688
+        },
+        "measurementUnits": "Approximate pixels in flattened360x640reference; scale proportionally to current canvas and calibrate rendered result."
+      },
+      "clinic_access_and_name": {
+        "role": "clinic_access_and_name",
+        "backgroundBoxPx": [
+          38,
+          509,
+          284,
+          115
+        ],
+        "approxFontPx": [
+          28,
+          38
+        ],
+        "weight": "heavy",
+        "fill": "white",
+        "background": "coral rounded card, radius approximately24px",
+        "boundsNormalized": {
+          "x": 0.105556,
+          "y": 0.795312,
+          "width": 0.788889,
+          "height": 0.179688
+        },
+        "measurementUnits": "Approximate pixels in flattened360x640reference; scale proportionally to current canvas and calibrate rendered result."
+      }
+    },
+    "closing": {
+      "offer_badge": {
+        "role": "offer_badge",
+        "approxBoxPx": [
+          2,
+          142,
+          177,
+          80
+        ],
+        "approxFontPx": 32,
+        "rotationDegApprox": -5,
+        "fill": "white",
+        "background": "coral rounded badge",
+        "condition": "Only when an applicable limited-period offer is explicitly confirmed.",
+        "boundsNormalized": {
+          "x": 0.005556,
+          "y": 0.221875,
+          "width": 0.491667,
+          "height": 0.125
+        },
+        "measurementUnits": "Approximate pixels in flattened360x640reference; scale proportionally to current canvas and calibrate rendered result."
+      },
+      "offer_or_booking_heading": {
+        "role": "offer_or_booking_heading",
+        "backgroundBoxPx": [
+          2,
+          260,
+          356,
+          120
+        ],
+        "approxFontPx": 38,
+        "weight": "heavy",
+        "fill": "black",
+        "background": "white rounded card, radius approximately24px",
+        "boundsNormalized": {
+          "x": 0.005556,
+          "y": 0.40625,
+          "width": 0.988889,
+          "height": 0.1875
+        },
+        "measurementUnits": "Approximate pixels in flattened360x640reference; scale proportionally to current canvas and calibrate rendered result."
+      },
+      "action": {
+        "role": "action",
+        "approxBoxPx": [
+          26,
+          434,
+          308,
+          85
+        ],
+        "approxFontPx": 36,
+        "weight": "heavy",
+        "fill": "white",
+        "effect": "broad soft coral glow/outline",
+        "condition": "Copy and arrow direction must match the actual destination and posting surface.",
+        "boundsNormalized": {
+          "x": 0.072222,
+          "y": 0.678125,
+          "width": 0.855556,
+          "height": 0.132812
+        },
+        "measurementUnits": "Approximate pixels in flattened360x640reference; scale proportionally to current canvas and calibrate rendered result."
+      },
+      "direction_arrows": {
+        "role": "direction_arrows",
+        "approxCenterXPx": [
+          106,
+          180,
+          253
+        ],
+        "approxYPx": [
+          535,
+          567
+        ],
+        "fill": "white",
+        "effect": "coral glow",
+        "measurementUnits": "Approximate pixels in flattened360x640reference; scale proportionally to current canvas and calibrate rendered result."
+      }
+    },
+    "animation": {
+      "observed": "Mostly static fixed graphics; body removed atframe778 and closing appears atframe781. No complex entrance animation confirmed.",
+      "future": "Use simple appearance/change at relevant current content; do not copy the3framegap, force glitter/zoom, or invent exact keyframes.",
+      "referenceBodyEndSeconds": 32.416666666666664,
+      "referenceClosingStartSeconds": 32.541666666666664,
+      "referenceTimingIsNotTemplateTiming": true
+    }
+  },
+  "fontPolicy": {
+    "identityVerified": false,
+    "originalEditableProjectAvailable": false,
+    "fontBinariesBundled": false,
+    "approvedApproximation": {
+      "family": "Noto Sans JP",
+      "weight": 900,
+      "scope": "One user-approved new-footage ChatCut composite; use as A06 default candidate when supported.",
+      "comparedCandidates": [
+        "M PLUS 1p",
+        "Noto Sans JP",
+        "Zen Kaku Gothic New",
+        "Dela Gothic One"
+      ]
+    },
+    "suggestion": "Start with Noto Sans JP 900 when the active renderer supports it. Compare the actual current Japanese wording against the provided reference images, then adjust size, tracking, line-height and card padding in that order. Use another supported heavy Japanese Gothic only after a specimen/composite comparison.",
+    "substitutionDisclosureRequired": true,
+    "pixelMeasurementsAreNotOriginalFontSettings": true,
+    "crossRendererExactMatchVerified": false,
+    "negativeTrackingDefault": false,
+    "twoLineLineHeightRange": [
+      1.15,
+      1.22
+    ]
+  },
+  "facePrivacy": {
+    "requiredForVisiblePatient": true,
+    "referenceObservedEffect": "Existing heavy blur on patient face; not a newly added pixel mosaic.",
+    "executionReference": "face-mosaic.md",
+    "keepExistingSourceObscuration": true,
+    "doNotReuseReferenceFaceCoordinates": true,
+    "doNotTreatGraphicAsFaceMask": true,
+    "verification": "All exposure frames in current finished composite per common rule, including movement, reflections, cut boundaries and first/last frames.",
+    "referenceAuditIsSampleOnly": true
+  },
+  "audio": {
+    "keepOriginalSpeech": true,
+    "keepExistingSourceSoundByDefault": true,
+    "addAiVoice": false,
+    "addBgm": false,
+    "addSfx": false,
+    "referencePreview": "H264/AAC packet-preserving remux; no added sound.",
+    "audioAuditionedByThisReferenceAudit": false,
+    "asrIsNotAudition": true
+  },
+  "editingAndCorrection": {
+    "editableText": true,
+    "useCurrentHostSkills": true,
+    "avoidBakedSingleVideoAsOnlyEditableResult": true,
+    "textOnlyCorrection": "Update only affected graphic text, glyphs/layout if needed; preserve edited video, original audio, timing and face mosaic.",
+    "noScriptWordDeleteForTypoCorrection": true,
+    "glyphBasedRenderer": "If using generated glyph paths, text changes require glyph/layout regeneration; do not promise typing alone updates all renderers.",
+    "timingChange": "After any actual speech cut, retime graphics/closing and verify picture/audio and last frame."
+  },
+  "reference": {
+    "label": "line_oa_chat_261022_105155.mp4",
+    "export": {
+      "width": 360,
+      "height": 640,
+      "fps": 24,
+      "frameCount": 973,
+      "aspectRatio": "9:16",
+      "durationSeconds": 40.541667,
+      "videoCodec": "h264",
+      "audioCodec": "aac"
+    },
+    "bodyTextReferenceOnly": [
+      {
+        "role": "short_context_heading",
+        "text": "薬を飲んでも変わらなかった"
+      },
+      {
+        "role": "primary_topic",
+        "text": "脊柱管狭窄症"
+      },
+      {
+        "role": "patient_result_or_key_message",
+        "text": "「ゴルフが痛みなくできるように😊」"
+      },
+      {
+        "role": "clinic_access_and_name",
+        "text": [
+          "伏見駅から徒歩4分",
+          "悠和整体院"
+        ]
+      }
+    ],
+    "closingTextReferenceOnly": [
+      {
+        "role": "offer_badge",
+        "text": "期間限定"
+      },
+      {
+        "role": "offer_or_booking_heading",
+        "text": "初回キャンペーン\n実施中"
+      },
+      {
+        "role": "action",
+        "text": "今すぐ下の\nリンクをクリック！"
+      },
+      {
+        "role": "direction_arrows",
+        "text": "↓　↓　↓"
+      }
+    ],
+    "referenceWordsNotDefaults": true,
+    "speechAnalysisStatus": "Timestamped ASR candidates from two models suggest conversation about golf, scores and rounds; not a fully auditioned transcript. Visible medication/diagnosis/pain-free outcome copy is not established by the audio analysis alone.",
+    "cutObservation": "Single apparent treatment scene in sampled timeline and numeric upper-image scan; no clearly separate scene cut found, not proof that source was uncut.",
+    "bodyComparison": "../assets/a06-reference/body.jpg",
+    "closingComparison": "../assets/a06-reference/closing.jpg",
+    "comparisonImagesNotNewFootage": true
+  },
+  "helperCompatibility": {
+    "timeline_plan.py": false,
+    "text_revision.py": false,
+    "routeIsLocalDispatcherNameNotChatCutApi": true,
+    "reason": "Requires semantic summary from current original speech and current clinic facts, editable persistent graphics and per-shot patient privacy; not a fixed cue/timeline helper route."
+  },
+  "verification": {
+    "sourceMetadataRead": true,
+    "fullSourceFrameDecode": true,
+    "fullTimelineContactSheet": true,
+    "representativeNativeSizeFrames": true,
+    "layoutTransitionConsecutiveFrames": true,
+    "firstAndLastFrame": true,
+    "fontIdentity": false,
+    "audioAuditioned": false,
+    "asrIsNotFullyVerifiedSpeech": true,
+    "wholeSourceFacePrivacyCertified": false,
+    "previewVideoAndAudioPacketHashesPreserved": true,
+    "newFootageEdited": true,
+    "newSemanticCopyVerified": true,
+    "newSemanticCopyVerificationScope": "User explicitly confirmed the main topic and approved the final edit. Supporting copy was ASR-grounded, but this audit did not independently audition the original audio.",
+    "newChatCutCompositeVerified": true,
+    "newFaceMosaicTrackingVerified": false,
+    "newLocalExportVerified": false,
+    "otherOperatorEndToEndVerified": false,
+    "userApprovedFinalEdit": true,
+    "userApprovalDate": "2026-10-23",
+    "typographyCandidatesComparedInRenderer": true,
+    "largeBodyAndClosingFramesVerified": true,
+    "bodyClosingBoundaryFramesVerified": true,
+    "finalFrameVerified": true,
+    "wholeProgramAudioPlaybackVerified": false,
+    "report": "One new-footage editable ChatCut composite and the revised Noto Sans JP typography/spacing were approved. Separate this from independent original-audio audition, whole-frame privacy certification, full audio playback, export and other-operator tests."
+  }
+}

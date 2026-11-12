@@ -1,0 +1,596 @@
+{
+  "pattern": "A02",
+  "sourceLabel": "院紹介動画.mov / サイト掲載 a02-reference.mp4",
+  "sourceSha256": "10c26fcc9a2f2a589bf08aaca0348abcf498c0038434fb910000e928a14d80d3",
+  "reviewType": "既存22cueの静止後代表フレームを抽出し、view_imageで実際の画面テロップを目視確認",
+  "reviewedOn": "2026-10-07",
+  "frameRate": 30,
+  "cueCount": 22,
+  "verification": {
+    "all22CuesVisuallyRead": true,
+    "unreadableCues": [],
+    "audioListened": false,
+    "audioVerbatimTranscript": false,
+    "frameAccurateTextBoundaryRemeasured": false
+  },
+  "sourceTimingAuthority": "a02-reference.json の cue start/end を利用。境界の再測定はしていない。",
+  "reusePolicy": "新規台本の語順・言い回しの見本。別店舗の事実・効果・価格を表す生成既定値として使わない。今回の明示文言、承認済み台本、支給音声優先を維持。",
+  "readingSequence": [
+    "symptom_hook",
+    "hook_emphasis",
+    "access",
+    "clinic_specialty",
+    "practitioner_knowledge",
+    "consultation",
+    "assessment_intro",
+    "assessment_method",
+    "assessment_summary",
+    "difference",
+    "approach_context",
+    "approach_emphasis",
+    "treatment_detail",
+    "treatment_reason",
+    "concern_insert",
+    "treatment_policy",
+    "whole_body",
+    "benefit_emphasis",
+    "home_exercise",
+    "reassurance",
+    "offer_condition",
+    "offer_price"
+  ],
+  "cues": [
+    {
+      "number": 1,
+      "key": "symptom_hook",
+      "startFrame": 0,
+      "endFrame": 47,
+      "sampleFrame": 23,
+      "sampleSeconds": 0.7666666666666667,
+      "role": "対象となる悩みの呼びかけ",
+      "requiredClinicFacts": [
+        "対象となる悩み・症状"
+      ],
+      "onScreenText": "足の痛み\n痺れがある方",
+      "readingOrderText": "足の痛み痺れがある方",
+      "sourceType": "画面テロップの原文",
+      "visualTextVerified": true,
+      "audioVerbatimVerified": false,
+      "factSlots": [
+        {
+          "source": "足の痛み・痺れ",
+          "slot": "対象とする症状",
+          "requires": "今回のLP等に対応する悩みの記載"
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "key": "hook_emphasis",
+      "startFrame": 47,
+      "endFrame": 89,
+      "sampleFrame": 68,
+      "sampleSeconds": 2.2666666666666666,
+      "role": "短い注目語",
+      "requiredClinicFacts": [],
+      "onScreenText": "必見",
+      "readingOrderText": "必見",
+      "sourceType": "画面テロップの原文",
+      "visualTextVerified": true,
+      "audioVerbatimVerified": false,
+      "factSlots": []
+    },
+    {
+      "number": 3,
+      "key": "access",
+      "startFrame": 89,
+      "endFrame": 180,
+      "sampleFrame": 134,
+      "sampleSeconds": 4.466666666666667,
+      "role": "店舗の地域・アクセス",
+      "requiredClinicFacts": [
+        "地域名・最寄駅・徒歩時間"
+      ],
+      "onScreenText": "赤坂駅\n徒歩1分にある",
+      "readingOrderText": "赤坂駅徒歩1分にある",
+      "sourceType": "画面テロップの原文",
+      "visualTextVerified": true,
+      "audioVerbatimVerified": false,
+      "factSlots": [
+        {
+          "source": "赤坂駅",
+          "slot": "最寄駅",
+          "requires": "今回の店舗アクセス"
+        },
+        {
+          "source": "徒歩1分",
+          "slot": "徒歩時間",
+          "requires": "今回のLP等で確認された値"
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "key": "clinic_specialty",
+      "startFrame": 180,
+      "endFrame": 266,
+      "sampleFrame": 223,
+      "sampleSeconds": 7.433333333333334,
+      "role": "対象店舗の特徴と紹介",
+      "requiredClinicFacts": [
+        "店舗名・専門分野または特徴"
+      ],
+      "onScreenText": "痛み・痺れに特化した\n整体院をご存知ですか？",
+      "readingOrderText": "痛み・痺れに特化した整体院をご存知ですか？",
+      "sourceType": "画面テロップの原文",
+      "visualTextVerified": true,
+      "audioVerbatimVerified": false,
+      "factSlots": [
+        {
+          "source": "痛み・痺れに特化した",
+          "slot": "専門分野・対象症状",
+          "requires": "今回のLP等の専門性"
+        },
+        {
+          "source": "整体院",
+          "slot": "院名・店名を含む紹介",
+          "requires": "利用者指定の表示名称。原見本画面は一般名詞のみ"
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "key": "practitioner_knowledge",
+      "startFrame": 266,
+      "endFrame": 334,
+      "sampleFrame": 300,
+      "sampleSeconds": 10.0,
+      "role": "施術者の確認済みの専門性",
+      "requiredClinicFacts": [
+        "資格・経験・専門性の根拠"
+      ],
+      "onScreenText": "解剖学を\n熟知してる先生が",
+      "readingOrderText": "解剖学を熟知してる先生が",
+      "sourceType": "画面テロップの原文",
+      "visualTextVerified": true,
+      "audioVerbatimVerified": false,
+      "factSlots": [
+        {
+          "source": "解剖学を熟知してる先生",
+          "slot": "専門性・担当者",
+          "requires": "今回のLP等の資格・経験・専門性。単に施術者であることから熟知と断定しない"
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "key": "consultation",
+      "startFrame": 334,
+      "endFrame": 415,
+      "sampleFrame": 374,
+      "sampleSeconds": 12.466666666666667,
+      "role": "問診・相談の特徴",
+      "requiredClinicFacts": [
+        "問診の方針"
+      ],
+      "onScreenText": "時間をかけて\n症状を確認",
+      "readingOrderText": "時間をかけて症状を確認",
+      "sourceType": "画面テロップの原文",
+      "visualTextVerified": true,
+      "audioVerbatimVerified": false,
+      "factSlots": [
+        {
+          "source": "時間をかけて症状を確認",
+          "slot": "問診の方針",
+          "requires": "今回のLP等に時間をかける問診・症状確認の方針が明記されていること。丁寧な問診だけが確認できる場合は『丁寧に症状を確認』へ差し替える"
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "key": "assessment_intro",
+      "startFrame": 415,
+      "endFrame": 475,
+      "sampleFrame": 445,
+      "sampleSeconds": 14.833333333333334,
+      "role": "検査の目的",
+      "requiredClinicFacts": [
+        "検査の目的"
+      ],
+      "onScreenText": "痺れの根本を",
+      "readingOrderText": "痺れの根本を",
+      "sourceType": "画面テロップの原文",
+      "visualTextVerified": true,
+      "audioVerbatimVerified": false,
+      "factSlots": [
+        {
+          "source": "痺れの根本",
+          "slot": "対象症状と検査の目的",
+          "requires": "今回のLP等の症状・方針。確実な原因究明を断定しない"
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "key": "assessment_method",
+      "startFrame": 475,
+      "endFrame": 543,
+      "sampleFrame": 509,
+      "sampleSeconds": 16.966666666666665,
+      "role": "検査方法の特徴",
+      "requiredClinicFacts": [
+        "実際の検査方法"
+      ],
+      "onScreenText": "独自の検査方法で",
+      "readingOrderText": "独自の検査方法で",
+      "sourceType": "画面テロップの原文",
+      "visualTextVerified": true,
+      "audioVerbatimVerified": false,
+      "factSlots": [
+        {
+          "source": "独自の検査方法",
+          "slot": "検査方法の特徴",
+          "requires": "独自性まで裏付ける今回の資料"
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "key": "assessment_summary",
+      "startFrame": 543,
+      "endFrame": 599,
+      "sampleFrame": 571,
+      "sampleSeconds": 19.033333333333335,
+      "role": "検査の説明を短く強調",
+      "requiredClinicFacts": [
+        "検査で確認する内容"
+      ],
+      "onScreenText": "原因を特定",
+      "readingOrderText": "原因を特定",
+      "sourceType": "画面テロップの原文",
+      "visualTextVerified": true,
+      "audioVerbatimVerified": false,
+      "factSlots": [
+        {
+          "source": "原因を特定",
+          "slot": "検査で確認する内容",
+          "requires": "今回の裏付け。未確認なら原因・状態を確認等へ最小変更"
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "key": "difference",
+      "startFrame": 599,
+      "endFrame": 676,
+      "sampleFrame": 637,
+      "sampleSeconds": 21.233333333333334,
+      "role": "施術方針の導入",
+      "requiredClinicFacts": [
+        "店舗の特徴"
+      ],
+      "onScreenText": "ここが他とは違う",
+      "readingOrderText": "ここが他とは違う",
+      "sourceType": "画面テロップの原文",
+      "visualTextVerified": true,
+      "audioVerbatimVerified": false,
+      "factSlots": [
+        {
+          "source": "他とは違う",
+          "slot": "他院比較・特徴の導入",
+          "requires": "違いを説明できる今回の事実。未確認なら施術方針の中立的導入へ最小変更"
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "key": "approach_context",
+      "startFrame": 676,
+      "endFrame": 771,
+      "sampleFrame": 723,
+      "sampleSeconds": 24.1,
+      "role": "施術方針を説明する背景",
+      "requiredClinicFacts": [
+        "施術方針の説明"
+      ],
+      "onScreenText": "緩めるだけだと\nその場の改善で\n終わってしまうけど",
+      "readingOrderText": "緩めるだけだとその場の改善で終わってしまうけど",
+      "sourceType": "画面テロップの原文",
+      "visualTextVerified": true,
+      "audioVerbatimVerified": false,
+      "factSlots": [
+        {
+          "source": "緩めるだけだとその場の改善で終わってしまう",
+          "slot": "施術方針の背景説明",
+          "requires": "今回の資料にある説明。一般医学的事実や他院批判として無条件流用しない"
+        }
+      ],
+      "layoutNote": "原見本は3行だが新規制作は承認済み最大2行。原文順序を保って複数cueへ分割する。"
+    },
+    {
+      "number": 12,
+      "key": "approach_emphasis",
+      "startFrame": 771,
+      "endFrame": 865,
+      "sampleFrame": 818,
+      "sampleSeconds": 27.266666666666666,
+      "role": "対象店舗で確認できる施術方針",
+      "requiredClinicFacts": [
+        "施術方法の裏付け"
+      ],
+      "onScreenText": "ここの施術は\n鍛えることで\n根本改善",
+      "readingOrderText": "ここの施術は鍛えることで根本改善",
+      "sourceType": "画面テロップの原文",
+      "visualTextVerified": true,
+      "audioVerbatimVerified": false,
+      "factSlots": [
+        {
+          "source": "鍛えることで根本改善",
+          "slot": "運動・施術方法と効果表現",
+          "requires": "運動・筋力への方針と効果の裏付け。根本改善を新店舗の確約へしない"
+        }
+      ],
+      "layoutNote": "原見本は3行だが新規制作は承認済み最大2行。原文順序を保って複数cueへ分割する。"
+    },
+    {
+      "number": 13,
+      "key": "treatment_detail",
+      "startFrame": 865,
+      "endFrame": 900,
+      "sampleFrame": 882,
+      "sampleSeconds": 29.4,
+      "role": "施術中の説明・前半",
+      "requiredClinicFacts": [
+        "施術説明"
+      ],
+      "onScreenText": "硬いところは",
+      "readingOrderText": "硬いところは",
+      "sourceType": "画面テロップの原文",
+      "visualTextVerified": true,
+      "audioVerbatimVerified": false,
+      "factSlots": [
+        {
+          "source": "硬いところ",
+          "slot": "施術対象の説明",
+          "requires": "今回の施術方法の説明"
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "key": "treatment_reason",
+      "startFrame": 900,
+      "endFrame": 956,
+      "sampleFrame": 928,
+      "sampleSeconds": 30.933333333333334,
+      "role": "施術中の説明・後半",
+      "requiredClinicFacts": [
+        "施術方針の根拠"
+      ],
+      "onScreenText": "普段頑張ってる\nところだから",
+      "readingOrderText": "普段頑張ってるところだから",
+      "sourceType": "画面テロップの原文",
+      "visualTextVerified": true,
+      "audioVerbatimVerified": false,
+      "factSlots": [
+        {
+          "source": "普段頑張ってるところだから",
+          "slot": "身体の状態・施術理由",
+          "requires": "今回の資料にある施術理由。患者全員に当てはまる事実としない"
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "key": "concern_insert",
+      "startFrame": 956,
+      "endFrame": 1012,
+      "sampleFrame": 984,
+      "sampleSeconds": 32.8,
+      "role": "方針に関連する悩みの説明",
+      "requiredClinicFacts": [
+        "説明に対応する悩み"
+      ],
+      "onScreenText": "緩めるだけだと\nまた戻っちゃう",
+      "readingOrderText": "緩めるだけだとまた戻っちゃう",
+      "sourceType": "画面テロップの原文",
+      "visualTextVerified": true,
+      "audioVerbatimVerified": false,
+      "factSlots": [
+        {
+          "source": "緩めるだけだとまた戻っちゃう",
+          "slot": "再発・施術方針の説明",
+          "requires": "今回の資料。再発の医学的断定として無条件流用しない"
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "key": "treatment_policy",
+      "startFrame": 1012,
+      "endFrame": 1067,
+      "sampleFrame": 1039,
+      "sampleSeconds": 34.63333333333333,
+      "role": "対象店舗の施術方針を3行で",
+      "requiredClinicFacts": [
+        "施術方針"
+      ],
+      "onScreenText": "ここは\n弱った部分を\n鍛える",
+      "readingOrderText": "ここは弱った部分を鍛える",
+      "sourceType": "画面テロップの原文",
+      "visualTextVerified": true,
+      "audioVerbatimVerified": false,
+      "factSlots": [
+        {
+          "source": "弱った部分を鍛える",
+          "slot": "運動・施術方針",
+          "requires": "今回のLP等に該当の運動指導があること"
+        }
+      ],
+      "layoutNote": "原見本は3行だが新規制作は承認済み最大2行。原文順序を保って複数cueへ分割する。"
+    },
+    {
+      "number": 17,
+      "key": "whole_body",
+      "startFrame": 1067,
+      "endFrame": 1156,
+      "sampleFrame": 1111,
+      "sampleSeconds": 37.03333333333333,
+      "role": "対象店舗の追加の特徴",
+      "requiredClinicFacts": [
+        "追加の施術内容"
+      ],
+      "onScreenText": "しかも\n全身調整\nしてくれるから",
+      "readingOrderText": "しかも全身調整してくれるから",
+      "sourceType": "画面テロップの原文",
+      "visualTextVerified": true,
+      "audioVerbatimVerified": false,
+      "factSlots": [
+        {
+          "source": "全身調整",
+          "slot": "追加の施術内容",
+          "requires": "今回のLP等で提供確認"
+        }
+      ],
+      "layoutNote": "原見本は3行だが新規制作は承認済み最大2行。原文順序を保って複数cueへ分割する。"
+    },
+    {
+      "number": 18,
+      "key": "benefit_emphasis",
+      "startFrame": 1156,
+      "endFrame": 1207,
+      "sampleFrame": 1181,
+      "sampleSeconds": 39.36666666666667,
+      "role": "確認済みの方針・特徴を短く強調",
+      "requiredClinicFacts": [
+        "誇張しない確認済みの特徴"
+      ],
+      "onScreenText": "根本改善",
+      "readingOrderText": "根本改善",
+      "sourceType": "画面テロップの原文",
+      "visualTextVerified": true,
+      "audioVerbatimVerified": false,
+      "factSlots": [
+        {
+          "source": "根本改善",
+          "slot": "効果・目指す方向",
+          "requires": "今回のLP等の裏付け。未確認なら説明済みの施術方針へ最小変更"
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "key": "home_exercise",
+      "startFrame": 1207,
+      "endFrame": 1267,
+      "sampleFrame": 1237,
+      "sampleSeconds": 41.233333333333334,
+      "role": "セルフケア指導の内容",
+      "requiredClinicFacts": [
+        "セルフケア・運動指導の有無"
+      ],
+      "onScreenText": "自宅でもできる\n運動だから",
+      "readingOrderText": "自宅でもできる運動だから",
+      "sourceType": "画面テロップの原文",
+      "visualTextVerified": true,
+      "audioVerbatimVerified": false,
+      "factSlots": [
+        {
+          "source": "自宅でもできる運動",
+          "slot": "セルフケア指導",
+          "requires": "今回のLP等で提供確認"
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "key": "reassurance",
+      "startFrame": 1267,
+      "endFrame": 1362,
+      "sampleFrame": 1314,
+      "sampleSeconds": 43.8,
+      "role": "対応方針・配慮",
+      "requiredClinicFacts": [
+        "実際の配慮・対応方針"
+      ],
+      "onScreenText": "運動が苦手な方\n痛みが強い方でも安心",
+      "readingOrderText": "運動が苦手な方痛みが強い方でも安心",
+      "sourceType": "画面テロップの原文",
+      "visualTextVerified": true,
+      "audioVerbatimVerified": false,
+      "factSlots": [
+        {
+          "source": "運動が苦手な方・痛みが強い方でも安心",
+          "slot": "対応方針・配慮",
+          "requires": "今回の対応・調整方針。すべての強い痛みに安全と断定しない"
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "key": "offer_condition",
+      "startFrame": 1487,
+      "endFrame": 1524,
+      "sampleFrame": 1505,
+      "sampleSeconds": 50.166666666666664,
+      "role": "案内や特典の適用条件",
+      "requiredClinicFacts": [
+        "特典の適用条件"
+      ],
+      "onScreenText": "動画を見た方限定",
+      "readingOrderText": "動画を見た方限定",
+      "sourceType": "画面テロップの原文",
+      "visualTextVerified": true,
+      "audioVerbatimVerified": false,
+      "factSlots": [
+        {
+          "source": "動画を見た方限定",
+          "slot": "オファー適用条件",
+          "requires": "今回のLP等または利用者の明示指定"
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "key": "offer_price",
+      "startFrame": 1524,
+      "endFrame": 1600,
+      "sampleFrame": 1562,
+      "sampleSeconds": 52.06666666666667,
+      "role": "確認済みの価格または予約案内",
+      "requiredClinicFacts": [
+        "料金・条件・または予約先"
+      ],
+      "onScreenText": "初回価格\n1,980円",
+      "readingOrderText": "初回価格1,980円",
+      "sourceType": "画面テロップの原文",
+      "visualTextVerified": true,
+      "audioVerbatimVerified": false,
+      "factSlots": [
+        {
+          "source": "初回価格1,980円",
+          "slot": "初回料金・オファー",
+          "requires": "今回の確定情報。旧店舗価格は自動流用しない"
+        }
+      ]
+    }
+  ],
+  "unCaptionedRegion": {
+    "startFrame": 1362,
+    "endFrame": 1487,
+    "sampleFrames": [
+      1380,
+      1425,
+      1470
+    ],
+    "sampleFinding": "施術後の立位動作。3代表フレームではテロップなし。",
+    "continuousAbsenceVerified": false
+  },
+  "notes": [
+    "原文の句読点・改行は画面表示を記録。読み上げ用として自然な句読点や助詞を補う場合は編集後台本で明示。",
+    "原見本に返金保証・予約混雑・今すぐチェックしてねのテロップは含まれない。これらは今回/他の承認事例のオファー指定であり原見本とは区別。",
+    "全22cueの原文が画像から読めたことは、ナレーションを聴いて逐語確認したことや全編連続再生の完了を意味しない。"
+  ],
+  "schemaVersion": 1,
+  "sourceSite": "https://seitai-reel-library.ryo60129109.chatgpt.site/"
+}

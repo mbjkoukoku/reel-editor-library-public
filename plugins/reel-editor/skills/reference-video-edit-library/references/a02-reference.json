@@ -1,0 +1,1584 @@
+{
+  "id": "A02",
+  "version": "0.4.0",
+  "name": "院紹介・強調テロップ",
+  "canvas": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "durationFrames": 1600
+  },
+  "reference": {
+    "label": "院紹介動画.mov",
+    "durationSeconds": 53.766667,
+    "durationFrames": 1613,
+    "visualContentEndFrame": 1600,
+    "blackTailExcludedFrames": 13,
+    "matchingDraftEvidence": "same1080x1920/30fps/duration, exact closing cues/fonts/timing, matching final image placement",
+    "allSourceTextMetadataAvailable": false,
+    "flattenedTextReason": "main20 captions are baked into an imported rendered video in finalCapCut draft",
+    "referenceComposedFramesVerified": false
+  },
+  "cuts": [
+    {
+      "role": "悩みの動作",
+      "start": 0,
+      "end": 89,
+      "visualIntent": "患者の動作。施術前と判断できる証拠がなければ悩みの説明映像として扱う",
+      "cutType": "hardcut",
+      "sourceEvidence": "adjacent rendered frames inspected"
+    },
+    {
+      "role": "外観・アクセス",
+      "start": 89,
+      "end": 180,
+      "visualIntent": "院の外観から入口への動き",
+      "cutType": "hardcut",
+      "sourceEvidence": "adjacent rendered frames inspected"
+    },
+    {
+      "role": "内観・院の紹介",
+      "start": 180,
+      "end": 266,
+      "visualIntent": "受付から施術室への動き",
+      "cutType": "hardcut",
+      "sourceEvidence": "adjacent rendered frames inspected"
+    },
+    {
+      "role": "問診・相談",
+      "start": 266,
+      "end": 415,
+      "visualIntent": "施術者と患者が向き合って相談",
+      "cutType": "hardcut",
+      "sourceEvidence": "adjacent rendered frames inspected"
+    },
+    {
+      "role": "仰向けでの検査",
+      "start": 415,
+      "end": 598,
+      "visualIntent": "施術者が仰向け患者の脚を支えて検査",
+      "cutType": "hardcut",
+      "sourceEvidence": "adjacent rendered frames inspected"
+    },
+    {
+      "role": "施術の全景",
+      "start": 598,
+      "end": 676,
+      "visualIntent": "同じ検査・施術を全景で見せる",
+      "cutType": "hardcut",
+      "sourceEvidence": "adjacent rendered frames inspected"
+    },
+    {
+      "role": "施術の寄り",
+      "start": 676,
+      "end": 771,
+      "visualIntent": "施術者の顔と手、患者の脚が見える寄り",
+      "cutType": "hardcut",
+      "sourceEvidence": "adjacent rendered frames inspected"
+    },
+    {
+      "role": "運動・施術方針のイメージ",
+      "start": 771,
+      "end": 865,
+      "visualIntent": "運動を示す人物映像。参考では静止画",
+      "cutType": "hardcut",
+      "sourceEvidence": "adjacent rendered frames inspected"
+    },
+    {
+      "role": "横向きの施術",
+      "start": 865,
+      "end": 956,
+      "visualIntent": "施術者の顔と手が見える横向き施術",
+      "cutType": "hardcut",
+      "sourceEvidence": "adjacent rendered frames inspected"
+    },
+    {
+      "role": "悩みを表す補足映像",
+      "start": 956,
+      "end": 1012,
+      "visualIntent": "悩みを示す人物映像。参考では白黒の腰を押さえる静止画",
+      "cutType": "hardcut",
+      "sourceEvidence": "adjacent rendered frames inspected"
+    },
+    {
+      "role": "横向き施術と方針説明",
+      "start": 1012,
+      "end": 1207,
+      "visualIntent": "横向き施術を継続して見せる",
+      "cutType": "hardcut",
+      "sourceEvidence": "adjacent rendered frames inspected"
+    },
+    {
+      "role": "運動・セルフケア指導",
+      "start": 1207,
+      "end": 1362,
+      "visualIntent": "施術者と患者が座って脚の運動を確認",
+      "cutType": "hardcut",
+      "sourceEvidence": "adjacent rendered frames inspected"
+    },
+    {
+      "role": "施術後の動作確認",
+      "start": 1362,
+      "end": 1486,
+      "visualIntent": "患者が前屈・後屈して歩く。改善の断定はしない",
+      "cutType": "hardcut",
+      "sourceEvidence": "adjacent rendered frames inspected"
+    },
+    {
+      "role": "施術者の挨拶・案内",
+      "start": 1486,
+      "end": 1600,
+      "visualIntent": "施術者が正面で手を振る",
+      "cutType": "hardcut",
+      "sourceEvidence": "adjacent rendered frames inspected"
+    }
+  ],
+  "cues": [
+    {
+      "key": "symptom_hook",
+      "start": 0,
+      "end": 47,
+      "style": "outlined_gothic",
+      "role": "対象となる悩みの呼びかけ",
+      "requiredClinicFacts": [
+        "対象となる悩み・症状"
+      ],
+      "missingFactPolicy": "omit_or_replace_with_supported_neutral_text; never copy source-clinic claim",
+      "metrics": {
+        "fontSize": 112,
+        "linePitch": 125,
+        "centerX": 540,
+        "centerY": 1040,
+        "maxLineAdvance": 920,
+        "lineCount": 2,
+        "status": "provisional CSS-pixel seeds at1080x1920; rendered comparison required"
+      },
+      "animations": [],
+      "fontRole": "unidentifiedHeavyGothic",
+      "sampleFrame": 30,
+      "contentVerified": false,
+      "observedTextBoundsPx": {
+        "x": 147,
+        "y": 858,
+        "width": 807,
+        "height": 340
+      }
+    },
+    {
+      "key": "hook_emphasis",
+      "start": 47,
+      "end": 89,
+      "style": "orange_hook",
+      "role": "短い注目語",
+      "requiredClinicFacts": [],
+      "missingFactPolicy": "omit_or_replace_with_supported_neutral_text; never copy source-clinic claim",
+      "metrics": {
+        "fontSize": 240,
+        "linePitch": 250,
+        "centerX": 540,
+        "centerY": 970,
+        "maxLineAdvance": 780,
+        "lineCount": 1,
+        "status": "provisional CSS-pixel seeds at1080x1920; rendered comparison required"
+      },
+      "animations": [
+        {
+          "kind": "oversize_zoom_settle",
+          "durationFrames": 15,
+          "keyframeTargets": [
+            {
+              "frame": 0,
+              "scale": 4.0
+            },
+            {
+              "frame": 5,
+              "scale": 1.7
+            },
+            {
+              "frame": 10,
+              "scale": 1.1
+            },
+            {
+              "frame": 15,
+              "scale": 1.0
+            }
+          ],
+          "note": "text-only large zoom; do not zoom footage",
+          "type": "in",
+          "startFrame": 0,
+          "status": "visually reconstructed target, not exact source curve",
+          "chatcutParityVerified": false,
+          "durationEvidence": "frame-by-frame observed settle window, within about 2 frames"
+        }
+      ],
+      "fontRole": "unidentifiedHeavyGothic",
+      "sampleFrame": 75,
+      "contentVerified": false,
+      "observedTextBoundsPx": {
+        "x": 276,
+        "y": 832,
+        "width": 532,
+        "height": 256
+      }
+    },
+    {
+      "key": "access",
+      "start": 89,
+      "end": 180,
+      "style": "white_mincho_mixed",
+      "role": "店舗の地域・アクセス",
+      "requiredClinicFacts": [
+        "地域名・最寄駅・徒歩時間"
+      ],
+      "missingFactPolicy": "omit_or_replace_with_supported_neutral_text; never copy source-clinic claim",
+      "metrics": {
+        "fontSize": 134,
+        "linePitch": 152,
+        "centerX": 540,
+        "centerY": 980,
+        "maxLineAdvance": 1000,
+        "lineCount": 2,
+        "status": "provisional CSS-pixel seeds at1080x1920; rendered comparison required"
+      },
+      "animations": [
+        {
+          "kind": "slide_from_left",
+          "durationFrames": 10,
+          "visibleOffsetFrames": 2,
+          "keyframeTargets": [
+            {
+              "frame": 0,
+              "xPx": -1100
+            },
+            {
+              "frame": 2,
+              "xPx": -600
+            },
+            {
+              "frame": 7,
+              "xPx": 0
+            },
+            {
+              "frame": 10,
+              "xPx": 0
+            }
+          ],
+          "note": "stable by about frame96; keep mixed-size Mincho line layout",
+          "type": "in",
+          "startFrame": 0,
+          "status": "visually reconstructed target, not exact source curve",
+          "chatcutParityVerified": false,
+          "durationEvidence": "frame-by-frame observed settle window, within about 2 frames"
+        }
+      ],
+      "fontRole": "unidentifiedHeavyMincho",
+      "sampleFrame": 150,
+      "contentVerified": false,
+      "observedTextBoundsPx": {
+        "x": 32,
+        "y": 788,
+        "width": 916,
+        "height": 396
+      },
+      "mixedSizeLayout": {
+        "lines": [
+          {
+            "role": "最寄駅",
+            "sizeRatio": 1
+          },
+          {
+            "spans": [
+              {
+                "role": "徒歩",
+                "sizeRatio": 1.45
+              },
+              {
+                "role": "時間と補足",
+                "sizeRatio": 0.95
+              }
+            ]
+          }
+        ],
+        "status": "visual target, proportional seeds"
+      }
+    },
+    {
+      "key": "clinic_specialty",
+      "start": 180,
+      "end": 266,
+      "style": "white_mincho_mixed",
+      "role": "対象店舗の特徴と紹介",
+      "requiredClinicFacts": [
+        "店舗名・専門分野または特徴"
+      ],
+      "missingFactPolicy": "omit_or_replace_with_supported_neutral_text; never copy source-clinic claim",
+      "metrics": {
+        "fontSize": 113,
+        "linePitch": 138,
+        "centerX": 540,
+        "centerY": 930,
+        "maxLineAdvance": 1040,
+        "lineCount": 2,
+        "status": "provisional CSS-pixel seeds at1080x1920; rendered comparison required"
+      },
+      "animations": [
+        {
+          "kind": "slide_from_right",
+          "durationFrames": 11,
+          "visibleOffsetFrames": 1,
+          "keyframeTargets": [
+            {
+              "frame": 0,
+              "xPx": 1100
+            },
+            {
+              "frame": 2,
+              "xPx": 550
+            },
+            {
+              "frame": 8,
+              "xPx": 0
+            },
+            {
+              "frame": 11,
+              "xPx": 0
+            }
+          ],
+          "type": "in",
+          "startFrame": 0,
+          "status": "visually reconstructed target, not exact source curve",
+          "chatcutParityVerified": false,
+          "durationEvidence": "frame-by-frame observed settle window, within about 2 frames"
+        }
+      ],
+      "fontRole": "unidentifiedHeavyMincho",
+      "sampleFrame": 225,
+      "contentVerified": false,
+      "observedTextBoundsPx": {
+        "x": 16,
+        "y": 734,
+        "width": 1060,
+        "height": 386
+      },
+      "mixedSizeLayout": {
+        "lines": [
+          {
+            "role": "専門分野",
+            "sizeRatio": 0.85
+          },
+          {
+            "role": "院紹介",
+            "sizeRatio": 1
+          }
+        ],
+        "status": "visual target, proportional seeds"
+      }
+    },
+    {
+      "key": "practitioner_knowledge",
+      "start": 266,
+      "end": 334,
+      "style": "body_white",
+      "role": "施術者の確認済みの専門性",
+      "requiredClinicFacts": [
+        "資格・経験・専門性の根拠"
+      ],
+      "missingFactPolicy": "omit_or_replace_with_supported_neutral_text; never copy source-clinic claim",
+      "metrics": {
+        "fontSize": 100,
+        "linePitch": 120,
+        "centerX": 540,
+        "centerY": 1080,
+        "maxLineAdvance": 920,
+        "lineCount": 2,
+        "status": "provisional CSS-pixel seeds at1080x1920; rendered comparison required"
+      },
+      "animations": [],
+      "fontRole": "unidentifiedHeavyGothic",
+      "sampleFrame": 300,
+      "contentVerified": false,
+      "observedTextBoundsPx": {
+        "x": 148,
+        "y": 952,
+        "width": 824,
+        "height": 240
+      }
+    },
+    {
+      "key": "consultation",
+      "start": 334,
+      "end": 415,
+      "style": "gold_mincho",
+      "role": "問診・相談の特徴",
+      "requiredClinicFacts": [
+        "問診の方針"
+      ],
+      "missingFactPolicy": "omit_or_replace_with_supported_neutral_text; never copy source-clinic claim",
+      "metrics": {
+        "fontSize": 126,
+        "linePitch": 160,
+        "centerX": 540,
+        "centerY": 1010,
+        "maxLineAdvance": 960,
+        "lineCount": 2,
+        "status": "provisional CSS-pixel seeds at1080x1920; rendered comparison required"
+      },
+      "animations": [
+        {
+          "kind": "bright_blurred_reveal_from_right",
+          "durationFrames": 16,
+          "keyframeTargets": [
+            {
+              "frame": 0,
+              "xPx": 350,
+              "blurPx": 24,
+              "glowAlpha": 1
+            },
+            {
+              "frame": 7,
+              "xPx": 0,
+              "blurPx": 16,
+              "glowAlpha": 1
+            },
+            {
+              "frame": 12,
+              "xPx": 0,
+              "blurPx": 6,
+              "glowAlpha": 0.5
+            },
+            {
+              "frame": 16,
+              "xPx": 0,
+              "blurPx": 0,
+              "glowAlpha": 0
+            }
+          ],
+          "type": "in",
+          "startFrame": 0,
+          "status": "visually reconstructed target, not exact source curve",
+          "chatcutParityVerified": false,
+          "durationEvidence": "frame-by-frame observed settle window, within about 2 frames"
+        }
+      ],
+      "fontRole": "unidentifiedHeavyMincho",
+      "sampleFrame": 375,
+      "contentVerified": false,
+      "observedTextBoundsPx": {
+        "x": 100,
+        "y": 824,
+        "width": 892,
+        "height": 361
+      }
+    },
+    {
+      "key": "assessment_intro",
+      "start": 415,
+      "end": 475,
+      "style": "body_white",
+      "role": "検査の目的",
+      "requiredClinicFacts": [
+        "検査の目的"
+      ],
+      "missingFactPolicy": "omit_or_replace_with_supported_neutral_text; never copy source-clinic claim",
+      "metrics": {
+        "fontSize": 99,
+        "linePitch": 120,
+        "centerX": 540,
+        "centerY": 1010,
+        "maxLineAdvance": 930,
+        "lineCount": 1,
+        "status": "provisional CSS-pixel seeds at1080x1920; rendered comparison required"
+      },
+      "animations": [],
+      "fontRole": "unidentifiedHeavyGothic",
+      "sampleFrame": 450,
+      "contentVerified": false,
+      "observedTextBoundsPx": {
+        "x": 236,
+        "y": 960,
+        "width": 608,
+        "height": 112
+      }
+    },
+    {
+      "key": "assessment_method",
+      "start": 475,
+      "end": 543,
+      "style": "red_mincho",
+      "role": "検査方法の特徴",
+      "requiredClinicFacts": [
+        "実際の検査方法"
+      ],
+      "missingFactPolicy": "omit_or_replace_with_supported_neutral_text; never copy source-clinic claim",
+      "metrics": {
+        "fontSize": 112,
+        "linePitch": 140,
+        "centerX": 540,
+        "centerY": 1005,
+        "maxLineAdvance": 1000,
+        "lineCount": 1,
+        "status": "provisional CSS-pixel seeds at1080x1920; rendered comparison required"
+      },
+      "animations": [
+        {
+          "kind": "bright_blurred_reveal_left_to_right",
+          "durationFrames": 17,
+          "keyframeTargets": [
+            {
+              "frame": 0,
+              "reveal": 0.25,
+              "blurPx": 24,
+              "glowAlpha": 1
+            },
+            {
+              "frame": 8,
+              "reveal": 1,
+              "blurPx": 16,
+              "glowAlpha": 1
+            },
+            {
+              "frame": 14,
+              "reveal": 1,
+              "blurPx": 4,
+              "glowAlpha": 0.4
+            },
+            {
+              "frame": 17,
+              "reveal": 1,
+              "blurPx": 0,
+              "glowAlpha": 0
+            }
+          ],
+          "type": "in",
+          "startFrame": 0,
+          "status": "visually reconstructed target, not exact source curve",
+          "chatcutParityVerified": false,
+          "durationEvidence": "frame-by-frame observed settle window, within about 2 frames"
+        }
+      ],
+      "fontRole": "unidentifiedHeavyMincho",
+      "sampleFrame": 510,
+      "contentVerified": false,
+      "observedTextBoundsPx": {
+        "x": 56,
+        "y": 936,
+        "width": 980,
+        "height": 140
+      }
+    },
+    {
+      "key": "assessment_summary",
+      "start": 543,
+      "end": 599,
+      "style": "gold_red_mincho",
+      "role": "検査の説明を短く強調",
+      "requiredClinicFacts": [
+        "検査で確認する内容"
+      ],
+      "missingFactPolicy": "omit_or_replace_with_supported_neutral_text; never copy source-clinic claim",
+      "metrics": {
+        "fontSize": 166,
+        "linePitch": 180,
+        "centerX": 540,
+        "centerY": 990,
+        "maxLineAdvance": 980,
+        "lineCount": 1,
+        "status": "provisional CSS-pixel seeds at1080x1920; rendered comparison required"
+      },
+      "animations": [
+        {
+          "kind": "oversize_zoom_settle",
+          "durationFrames": 12,
+          "keyframeTargets": [
+            {
+              "frame": 0,
+              "scale": 4.0
+            },
+            {
+              "frame": 5,
+              "scale": 1.8
+            },
+            {
+              "frame": 9,
+              "scale": 1.08
+            },
+            {
+              "frame": 12,
+              "scale": 1.0
+            }
+          ],
+          "type": "in",
+          "startFrame": 0,
+          "status": "visually reconstructed target, not exact source curve",
+          "chatcutParityVerified": false,
+          "durationEvidence": "frame-by-frame observed settle window, within about 2 frames"
+        }
+      ],
+      "fontRole": "unidentifiedHeavyMincho",
+      "sampleFrame": 570,
+      "contentVerified": false,
+      "observedTextBoundsPx": {
+        "x": 100,
+        "y": 875,
+        "width": 909,
+        "height": 218
+      }
+    },
+    {
+      "key": "difference",
+      "start": 599,
+      "end": 676,
+      "style": "body_white",
+      "role": "施術方針の導入",
+      "requiredClinicFacts": [
+        "店舗の特徴"
+      ],
+      "missingFactPolicy": "omit_or_replace_with_supported_neutral_text; never copy source-clinic claim",
+      "metrics": {
+        "fontSize": 99,
+        "linePitch": 120,
+        "centerX": 540,
+        "centerY": 1010,
+        "maxLineAdvance": 940,
+        "lineCount": 1,
+        "status": "provisional CSS-pixel seeds at1080x1920; rendered comparison required"
+      },
+      "animations": [],
+      "fontRole": "unidentifiedHeavyGothic",
+      "sampleFrame": 645,
+      "contentVerified": false,
+      "observedTextBoundsPx": {
+        "x": 160,
+        "y": 956,
+        "width": 760,
+        "height": 116
+      }
+    },
+    {
+      "key": "approach_context",
+      "start": 676,
+      "end": 771,
+      "style": "body_white",
+      "role": "施術方針を説明する背景",
+      "requiredClinicFacts": [
+        "施術方針の説明"
+      ],
+      "missingFactPolicy": "omit_or_replace_with_supported_neutral_text; never copy source-clinic claim",
+      "metrics": {
+        "fontSize": 99,
+        "linePitch": 120,
+        "centerX": 540,
+        "centerY": 1285,
+        "maxLineAdvance": 970,
+        "lineCount": 3,
+        "status": "provisional CSS-pixel seeds at1080x1920; rendered comparison required"
+      },
+      "animations": [],
+      "fontRole": "unidentifiedHeavyGothic",
+      "sampleFrame": 720,
+      "contentVerified": false,
+      "observedTextBoundsPx": {
+        "x": 104,
+        "y": 1090,
+        "width": 873,
+        "height": 376
+      }
+    },
+    {
+      "key": "approach_emphasis",
+      "start": 771,
+      "end": 865,
+      "style": "yellow_red_gothic",
+      "role": "対象店舗で確認できる施術方針",
+      "requiredClinicFacts": [
+        "施術方法の裏付け"
+      ],
+      "missingFactPolicy": "omit_or_replace_with_supported_neutral_text; never copy source-clinic claim",
+      "metrics": {
+        "fontSize": 128,
+        "linePitch": 164,
+        "centerX": 540,
+        "centerY": 980,
+        "maxLineAdvance": 980,
+        "lineCount": 3,
+        "status": "provisional CSS-pixel seeds at1080x1920; rendered comparison required"
+      },
+      "animations": [
+        {
+          "kind": "bright_blurred_reveal_from_right",
+          "durationFrames": 19,
+          "keyframeTargets": [
+            {
+              "frame": 0,
+              "xPx": 420,
+              "blurPx": 24,
+              "glowAlpha": 1
+            },
+            {
+              "frame": 8,
+              "xPx": 0,
+              "blurPx": 18,
+              "glowAlpha": 1
+            },
+            {
+              "frame": 14,
+              "xPx": 0,
+              "blurPx": 8,
+              "glowAlpha": 0.5
+            },
+            {
+              "frame": 19,
+              "xPx": 0,
+              "blurPx": 0,
+              "glowAlpha": 0
+            }
+          ],
+          "type": "in",
+          "startFrame": 0,
+          "status": "visually reconstructed target, not exact source curve",
+          "chatcutParityVerified": false,
+          "durationEvidence": "frame-by-frame observed settle window, within about 2 frames"
+        }
+      ],
+      "fontRole": "unidentifiedHeavyGothic",
+      "sampleFrame": 825,
+      "contentVerified": false,
+      "observedTextBoundsPx": {
+        "x": 100,
+        "y": 706,
+        "width": 897,
+        "height": 536
+      }
+    },
+    {
+      "key": "treatment_detail",
+      "start": 865,
+      "end": 900,
+      "style": "body_white",
+      "role": "施術中の説明・前半",
+      "requiredClinicFacts": [
+        "施術説明"
+      ],
+      "missingFactPolicy": "omit_or_replace_with_supported_neutral_text; never copy source-clinic claim",
+      "metrics": {
+        "fontSize": 99,
+        "linePitch": 120,
+        "centerX": 540,
+        "centerY": 1010,
+        "maxLineAdvance": 940,
+        "lineCount": 1,
+        "status": "provisional CSS-pixel seeds at1080x1920; rendered comparison required"
+      },
+      "animations": [],
+      "fontRole": "unidentifiedHeavyGothic",
+      "sampleFrame": 885,
+      "contentVerified": false,
+      "observedTextBoundsPx": {
+        "x": 252,
+        "y": 958,
+        "width": 581,
+        "height": 115
+      }
+    },
+    {
+      "key": "treatment_reason",
+      "start": 900,
+      "end": 956,
+      "style": "body_white",
+      "role": "施術中の説明・後半",
+      "requiredClinicFacts": [
+        "施術方針の根拠"
+      ],
+      "missingFactPolicy": "omit_or_replace_with_supported_neutral_text; never copy source-clinic claim",
+      "metrics": {
+        "fontSize": 99,
+        "linePitch": 120,
+        "centerX": 540,
+        "centerY": 1070,
+        "maxLineAdvance": 940,
+        "lineCount": 2,
+        "status": "provisional CSS-pixel seeds at1080x1920; rendered comparison required"
+      },
+      "animations": [],
+      "fontRole": "unidentifiedHeavyGothic",
+      "sampleFrame": 930,
+      "contentVerified": false,
+      "observedTextBoundsPx": {
+        "x": 196,
+        "y": 964,
+        "width": 680,
+        "height": 238
+      }
+    },
+    {
+      "key": "concern_insert",
+      "start": 956,
+      "end": 1012,
+      "style": "body_white",
+      "role": "方針に関連する悩みの説明",
+      "requiredClinicFacts": [
+        "説明に対応する悩み"
+      ],
+      "missingFactPolicy": "omit_or_replace_with_supported_neutral_text; never copy source-clinic claim",
+      "metrics": {
+        "fontSize": 99,
+        "linePitch": 120,
+        "centerX": 540,
+        "centerY": 960,
+        "maxLineAdvance": 940,
+        "lineCount": 2,
+        "status": "provisional CSS-pixel seeds at1080x1920; rendered comparison required"
+      },
+      "animations": [],
+      "fontRole": "unidentifiedHeavyGothic",
+      "sampleFrame": 975,
+      "contentVerified": false,
+      "observedTextBoundsPx": {
+        "x": 196,
+        "y": 840,
+        "width": 708,
+        "height": 241
+      }
+    },
+    {
+      "key": "treatment_policy",
+      "start": 1012,
+      "end": 1067,
+      "style": "body_white_large",
+      "role": "対象店舗の施術方針を3行で",
+      "requiredClinicFacts": [
+        "施術方針"
+      ],
+      "missingFactPolicy": "omit_or_replace_with_supported_neutral_text; never copy source-clinic claim",
+      "metrics": {
+        "fontSize": 118,
+        "linePitch": 142,
+        "centerX": 540,
+        "centerY": 990,
+        "maxLineAdvance": 950,
+        "lineCount": 3,
+        "status": "provisional CSS-pixel seeds at1080x1920; rendered comparison required"
+      },
+      "animations": [],
+      "fontRole": "unidentifiedHeavyGothic",
+      "sampleFrame": 1035,
+      "contentVerified": false,
+      "observedTextBoundsPx": {
+        "x": 192,
+        "y": 796,
+        "width": 708,
+        "height": 412
+      }
+    },
+    {
+      "key": "whole_body",
+      "start": 1067,
+      "end": 1156,
+      "style": "pale_yellow_mincho",
+      "role": "対象店舗の追加の特徴",
+      "requiredClinicFacts": [
+        "追加の施術内容"
+      ],
+      "missingFactPolicy": "omit_or_replace_with_supported_neutral_text; never copy source-clinic claim",
+      "metrics": {
+        "fontSize": 130,
+        "linePitch": 155,
+        "centerX": 540,
+        "centerY": 960,
+        "maxLineAdvance": 1000,
+        "lineCount": 3,
+        "status": "provisional CSS-pixel seeds at1080x1920; rendered comparison required"
+      },
+      "animations": [],
+      "fontRole": "unidentifiedMincho",
+      "sampleFrame": 1110,
+      "contentVerified": false,
+      "observedTextBoundsPx": {
+        "x": 144,
+        "y": 732,
+        "width": 837,
+        "height": 474
+      }
+    },
+    {
+      "key": "benefit_emphasis",
+      "start": 1156,
+      "end": 1207,
+      "style": "gold_black_gothic",
+      "role": "確認済みの方針・特徴を短く強調",
+      "requiredClinicFacts": [
+        "誇張しない確認済みの特徴"
+      ],
+      "missingFactPolicy": "omit_or_replace_with_supported_neutral_text; never copy source-clinic claim",
+      "metrics": {
+        "fontSize": 202,
+        "linePitch": 212,
+        "centerX": 540,
+        "centerY": 985,
+        "maxLineAdvance": 1000,
+        "lineCount": 1,
+        "status": "provisional CSS-pixel seeds at1080x1920; rendered comparison required"
+      },
+      "animations": [
+        {
+          "kind": "drop_and_fade",
+          "durationFrames": 8,
+          "keyframeTargets": [
+            {
+              "frame": 0,
+              "yPx": -180,
+              "opacity": 0.2
+            },
+            {
+              "frame": 4,
+              "yPx": -70,
+              "opacity": 0.7
+            },
+            {
+              "frame": 8,
+              "yPx": 0,
+              "opacity": 1
+            }
+          ],
+          "type": "in",
+          "startFrame": 0,
+          "status": "visually reconstructed target, not exact source curve",
+          "chatcutParityVerified": false,
+          "durationEvidence": "frame-by-frame observed settle window, within about 2 frames"
+        }
+      ],
+      "fontRole": "unidentifiedHeavyGothic",
+      "sampleFrame": 1185,
+      "contentVerified": false,
+      "observedTextBoundsPx": {
+        "x": 99,
+        "y": 837,
+        "width": 886,
+        "height": 275
+      }
+    },
+    {
+      "key": "home_exercise",
+      "start": 1207,
+      "end": 1267,
+      "style": "body_white",
+      "role": "セルフケア指導の内容",
+      "requiredClinicFacts": [
+        "セルフケア・運動指導の有無"
+      ],
+      "missingFactPolicy": "omit_or_replace_with_supported_neutral_text; never copy source-clinic claim",
+      "metrics": {
+        "fontSize": 99,
+        "linePitch": 120,
+        "centerX": 540,
+        "centerY": 1280,
+        "maxLineAdvance": 940,
+        "lineCount": 2,
+        "status": "provisional CSS-pixel seeds at1080x1920; rendered comparison required"
+      },
+      "animations": [],
+      "fontRole": "unidentifiedHeavyGothic",
+      "sampleFrame": 1230,
+      "contentVerified": false,
+      "observedTextBoundsPx": {
+        "x": 208,
+        "y": 1164,
+        "width": 668,
+        "height": 232
+      }
+    },
+    {
+      "key": "reassurance",
+      "start": 1267,
+      "end": 1362,
+      "style": "cream_red_mincho",
+      "role": "対応方針・配慮",
+      "requiredClinicFacts": [
+        "実際の配慮・対応方針"
+      ],
+      "missingFactPolicy": "omit_or_replace_with_supported_neutral_text; never copy source-clinic claim",
+      "metrics": {
+        "fontSize": 113,
+        "linePitch": 140,
+        "centerX": 540,
+        "centerY": 1330,
+        "maxLineAdvance": 1040,
+        "lineCount": 2,
+        "status": "provisional CSS-pixel seeds at1080x1920; rendered comparison required"
+      },
+      "animations": [
+        {
+          "kind": "bright_blurred_reveal_from_right",
+          "durationFrames": 19,
+          "keyframeTargets": [
+            {
+              "frame": 0,
+              "xPx": 350,
+              "blurPx": 20,
+              "opacity": 0.25
+            },
+            {
+              "frame": 8,
+              "xPx": 0,
+              "blurPx": 15,
+              "opacity": 1
+            },
+            {
+              "frame": 14,
+              "xPx": 0,
+              "blurPx": 6,
+              "opacity": 1
+            },
+            {
+              "frame": 19,
+              "xPx": 0,
+              "blurPx": 0,
+              "opacity": 1
+            }
+          ],
+          "type": "in",
+          "startFrame": 0,
+          "status": "visually reconstructed target, not exact source curve",
+          "chatcutParityVerified": false,
+          "durationEvidence": "frame-by-frame observed settle window, within about 2 frames"
+        }
+      ],
+      "fontRole": "unidentifiedHeavyMincho",
+      "sampleFrame": 1320,
+      "contentVerified": false,
+      "observedTextBoundsPx": {
+        "x": 28,
+        "y": 1186,
+        "width": 1024,
+        "height": 290
+      }
+    },
+    {
+      "key": "offer_condition",
+      "start": 1487,
+      "end": 1524,
+      "style": "closing_white",
+      "role": "案内や特典の適用条件",
+      "requiredClinicFacts": [
+        "特典の適用条件"
+      ],
+      "missingFactPolicy": "omit_or_replace_with_supported_neutral_text; never copy source-clinic claim",
+      "metrics": {
+        "fontSize": 107,
+        "linePitch": 125,
+        "centerX": 540,
+        "centerY": 1013.5,
+        "maxLineAdvance": 980,
+        "lineCount": 1,
+        "status": "provisional CSS-pixel seeds at1080x1920; rendered comparison required"
+      },
+      "animations": [],
+      "fontRole": "closingWhite",
+      "sampleFrame": 1500,
+      "contentVerified": false,
+      "observedTextBoundsPx": {
+        "x": 112,
+        "y": 960,
+        "width": 860,
+        "height": 116
+      },
+      "postscriptName": "HiraginoSans-W7",
+      "originalCapCut": {
+        "fontSize": 14,
+        "scale": 1.1679052224009692,
+        "transform": {
+          "x": 0,
+          "y": -0.05573876832704783
+        },
+        "lineSpacing": 0.02,
+        "letterSpacing": 0,
+        "targetStartMicroseconds": 49566666,
+        "targetDurationMicroseconds": 1233334,
+        "activeStyle": {
+          "fontRole": "closingWhite",
+          "postscriptName": "HiraginoSans-W7",
+          "fontIdentity": "matching CapCut draft identifies TTC path; first face PostScript name verified",
+          "weightAppearance": "W7",
+          "fill": "#ffffff",
+          "shadow": {
+            "color": "#000000",
+            "sourceDistance": 8,
+            "sourceDiffuse": 0.00862096529453993,
+            "sourceAlpha": 0.8351210355758667
+          },
+          "appearanceSource": "original CapCut active content.styles",
+          "renderParityVerified": false
+        }
+      }
+    },
+    {
+      "key": "offer_price",
+      "start": 1524,
+      "end": 1600,
+      "style": "closing_orange",
+      "role": "確認済みの価格または予約案内",
+      "requiredClinicFacts": [
+        "料金・条件・または予約先"
+      ],
+      "missingFactPolicy": "omit_or_replace_with_supported_neutral_text; never copy source-clinic claim",
+      "metrics": {
+        "fontSize": 196,
+        "linePitch": 258,
+        "centerX": 540,
+        "centerY": 896.2,
+        "maxLineAdvance": 980,
+        "lineCount": 2,
+        "status": "provisional CSS-pixel seeds at1080x1920; rendered comparison required"
+      },
+      "animations": [
+        {
+          "kind": "chroma_zoom_settle",
+          "sourceName": "クロマ拡大縮小",
+          "durationFrames": 15,
+          "durationEvidence": "original CapCut metadata 500000 microseconds",
+          "visibleOffsetFrames": 1,
+          "keyframeTargets": [
+            {
+              "frame": 0,
+              "opacity": 0,
+              "scale": 3.0,
+              "rgbSplitPx": 20
+            },
+            {
+              "frame": 1,
+              "opacity": 1,
+              "scale": 3.0,
+              "rgbSplitPx": 20
+            },
+            {
+              "frame": 5,
+              "opacity": 1,
+              "scale": 1.65,
+              "rgbSplitPx": 13
+            },
+            {
+              "frame": 9,
+              "opacity": 1,
+              "scale": 1,
+              "rgbSplitPx": 3
+            },
+            {
+              "frame": 15,
+              "opacity": 1,
+              "scale": 1,
+              "rgbSplitPx": 0
+            }
+          ],
+          "type": "in",
+          "startFrame": 0,
+          "status": "visually reconstructed target, not exact source curve",
+          "chatcutParityVerified": false
+        }
+      ],
+      "fontRole": "closingOrange",
+      "sampleFrame": 1560,
+      "contentVerified": false,
+      "observedTextBoundsPx": {
+        "x": 100,
+        "y": 676,
+        "width": 884,
+        "height": 480
+      },
+      "postscriptName": "HiraginoSans-W8",
+      "originalCapCut": {
+        "fontSize": 25,
+        "scale": 1.1679052224009692,
+        "transform": {
+          "x": 0,
+          "y": 0.06645776223609545
+        },
+        "lineSpacing": 0.17,
+        "letterSpacing": 0,
+        "targetStartMicroseconds": 50800000,
+        "targetDurationMicroseconds": 2533333,
+        "activeStyle": {
+          "fontRole": "closingOrange",
+          "postscriptName": "HiraginoSans-W8",
+          "fontIdentity": "matching CapCut draft identifies TTC path; first face PostScript name verified",
+          "weightAppearance": "W8",
+          "fill": "#e77400",
+          "strokeLayers": [
+            {
+              "color": "#ffffff",
+              "sourceWidth": 0.07577164471149445
+            }
+          ],
+          "shadow": {
+            "color": "#f5a300",
+            "sourceDistance": 0,
+            "sourceDiffuse": 0.02500000037252903
+          },
+          "appearanceSource": "original CapCut active content.styles",
+          "renderParityVerified": false
+        }
+      }
+    }
+  ],
+  "typography": {
+    "bodyFont": null,
+    "bodyPostscriptName": null,
+    "introFont": null,
+    "introPostscriptName": null,
+    "fontIdentity": "mainfonts unidentified from flattened render; closingfonts identified in matchingdraft",
+    "defaultFidelity": "unidentified-font-requires-explicit-approval-for-approximation",
+    "maxLineAdvance": 1000,
+    "color": "#ffffff",
+    "styles": {
+      "outlined_gothic": {
+        "fontRole": "unidentifiedHeavyGothic",
+        "weightAppearance": "heavy",
+        "fill": "#ffffff",
+        "strokeLayers": [
+          {
+            "color": "#161616",
+            "widthPx": 11
+          },
+          {
+            "color": "#d6d6d6",
+            "widthPx": 3
+          }
+        ],
+        "shadow": {
+          "color": "#000000",
+          "blurPx": 5,
+          "xPx": 3,
+          "yPx": 5
+        },
+        "appearanceSource": "rendered reference visual measurement; pixel colors and widths are provisional rendering seeds",
+        "renderParityVerified": false
+      },
+      "orange_hook": {
+        "fontRole": "unidentifiedHeavyGothic",
+        "weightAppearance": "heavy italic",
+        "fillGradient": [
+          "#ff2100",
+          "#ff9c00"
+        ],
+        "strokeLayers": [
+          {
+            "color": "#ffffff",
+            "widthPx": 15
+          }
+        ],
+        "shadow": {
+          "color": "#404040",
+          "blurPx": 8,
+          "xPx": 3,
+          "yPx": 6
+        },
+        "appearanceSource": "rendered reference visual measurement; pixel colors and widths are provisional rendering seeds",
+        "renderParityVerified": false
+      },
+      "white_mincho_mixed": {
+        "fontRole": "unidentifiedHeavyMincho",
+        "weightAppearance": "bold with slanted/variable-size glyphs",
+        "fill": "#ffffff",
+        "shadow": {
+          "color": "#000000",
+          "blurPx": 14,
+          "xPx": 5,
+          "yPx": 6
+        },
+        "mixedGlyphSizes": true,
+        "appearanceSource": "rendered reference visual measurement; pixel colors and widths are provisional rendering seeds",
+        "renderParityVerified": false
+      },
+      "body_white": {
+        "fontRole": "unidentifiedHeavyGothic",
+        "weightAppearance": "heavy",
+        "fill": "#ffffff",
+        "strokeLayers": [
+          {
+            "color": "#292929",
+            "widthPx": 5
+          }
+        ],
+        "shadow": {
+          "color": "#000000",
+          "blurPx": 7,
+          "xPx": 3,
+          "yPx": 6
+        },
+        "appearanceSource": "rendered reference visual measurement; pixel colors and widths are provisional rendering seeds",
+        "renderParityVerified": false
+      },
+      "body_white_large": {
+        "fontRole": "unidentifiedHeavyGothic",
+        "weightAppearance": "heavy",
+        "fill": "#ffffff",
+        "strokeLayers": [
+          {
+            "color": "#292929",
+            "widthPx": 5
+          }
+        ],
+        "shadow": {
+          "color": "#000000",
+          "blurPx": 7,
+          "xPx": 3,
+          "yPx": 6
+        },
+        "appearanceSource": "rendered reference visual measurement; pixel colors and widths are provisional rendering seeds",
+        "renderParityVerified": false
+      },
+      "gold_mincho": {
+        "fontRole": "unidentifiedHeavyMincho",
+        "weightAppearance": "bold italic",
+        "fill": "#efd44a",
+        "strokeLayers": [
+          {
+            "color": "#fffbd1",
+            "widthPx": 5
+          }
+        ],
+        "shadow": {
+          "color": "#b58d00",
+          "blurPx": 8,
+          "xPx": 4,
+          "yPx": 5
+        },
+        "appearanceSource": "rendered reference visual measurement; pixel colors and widths are provisional rendering seeds",
+        "renderParityVerified": false
+      },
+      "red_mincho": {
+        "fontRole": "unidentifiedHeavyMincho",
+        "weightAppearance": "bold italic",
+        "fill": "#ef0000",
+        "strokeLayers": [
+          {
+            "color": "#ffffff",
+            "widthPx": 8
+          }
+        ],
+        "shadow": {
+          "color": "#ffffff",
+          "blurPx": 14,
+          "xPx": 0,
+          "yPx": 0
+        },
+        "appearanceSource": "rendered reference visual measurement; pixel colors and widths are provisional rendering seeds",
+        "renderParityVerified": false
+      },
+      "gold_red_mincho": {
+        "fontRole": "unidentifiedHeavyMincho",
+        "weightAppearance": "bold italic",
+        "fillGradient": [
+          "#fff868",
+          "#ffbe27"
+        ],
+        "strokeLayers": [
+          {
+            "color": "#a91c00",
+            "widthPx": 9
+          },
+          {
+            "color": "#291a0a",
+            "widthPx": 14
+          }
+        ],
+        "shadow": {
+          "color": "#1c0c00",
+          "blurPx": 9,
+          "xPx": 4,
+          "yPx": 6
+        },
+        "appearanceSource": "rendered reference visual measurement; pixel colors and widths are provisional rendering seeds",
+        "renderParityVerified": false
+      },
+      "yellow_red_gothic": {
+        "fontRole": "unidentifiedHeavyGothic",
+        "weightAppearance": "heavy",
+        "fill": "#fffc00",
+        "strokeLayers": [
+          {
+            "color": "#cb0000",
+            "widthPx": 9
+          },
+          {
+            "color": "#200c00",
+            "widthPx": 14
+          }
+        ],
+        "appearanceSource": "rendered reference visual measurement; pixel colors and widths are provisional rendering seeds",
+        "renderParityVerified": false
+      },
+      "pale_yellow_mincho": {
+        "fontRole": "unidentifiedMincho",
+        "weightAppearance": "medium-bold",
+        "fill": "#fcff9c",
+        "strokeLayers": [
+          {
+            "color": "#101010",
+            "widthPx": 7
+          }
+        ],
+        "shadow": {
+          "color": "#000000",
+          "blurPx": 7,
+          "xPx": 3,
+          "yPx": 5
+        },
+        "appearanceSource": "rendered reference visual measurement; pixel colors and widths are provisional rendering seeds",
+        "renderParityVerified": false
+      },
+      "gold_black_gothic": {
+        "fontRole": "unidentifiedHeavyGothic",
+        "weightAppearance": "very heavy",
+        "fillGradient": [
+          "#fffba6",
+          "#ffc234",
+          "#ffe791"
+        ],
+        "strokeLayers": [
+          {
+            "color": "#000000",
+            "widthPx": 17
+          },
+          {
+            "color": "#fff7b5",
+            "widthPx": 23
+          }
+        ],
+        "shadow": {
+          "color": "#000000",
+          "blurPx": 5,
+          "xPx": 0,
+          "yPx": 5
+        },
+        "appearanceSource": "rendered reference visual measurement; pixel colors and widths are provisional rendering seeds",
+        "renderParityVerified": false
+      },
+      "cream_red_mincho": {
+        "fontRole": "unidentifiedHeavyMincho",
+        "weightAppearance": "bold italic",
+        "fill": "#fff1b5",
+        "strokeLayers": [
+          {
+            "color": "#ac3521",
+            "widthPx": 5
+          }
+        ],
+        "shadow": {
+          "color": "#e84d32",
+          "blurPx": 12,
+          "xPx": 0,
+          "yPx": 0
+        },
+        "appearanceSource": "rendered reference visual measurement; pixel colors and widths are provisional rendering seeds",
+        "renderParityVerified": false
+      },
+      "closing_white": {
+        "fontRole": "closingWhite",
+        "postscriptName": "HiraginoSans-W7",
+        "fontIdentity": "matching CapCut draft identifies TTC path; first face PostScript name verified",
+        "weightAppearance": "W7",
+        "fill": "#ffffff",
+        "shadow": {
+          "color": "#000000",
+          "sourceDistance": 8,
+          "sourceDiffuse": 0.00862096529453993,
+          "sourceAlpha": 0.8351210355758667
+        },
+        "appearanceSource": "original CapCut active content.styles",
+        "renderParityVerified": false
+      },
+      "closing_orange": {
+        "fontRole": "closingOrange",
+        "postscriptName": "HiraginoSans-W8",
+        "fontIdentity": "matching CapCut draft identifies TTC path; first face PostScript name verified",
+        "weightAppearance": "W8",
+        "fill": "#e77400",
+        "strokeLayers": [
+          {
+            "color": "#ffffff",
+            "sourceWidth": 0.07577164471149445
+          }
+        ],
+        "shadow": {
+          "color": "#f5a300",
+          "sourceDistance": 0,
+          "sourceDiffuse": 0.02500000037252903
+        },
+        "appearanceSource": "original CapCut active content.styles",
+        "renderParityVerified": false
+      }
+    },
+    "styleFonts": {
+      "outlined_gothic": null,
+      "orange_hook": null,
+      "white_mincho_mixed": null,
+      "body_white": null,
+      "body_white_large": null,
+      "gold_mincho": null,
+      "red_mincho": null,
+      "gold_red_mincho": null,
+      "yellow_red_gothic": null,
+      "pale_yellow_mincho": null,
+      "gold_black_gothic": null,
+      "cream_red_mincho": null,
+      "closing_white": "HiraginoSans-W7",
+      "closing_orange": "HiraginoSans-W8"
+    },
+    "confirmedClosingFonts": [
+      "HiraginoSans-W7",
+      "HiraginoSans-W8"
+    ],
+    "fontFilesBundled": false,
+    "externalUseRights": "font licenses must permit renderer use; do not distribute macOS systemfont files",
+    "renderCalibrationPending": true,
+    "strokeOrder": "eachstyle layers describe visible rings; renderer must validate painter order rather than assume listorder"
+  },
+  "band": null,
+  "decorations": {},
+  "speechCaptionCueKey": "practitioner_knowledge",
+  "visualSelection": {
+    "practitionerRequired": true,
+    "actualTreatmentRequired": true,
+    "watchSelectedRange": true,
+    "sampleStartMiddleEnd": true,
+    "unoccupiedAllowedRoles": [
+      "外観・アクセス",
+      "内観・院の紹介"
+    ],
+    "maxUnoccupiedShotSeconds": 3.2,
+    "maxUnoccupiedRunSeconds": 6.2,
+    "limitsMeaning": "A02 reference contains5.9seconds of intentional cliniclocation tour; never use emptyroom footage as filler elsewhere",
+    "allowPatientOnlyRoles": [
+      "悩みの動作",
+      "施術後の動作確認"
+    ],
+    "optionalLicensedImageRoles": [
+      "運動・施術方針のイメージ",
+      "悩みを表す補足映像"
+    ],
+    "imageFallback": "use supplied real practitioner/treatment footage or omit insert; never silently obtain/generate stockphotos",
+    "brightness": "minor correction preserving skin tones"
+  },
+  "durationPolicy": {
+    "fixedLengthRequired": false,
+    "preserveRoleOrder": true,
+    "retimeCaptionsToChosenShotsOrSourceSpeech": true,
+    "doNotCopyBlackTail": true
+  },
+  "audio": {
+    "generateAiVoice": false,
+    "addBgm": false,
+    "referenceAudioIsForViewingOnly": true,
+    "speechMode": "retain source speech; captions verbatim"
+  },
+  "verification": {
+    "cutBoundariesFrameChecked": true,
+    "captionBoundariesFrameChecked": true,
+    "allFontsIdentified": false,
+    "exactClosingFontMetadata": true,
+    "referenceComposedFramesVerified": false,
+    "chatcutParityVerified": false,
+    "exportVerified": false,
+    "animationKeyframes": "reconstruction targets, must compare preview beginning/middle/end and transitionframes"
+  }
+}

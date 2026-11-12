@@ -1,0 +1,313 @@
+{
+  "id": "A05",
+  "version": "0.7.0",
+  "name": "施術前・施術後のビフォーアフター",
+  "executionRoute": "before_after_comparison",
+  "workflow": "before_after_with_lp",
+  "canvas": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30
+  },
+  "input": {
+    "required": [
+      "current clinic LP or official homepage URL for the caption/layout draft",
+      "current before and after footage for editing after the draft is confirmed"
+    ],
+    "optional": [
+      "explicit before/after file or time mapping",
+      "patient-specific confirmed short description"
+    ],
+    "lpRequired": true,
+    "newLongNarrationScriptRequired": false,
+    "missingInputAction": "Start the short text/layout draft with the current LP only. After confirmation, ask for current before/after footage. Once footage exists, ask only for missing or ambiguous phase mapping; never use the reference as new footage.",
+    "patternRegistrationMayProceedWithoutCurrentLp": true
+  },
+  "flow": [
+    "First receive the request and current LP; prepare only a short screen-text/layout draft containing clinic name, LP-derived palette and before/after labels. The new patient-specific outcome is optional and requires actual confirmation; do not invent it from the LP.",
+    "Show that short draft for confirmation, then explicitly ask for footage clearly labeled before or after. Do not require footage to prepare the initial LP-only draft.",
+    "Inspect the uploaded footage, confirm the actual before/after ranges and comparable actions. Resolve any phase ambiguity before labeling the video; preserve meaningful movement.",
+    "Edit the current footage, add tracking pixel mosaic and editable overlays using the confirmed draft. An explicit prior instruction authorizing that draft remains authoritative.",
+    "Verify face coverage throughout the finished result, label/cut alignment, comparable action visibility, text and audio; export locally only when requested."
+  ],
+  "comparison": {
+    "defaultLayout": "sequential_before_then_after",
+    "labels": {
+      "before": "施術前",
+      "after": "施術後",
+      "visibleForEntireRespectiveRange": true,
+      "switchAtActualPictureCut": true
+    },
+    "mappingEvidence": [
+      "explicit filenames or user-provided numbers with stated meaning",
+      "source labels or filming notes",
+      "user-confirmed timestamp mapping"
+    ],
+    "neverInferBeforeAfterFrom": [
+      "gait quality",
+      "appearance of pain",
+      "clinic color",
+      "file ordering alone"
+    ],
+    "missingOrAmbiguousMapping": "Present the candidate ranges and ask for the actual before/after mapping before applying clinical phase labels.",
+    "showComparableAction": true,
+    "preserveWholeActionAndFeet": true,
+    "keepOriginalSpeed": true,
+    "doNotCreateApparentImprovementBySpeedCropOrMirroring": true,
+    "keepChronologicalActionWithinEachPhase": true,
+    "splitScreen": "Optional only when the current material permits a clear comparison of the same action and the user-approved plan calls for it. Do not force split screen to imitate this sequential reference.",
+    "cuts": "Remove setup/redundant dead time while preserving complete starts, steps/turns or range-of-motion demonstrations. Silence alone is not permission to remove examination or movement.",
+    "duration": "Choose enough current before and after action to compare. Do not impose47.8seconds, a24.3second split or the reference cut count."
+  },
+  "branding": {
+    "clinicNameSource": "current LP official name; verify logo text vs page title when different",
+    "paletteSource": "current LP main brand color, accent and neutral text/background colors",
+    "applyTo": [
+      "clinic banner",
+      "optional verified callout accent",
+      "small comparison accents where useful"
+    ],
+    "referenceClinicNameIsSampleOnly": true,
+    "referenceGreenIsNotDefaultForOtherClinics": true,
+    "legibility": "Use a readable light/dark text pairing and outline as needed; do not sacrifice readability to reproduce a pale LP color.",
+    "doNotRecolorPatientSkinOrFootageToBrand": true,
+    "lightAdjustment": "Only mild matched exposure/white balance if needed; do not make after footage look improved through unequal grading."
+  },
+  "captions": {
+    "type": "short_comparison_labels_and_optional_confirmed_callout",
+    "verbatimSpeechCaptionsRequiredByPattern": false,
+    "defaultClinicBanner": true,
+    "defaultPhaseLabels": true,
+    "referenceOutcomeClaimIsNotTemplateText": true,
+    "outcomeSource": "Only the current patient statement or explicit user-confirmed fact; an LP service claim does not establish this patient outcome.",
+    "ifOutcomeUnconfirmed": "Use neutral labels only, or omit the optional callout. Do not copy 痛みなく／スタスタ／楽に歩ける！ into another patient video.",
+    "planPreviewRequired": true,
+    "editableText": true,
+    "typoRevision": "Update only the relevant text/layout; preserve approved cuts, masks and timing. Regenerate glyph paths if the selected renderer requires them."
+  },
+  "facePrivacy": {
+    "required": true,
+    "requestedEffect": "tracking_pixel_mosaic",
+    "referenceObservedEffect": "blurred circular masked compound, not pixel mosaic",
+    "scope": [
+      "patient direct face",
+      "patient profile/turning face",
+      "patient mirror/reflection face"
+    ],
+    "tracking": "Follow each visible face throughout each selected shot; add coverage margin for motion and frame entry/exit. Treat reflected faces as separate tracked regions when needed.",
+    "minimumCoverage": "Eyes, nose, mouth and face outline must remain indistinguishable; use sufficient block size for the actual output resolution.",
+    "doNotUseBannerOrCaptionAsOnlyMask": true,
+    "doNotReuseReferenceMaskCoordinatesOnNewPatient": true,
+    "keepBodyAndActionVisible": true,
+    "verification": "Review every selected shot for the complete duration at final output size, with frame inspection at every cut, face entry/exit, turn, occlusion and tracker/keyframe transition. If any interval is not verified, do not describe the video as privacy-complete.",
+    "uncertainCoverageAction": "Enlarge or add a track and re-check; if reliable coverage cannot be produced with current tools, report the exact pending interval and do not deliver an unmasked final.",
+    "execution": "Use the current connected tool capability, not invented APIs. If masking requires a local derived media pass, preserve original media, timing and a mask record; keep clinic/phase text editable in ChatCut.",
+    "sourceReferencePrivacyAudit": "96 sampled frames plus selected boundaries examined. Existing patient blur observed. Full1434frame privacy certification not performed."
+  },
+  "audio": {
+    "keepProvidedOriginalByDefault": true,
+    "addAiVoice": false,
+    "addBgm": false,
+    "addSfx": false,
+    "sourceReference": "AAC audio exists in exported and flattened base video. Native draft has no separate BGM/SFX/audio track. Listening has not been performed, so do not assert that the reference contains no music.",
+    "speechCleanup": "This is a movement-comparison pattern. Do not automatically apply A04 word/filler cuts across walking or examination footage; follow an explicit speech cleanup request while preserving complete movement."
+  },
+  "renderTargets": {
+    "clinicBanner": {
+      "position": "top_center",
+      "referenceFill": "#0c7217",
+      "fillSource": "current LP brand palette",
+      "textFill": "#ffffff",
+      "corner": "rounded_rectangle",
+      "anchorNormalized": {
+        "centerX": 0.5,
+        "centerY": 0.08
+      },
+      "exportedBoundsAt720x1280": [
+        32,
+        29,
+        689,
+        172
+      ],
+      "exportedWhiteGlyphBoundsAt720x1280": [
+        66,
+        67,
+        654,
+        132
+      ],
+      "measurements": "Approximate JPEG pixel threshold bounds; reference sample clinic name only.",
+      "fontIdentity": "CapCut bundled SystemFont/en.ttf declared, Japanese fallback/face unconfirmed. Do not call its exact Japanese font verified.",
+      "originalCapCut": {
+        "nativeTextSize": 16.972131921140956,
+        "scale": 1.0,
+        "transform": {
+          "x": 0.0,
+          "y": 0.8401522618219852
+        },
+        "shapeScale": 0.97,
+        "shapeTransform": {
+          "x": 0.0,
+          "y": 0.8440122849262115
+        },
+        "shapeRoundness": [
+          30,
+          30,
+          30,
+          30
+        ],
+        "units": "native CapCut units, not CSS pixels"
+      }
+    },
+    "phaseLabel": {
+      "fontFileBasename": "ヒラギノ角ゴシック W6.ttc",
+      "fontFaceIndex": null,
+      "bold": true,
+      "fill": "#000000",
+      "stroke": "#ffffff",
+      "activeTextShadow": false,
+      "position": "center_below_clinic_banner",
+      "anchorNormalized": {
+        "centerX": 0.5,
+        "centerY": 0.18058
+      },
+      "lines": 1,
+      "originalCapCut": {
+        "nativeTextSize": 21.04013718214608,
+        "scale": 1.0,
+        "transform": {
+          "x": 0.0,
+          "y": 0.6388420443665532
+        },
+        "strokeWidth": 0.07046040147542953,
+        "boldWidth": 0.00800000037997961,
+        "lineSpacing": 0.02,
+        "units": "native CapCut units, not CSS pixels"
+      }
+    },
+    "optionalCallout": {
+      "fontFileBasename": "ヒラギノ角ゴシック W6.ttc",
+      "fontFaceIndex": null,
+      "bold": true,
+      "referenceFill": "#065e0f",
+      "fillSource": "current LP-derived readable accent",
+      "stroke": "#ffffff",
+      "activeTextShadow": false,
+      "position": "lower_right",
+      "anchorNormalized": {
+        "centerX": 0.63772,
+        "centerY": 0.82196
+      },
+      "referenceLines": 3,
+      "linesPolicy": "Use the confirmed current wording; keep feet/movement and safe margins visible. Do not force the reference wording or three lines.",
+      "originalCapCut": {
+        "nativeTextSize": 19.56310272216797,
+        "scale": 1.0,
+        "transform": {
+          "x": 0.2754405140876768,
+          "y": -0.6439199458270983
+        },
+        "strokeWidth": 0.07046040147542953,
+        "boldWidth": 0.00800000037997961,
+        "lineSpacing": 0.17,
+        "units": "native CapCut units, not CSS pixels"
+      }
+    },
+    "animation": {
+      "referenceTextAnimations": [],
+      "default": "static labels and hard picture cuts; no automatic flashy entrance or extra effects",
+      "requireRenderedCalibration": true
+    }
+  },
+  "fontPolicy": {
+    "fontBinariesBundled": false,
+    "crossRendererGlyphMatchVerified": false,
+    "nativeTtcFaceUnspecified": true,
+    "fallback": "Check locally available licensed fonts; disclose a substitution and compare actual glyph width/weight against the reference."
+  },
+  "reference": {
+    "label": "0711.mov",
+    "export": {
+      "width": 720,
+      "height": 1280,
+      "fps": 30,
+      "durationSeconds": 47.8,
+      "frames": 1434,
+      "videoCodec": "hevc",
+      "audioCodec": "aac"
+    },
+    "draftCanvas": {
+      "width": 1080,
+      "height": 1920,
+      "fps": 30
+    },
+    "draftRelativeName": "0711/draft_info.json",
+    "bakedPictureCutSeconds": [
+      4,
+      8,
+      21,
+      24.3,
+      28.8,
+      37.3
+    ],
+    "bakedCutsAreReferenceOnly": true,
+    "nativeTextCues": [
+      {
+        "role": "clinic",
+        "startFrame": 0,
+        "endFrameExclusive": 1434,
+        "text": "恵比寿整体 nature"
+      },
+      {
+        "role": "before",
+        "startFrame": 0,
+        "endFrameExclusive": 728,
+        "text": "施術前"
+      },
+      {
+        "role": "after",
+        "startFrame": 728,
+        "endFrameExclusive": 1434,
+        "text": "施術後"
+      },
+      {
+        "role": "optionalOutcome",
+        "startFrame": 940,
+        "endFrameExclusive": 1434,
+        "text": "痛みなく\nスタスタ\n楽に歩ける！"
+      }
+    ],
+    "knownMismatch": "Reference after label starts at frame728(24.2667s), but picture changes to hallway after footage at frame729(24.3s). New edits must align label and picture; do not copy this one-frame mismatch.",
+    "privacyNative": {
+      "effect": "ぼかし",
+      "effectStrength": 0.5,
+      "mask": "サークル",
+      "positionKeyframeCountEach": 14,
+      "sizeKeyframeCountEach": 6,
+      "pixelMosaic": false
+    },
+    "newWorkUse": "Reference for composition only. Do not insert reference patient, clinic name, old claim, fixed duration or mask path into another clinic edit."
+  },
+  "helperCompatibility": {
+    "timeline_plan.py": false,
+    "text_revision.py": false,
+    "routeIsLocalDispatcherNameNotChatCutApi": true,
+    "reason": "Requires explicit before/after mapping, LP palette and tracked face mosaic per new shot; legacy fixed-cut speech/caption helpers are not this workflow."
+  },
+  "verification": {
+    "sourceMetadataRead": true,
+    "matchingDraftInspected": true,
+    "sampledSourceFramesInspected": 96,
+    "cutBoundaryFramesInspected": true,
+    "textAnimationListsChecked": true,
+    "wholeSourcePrivacyCertified": false,
+    "audioAuditioned": false,
+    "newFootageEdited": false,
+    "chatcutApplied": false,
+    "newFaceMosaicTrackingVerified": false,
+    "newLpPaletteVerified": false,
+    "newChatCutCompositeVerified": false,
+    "newLocalExportVerified": false,
+    "otherOperatorEndToEndVerified": false,
+    "report": "Separate reference analysis and library registration from actual new-video editing, full face coverage review, listening and exported-file verification."
+  }
+}

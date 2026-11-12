@@ -1,0 +1,314 @@
+[
+  {
+    "key": "mode",
+    "label": "表示形式（intro/body/split/ending）",
+    "defaultValue": "body",
+    "type": "text"
+  },
+  {
+    "key": "titlePlace",
+    "label": "導入上段",
+    "defaultValue": "",
+    "type": "text"
+  },
+  {
+    "key": "title",
+    "label": "導入主題",
+    "defaultValue": "",
+    "type": "text"
+  },
+  {
+    "key": "titleVlog",
+    "label": "導入下段",
+    "defaultValue": "1日Vlog",
+    "type": "text"
+  },
+  {
+    "key": "clock",
+    "label": "時刻・見出し",
+    "defaultValue": "",
+    "type": "text"
+  },
+  {
+    "key": "text",
+    "label": "本文（改行を含む）",
+    "defaultValue": "",
+    "type": "text"
+  },
+  {
+    "key": "text2",
+    "label": "後半本文（空欄なら切替なし）",
+    "defaultValue": "",
+    "type": "text"
+  },
+  {
+    "key": "switchAtSeconds",
+    "label": "後半本文へ切り替える秒数",
+    "type": "number",
+    "defaultValue": 3
+  },
+  {
+    "key": "sceneLabel",
+    "label": "映像の説明ラベル",
+    "defaultValue": "",
+    "type": "text"
+  },
+  {
+    "key": "sampleLabel",
+    "label": "サンプル表示",
+    "defaultValue": "",
+    "type": "text"
+  },
+  {
+    "key": "fontFamily",
+    "label": "本文・時計フォント",
+    "defaultValue": "Noto Serif CJK JP",
+    "type": "font"
+  },
+  {
+    "key": "labelFontFamily",
+    "label": "小ラベルフォント",
+    "defaultValue": "Noto Sans JP",
+    "type": "font"
+  },
+  {
+    "key": "fontWeight",
+    "label": "文字の太さ",
+    "type": "number",
+    "defaultValue": 900
+  },
+  {
+    "key": "textColor",
+    "label": "文字色",
+    "defaultValue": "#FFFFFF",
+    "type": "color"
+  },
+  {
+    "key": "bodySize",
+    "label": "本文サイズ",
+    "type": "number",
+    "defaultValue": 78
+  },
+  {
+    "key": "bodyLineHeight",
+    "label": "本文の行送り(px)",
+    "type": "number",
+    "defaultValue": 104
+  },
+  {
+    "key": "bodySpacing",
+    "label": "本文の字間(px)",
+    "type": "number",
+    "defaultValue": 4.8
+  },
+  {
+    "key": "clockSize",
+    "label": "時計サイズ",
+    "type": "number",
+    "defaultValue": 75
+  },
+  {
+    "key": "clockSpacing",
+    "label": "時計の字間(px)",
+    "type": "number",
+    "defaultValue": 5
+  },
+  {
+    "key": "maxTextWidth",
+    "label": "通常の帯・文字の最大幅",
+    "type": "number",
+    "defaultValue": 1000
+  },
+  {
+    "key": "introPlaceSize",
+    "label": "導入上段サイズ",
+    "type": "number",
+    "defaultValue": 100
+  },
+  {
+    "key": "introTitleSize",
+    "label": "導入主題サイズ",
+    "type": "number",
+    "defaultValue": 84
+  },
+  {
+    "key": "introVlogSize",
+    "label": "導入下段サイズ",
+    "type": "number",
+    "defaultValue": 92
+  },
+  {
+    "key": "animateIntro",
+    "label": "導入の文字出現",
+    "defaultValue": true,
+    "type": "boolean"
+  },
+  {
+    "key": "bandColor",
+    "label": "通常の帯色",
+    "defaultValue": "#222222",
+    "type": "color"
+  },
+  {
+    "key": "bandOpacity",
+    "label": "通常の帯の不透明度",
+    "type": "number",
+    "defaultValue": 0.5
+  },
+  {
+    "key": "endingBandColor",
+    "label": "締めの帯色",
+    "defaultValue": "#E88721",
+    "type": "color"
+  },
+  {
+    "key": "endingBandOpacity",
+    "label": "締めの帯の不透明度",
+    "type": "number",
+    "defaultValue": 0.75
+  },
+  {
+    "key": "endingSize",
+    "label": "締め本文サイズ",
+    "type": "number",
+    "defaultValue": 90
+  },
+  {
+    "key": "endingLineHeight",
+    "label": "締めの行送り(px)",
+    "type": "number",
+    "defaultValue": 118
+  },
+  {
+    "key": "shadowColor",
+    "label": "影色",
+    "defaultValue": "#000000",
+    "type": "color"
+  },
+  {
+    "key": "shadowOpacity",
+    "label": "影の不透明度",
+    "type": "number",
+    "defaultValue": 0.7
+  },
+  {
+    "key": "shadowX",
+    "label": "影の右ずれ(px)",
+    "type": "number",
+    "defaultValue": 5
+  },
+  {
+    "key": "shadowY",
+    "label": "影の下ずれ(px)",
+    "type": "number",
+    "defaultValue": 7
+  },
+  {
+    "key": "shadowBlur",
+    "label": "影のぼかし(px)",
+    "type": "number",
+    "defaultValue": 1
+  },
+  {
+    "key": "transparentBackground",
+    "label": "背景を透明にする",
+    "defaultValue": true,
+    "type": "boolean"
+  },
+  {
+    "key": "backgroundColor",
+    "label": "背景色（透明OFF時）",
+    "defaultValue": "#000000",
+    "type": "color"
+  },
+  {
+    "key": "clockY",
+    "label": "時刻・見出しの縦位置(px)",
+    "type": "number",
+    "defaultValue": 616
+  },
+  {
+    "key": "bodyY",
+    "label": "分割時の1帯目上端(px)",
+    "type": "number",
+    "defaultValue": 836
+  },
+  {
+    "key": "sceneLabelY",
+    "label": "映像ラベルの縦位置(px)",
+    "type": "number",
+    "defaultValue": 1780
+  },
+  {
+    "key": "sceneLabelSize",
+    "label": "映像ラベルの文字サイズ(px)",
+    "type": "number",
+    "defaultValue": 32
+  },
+  {
+    "key": "sceneLabelLineHeight",
+    "label": "映像ラベルの行送り(px)",
+    "type": "number",
+    "defaultValue": 42
+  },
+  {
+    "key": "bodyCenterY",
+    "label": "通常本文の中心Y(px)",
+    "type": "number",
+    "defaultValue": 960
+  },
+  {
+    "key": "secondBandText",
+    "label": "分割時の2帯目テキスト",
+    "type": "text",
+    "defaultValue": ""
+  },
+  {
+    "key": "secondBandY",
+    "label": "分割時の2帯目基準Y(px・1帯目1行時)",
+    "type": "number",
+    "defaultValue": 1009
+  },
+  {
+    "key": "secondBandSize",
+    "label": "分割時の2帯目サイズ",
+    "type": "number",
+    "defaultValue": 78
+  },
+  {
+    "key": "secondBandLineHeight",
+    "label": "分割時の2帯目行送り(px)",
+    "type": "number",
+    "defaultValue": 104
+  },
+  {
+    "key": "clockLineHeight",
+    "label": "時計の行送り(px)",
+    "type": "number",
+    "defaultValue": 100
+  },
+  {
+    "key": "clockPaddingX",
+    "label": "時計帯の左右余白(px)",
+    "type": "number",
+    "defaultValue": 22
+  },
+  {
+    "key": "bodyFontWeight",
+    "label": "本文・分割帯・締めの文字太さ",
+    "type": "number",
+    "defaultValue": 700
+  },
+  {
+    "key": "clockFontWeight",
+    "label": "時計の文字太さ",
+    "type": "number",
+    "defaultValue": 900
+  },
+  {
+    "key": "bodyFontFamily",
+    "label": "本文・分割帯・締めの書体",
+    "type": "font",
+    "defaultValue": "A07 Reference Serif"
+  }
+]

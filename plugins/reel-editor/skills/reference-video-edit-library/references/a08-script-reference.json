@@ -1,0 +1,117 @@
+{
+  "pattern": "A08",
+  "referenceOnly": true,
+  "notAConfirmedSpeechTranscript": true,
+  "notCurrentClinicFacts": true,
+  "fps": 30,
+  "cues": [
+    {
+      "id": "t01",
+      "section": "promo",
+      "role": "地域の対象者",
+      "startFrame": 0,
+      "endFrameExclusive": 90,
+      "text": "富山市長江に\n通える方必見！",
+      "adaptation": "Use current confirmed facts; do not preserve unsupported claims or offers."
+    },
+    {
+      "id": "t02",
+      "section": "promo",
+      "role": "確認できる施術方針",
+      "startFrame": 90,
+      "endFrameExclusive": 170,
+      "text": "運動療法で\n腰痛を改善できる",
+      "adaptation": "Use current confirmed facts; do not preserve unsupported claims or offers."
+    },
+    {
+      "id": "t03",
+      "section": "promo",
+      "role": "院の利用条件",
+      "startFrame": 170,
+      "endFrameExclusive": 265,
+      "text": "完全予約制の整体院\n知ってる？",
+      "adaptation": "Use current confirmed facts; do not preserve unsupported claims or offers."
+    },
+    {
+      "id": "t04",
+      "section": "promo",
+      "role": "確認できる手法",
+      "startFrame": 265,
+      "endFrameExclusive": 359,
+      "text": "MSMメソッドを\n活かした",
+      "adaptation": "Use current confirmed facts; do not preserve unsupported claims or offers."
+    },
+    {
+      "id": "t05",
+      "section": "promo",
+      "role": "検査・触診の特徴",
+      "startFrame": 359,
+      "endFrameExclusive": 425,
+      "text": "丁寧な触診で",
+      "adaptation": "Use current confirmed facts; do not preserve unsupported claims or offers."
+    },
+    {
+      "id": "t06",
+      "section": "promo",
+      "role": "確認できる施術方針の締め",
+      "startFrame": 425,
+      "endFrameExclusive": 486,
+      "text": "繰り返す痛みを根本から\n改善していきます",
+      "adaptation": "Use current confirmed facts; do not preserve unsupported claims or offers."
+    },
+    {
+      "id": "t07",
+      "section": "original_speech",
+      "role": "本人案内の導入",
+      "startFrame": 486,
+      "endFrameExclusive": 508,
+      "text": "只今ですね",
+      "adaptation": "Use current actual spoken words, or mark as a filming-script proposal before recording."
+    },
+    {
+      "id": "t08",
+      "section": "original_speech",
+      "role": "案内する対象",
+      "startFrame": 508,
+      "endFrameExclusive": 546,
+      "text": "慢性腰痛",
+      "adaptation": "Use current actual spoken words, or mark as a filming-script proposal before recording."
+    },
+    {
+      "id": "t09",
+      "section": "original_speech",
+      "role": "今回有効な案内の強調",
+      "startFrame": 546,
+      "endFrameExclusive": 586,
+      "text": "コースの初回割引",
+      "adaptation": "Use current actual spoken words, or mark as a filming-script proposal before recording."
+    },
+    {
+      "id": "t10",
+      "section": "original_speech",
+      "role": "案内の続き",
+      "startFrame": 590,
+      "endFrameExclusive": 633,
+      "text": "をさせて\nいただいております！",
+      "adaptation": "Use current actual spoken words, or mark as a filming-script proposal before recording."
+    },
+    {
+      "id": "t11",
+      "section": "original_speech",
+      "role": "本人の呼びかけ",
+      "startFrame": 653,
+      "endFrameExclusive": 712,
+      "text": "本気で\n治したいという方はですね",
+      "adaptation": "Use current actual spoken words, or mark as a filming-script proposal before recording."
+    },
+    {
+      "id": "t12",
+      "section": "original_speech",
+      "role": "確認済みの連絡導線",
+      "startFrame": 728,
+      "endFrameExclusive": 816,
+      "text": "下のホームページより\nご連絡ください！",
+      "adaptation": "Use current actual spoken words, or mark as a filming-script proposal before recording."
+    }
+  ]
+}
