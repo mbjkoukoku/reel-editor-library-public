@@ -14,7 +14,7 @@
    codex plugin add reel-editor@reel-library
    ```
 
-   同じ公開URLのmarketplaceが登録済みなら追加ではなく、`codex plugin marketplace upgrade reel-library` で更新してからインストールする。旧非公開URLで登録済みの場合は、現在の登録先を確認してこの公開元へ切り替える。以前の作業ファイルを削除したり別プラグインを二重導入したりしない。現行CLIのヘルプ・実行結果を確認する。認証エラーを見て直ちに利用者へGitHub招待を要求せず、公開URLと接続・取得結果を切り分ける。
+   同じ公開URLのmarketplaceが登録済みなら追加ではなく、`codex plugin marketplace upgrade reel-library` で更新してからインストールする。旧非公開URLで登録済みの場合、同名を別URLで追加すると競合する。現在の登録先・変更有無を確認し、`codex plugin marketplace remove reel-library` で旧配布元の登録を外してから、上記の公開URLをaddする。これは配布元の登録変更であり、動画プロジェクトや個人プラグインを削除する指示ではない。以前の作業ファイルを削除したり別プラグインを二重導入したりしない。現行CLIのヘルプ・実行結果を確認する。認証エラーを見て直ちに利用者へGitHub招待を要求せず、公開URLと接続・取得結果を切り分ける。
 3. 取得したプラグインの `skills/reference-video-edit-library/SKILL.md` と、今回選択したパターンの資料を実際に読む。A07なら `a07.md`、`a07.json`、`a07-approved-profile.md` と `assets/a07/README.md` を使う。ファイルが読めない場合に読了したと装わない。
 4. この依頼内では取得したファイルを直接参照して台本作成へ進める。新しく導入したスキルの自動発見だけに依存せず、LPの再提出や新しいチャットの作成を機械的に要求しない。ホストが実際に再起動・新規チャットを必要とする操作は、その時点で必要な手順だけ案内する。
 
