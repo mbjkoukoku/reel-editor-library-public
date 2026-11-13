@@ -1,5 +1,5 @@
 動画編集ライブラリの A06（A6）で、素材の話の内容を分析し、見本と同じデザインで編集してください。発話の全文テロップは不要です。
-ライブラリの案内版：0.10.7（導入済みの版とa06.md・a06.jsonを確認し、古ければ同じ共有元から更新してください）。
+ライブラリの案内版：0.10.8（導入済みの版とa06.md・a06.jsonを確認し、古ければ同じ共有元から更新してください）。
 共有配布元：https://github.com/mbjkoukoku/reel-editor-library-public
 見本・使い方のサイト：https://seitai-reel-library.ryo60129109.chatgpt.site/
 

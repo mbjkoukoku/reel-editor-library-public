@@ -1,7 +1,7 @@
 動画編集ライブラリの初回設定を手伝ってください。
 今回使うパターン：このチャットで選択したA01〜A08を引き継いでください。未選択なら導入だけ進めてください。
 共有配布元：https://github.com/mbjkoukoku/reel-editor-library-public
-案内版：0.10.7
+案内版：0.10.8
 見本・使い方：https://seitai-reel-library.ryo60129109.chatgpt.site/
 
 1. 公開配布元のREADMEとmarketplace設定を確認してください。取得にGitHubの招待・ログインは不要です。初回設定は担当側で進め、本人が行う必要のある操作だけ案内してください。

@@ -2551,7 +2551,7 @@
       ]
     }
   },
-  "workflowRevision": "0.9.2",
+  "workflowRevision": "0.10.8",
   "workflowVerification": {
     "recordedDate": "2026-10-16",
     "scope": "additional approved A02 production; before-photo-revision evidence is separate from the accepted photo revision",
@@ -2608,7 +2608,9 @@
     "renderingGuide": "a02-rendering.md",
     "deliveryVerificationGuide": "local-delivery.md",
     "speechTimingUncertaintyGuide": "speech-cleanup.md",
-    "audioReplacementGuide": "provided-narration.md#完成後の音声差し替え"
+    "audioReplacementGuide": "provided-narration.md#完成後の音声差し替え",
+    "shotSelectionGuide": "shot-selection.md",
+    "photoFramingGuide": "media-revisions.md#説明に合う写真と控えめな動き"
   },
   "workflowVerificationHistory": [
     {
@@ -2691,6 +2693,28 @@
       },
       "caseMediaIncluded": false,
       "userAcceptanceDate": "2026-11-06"
+    },
+    {
+      "workflowRevision": "0.10.8",
+      "recordedDate": "2026-11-13",
+      "evidenceDate": "2026-11-11",
+      "userAcceptanceDate": "2026-11-13",
+      "scope": "approved A02 hook sound gain, photo framing and permitted explanation-video substitution; no fixed case settings included",
+      "checks": {
+        "editableDesktopProjectSaved": true,
+        "desktopLocalMp4File": true,
+        "changedPhotoAndVideoFramesAndBoundariesReviewed": true,
+        "patientFaceProtectionAfterReframingChecked": true,
+        "neighboringAndNearbyShotComparison": true,
+        "targetSfxOutputGainNumericallyCompared": true,
+        "videoOnlyReplacementDecodedStereoAudioIdentical": true,
+        "unchangedPictureRegionsNumericallyCompared": true,
+        "userAcceptedFinalRevision": true,
+        "directAuditoryListeningByAgent": false,
+        "continuousPlaybackWithAudio": false,
+        "otherAccountsEndToEnd": false
+      },
+      "caseMediaIncluded": false
     }
   ],
   "faceMosaicVerification": {
