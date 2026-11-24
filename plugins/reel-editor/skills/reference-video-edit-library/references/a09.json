@@ -1,0 +1,1321 @@
+{
+  "id": "A09",
+  "aliases": [
+    "A9",
+    "A-09"
+  ],
+  "version": "0.11.0",
+  "name": "悩み訴求・施術説明＋本人の案内",
+  "executionRoute": "patient_problem_treatment_presenter",
+  "reference": {
+    "url": "https://www.youtube.com/shorts/VSvafFzsAOY",
+    "title": "インスタ広告動画1",
+    "analyzedOn": "2026-11-24",
+    "videoDurationSeconds": 32.0,
+    "containerDurationSeconds": 32.043537,
+    "videoFrameCount": 960,
+    "fileSha256": "df2c2bd16eb28cacfb2bed45a5e5c174b2fecf01791322c31f56b52f305102b5",
+    "sourceProjectProvided": false,
+    "publicPreview": "YouTube埋め込み。原動画・原音・写真本体は配布パッケージに含めない"
+  },
+  "canvas": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "timeDomain": "original_source",
+    "frameIndex": "zero_based",
+    "interval": "start_inclusive_end_exclusive"
+  },
+  "workflow": {
+    "first": "今回のLPから画面テロップ・前半ナレーション案・後半本人案内文・素材の場面表を提示。既にある本人声は実発話を採用。",
+    "next": "台本確認後、患者の動作／対応する前後素材／施術／会釈／本人の案内の元音声付き素材と、使う場合だけ支給ナレーションを同じタスクへ受け取り編集。",
+    "scope": "見本登録時に新店舗制作・有料音声や動画の生成はしない。"
+  },
+  "input": {
+    "requiredForScript": [
+      "LPまたは確認済み店舗情報"
+    ],
+    "neededShotRoles": [
+      "患者の正面全身・腰に手を当てる動作",
+      "同じ患者の後ろ姿",
+      "施術者の会釈",
+      "施術者と手元・部位の見える複数の施術",
+      "問診・説明の双方の画角",
+      "立位動作・同じ条件のBefore/After",
+      "本人が正面で案内し、最後に下を指す元音声付き動画"
+    ],
+    "optional": [
+      "今回使える写真・ナレーション・BGM・効果音"
+    ],
+    "missingFootagePolicy": "素材不足を捏造・無人カット・勝手な生成で埋めず、意味の合う手持ち素材で代替し差を伝える。前後比較素材がなければ比較を成立したことにしない。"
+  },
+  "cuts": [
+    {
+      "id": "S01",
+      "startFrame": 0,
+      "endFrameExclusive": 67,
+      "role": "悩みの導入",
+      "visual": "患者の全身正面。腰に手を当て、動きにくさを示す。",
+      "incomingTransition": "hard",
+      "transitionFramesApprox": null,
+      "timingEvidence": "hard cuts 67/144/200/577/655 verified; dissolve boundaries sampled ±2 frames"
+    },
+    {
+      "id": "S02",
+      "startFrame": 67,
+      "endFrameExclusive": 144,
+      "role": "試してきたこと",
+      "visual": "患者の後ろ姿を背景に、薬・湿布・リハビリの画像を下→中央→上と積む。",
+      "incomingTransition": "hard",
+      "transitionFramesApprox": null,
+      "timingEvidence": "hard cuts 67/144/200/577/655 verified; dissolve boundaries sampled ±2 frames"
+    },
+    {
+      "id": "S03",
+      "startFrame": 144,
+      "endFrameExclusive": 200,
+      "role": "悩みの継続",
+      "visual": "後ろ姿の素材にモノクロ・灰色の低コントラスト処理。",
+      "incomingTransition": "hard",
+      "transitionFramesApprox": null,
+      "timingEvidence": "hard cuts 67/144/200/577/655 verified; dissolve boundaries sampled ±2 frames"
+    },
+    {
+      "id": "S04",
+      "startFrame": 200,
+      "endFrameExclusive": 235,
+      "role": "施術者との出会い",
+      "visual": "出入口で施術者が会釈。動作が終わるまで残す。",
+      "incomingTransition": "hard",
+      "transitionFramesApprox": null,
+      "timingEvidence": "hard cuts 67/144/200/577/655 verified; dissolve boundaries sampled ±2 frames"
+    },
+    {
+      "id": "S05",
+      "startFrame": 235,
+      "endFrameExclusive": 274,
+      "role": "施術方法の紹介",
+      "visual": "側臥位の患者の肩・腕を支える施術の寄り。",
+      "incomingTransition": "cross_dissolve",
+      "transitionFramesApprox": [
+        235,
+        247
+      ],
+      "timingEvidence": "hard cuts 67/144/200/577/655 verified; dissolve boundaries sampled ±2 frames"
+    },
+    {
+      "id": "S06",
+      "startFrame": 274,
+      "endFrameExclusive": 308,
+      "role": "施術方法の紹介続き",
+      "visual": "仰臥位患者の脚を持ち上げる施術。施術者・手元を残す。",
+      "incomingTransition": "cross_dissolve",
+      "transitionFramesApprox": [
+        274,
+        285
+      ],
+      "timingEvidence": "hard cuts 67/144/200/577/655 verified; dissolve boundaries sampled ±2 frames"
+    },
+    {
+      "id": "S07",
+      "startFrame": 308,
+      "endFrameExclusive": 340,
+      "role": "問診",
+      "visual": "施術者が資料を手に患者へ説明する側の画角。",
+      "incomingTransition": "cross_dissolve",
+      "transitionFramesApprox": [
+        308,
+        319
+      ],
+      "timingEvidence": "hard cuts 67/144/200/577/655 verified; dissolve boundaries sampled ±2 frames"
+    },
+    {
+      "id": "S08",
+      "startFrame": 340,
+      "endFrameExclusive": 378,
+      "role": "状態に応じた説明",
+      "visual": "対面の患者側へ画角を変える。",
+      "incomingTransition": "cross_dissolve",
+      "transitionFramesApprox": [
+        340,
+        350
+      ],
+      "timingEvidence": "hard cuts 67/144/200/577/655 verified; dissolve boundaries sampled ±2 frames"
+    },
+    {
+      "id": "S09",
+      "startFrame": 378,
+      "endFrameExclusive": 416,
+      "role": "施術1",
+      "visual": "仰臥位の片脚を支える正面の施術。",
+      "incomingTransition": "cross_dissolve",
+      "transitionFramesApprox": [
+        378,
+        389
+      ],
+      "timingEvidence": "hard cuts 67/144/200/577/655 verified; dissolve boundaries sampled ±2 frames"
+    },
+    {
+      "id": "S10",
+      "startFrame": 416,
+      "endFrameExclusive": 459,
+      "role": "施術2",
+      "visual": "脚周辺へ手を当てる別角度の施術。",
+      "incomingTransition": "cross_dissolve",
+      "transitionFramesApprox": [
+        416,
+        427
+      ],
+      "timingEvidence": "hard cuts 67/144/200/577/655 verified; dissolve boundaries sampled ±2 frames"
+    },
+    {
+      "id": "S11",
+      "startFrame": 459,
+      "endFrameExclusive": 494,
+      "role": "施術3",
+      "visual": "ベッド脚側から施術者と脚の動きを見せる。",
+      "incomingTransition": "cross_dissolve",
+      "transitionFramesApprox": [
+        459,
+        471
+      ],
+      "timingEvidence": "hard cuts 67/144/200/577/655 verified; dissolve boundaries sampled ±2 frames"
+    },
+    {
+      "id": "S12",
+      "startFrame": 494,
+      "endFrameExclusive": 547,
+      "role": "目指す状態",
+      "visual": "立位の患者の側方で施術者がしゃがみ支える。",
+      "incomingTransition": "cross_dissolve",
+      "transitionFramesApprox": [
+        495,
+        507
+      ],
+      "timingEvidence": "hard cuts 67/144/200/577/655 verified; dissolve boundaries sampled ±2 frames"
+    },
+    {
+      "id": "S13",
+      "startFrame": 547,
+      "endFrameExclusive": 577,
+      "role": "変化の声",
+      "visual": "後ろ姿で両腕を上げる患者の動作。",
+      "incomingTransition": "cross_dissolve",
+      "transitionFramesApprox": [
+        547,
+        555
+      ],
+      "timingEvidence": "hard cuts 67/144/200/577/655 verified; dissolve boundaries sampled ±2 frames"
+    },
+    {
+      "id": "S14",
+      "startFrame": 577,
+      "endFrameExclusive": 607,
+      "role": "Before",
+      "visual": "患者の側面全身。上部に赤いBefore。",
+      "incomingTransition": "hard",
+      "transitionFramesApprox": null,
+      "timingEvidence": "hard cuts 67/144/200/577/655 verified; dissolve boundaries sampled ±2 frames"
+    },
+    {
+      "id": "S15",
+      "startFrame": 607,
+      "endFrameExclusive": 655,
+      "role": "After",
+      "visual": "同じ側面全身の対応素材へ移る。上部はAfter。",
+      "incomingTransition": "cross_dissolve",
+      "transitionFramesApprox": [
+        607,
+        615
+      ],
+      "timingEvidence": "hard cuts 67/144/200/577/655 verified; dissolve boundaries sampled ±2 frames"
+    },
+    {
+      "id": "S16",
+      "startFrame": 655,
+      "endFrameExclusive": 960,
+      "role": "本人の案内",
+      "visual": "施術者の正面の呼びかけ。後半は両手で下を指し、予約案内へ。",
+      "incomingTransition": "hard",
+      "transitionFramesApprox": null,
+      "timingEvidence": "hard cuts 67/144/200/577/655 verified; dissolve boundaries sampled ±2 frames"
+    }
+  ],
+  "captions": [
+    {
+      "id": "C01",
+      "startFrame": 9,
+      "endFrameExclusive": 67,
+      "startSeconds": 0.3,
+      "endSeconds": 2.233333,
+      "text": "一生付き合うしかないの？",
+      "style": "vertical_problem",
+      "timingEvidence": "sampled_boundary_±2_frames",
+      "bboxApproxPx": [
+        810,
+        135,
+        145,
+        1330
+      ],
+      "motion": "約0.30–0.40秒に薄いぼかしから明瞭化。右列を固定。"
+    },
+    {
+      "id": "C02",
+      "startFrame": 41,
+      "endFrameExclusive": 67,
+      "startSeconds": 1.366667,
+      "endSeconds": 2.233333,
+      "text": "と、本気で思ってた",
+      "style": "vertical_problem_small",
+      "timingEvidence": "sampled_boundary_±2_frames",
+      "bboxApproxPx": [
+        115,
+        885,
+        160,
+        975
+      ],
+      "motion": "左下の縦列。約1.37–1.8秒は揺れと残像・ぼかし、後半で明瞭化。"
+    },
+    {
+      "id": "C03",
+      "startFrame": 68,
+      "endFrameExclusive": 144,
+      "startSeconds": 2.266667,
+      "endSeconds": 4.8,
+      "text": "薬も",
+      "style": "stack_photo_label",
+      "timingEvidence": "sampled_boundary_±2_frames",
+      "bboxApproxPx": [
+        690,
+        1635,
+        250,
+        170
+      ],
+      "motion": "薬の下段画像ごと横方向のぼかし付きで出現、約2.4秒で定着。"
+    },
+    {
+      "id": "C04",
+      "startFrame": 89,
+      "endFrameExclusive": 144,
+      "startSeconds": 2.966667,
+      "endSeconds": 4.8,
+      "text": "湿布も",
+      "style": "stack_photo_label",
+      "timingEvidence": "sampled_boundary_±2_frames",
+      "bboxApproxPx": [
+        85,
+        920,
+        350,
+        170
+      ],
+      "motion": "中央段の写真を右から滑らせる。約2.97–3.33秒。"
+    },
+    {
+      "id": "C05",
+      "startFrame": 112,
+      "endFrameExclusive": 144,
+      "startSeconds": 3.733333,
+      "endSeconds": 4.8,
+      "text": "リハビリも",
+      "style": "stack_photo_label",
+      "timingEvidence": "sampled_boundary_±2_frames",
+      "bboxApproxPx": [
+        430,
+        260,
+        610,
+        170
+      ],
+      "motion": "上段の写真を横方向の短いぼかしと共に出現。約3.73–3.87秒。"
+    },
+    {
+      "id": "C06",
+      "startFrame": 131,
+      "endFrameExclusive": 144,
+      "startSeconds": 4.366667,
+      "endSeconds": 4.8,
+      "text": "全部やった",
+      "style": "stack_red_emphasis",
+      "timingEvidence": "sampled_boundary_±2_frames",
+      "bboxApproxPx": [
+        495,
+        540,
+        195,
+        850
+      ],
+      "motion": "3段をまたいで中央に赤い縦書きを出す。"
+    },
+    {
+      "id": "C07",
+      "startFrame": 147,
+      "endFrameExclusive": 200,
+      "startSeconds": 4.9,
+      "endSeconds": 6.666667,
+      "text": "でもどれも\n根本的には変わらなかった",
+      "style": "vertical_problem_two_columns",
+      "timingEvidence": "sampled_boundary_±2_frames",
+      "bboxApproxPx": [
+        660,
+        95,
+        285,
+        1755
+      ],
+      "motion": "右上から読む2列。2列目をやや下げる。背景はモノクロ＋低コントラスト。"
+    },
+    {
+      "id": "C08",
+      "startFrame": 200,
+      "endFrameExclusive": 235,
+      "startSeconds": 6.666667,
+      "endSeconds": 7.833333,
+      "text": "そんな時出会ったのが",
+      "style": "vertical_welcome",
+      "timingEvidence": "sampled_boundary_±2_frames",
+      "bboxApproxPx": [
+        85,
+        140,
+        215,
+        1410
+      ],
+      "motion": "中央の小さい文字が左列へ拡大・移動し、黄色の光が一瞬強くなる。約6.67–7.1秒。"
+    },
+    {
+      "id": "C09",
+      "startFrame": 235,
+      "endFrameExclusive": 253,
+      "startSeconds": 7.833333,
+      "endSeconds": 8.433333,
+      "text": "筋膜リリースと",
+      "style": "body",
+      "timingEvidence": "sampled_boundary_±2_frames",
+      "bboxApproxPx": [
+        160,
+        937,
+        755,
+        150
+      ],
+      "emphasis": {
+        "筋膜リリース": "yellow"
+      }
+    },
+    {
+      "id": "C10",
+      "startFrame": 253,
+      "endFrameExclusive": 274,
+      "startSeconds": 8.433333,
+      "endSeconds": 9.133333,
+      "text": "運動療法を",
+      "style": "body",
+      "timingEvidence": "sampled_boundary_±2_frames",
+      "bboxApproxPx": [
+        230,
+        937,
+        620,
+        150
+      ],
+      "emphasis": {
+        "運動療法": "cyan"
+      }
+    },
+    {
+      "id": "C11",
+      "startFrame": 274,
+      "endFrameExclusive": 308,
+      "startSeconds": 9.133333,
+      "endSeconds": 10.266667,
+      "text": "取り入れた\n整体でした",
+      "style": "body",
+      "timingEvidence": "sampled_boundary_±2_frames",
+      "bboxApproxPx": [
+        234,
+        863,
+        605,
+        295
+      ],
+      "emphasis": {
+        "整体": "red"
+      }
+    },
+    {
+      "id": "C12",
+      "startFrame": 308,
+      "endFrameExclusive": 340,
+      "startSeconds": 10.266667,
+      "endSeconds": 11.333333,
+      "text": "その場凌ぎではなく",
+      "style": "body",
+      "timingEvidence": "sampled_boundary_±2_frames",
+      "bboxApproxPx": [
+        20,
+        945,
+        1040,
+        145
+      ]
+    },
+    {
+      "id": "C13",
+      "startFrame": 340,
+      "endFrameExclusive": 378,
+      "startSeconds": 11.333333,
+      "endSeconds": 12.6,
+      "text": "痛みの原因に\n合わせて",
+      "style": "body",
+      "timingEvidence": "sampled_boundary_±2_frames",
+      "bboxApproxPx": [
+        155,
+        865,
+        770,
+        290
+      ],
+      "emphasis": {
+        "痛みの原因": "red"
+      },
+      "motion": "左から横方向の残像付きで入る。約11.33–11.47秒。"
+    },
+    {
+      "id": "C14",
+      "startFrame": 378,
+      "endFrameExclusive": 416,
+      "startSeconds": 12.6,
+      "endSeconds": 13.866667,
+      "text": "硬くなった\n筋膜をゆるめ",
+      "style": "body",
+      "timingEvidence": "sampled_boundary_±2_frames",
+      "bboxApproxPx": [
+        260,
+        865,
+        590,
+        290
+      ],
+      "emphasis": {
+        "筋膜": "red"
+      },
+      "motion": "右から横方向の残像付きで入る。約12.60–12.9秒。"
+    },
+    {
+      "id": "C15",
+      "startFrame": 416,
+      "endFrameExclusive": 459,
+      "startSeconds": 13.866667,
+      "endSeconds": 15.3,
+      "text": "使えていない\n筋肉を鍛える",
+      "style": "body",
+      "timingEvidence": "sampled_boundary_±2_frames",
+      "bboxApproxPx": [
+        210,
+        865,
+        690,
+        290
+      ],
+      "emphasis": {
+        "筋肉": "red"
+      },
+      "motion": "横方向の残像を伴う出現。約13.87–14.07秒。"
+    },
+    {
+      "id": "C16",
+      "startFrame": 459,
+      "endFrameExclusive": 494,
+      "startSeconds": 15.3,
+      "endSeconds": 16.466667,
+      "text": "そうした運動療法で",
+      "style": "body",
+      "timingEvidence": "sampled_boundary_±2_frames",
+      "bboxApproxPx": [
+        30,
+        942,
+        1020,
+        145
+      ],
+      "emphasis": {
+        "運動療法": "cyan"
+      },
+      "motion": "左から語が順に見える横ワイプ。約15.30–15.7秒。"
+    },
+    {
+      "id": "C17",
+      "startFrame": 495,
+      "endFrameExclusive": 546,
+      "startSeconds": 16.5,
+      "endSeconds": 18.2,
+      "text": "正しく動ける\n身体を目指して\nいきます",
+      "style": "bold_outlined_body",
+      "timingEvidence": "adjacent_source_frames_verified",
+      "bboxApproxPx": [
+        126,
+        800,
+        824,
+        422
+      ],
+      "emphasis": {
+        "正しく動ける": "yellow",
+        "身体": "red"
+      },
+      "motion": "Tiny blurred scale-in around495 then full by498; retain3 lines. No inherited A08 8-character/2-line limit.",
+      "evidenceFrames": [
+        494,
+        495,
+        510,
+        545,
+        546
+      ],
+      "firstVisibleBracketSeconds": [
+        16.466667,
+        16.5
+      ]
+    },
+    {
+      "id": "C18",
+      "startFrame": 547,
+      "endFrameExclusive": 577,
+      "startSeconds": 18.233333,
+      "endSeconds": 19.233333,
+      "text": "「身体が軽くなった」",
+      "style": "bold_outlined_body",
+      "timingEvidence": "adjacent_source_frames_verified",
+      "bboxApproxPx": [
+        0,
+        950,
+        1080,
+        144
+      ],
+      "emphasis": {
+        "身体": "red"
+      },
+      "motion": "Enters with vertical smear from upper position, settles by~18.5. Reference is extremelywide/nearlyclips sideedges; keep visualweight but avoid cropping different text.",
+      "evidenceFrames": [
+        546,
+        547,
+        548,
+        561,
+        576
+      ]
+    },
+    {
+      "id": "C19",
+      "startFrame": 577,
+      "endFrameExclusive": 607,
+      "startSeconds": 19.233333,
+      "endSeconds": 20.233333,
+      "text": "「動くのが\nラクになった」",
+      "style": "bold_outlined_body",
+      "timingEvidence": "adjacent_source_frames_verified",
+      "bboxApproxPx": [
+        175,
+        865,
+        725,
+        285
+      ],
+      "emphasis": {
+        "ラク": "yellow"
+      },
+      "motion": "Enters from below with vertical motiontrail19.233; settles by19.4.",
+      "evidenceFrames": [
+        576,
+        577,
+        588,
+        606,
+        607
+      ]
+    },
+    {
+      "id": "C20",
+      "startFrame": 607,
+      "endFrameExclusive": 625,
+      "startSeconds": 20.233333,
+      "endSeconds": 20.833333,
+      "text": "そんなお声も",
+      "style": "bold_outlined_body",
+      "timingEvidence": "adjacent_source_frames_verified",
+      "bboxApproxPx": [
+        181,
+        942,
+        720,
+        145
+      ],
+      "motion": "Immediate textreplacement at20.233; no independent complex animation confirmed.",
+      "evidenceFrames": [
+        607,
+        608,
+        618,
+        624,
+        625
+      ]
+    },
+    {
+      "id": "C21",
+      "startFrame": 626,
+      "endFrameExclusive": 655,
+      "startSeconds": 20.866667,
+      "endSeconds": 21.833333,
+      "text": "多く頂いてます",
+      "style": "orange_white_outline",
+      "timingEvidence": "adjacent_source_frames_verified",
+      "bboxApproxPx": [
+        86,
+        934,
+        912,
+        145
+      ],
+      "motion": "Pop fromtiny20.867 to full by21.0.",
+      "evidenceFrames": [
+        625,
+        626,
+        636,
+        654,
+        655
+      ],
+      "firstVisibleBracketSeconds": [
+        20.833333,
+        20.866667
+      ]
+    },
+    {
+      "id": "C22",
+      "startFrame": 655,
+      "endFrameExclusive": 680,
+      "startSeconds": 21.833333,
+      "endSeconds": 22.666667,
+      "text": "現在ですね",
+      "style": "presenter_small_white",
+      "timingEvidence": "adjacent_source_frames_verified",
+      "bboxApproxPx": [
+        310,
+        1058,
+        460,
+        90
+      ],
+      "motion": "Hard onset with presenter shot.",
+      "evidenceFrames": [
+        655,
+        663,
+        679,
+        680
+      ]
+    },
+    {
+      "id": "C23",
+      "startFrame": 680,
+      "endFrameExclusive": 757,
+      "startSeconds": 22.666667,
+      "endSeconds": 25.233333,
+      "text": "慢性腰痛\n整体コース",
+      "style": "gold_serif_offer",
+      "timingEvidence": "adjacent_source_frames_verified",
+      "bboxApproxPx": [
+        183,
+        1020,
+        710,
+        345
+      ],
+      "motion": "Large zoomed letters enter fromlowercenter, pullback with radialblur/echo into fixed2line block. Fullby~23.1.",
+      "evidenceFrames": [
+        680,
+        681,
+        711,
+        756,
+        757
+      ]
+    },
+    {
+      "id": "C24",
+      "startFrame": 757,
+      "endFrameExclusive": 847,
+      "startSeconds": 25.233333,
+      "endSeconds": 28.233333,
+      "text": "初回割引\nキャンペーン",
+      "style": "orange_campaign",
+      "timingEvidence": "adjacent_source_frames_verified",
+      "bboxApproxPx": [
+        135,
+        860,
+        805,
+        325
+      ],
+      "motion": "Rises frombelow with longverticalsmear, settles by~25.5.",
+      "evidenceFrames": [
+        757,
+        758,
+        774,
+        799,
+        846,
+        847
+      ]
+    },
+    {
+      "id": "C25",
+      "startFrame": 801,
+      "endFrameExclusive": 847,
+      "startSeconds": 26.7,
+      "endSeconds": 28.233333,
+      "text": "10,000円\n↓\n1,980円",
+      "style": "gold_serif_price",
+      "timingEvidence": "adjacent_source_frames_verified",
+      "bboxApproxPx": [
+        222,
+        1268,
+        644,
+        510
+      ],
+      "motion": "Horizontal left-to-right reveal ofwhole3linepriceblock; only first1 visible801; full by~26.9. Campaign staysabove.",
+      "evidenceFrames": [
+        800,
+        801,
+        804,
+        816,
+        846,
+        847
+      ],
+      "firstVisibleBracketSeconds": [
+        26.666667,
+        26.7
+      ]
+    },
+    {
+      "id": "C26",
+      "startFrame": 848,
+      "endFrameExclusive": 893,
+      "startSeconds": 28.266667,
+      "endSeconds": 29.766667,
+      "text": "本気でお悩みの方は",
+      "style": "red_white_black_outline",
+      "timingEvidence": "adjacent_source_frames_verified",
+      "bboxApproxPx": [
+        42,
+        1054,
+        996,
+        135
+      ],
+      "motion": "Tiny centered pop-in to full by28.4.",
+      "evidenceFrames": [
+        847,
+        848,
+        861,
+        892,
+        893
+      ],
+      "firstVisibleBracketSeconds": [
+        28.233333,
+        28.266667
+      ]
+    },
+    {
+      "id": "C27",
+      "startFrame": 894,
+      "endFrameExclusive": 960,
+      "startSeconds": 29.8,
+      "endSeconds": 32.0,
+      "text": "ぜひご連絡ください",
+      "style": "red_white_black_outline",
+      "timingEvidence": "adjacent_source_frames_verified",
+      "bboxApproxPx": [
+        211,
+        844,
+        680,
+        115
+      ],
+      "motion": "Drops down with vertical motionblur fromuppercenter, settles around30.067.",
+      "evidenceFrames": [
+        893,
+        894,
+        903,
+        930,
+        959
+      ],
+      "firstVisibleBracketSeconds": [
+        29.766667,
+        29.8
+      ]
+    },
+    {
+      "id": "C28",
+      "startFrame": 894,
+      "endFrameExclusive": 960,
+      "startSeconds": 29.8,
+      "endSeconds": 32.0,
+      "text": "HPをチェック",
+      "style": "green_cta",
+      "timingEvidence": "adjacent_source_frames_verified",
+      "bboxApproxPx": [
+        112,
+        1014,
+        866,
+        150
+      ],
+      "motion": "Scales fromtiny throughovershoot then settles~30.1.",
+      "evidenceFrames": [
+        893,
+        894,
+        903,
+        930,
+        959
+      ],
+      "firstVisibleBracketSeconds": [
+        29.766667,
+        29.8
+      ]
+    },
+    {
+      "id": "C29",
+      "startFrame": 893,
+      "endFrameExclusive": 960,
+      "startSeconds": 29.766667,
+      "endSeconds": 32.0,
+      "text": "整痛院ふっか  検索",
+      "style": "search_bar",
+      "timingEvidence": "adjacent_source_frames_verified",
+      "bboxApproxPx": [
+        124,
+        1502,
+        792,
+        83
+      ],
+      "motion": "Searchbar immediatelyvisible; mousepointer approaches searchbutton; buttondarkenslate. Confirmed rawreference wording, not futureclinicfact.",
+      "evidenceFrames": [
+        893,
+        894,
+        930,
+        959
+      ]
+    }
+  ],
+  "overlays": [
+    {
+      "text": "Before",
+      "start": 19.233333,
+      "end": 20.233333,
+      "style": "red_heavy_latin_white_outline",
+      "bboxApprox": [
+        310,
+        120,
+        465,
+        134
+      ],
+      "evidenceFrames": [
+        577,
+        588,
+        606
+      ]
+    },
+    {
+      "text": "After",
+      "start": 20.233333,
+      "end": 21.833333,
+      "style": "red_heavy_latin_white_outline",
+      "bboxApprox": [
+        365,
+        120,
+        373,
+        134
+      ],
+      "evidenceFrames": [
+        607,
+        618,
+        636,
+        654
+      ]
+    },
+    {
+      "type": "three_yellow_downpointing_hand_emoji",
+      "startWindow": [
+        30,
+        30.1
+      ],
+      "end": 32,
+      "bboxApprox": [
+        352,
+        1250,
+        390,
+        150
+      ],
+      "evidenceFrames": [
+        903,
+        930,
+        945,
+        950,
+        959
+      ],
+      "animation": "Blinking: absent31.5/frame945, present31.667/frame950. Do not use continuouslystill fingers if aiming to trace."
+    }
+  ],
+  "typography": {
+    "vertical_problem": {
+      "appearance": "太い明朝の赤〜暗赤塗り、白縁、黒い外側のぼかし影",
+      "fontIdentified": false,
+      "observedGlyphHeightPx": [
+        115,
+        125
+      ],
+      "proposedRender": {
+        "fontCandidates": [
+          "Noto Serif JP Black",
+          "利用可能な太い明朝で参照字形と比較"
+        ],
+        "fontSizePx": 124,
+        "lineAdvancePx": 118,
+        "fill": [
+          "#be0000",
+          "#260000"
+        ],
+        "whiteStrokePx": 6,
+        "blackShadowBlurPx": 10,
+        "blackShadowOpacity": 0.95
+      },
+      "writingMode": "vertical-rl",
+      "anchorPx": [
+        880,
+        140
+      ],
+      "note": "字形・縦送り・？の向きは参考表示と比較。CSS point sizeではなく再現開始値。"
+    },
+    "vertical_problem_small": {
+      "inherit": "vertical_problem",
+      "proposedRender": {
+        "fontSizePx": 104,
+        "lineAdvancePx": 103
+      },
+      "anchorPx": [
+        190,
+        890
+      ]
+    },
+    "vertical_problem_two_columns": {
+      "inherit": "vertical_problem",
+      "proposedRender": {
+        "fontSizePx": 116,
+        "lineAdvancePx": 116,
+        "columnAdvancePx": 135
+      },
+      "columnAnchorsPx": [
+        [
+          880,
+          95
+        ],
+        [
+          745,
+          460
+        ]
+      ],
+      "note": "改行は縦列の切替。行送りと列間を混同しない。"
+    },
+    "stack_photo_label": {
+      "appearance": "白〜薄灰色の明朝、細い暗い縁。写真に直接重ねる",
+      "fontIdentified": false,
+      "proposedRender": {
+        "fontSizePx": 132,
+        "fill": "#edf5f3",
+        "darkStrokePx": 4,
+        "whiteOuterStrokePx": 2
+      }
+    },
+    "stack_red_emphasis": {
+      "appearance": "赤い太い明朝の縦書き、太い黒縁と影",
+      "fontIdentified": false,
+      "proposedRender": {
+        "fontSizePx": 150,
+        "lineAdvancePx": 148,
+        "fill": "#d80000",
+        "blackStrokePx": 12,
+        "shadowBlurPx": 7
+      },
+      "anchorPx": [
+        590,
+        550
+      ]
+    },
+    "vertical_welcome": {
+      "appearance": "ピンク〜紫の太いゴシック縦書き、白縁、黄色の発光",
+      "fontIdentified": false,
+      "proposedRender": {
+        "fontCandidates": [
+          "Noto Sans JP Black",
+          "太い丸みのあるゴシックで比較"
+        ],
+        "fontSizePx": 142,
+        "lineAdvancePx": 126,
+        "fill": "#d854ec",
+        "whiteStrokePx": 8,
+        "glowColor": "#ffff45",
+        "glowBlurPx": 18
+      },
+      "anchorPx": [
+        195,
+        150
+      ]
+    },
+    "body": {
+      "appearance": "太く丸みのあるゴシック。白または強調色→黒縁→白外縁。背景帯なし",
+      "fontIdentified": false,
+      "observedGlyphHeightPx": [
+        112,
+        125
+      ],
+      "observedLineAdvancePx": 145,
+      "proposedRender": {
+        "fontCandidates": [
+          "Noto Sans JP Black",
+          "ヒラギノ角ゴシックW8を利用可能なら比較"
+        ],
+        "fontSizePx": 120,
+        "fontWeight": 900,
+        "lineAdvancePx": 145,
+        "letterSpacingPx": 0,
+        "fill": "#ffffff",
+        "blackStrokePx": 12,
+        "whiteOuterStrokePx": 7,
+        "accentColors": {
+          "red": "#f00000",
+          "yellow": "#edf000",
+          "cyan": "#00e7e2"
+        }
+      },
+      "anchorPx": [
+        540,
+        1010
+      ],
+      "alignment": "center",
+      "lineCount": "区間別1〜3行",
+      "note": "3行の目標説明を保持。A08の8文字×2行を適用しない。元書体同定ではない。"
+    },
+    "bold_outlined_body": {
+      "inherit": "body",
+      "fontAppearance": "Heavy rounded Japanese sans, exactfamily/weightunknown",
+      "fill": "white plus red/yellow/cyan keywords",
+      "strokeAppearance": "Thick blackinneroutline and whiteouteroutline; no filledtextband",
+      "outerGlyphHeightApproxPx": 120,
+      "strokeStartingEstimatePx": {
+        "black": 10,
+        "whiteOuter": 6
+      },
+      "alignment": "center",
+      "centerYApproxPx": 1010,
+      "note": "Stroke values are renderingstartingestimates; compare actualpixels. Observed3lineblock mustremainpossible."
+    },
+    "presenter_small_white": {
+      "fontAppearance": "Heavy Japanese whitegothic with compact/shapedterminals, exactfamilyunknown",
+      "visibleGlyphHeightPx": 80,
+      "fill": "white",
+      "shadow": "small darksoftshadow",
+      "centerApprox": [
+        540,
+        1104
+      ]
+    },
+    "gold_serif_offer": {
+      "fontAppearance": "Veryheavy highcontrast serif/Mincho; exactfamilyunknown",
+      "fill": "Palecream todeepgold verticalgradient",
+      "stroke": "Thick darkbrownoutline, whiteouterglow",
+      "visibleGlyphHeightApproxPx": 145,
+      "lineAdvanceApproxPx": 170,
+      "centerApprox": [
+        540,
+        1195
+      ]
+    },
+    "orange_campaign": {
+      "fontAppearance": "Heavy roundedgothic",
+      "fill": "orange",
+      "stroke": "whiteinneroutline, thinorangeouteredge",
+      "visibleGlyphHeightApproxPx": 145,
+      "lineAdvanceApproxPx": 170,
+      "centerApprox": [
+        540,
+        1025
+      ]
+    },
+    "gold_serif_price": {
+      "fontAppearance": "Heavy serif numerals/Mincho currencyglyph",
+      "fill": "Goldgradient",
+      "stroke": "darkbrownoutline/whiteglow samecourse",
+      "visibleGlyphHeightApproxPx": 145,
+      "centerApprox": [
+        540,
+        1523
+      ]
+    },
+    "red_white_black_outline": {
+      "fontAppearance": "Heavy roundedsans",
+      "fill": "red",
+      "stroke": "whiteinner thenblack thenwhiteouteredge",
+      "visibleGlyphHeightApproxPx": 100
+    },
+    "green_cta": {
+      "fontAppearance": "Heavy roundedsans",
+      "fill": "green",
+      "stroke": "thickwhiteinneroutline/thinnergreenouterline",
+      "visibleGlyphHeightApproxPx": 135
+    },
+    "search_bar": {
+      "background": "white namefield, lightgraysearchbutton, thindarkgrayborder",
+      "nameText": "blackheavygothic",
+      "buttonText": "black/gray searchicon+検索",
+      "cursor": "blackarrow outsidebutton thenmovesin",
+      "clinicWordChangingRule": "Useconfirmedclinicdisplayname andactualCTA; replaceoriginalname."
+    },
+    "orange_white_outline": {
+      "appearance": "太いオレンジのゴシック、白い縁とオレンジの外縁",
+      "fontIdentified": false,
+      "observedGlyphHeightPx": 145,
+      "proposedRender": {
+        "fontSizePx": 126,
+        "fill": "#f18400",
+        "whiteStrokePx": 8,
+        "orangeOuterStrokePx": 3
+      },
+      "anchorPx": [
+        540,
+        1006
+      ],
+      "alignment": "center"
+    },
+    "red_heavy_latin_white_outline": {
+      "appearance": "赤い極太欧文、白い縁",
+      "fontIdentified": false,
+      "observedGlyphHeightPx": 134,
+      "proposedRender": {
+        "fontSizePx": 146,
+        "fontWeight": 900,
+        "fill": "#ec0606",
+        "whiteStrokePx": 7
+      },
+      "anchorPx": [
+        540,
+        187
+      ],
+      "alignment": "center"
+    }
+  },
+  "composition": {
+    "stackedPhotos": {
+      "bottomApproxRect": [
+        0,
+        1280,
+        1080,
+        640
+      ],
+      "middleApproxRect": [
+        0,
+        615,
+        1080,
+        665
+      ],
+      "topApproxRect": [
+        0,
+        0,
+        1080,
+        615
+      ],
+      "order": [
+        "bottom",
+        "middle",
+        "top"
+      ],
+      "note": "単なる3分割同時表示にしない。元写真は再配布せず今回使える写真を用意。"
+    },
+    "beforeAfter": {
+      "labelAppearance": "赤い太い欧文＋白縁",
+      "position": "上部中央",
+      "labelHeightApproxPx": 134,
+      "sourceLabelTimingFrames": {
+        "Before": [
+          577,
+          607
+        ],
+        "After": [
+          607,
+          655
+        ]
+      },
+      "truthRule": "同一人物・同じ動作・対応する素材。速度変更や違う画角だけで改善を作らない。"
+    }
+  },
+  "audio": {
+    "speechStructure": [
+      {
+        "sourceSeconds": [
+          0,
+          21.833333
+        ],
+        "role": "映像の会話とは別の説明ナレーション"
+      },
+      {
+        "sourceSeconds": [
+          21.833333,
+          32
+        ],
+        "role": "施術者本人の正面の呼びかけ"
+      }
+    ],
+    "transcriptStatus": "ChatCut ASR完了。画面原文と照合。逐語の原音試聴は未確認。",
+    "knownASRDiscrepancies": [
+      "生態→画面では整体",
+      "そのわしのぎ→画面ではその場凌ぎ",
+      "鍛えていない筋肉→画面では使えていない筋肉",
+      "末尾ItはASR候補であり、新しい字幕や台本に入れない"
+    ],
+    "measuredFullMix": {
+      "integratedLUFS": -15.83,
+      "truePeakDbTP": 0.23,
+      "loudnessRangeLU": 6.3,
+      "method": "FFmpeg loudnorm measurement only; not a listening review"
+    },
+    "bgmIdentity": "未同定",
+    "sfxIdentity": "未同定",
+    "policy": "音声を全ミュートしない。今回の前半ナレーションと後半本人声を別トラックにする。利用可能な支給音源を優先。音源がない場合は声を優先し、無料の利用可能な音源を選ぶ際に役割と音量を実聴比較する。元動画から無断で音源を抜いて新店舗へ流用しない。未確認の効果音を見本と同一と説明しない。",
+    "generation": "新規有料AI音声・BGM・映像生成は別途具体的な内容・価格の承認後だけ。"
+  },
+  "productionDefaults": {
+    "status": "reference_derived_starting_profile_not_yet_approved_production",
+    "canvas": [
+      1080,
+      1920,
+      30
+    ],
+    "duration": "32秒固定ではなく今回の台本・読速・発話・動作に合わせる。場面の役割順は保つ。",
+    "typography": "見本の縦明朝→太いゴシック→金色明朝→赤緑CTAを区間別に保つ。単一フォント・帯付き字幕へ一括変換しない。",
+    "wrap": "元の意味単位・行数を基準にする。特定パターンの8文字・2行制限を借用しない。長文は次cueへ分け、字を小さくして詰め込まない。",
+    "fontStatus": "元書体名・ウェイト・プリセット名は未同定。候補書体は近似案として字形を比較する。",
+    "referenceComparisonRequired": [
+      "縦書きの冒頭",
+      "3段写真完成＋縦強調",
+      "白黒背景",
+      "黄色発光の歓迎",
+      "1・2・3行の説明",
+      "Before/After",
+      "金色コース名",
+      "オレンジ＋金額",
+      "赤緑CTA＋検索欄"
+    ],
+    "editing": "映像・字幕・アクセント・各写真・ラベル・検索欄・音は後から修正可能な個別レイヤー。字幕の誤字訂正で声・映像の長さを変えない。",
+    "frameTolerance": "原見本の観測値と推定を区別。新素材は無理な固定尺伸縮をせず、対応する発話と動作へ同期。"
+  },
+  "verification": {
+    "completed": [
+      "原映像全体の画像概観",
+      "主要区間の1080×1920個別フレーム確認",
+      "前半境界の2フレーム刻み比較",
+      "後半主要テロップの隣接フレーム確認",
+      "ASRの全文と画面原文の照合",
+      "映像と音声の尺/FPS/混合音量の実測"
+    ],
+    "notCompleted": [
+      "元編集プロジェクトと書体の特定",
+      "直接の音声試聴とBGM・SFX同定",
+      "新しい店舗素材でのChatCut再現合成・全編連続再生・MP4保存",
+      "別利用者での制作試験"
+    ],
+    "boundsPrecision": "画面上の概算±10–20px。proposedRenderは元設定値でなく描画開始案。",
+    "sceneDetectionCaveat": "文字の出現でもカット検出が反応する。特に22.667/25.233/28.233秒を映像カットにしない。"
+  },
+  "factReplacement": {
+    "replace": [
+      "院名",
+      "地域",
+      "コース名",
+      "料金と割引条件",
+      "施術法",
+      "予約先",
+      "患者の経歴や感想"
+    ],
+    "rule": "見本の薬・湿布・リハビリ歴、筋膜/運動療法、効果、感想、10,000円→1,980円、院名は別店舗の事実として自動流用しない。LP・実際の素材・承認台本を根拠にする。効果の説明は確認できる範囲へ置換。"
+  }
+}

@@ -153,6 +153,8 @@ def fit_animations(cue, fps, warnings):
 def build_plan(request, spec=None):
     pattern = pattern_id(request.get("pattern", spec.get("id", "A01") if spec is not None else "A01"))
     spec = load_spec(pattern) if spec is None else spec
+    require(spec.get("executionRoute") != "patient_problem_treatment_presenter" and pattern != "A09",
+            "A09 requires independent vertical, photo, treatment and presenter layers; follow references/a09.md")
     require(spec.get("executionRoute") != "patient_vlog_with_sourced_cast" and pattern != "A07",
             "A07 requires a reviewed Vlog shot plan and sourced cast; follow references/a07.md")
     require(spec.get("executionRoute") != "speech_summary_design" and pattern != "A06",
