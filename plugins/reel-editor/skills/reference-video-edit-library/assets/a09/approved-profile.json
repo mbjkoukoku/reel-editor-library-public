@@ -18,7 +18,7 @@
     "cy": 1010,
     "color": "#ffffff",
     "accents": "{}",
-    "motion": "cut"
+    "motion": "none"
   },
   "presets": {
     "body": {
@@ -31,7 +31,7 @@
       "cy": 1010,
       "color": "#ffffff",
       "accents": "{}",
-      "motion": "left"
+      "motion": "none"
     },
     "vertical": {
       "text": "",
@@ -39,23 +39,47 @@
       "font": "Noto Serif JP",
       "fontSize": 116,
       "weight": 900,
-      "cx": 540,
-      "cy": 1010,
-      "color": "#a90000",
+      "cx": 885,
+      "cy": 175,
+      "color": "#e10016",
       "accents": "{}",
-      "motion": "pop"
+      "motion": "none"
+    },
+    "verticalSupplement": {
+      "text": "",
+      "kind": "vertical",
+      "font": "Noto Serif JP",
+      "fontSize": 104,
+      "weight": 900,
+      "cx": 190,
+      "cy": 940,
+      "color": "#be0000",
+      "accents": "{}",
+      "motion": "shake"
+    },
+    "verticalReprise": {
+      "text": "",
+      "kind": "vertical",
+      "font": "Noto Serif JP",
+      "fontSize": 116,
+      "weight": 900,
+      "cx": 875,
+      "cy": 155,
+      "color": "#e10016",
+      "accents": "{}",
+      "motion": "none"
     },
     "stackRed": {
       "text": "",
       "kind": "stack",
-      "font": "Noto Sans JP",
+      "font": "Noto Serif JP",
       "fontSize": 150,
       "weight": 900,
-      "cx": 540,
-      "cy": 1010,
-      "color": "#f00000",
+      "cx": 590,
+      "cy": 610,
+      "color": "#d80000",
       "accents": "{}",
-      "motion": "shake"
+      "motion": "cut"
     },
     "welcome": {
       "text": "",
@@ -63,11 +87,11 @@
       "font": "Noto Sans JP",
       "fontSize": 138,
       "weight": 900,
-      "cx": 540,
-      "cy": 1010,
+      "cx": 195,
+      "cy": 190,
       "color": "#d854ec",
       "accents": "{}",
-      "motion": "pop"
+      "motion": "none"
     },
     "goldCourse": {
       "text": "",
@@ -76,10 +100,10 @@
       "fontSize": 152,
       "weight": 900,
       "cx": 540,
-      "cy": 1010,
-      "color": "#e4ab20",
+      "cy": 1190,
+      "color": "#ffffff",
       "accents": "{}",
-      "motion": "pop"
+      "motion": "none"
     },
     "goldPrice": {
       "text": "",
@@ -88,8 +112,8 @@
       "fontSize": 125,
       "weight": 900,
       "cx": 540,
-      "cy": 1010,
-      "color": "#e4ab20",
+      "cy": 1465,
+      "color": "#ffffff",
       "accents": "{}",
       "motion": "wipe"
     },
@@ -97,13 +121,25 @@
       "text": "",
       "kind": "body",
       "font": "Noto Sans JP",
-      "fontSize": 116,
+      "fontSize": 135,
       "weight": 900,
       "cx": 540,
-      "cy": 1010,
+      "cy": 1020,
       "color": "#ffad05",
       "accents": "{}",
       "motion": "rise"
+    },
+    "redLead": {
+      "text": "",
+      "kind": "body",
+      "font": "Noto Sans JP",
+      "fontSize": 108,
+      "weight": 900,
+      "cx": 540,
+      "cy": 1120,
+      "color": "#ed0015",
+      "accents": "{}",
+      "motion": "pop"
     },
     "redInvite": {
       "text": "",
@@ -112,10 +148,10 @@
       "fontSize": 83,
       "weight": 900,
       "cx": 540,
-      "cy": 1010,
-      "color": "#ed0015",
+      "cy": 910,
+      "color": "#ec001b",
       "accents": "{}",
-      "motion": "pop"
+      "motion": "drop"
     },
     "greenLink": {
       "text": "",
@@ -124,7 +160,7 @@
       "fontSize": 128,
       "weight": 900,
       "cx": 540,
-      "cy": 1010,
+      "cy": 1110,
       "color": "#10b636",
       "accents": "{}",
       "motion": "bounce"
@@ -133,16 +169,28 @@
       "text": "",
       "kind": "small",
       "font": "Noto Sans JP",
+      "fontSize": 78,
+      "weight": 700,
+      "cx": 540,
+      "cy": 1100,
+      "color": "#ffffff",
+      "accents": "{}",
+      "motion": "none"
+    },
+    "smallCondition": {
+      "text": "",
+      "kind": "small",
+      "font": "Noto Sans JP",
       "fontSize": 52,
       "weight": 900,
       "cx": 540,
-      "cy": 1010,
+      "cy": 1760,
       "color": "#ffffff",
       "accents": "{}",
-      "motion": "cut"
+      "motion": "none"
     }
   },
-  "layoutNote": "cx/cyはcueごとにa09.jsonの役割・bboxと実合成から指定する。presetsの中央座標は配置完了を意味しない。縦列・価格・CTAを同じ座標へ一括配置しない。長文は意味単位で分ける。",
+  "layoutNote": "各presetは完成承認された対応場面のプロパティから店舗文と強調語を除いたもの。cx/cyは配置の起点で、異なる改行・文量や素材の顔・手の位置に応じ実合成で調整する。長文をこの枠へ縮小して押し込まない。bodyのmotion=noneは約0.1秒のぼかし出現、cutは即時。",
   "strokeWidthsPxOuterToInner": {
     "body": [
       40,
@@ -205,11 +253,11 @@
   "motionNotes": "時間はローカルフレーム/fps。welcomeとgold等の種別がmotionより優先されるため、実装とREADMEを確認する。動きごとの表示秒数ではなく入場の所要時間。",
   "photoProps": {
     "imageId": "",
-    "photoHeight": 360,
-    "seconds": 0.3,
+    "photoHeight": 634,
+    "seconds": 0.23,
     "direction": -1
   },
-  "photoPropsStatus": "API入力例。画像ID・高さ・出現秒数・方向・配置・開始時刻は各写真の観測値と採用画像に合わせる。360px/0.3秒を3枚共通の承認値と扱わない。",
+  "photoPropsStatus": "完成承認プロジェクトのコンポーネント既定値。各写真の実使用値はphotoScenePresetsで上書き。写真・位置・出現時刻は原見本と今回素材で確認する。",
   "linkDirectionProps": {
     "clinic": ""
   },
@@ -226,5 +274,28 @@
     "採用ソース時刻・完成尺",
     "個別の音量補正dB",
     "別案件での音声・素材の利用許可"
+  ],
+  "photoScenePresets": [
+    {
+      "role": "medicine",
+      "photoHeight": 634,
+      "seconds": 0.17,
+      "direction": -1,
+      "top": 1286
+    },
+    {
+      "role": "patch",
+      "photoHeight": 672,
+      "seconds": 0.36,
+      "direction": 1,
+      "top": 614
+    },
+    {
+      "role": "rehabilitation",
+      "photoHeight": 614,
+      "seconds": 0.14,
+      "direction": -1,
+      "top": 0
+    }
   ]
 }
