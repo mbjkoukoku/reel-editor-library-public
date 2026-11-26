@@ -1,0 +1,230 @@
+{
+  "version": "0.11.2",
+  "status": "approved_production_approximation_not_original_editor_settings",
+  "canvas": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30
+  },
+  "scope": "2026-11-26の1制作で合成比較・修正版MP4・利用者承認を確認。原書体・原プリセットの同定や別利用者環境の検証ではない。",
+  "textComponent": "a09-text.jsx",
+  "textProps": {
+    "text": "",
+    "kind": "body",
+    "font": "Noto Sans JP",
+    "fontSize": 116,
+    "weight": 900,
+    "cx": 540,
+    "cy": 1010,
+    "color": "#ffffff",
+    "accents": "{}",
+    "motion": "cut"
+  },
+  "presets": {
+    "body": {
+      "text": "",
+      "kind": "body",
+      "font": "Noto Sans JP",
+      "fontSize": 116,
+      "weight": 900,
+      "cx": 540,
+      "cy": 1010,
+      "color": "#ffffff",
+      "accents": "{}",
+      "motion": "left"
+    },
+    "vertical": {
+      "text": "",
+      "kind": "vertical",
+      "font": "Noto Serif JP",
+      "fontSize": 116,
+      "weight": 900,
+      "cx": 540,
+      "cy": 1010,
+      "color": "#a90000",
+      "accents": "{}",
+      "motion": "pop"
+    },
+    "stackRed": {
+      "text": "",
+      "kind": "stack",
+      "font": "Noto Sans JP",
+      "fontSize": 150,
+      "weight": 900,
+      "cx": 540,
+      "cy": 1010,
+      "color": "#f00000",
+      "accents": "{}",
+      "motion": "shake"
+    },
+    "welcome": {
+      "text": "",
+      "kind": "welcome",
+      "font": "Noto Sans JP",
+      "fontSize": 138,
+      "weight": 900,
+      "cx": 540,
+      "cy": 1010,
+      "color": "#d854ec",
+      "accents": "{}",
+      "motion": "pop"
+    },
+    "goldCourse": {
+      "text": "",
+      "kind": "gold",
+      "font": "Noto Serif JP",
+      "fontSize": 152,
+      "weight": 900,
+      "cx": 540,
+      "cy": 1010,
+      "color": "#e4ab20",
+      "accents": "{}",
+      "motion": "pop"
+    },
+    "goldPrice": {
+      "text": "",
+      "kind": "gold",
+      "font": "Noto Serif JP",
+      "fontSize": 125,
+      "weight": 900,
+      "cx": 540,
+      "cy": 1010,
+      "color": "#e4ab20",
+      "accents": "{}",
+      "motion": "wipe"
+    },
+    "orangeOffer": {
+      "text": "",
+      "kind": "body",
+      "font": "Noto Sans JP",
+      "fontSize": 116,
+      "weight": 900,
+      "cx": 540,
+      "cy": 1010,
+      "color": "#ffad05",
+      "accents": "{}",
+      "motion": "rise"
+    },
+    "redInvite": {
+      "text": "",
+      "kind": "body",
+      "font": "Noto Sans JP",
+      "fontSize": 83,
+      "weight": 900,
+      "cx": 540,
+      "cy": 1010,
+      "color": "#ed0015",
+      "accents": "{}",
+      "motion": "pop"
+    },
+    "greenLink": {
+      "text": "",
+      "kind": "body",
+      "font": "Noto Sans JP",
+      "fontSize": 128,
+      "weight": 900,
+      "cx": 540,
+      "cy": 1010,
+      "color": "#10b636",
+      "accents": "{}",
+      "motion": "bounce"
+    },
+    "smallWhite": {
+      "text": "",
+      "kind": "small",
+      "font": "Noto Sans JP",
+      "fontSize": 52,
+      "weight": 900,
+      "cx": 540,
+      "cy": 1010,
+      "color": "#ffffff",
+      "accents": "{}",
+      "motion": "cut"
+    }
+  },
+  "layoutNote": "cx/cyはcueごとにa09.jsonの役割・bboxと実合成から指定する。presetsの中央座標は配置完了を意味しない。縦列・価格・CTAを同じ座標へ一括配置しない。長文は意味単位で分ける。",
+  "strokeWidthsPxOuterToInner": {
+    "body": [
+      40,
+      27,
+      4
+    ],
+    "verticalAndWelcome": [
+      16,
+      2
+    ],
+    "stackRed": [
+      27,
+      4
+    ],
+    "gold": [
+      40,
+      31,
+      5
+    ],
+    "orange": [
+      34,
+      25,
+      5
+    ],
+    "green": [
+      38,
+      28,
+      5
+    ],
+    "redInvite": [
+      40,
+      33,
+      23,
+      5
+    ],
+    "smallWhite": [
+      5,
+      0
+    ]
+  },
+  "lineHeightMultiplier": {
+    "body": 1.23,
+    "gold": 1.16
+  },
+  "motionDurationSeconds": {
+    "welcome": 0.43,
+    "shake": 0.4,
+    "goldWipe": 0.22,
+    "wipe": 0.36,
+    "goldZoom": 0.42,
+    "orangeRise": 0.3,
+    "drop": 0.23,
+    "rise": 0.2,
+    "pop": 0.13,
+    "bounce": 0.3,
+    "right": 0.26,
+    "left": 0.16,
+    "cutOrSmall": 0
+  },
+  "motionNotes": "時間はローカルフレーム/fps。welcomeとgold等の種別がmotionより優先されるため、実装とREADMEを確認する。動きごとの表示秒数ではなく入場の所要時間。",
+  "photoProps": {
+    "imageId": "",
+    "photoHeight": 360,
+    "seconds": 0.3,
+    "direction": -1
+  },
+  "photoPropsStatus": "API入力例。画像ID・高さ・出現秒数・方向・配置・開始時刻は各写真の観測値と採用画像に合わせる。360px/0.3秒を3枚共通の承認値と扱わない。",
+  "linkDirectionProps": {
+    "clinic": ""
+  },
+  "contentDecisions": {
+    "footage": "reference_unless_explicitly_replaced",
+    "comparison": "verified_pair_or_explicit_omit",
+    "cta": "match_confirmed_destination",
+    "referenceAudio": "requires_permission_for_this_production"
+  },
+  "excludedFromSharedDefaults": [
+    "店舗名・料金・期限・人数",
+    "患者と出演者の映像・音声",
+    "Driveフォルダ・プロジェクト・素材ID",
+    "採用ソース時刻・完成尺",
+    "個別の音量補正dB",
+    "別案件での音声・素材の利用許可"
+  ]
+}

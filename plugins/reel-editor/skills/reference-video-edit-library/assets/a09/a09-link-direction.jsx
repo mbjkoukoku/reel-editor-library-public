@@ -1,0 +1,3 @@
+import React from 'react';
+import {useCurrentFrame,useVideoConfig} from 'remotion';
+export default function LinkDirection({item}){const frame=useCurrentFrame();const {fps}=useVideoConfig();const t=frame/fps;const p=item.props;return <svg width="1080" height="1920" viewBox="0 0 1080 1920"><g opacity={Math.floor(t*2.7)%2===0?1:0}><text x="260" y="1370" fontSize="170">👇</text><text x="455" y="1370" fontSize="170">👇</text><text x="650" y="1370" fontSize="170">👇</text></g><text x="540" y="1515" textAnchor="middle" fill="white" stroke="#202020" strokeWidth="5" paintOrder="stroke fill" fontFamily="Noto Sans JP" fontSize="52" fontWeight="900">{p.clinic}</text></svg>;}
